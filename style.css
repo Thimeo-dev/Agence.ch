@@ -16,7 +16,7 @@ header {
 }
 
 .logo-area { display: flex; align-items: center; gap: 10px; }
-.logo-area img { height: 35px; }
+.logo-area img { height: 90px; }
 .brand-name { font-weight: 600; font-size: 20px; }
 
 nav ul { list-style: none; display: flex; align-items: center; gap: 25px; }

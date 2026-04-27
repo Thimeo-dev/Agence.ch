@@ -1,78 +1,162 @@
-/* Reset & Fonts */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', sans-serif; color: #3c4043; background: #fff; line-height: 1.6; }
-
-/* Header & Nav */
-header {
+/* Styles globaux pour la page de connexion */
+body {
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
-    border-bottom: 1px solid #dadce0;
-    position: sticky;
-    top: 0;
-    background: white;
-    z-index: 1000;
-}
-
-.logo-area { display: flex; align-items: center; gap: 10px; }
-.logo-area img { height: 35px; }
-.brand-name { font-weight: 600; font-size: 20px; }
-
-nav ul { list-style: none; display: flex; align-items: center; gap: 25px; }
-nav a { text-decoration: none; color: #5f6368; font-weight: 500; }
-
-/* Le fameux bouton bleu */
-.login-btn {
-    background-color: #1a73e8;
-    color: white !important;
-    padding: 8px 20px;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-.login-btn:hover { background-color: #1557b0; }
-
-/* Hero Section */
-.hero {
-    padding: 100px 5%;
-    text-align: center;
-    background: #f8f9fa;
-}
-
-.hero h1 { font-size: 48px; color: #202124; margin-bottom: 20px; }
-
-.cta-main {
-    display: inline-block;
-    padding: 12px 30px;
-    background: #202124;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-top: 20px;
-}
-
-/* Services */
-.services-grid {
-    display: flex;
-    gap: 20px;
-    padding: 50px 5%;
     justify-content: center;
+    align-items: center;
+    background-color: #f4f7f6;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.service-card {
-    border: 1px solid #dadce0;
+.back-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #5F5D6B;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.back-home:hover {
+    color: #115DFC;
+}
+
+.container {
+    height: fit-content;
+    display: flex;
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.login-form {
+    width: 350px;
     padding: 30px;
-    border-radius: 8px;
-    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* Footer */
-footer {
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.auth-logo {
+    height: 45px;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 18px;
+    color: #2B2B2F;
+}
+
+.description {
+    font-size: 11px;
     text-align: center;
-    padding: 40px;
-    border-top: 1px solid #dadce0;
-    font-size: 14px;
+    color: #5F5D6B;
+    margin-top: 5px;
+    line-height: 1.4;
 }
 
-.dev-section { margin-bottom: 20px; color: #1a73e8; }
+.input_container {
+    width: 100%;
+    position: relative;
+}
+
+.icon {
+    width: 18px;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.input_field {
+    width: 100%;
+    height: 45px;
+    padding: 0 0 0 40px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+.input_field:focus {
+    border: 1px solid #115DFC;
+    box-shadow: 0px 0px 0px 2px rgba(17, 93, 252, 0.1);
+}
+
+.sign-in_btn {
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(180deg, #4480FF 0%, #115DFC 50%, #0550ED 100%);
+    border-radius: 5px;
+    border: 0;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+
+.sign-in_btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(17, 93, 252, 0.3);
+}
+
+/* Partie droite (Testimonial) */
+.testimonial {
+    width: 250px;
+    padding: 30px;
+    background: linear-gradient(358.31deg,#fff -24.13%,hsla(0,0%,100%,0) 338.58%), 
+                linear-gradient(89.84deg,rgba(230,36,174,.05) 0%, rgba(10,136,255,.05) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #f0f0f0;
+}
+
+.testimonial p {
+    color: #4d4c6d;
+    font-size: 12px;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.user-profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    margin: 20px 0 10px;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.username {
+    color: #2B2B2F;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.occupation {
+    color: #8D8CA1;
+    font-size: 10px;
+}

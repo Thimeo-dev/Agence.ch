@@ -139,7 +139,6 @@ body {
     border-radius: 50%;
     margin: 20px 0 10px;
     overflow: hidden; /* Important : coupe tout ce qui dépasse du cercle */
-    border: 2px solid #fff; /* Petit contour blanc élégant */
     box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Ombre légère */
 }
 

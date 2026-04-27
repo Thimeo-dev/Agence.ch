@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agence.ch</title>
+    <title>Agence.ch — Solutions de Voyage</title>
 
     <meta name="google-site-verification" content="Dbi79ytEiweGaX177GkOIDH1vKjyPlzukGwQY4as2fU" />
 
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="icon" type="image/svg+xml" href="agence180.svg">
+    <link rel="apple-touch-icon" href="agence180.svg">
 
     <link rel="stylesheet" href="style.css"> 
+    
     <script src="script.js" defer></script>
 </head>
 <body>
+
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="Logo Agence.ch" style="height: 40px;">
+            <img src="agence180.svg" alt="Logo Agence.ch" style="height: 32px;">
             <h1>Agence.ch</h1>
         </div>
+        
         <nav>
             <ul>
                 <li><a href="#services">Services</a></li>
@@ -29,24 +32,38 @@
     </header>
 
     <main>
-        <section id="services">
+        <section class="hero-section">
+            <h2>L'excellence du voyage.</h2>
+            <p>Découvrez une nouvelle façon d'explorer le monde avec des solutions technologiques et un accompagnement sur mesure.</p>
+            <a href="#services" class="btn-primary">Découvrir nos offres</a>
+        </section>
+
+        <section id="services" class="content-block">
             <h2>Nos Services</h2>
-            <p>Nous offrons une gamme complète de services pour répondre à vos besoins.</p>
+            <p>De la planification intelligente à la réservation simplifiée, nous redéfinissons chaque étape de votre aventure.</p>
+            <div class="grid-placeholder"></div>
         </section>
 
-        <section id="about">
+        <section id="about" class="content-block">
             <h2>À propos de nous</h2>
-            <p>Agence.ch est une entreprise dédiée à fournir des solutions innovantes pour nos clients.</p>
+            <p>Agence.ch combine innovation et passion pour offrir des expériences uniques à chaque voyageur.</p>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="content-block">
             <h2>Contactez-nous</h2>
-            <p>Vous pouvez nous contacter à l'adresse email suivante : contact@agence.ch</p>
+            <p>Besoin d'aide ? Nos experts sont à votre disposition.</p>
+            <a href="mailto:contact@agence.ch" class="btn-secondary">Envoyer un e-mail</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Agence.ch. Tous droits réservés.</p>
+        <div class="footer-content">
+            <p>&copy; 2026 Agence.ch. Tous droits réservés.</p>
+            <div class="footer-links">
+                <span>Suisse</span> | <span>Confidentialité</span> | <span>Conditions</span>
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>

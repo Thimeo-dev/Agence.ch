@@ -105,12 +105,39 @@ body {
     color: #ffffff;
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.2s;
-    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espace entre le texte et la clé */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
+.sign-in_btn span {
+    transition: all 0.3s ease;
+}
+
+/* Style de l'icône de la clé */
+.key-icon {
+    opacity: 0; /* Cachée par défaut */
+    transform: translateX(20px); /* Décalée à droite */
+    transition: all 0.3s ease;
+}
+
+/* Animation au survol */
 .sign-in_btn:hover {
-    transform: scale(1.02);
+    background: linear-gradient(180deg, #558cff 0%, #226cff 50%, #0a5eff 100%);
+    box-shadow: 0 5px 15px rgba(17, 93, 252, 0.4);
+}
+
+.sign-in_btn:hover span {
+    transform: translateX(-5px); /* Décale un peu le texte à gauche */
+}
+
+.sign-in_btn:hover .key-icon {
+    opacity: 1; /* Affiche la clé */
+    transform: translateX(0); /* Ramène la clé à sa place */
 }
 
 /* Partie droite dégradée */

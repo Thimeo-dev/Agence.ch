@@ -1,43 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+    --google-blue: #1a73e8;
+    --google-gray: #5f6368;
+    --google-dark: #202124;
+    --border-color: #dadce0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Fond ultra blanc */
+    color: var(--google-dark);
+}
+
+header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    background: #fff;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-container h1 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--google-gray);
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background: #007BFF;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
+nav a {
     text-decoration: none;
+    color: var(--google-dark);
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.2s;
 }
 
+nav a:hover {
+    opacity: 0.7;
+}
+
+/* Section "Hero" / Catégorie */
 main {
-    padding: 20px;
+    padding-top: 60px;
 }
 
-footer {
-    background: #333;
-    color: #fff;
+section {
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+    padding: 0 24px;
     text-align: center;
-    padding: 10px 0;
 }
 
 h2 {
-    color: #333;
+    font-size: 48px; /* Très grand comme chez Google */
+    font-weight: 400;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+p {
+    font-size: 18px;
+    color: var(--google-gray);
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+/* Boutons style Google */
+.btn-primary {
+    background-color: var(--google-blue);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: box-shadow 0.2s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 1px 3px rgba(60,64,67, 0.3), 0 4px 8px 3px rgba(60,64,67, 0.15);
+}
+
+/* Footer discret */
+footer {
+    border-top: 1px solid var(--border-color);
+    padding: 40px 24px;
+    background-color: #f8f9fa;
+    color: var(--google-gray);
+    font-size: 12px;
+    text-align: left;
 }

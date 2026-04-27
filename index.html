@@ -3,67 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agence.ch — Solutions de Voyage</title>
-
-    <meta name="google-site-verification" content="Dbi79ytEiweGaX177GkOIDH1vKjyPlzukGwQY4as2fU" />
-
-<link rel="icon" type="image/svg+xml" href="agence180.svg">
-<link rel="apple-touch-icon" href="agence180.svg" style="background-color: white;">
-
-    <link rel="stylesheet" href="style.css"> 
-    
-    <script src="script.js" defer></script>
+    <title>Agence.ch — Design & Développement</title>
+    <link rel="icon" type="image/svg+xml" href="agence180.svg">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo-container">
-            <img src="agence180.svg" alt="Logo Agence.ch" style="height: 32px;">
-            <h1>Agence.ch</h1>
+        <div class="logo-area">
+            <img src="agence180.svg" alt="Logo Agence">
+            <span class="brand-name">Agence.ch</span>
         </div>
-        
         <nav>
             <ul>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="auth.html" class="login-btn">Connexion</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero-section">
-            <h2>L'excellence du voyage.</h2>
-            <p>Découvrez une nouvelle façon d'explorer le monde avec des solutions technologiques et un accompagnement sur mesure.</p>
-            <a href="#services" class="btn-primary">Découvrir nos offres</a>
-        </section>
+    <section class="hero">
+        <h1>L'excellence numérique en Suisse.</h1>
+        <p>Nous créons des expériences web luxueuses et performantes.</p>
+        <a href="#contact" class="cta-main">Démarrer un projet</a>
+    </section>
 
-        <section id="services" class="content-block">
-            <h2>Nos Services</h2>
-            <p>De la planification intelligente à la réservation simplifiée, nous redéfinissons chaque étape de votre aventure.</p>
-            <div class="grid-placeholder"></div>
-        </section>
-
-        <section id="about" class="content-block">
-            <h2>À propos de nous</h2>
-            <p>Agence.ch combine innovation et passion pour offrir des expériences uniques à chaque voyageur.</p>
-        </section>
-
-        <section id="contact" class="content-block">
-            <h2>Contactez-nous</h2>
-            <p>Besoin d'aide ? Nos experts sont à votre disposition.</p>
-            <a href="mailto:contact@agence.ch" class="btn-secondary">Envoyer un e-mail</a>
-        </section>
-    </main>
+    <section id="services" class="services-grid">
+        <div class="service-card">
+            <h3>Design UI/UX</h3>
+            <p>Une interface épurée inspirée des plus grands standards.</p>
+        </div>
+        <div class="service-card">
+            <h3>Développement</h3>
+            <p>Code robuste et sécurisé avec Firebase.</p>
+        </div>
+    </section>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Agence.ch. Tous droits réservés.</p>
-            <div class="footer-links">
-                <span>Suisse</span> | <span>Confidentialité</span> | <span>Conditions</span>
-            </div>
+        <div class="dev-section">
+            <p>Mode Développeur : <a href="auth.html">Accéder au Panel Modo</a></p>
         </div>
+        <p>© 2026 Agence.ch - Tous droits réservés.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

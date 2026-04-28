@@ -6,7 +6,7 @@ const headerHTML = `
         </div>
         <nav>
             <ul>
-                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="auth.html" class="login-btn" id="auth-btn">Connexion</a></li>
             </ul>
         </nav>

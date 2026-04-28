@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 
 // 1. Config
@@ -13,20 +13,35 @@ const firebaseConfig = {
   measurementId: "G-W5YM04M7VM"
 };
 
-const headerHTML = `
-    <header>
-        <div class="logo-area">
-            <img src="agence180.svg" alt="Logo Agence">
-            <span class="brand-name">Agence.ch</span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="auth.html" class="login-btn" id="auth-btn">Connexion</a></li>
-            </ul>
-        </nav>
-    </header>
-`;
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+const renderHeader = (user) => {
+    const authLinks = user
+        ? `
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="auth.html" class="login-btn" id="auth-btn">Mon compte</a></li>
+            <li><button type="button" id="logout-btn" class="logout-btn">Déconnexion</button></li>
+        `
+        : `
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="auth.html" class="login-btn" id="auth-btn">Connexion</a></li>
+        `;
+
+    return `
+        <header>
+            <div class="logo-area">
+                <img src="agence180.svg" alt="Logo Agence">
+                <span class="brand-name">Agence.ch</span>
+            </div>
+            <nav>
+                <ul id="nav-links">
+                    ${authLinks}
+                </ul>
+            </nav>
+        </header>
+    `;
+};
 
 const footerHTML = `
     <footer class="site-footer">
@@ -58,7 +73,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const hPlace = document.getElementById('header-placeholder');
     const fPlace = document.getElementById('footer-placeholder');
 
-    if (hPlace) hPlace.innerHTML = headerHTML;
     if (fPlace) fPlace.innerHTML = footerHTML;
+
+    const render = (user) => {
+        if (!hPlace) return;
+        hPlace.innerHTML = renderHeader(user);
+
+        const logoutBtn = document.getElementById('logout-btn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', () => {
+                signOut(auth).then(() => {
+                    window.location.href = 'auth.html';
+                });
+            });
+        }
+    };
+
+    render(null);
+    onAuthStateChanged(auth, render);
 });
 

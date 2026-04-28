@@ -1,11 +1,13 @@
-document.getElementById('auth-form').addEventListener('submit', function(e) {
-    e.preventDefault(); // Empêche la page de se recharger
+const authForm = document.getElementById('auth-form');
 
-    const email = document.getElementById('email_field').value;
-    const password = document.getElementById('password_field').value;
+if (authForm) {
+    authForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Empêche la page de se recharger
 
-    console.log("Tentative de connexion avec :", email);
-    
-    // Prochaine étape : Firebase Auth ici !
-    alert("Connexion en cours pour : " + email);
-});
+        const email = document.getElementById('email_field').value;
+        const password = document.getElementById('password_field').value;
+
+        console.log("Tentative de connexion avec :", email);
+        // Authentification réelle gérée par auth-script.js
+    });
+}

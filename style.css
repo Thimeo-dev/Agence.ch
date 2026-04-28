@@ -77,6 +77,91 @@ nav a:hover {
     box-shadow: 0 2px 6px rgba(26, 115, 232, 0.3);
 }
 
+/* --- Menu Profil (Style Google) --- */
+.profile-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1 / 1; /* Force le carré pour un rond parfait */
+    border-radius: 50%;
+    object-fit: cover; /* Recadre l'image sans l'écraser */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid #e0e0e0;
+    background-color: #f1f3f4; /* Fond gris si l'image tarde à charger */
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    border-color: #1a73e8;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background: white;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    padding: 12px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001;
+}
+
+.profile-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 12px 20px;
+    color: #202124;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.profile-dropdown a:hover {
+    background-color: #f8f9fa;
+    color: #1a73e8;
+}
+
+.profile-dropdown hr {
+    margin: 8px 0;
+    border: none;
+    border-top: 1px solid #dadce0;
+}
+
+.logout-option {
+    width: 100%;
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    text-align: left;
+    color: #202124;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font: inherit;
+}
+
+.logout-option:hover {
+    background-color: #f8f9fa;
+    color: #1a73e8;
+}
+
 /* --- Hero Section --- */
 .hero {
     padding: 120px 5%;

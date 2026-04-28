@@ -16,12 +16,29 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
+const ADMIN_EMAIL = "ton-email@exemple.com"; // Remplace par ton email administratif
+
 const renderHeader = (user) => {
+    // Image par défaut (un avatar gris standard)
+    const defaultPic = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
+    
+    // On utilise la photo de l'utilisateur s'il en a une, sinon celle par défaut
+    const userPhoto = (user && user.photoURL) ? user.photoURL : defaultPic;
+    
+    const isAdmin = user && user.email === "thimeosousa02@gmail.com";
+
     const authLinks = user
         ? `
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="auth.html" class="login-btn" id="auth-btn">Mon compte</a></li>
-            <li><button type="button" id="logout-btn" class="logout-btn">Déconnexion</button></li>
+            <li class="profile-menu">
+                <img src="${userPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <a href="auth.html">Mon compte</a>
+                    ${isAdmin ? '<a href="admin.html">Tableau de bord</a>' : ''}
+                    <hr>
+                    <button type="button" id="logout-btn" class="logout-option">Déconnexion</button>
+                </div>
+            </li>
         `
         : `
             <li><a href="index.html">Accueil</a></li>
@@ -79,17 +96,42 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!hPlace) return;
         hPlace.innerHTML = renderHeader(user);
 
-        const logoutBtn = document.getElementById('logout-btn');
-        if (logoutBtn) {
-            logoutBtn.addEventListener('click', () => {
-                signOut(auth).then(() => {
-                    window.location.href = 'auth.html';
+        if (user) {
+            const profilePic = document.getElementById('profile-pic');
+            const profileDropdown = document.getElementById('profile-dropdown');
+
+            if (profilePic && profileDropdown) {
+                profilePic.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    profileDropdown.classList.toggle('show');
                 });
-            });
+
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('.profile-menu')) {
+                        profileDropdown.classList.remove('show');
+                    }
+                });
+            }
+
+            const logoutBtn = document.getElementById('logout-btn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', () => {
+                    signOut(auth).then(() => {
+                        window.location.href = 'auth.html';
+                    });
+                });
+            }
+        }
+
+        const isAdmin = user && user.email === "thimeosousa02@gmail.com";
+        const isOnAdminPage = window.location.pathname.endsWith('admin.html');
+        if (isOnAdminPage && !isAdmin) {
+            window.location.href = 'index.html';
         }
     };
 
     render(null);
     onAuthStateChanged(auth, render);
 });
+
 

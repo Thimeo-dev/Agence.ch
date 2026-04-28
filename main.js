@@ -13,17 +13,6 @@ const firebaseConfig = {
   measurementId: "G-W5YM04M7VM"
 };
 
-// 2. Initialisation
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const analytics = getAnalytics(app); // <--- Fonctionne sur chaque page qui charge ce script
-
-// 3. Tes composants (Header/Footer)
-document.addEventListener("DOMContentLoaded", () => {
-    // Ton code d'injection pour le header et le footer
-    // (Comme on l'a vu précédemment)
-});
-
 const headerHTML = `
     <header>
         <div class="logo-area">

@@ -4,26 +4,29 @@ const auth = getAuth();
 const ADMIN_EMAIL = "ton-email@agence.ch"; // <--- Vérifie bien l'orthographe ici
 
 onAuthStateChanged(auth, (user) => {
-    console.log("Vérification auth...");
+    const authBtn = document.getElementById('auth-btn');
+    const ADMIN_EMAIL = "ton-email@agence.ch";
 
-    if (user && user.email === ADMIN_EMAIL) {
-        console.log("Admin détecté ! Tentative d'ajout du bouton...");
-
-        // On utilise une petite boucle pour attendre que le Header soit injecté
-        const interval = setInterval(() => {
-            const navUl = document.querySelector('nav ul'); // On cherche ta liste de navigation
-            
-            if (navUl) {
-                clearInterval(interval); // On a trouvé le menu, on arrête de chercher
-                
-                if (!document.getElementById('admin-btn')) {
-                    const li = document.createElement('li');
-                    li.id = 'admin-btn';
-                    li.innerHTML = `<a href="admin.html" style="color: #e74c3c; font-weight: bold;">Admin</a>`;
-                    navUl.appendChild(li); // On l'ajoute à la fin de la liste
-                    console.log("Bouton Admin ajouté avec succès.");
-                }
-            }
-        }, 100); // On vérifie toutes les 100ms
+    if (user) {
+        // --- MODE CONNECTÉ ---
+        const initiale = user.email.charAt(0).toUpperCase();
+        
+        // On remplace le bouton par un rond
+        // Si c'est l'admin, on pointe vers admin.html, sinon vers un profil (ou rien)
+        const targetPage = (user.email === ADMIN_EMAIL) ? "admin.html" : "#";
+        
+        authBtn.outerHTML = `
+            <a href="${targetPage}" class="profile-dot" id="auth-btn" title="${user.email}">
+                ${initiale}
+            </a>
+        `;
+    } else {
+        // --- MODE DÉCONNECTÉ ---
+        // Si on n'est pas connecté, on remet le bouton normal
+        // Note: l'utilisation de innerHTML ou outerHTML ici dépend si l'élément a été supprimé
+        const navUl = document.querySelector('nav ul');
+        if (!document.querySelector('.login-btn')) {
+             authBtn.outerHTML = `<a href="auth.html" class="login-btn" id="auth-btn">Connexion</a>`;
+        }
     }
 });

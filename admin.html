@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration — Agence.ch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="agence180.svg">
+    
+    <style>
+        body { display: none; }
+    </style>
+</head>
+<body class="admin-page">
+
+    <div id="header-placeholder"></div>
+
+    <main class="admin-content" style="padding: 100px 20px; max-width: 1200px; margin: 0 auto;">
+        <h1>Tableau de bord Administrateur</h1>
+        <p>Bienvenue, Monsieur. Vos outils de gestion s'afficheront ici.</p>
+        
+        <div class="admin-placeholder" style="border: 2px dashed #ccc; padding: 50px; text-align: center; border-radius: 8px; margin-top: 30px;">
+            <p style="color: #666;">Aucune donnée à afficher pour le moment.</p>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="components.js"></script>
+    <script type="module">
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        
+        const auth = getAuth();
+        const MON_EMAIL = "ton-email@agence.ch"; // <--- REMPLACE PAR TON VRAI EMAIL
+
+        onAuthStateChanged(auth, (user) => {
+            if (user && user.email === MON_EMAIL) {
+                // C'est toi ! On affiche la page
+                document.body.style.display = "block";
+            } else {
+                // Ce n'est pas toi ou pas connecté -> redirection index
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+</body>
+</html>

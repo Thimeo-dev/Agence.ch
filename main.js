@@ -1,0 +1,48 @@
+const headerHTML = `
+    <header>
+        <div class="logo-area">
+            <img src="agence180.svg" alt="Logo Agence">
+            <span class="brand-name">Agence.ch</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="auth.html" class="login-btn" id="auth-btn">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+`;
+
+const footerHTML = `
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <div class="country-info">
+                <img src="https://flagcdn.com/w20/ch.png" alt="Suisse">
+                <span>Suisse</span>
+            </div>
+            <div class="footer-legal-links">
+                <a href="confidentialite.html">Confidentialité</a>
+                <a href="conditions.html">Conditions</a>
+                <p>© 2026 Agence.ch</p>
+            </div>
+        </div>
+
+        <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="#" aria-label="X"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="X"></a>
+            <a href="#" aria-label="TikTok"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"></a>
+            <a href="#" aria-label="Facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+            <a href="https://github.com/Thimeo-dev/Agence.ch" aria-label="Github"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Facebook"></a>
+        </div>
+    </div>
+</footer>
+`;
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hPlace = document.getElementById('header-placeholder');
+    const fPlace = document.getElementById('footer-placeholder');
+
+    if (hPlace) hPlace.innerHTML = headerHTML;
+    if (fPlace) fPlace.innerHTML = footerHTML;
+});

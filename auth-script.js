@@ -66,17 +66,6 @@ if (loginForm) {
     });
 }
 
-// --- 5. PROTECTION DE LA PAGE ADMIN ---
-// À placer dans admin.html (ou laisser ici si tu lies ce script à admin.html)
-if (window.location.pathname.includes("admin.html")) {
-    onAuthStateChanged(auth, (user) => {
-        if (!user || user.email !== ADMIN_EMAIL) {
-            // Si pas connecté ou pas l'admin, on dégage
-            window.location.href = "auth.html";
-        }
-    });
-}
-
 // --- 6. FONCTION DE DÉCONNEXION ---
 window.logout = () => {
     signOut(auth).then(() => {

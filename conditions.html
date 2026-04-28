@@ -3,49 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agence.ch — Agence de voyage Suisse</title>
-    
-    <link rel="icon" type="image/svg+xml" href="agence180.svg">
-
-    <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
-    <link rel="shortcut icon" href="favicon.png">
-
-    <link rel="apple-touch-icon" href="favicon.png">
-
+    <title>Confidentialité — Agence.ch</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="agence180.svg">
 </head>
-<body>
+<body class="legal-page">
 
     <header>
         <div class="logo-area">
-            <img src="agence180.svg" alt="Logo Agence">
-            <span class="brand-name">Agence.ch</span>
+            <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                <img src="agence180.svg" alt="Logo">
+                <span class="brand-name" style="color: #202124;">Agence.ch</span>
+            </a>
         </div>
         <nav>
             <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projets">Projets</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#services">Services</a></li>
                 <li><a href="auth.html" class="login-btn">Connexion</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Votre agence d'excellence en Suisse.</h1>
-        <p>Nous vous preparont votre prochain voyage.</p>
-        <a href="#contact" class="cta-main">Commencer a chercher</a>
-    </section>
+    <main class="legal-content">
+        <h1>Règles de confidentialité</h1>
+        <p class="last-update">Dernière mise à jour : 28 avril 2026</p>
 
-    <section id="services" class="services-grid">
-        <div class="service-card">
-            <h3>Design UI/UX</h3>
-            <p>Une interface épurée inspirée des plus grands standards.</p>
-        </div>
-        <div class="service-card">
-            <h3>Développement</h3>
-            <p>Code robuste et sécurisé avec Firebase.</p>
-        </div>
-    </section>
+        <section>
+            <h2>1. Collecte des données</h2>
+            <p>Dans le cadre de nos solutions de voyage, nous collectons les informations que vous nous fournissez lors de la création de votre compte (Nom, Email, Photo de profil via GitHub).</p>
+        </section>
+
+        <section>
+            <h2>2. Utilisation des informations</h2>
+            <p>Les données stockées sur nos serveurs Firebase servent exclusivement à personnaliser votre expérience et à sécuriser l'accès à vos documents de voyage.</p>
+        </section>
+
+        <section>
+            <h2>3. Protection des données</h2>
+            <p>Nous utilisons Cloud Firestore avec des règles de sécurité strictes pour garantir que vous êtes le seul à pouvoir accéder à vos données personnelles.</p>
+        </section>
+    </main>
 
 <footer class="site-footer">
     <div class="footer-container">
@@ -70,6 +68,5 @@
     </div>
 </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>

@@ -9,17 +9,16 @@
 </head>
 <body>
     <a href="index.html" class="back-home">← Retour au site</a>
-
+    
     <div class="container">
-    <form class="login-form" id="auth-form">
-        <div class="header">
-            <img src="agence180.svg" alt="Logo" class="auth-logo">
-            <label class="title">Espace Membre</label>
-            <p class="description">Connectez-vous ou inscrivez vous.</p>
-            
-            <div id="error-message" class="error-text"></div>
-        </div>
-            
+        <form class="login-form" id="auth-form">
+            <div class="header">
+                <img src="agence180.svg" alt="Logo" class="auth-logo">
+                <label class="title" id="auth-title">Espace Membre</label>
+                <p class="description" id="auth-desc">Connectez-vous pour accéder à votre espace.</p>
+                <div id="error-message" class="error-text"></div>
+            </div>
+                
             <div class="input_container">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M7 8.5L9.94202 10.2394C11.6572 11.2535 12.3428 11.2535 14.058 10.2394L17 8.5" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -36,10 +35,13 @@
                 </svg>
                 <input id="password_field" class="input_field" type="password" placeholder="Mot de passe" required>
             </div>
-            
-            <div id="error-message" class="error-text"></div>
 
-            <button type="submit" class="sign-in_btn">Connexion</button>
+            <button type="submit" class="sign-in_btn" id="submit-btn">Connexion</button>
+            
+            <p class="toggle-mode">
+                <span id="toggle-text">Pas encore de compte ?</span> 
+                <span id="switch-auth" class="switch-link">S'inscrire</span>
+            </p>
         </form>
 
         <div class="testimonial">

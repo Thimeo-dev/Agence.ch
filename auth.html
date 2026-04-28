@@ -11,12 +11,14 @@
     <a href="index.html" class="back-home">← Retour au site</a>
 
     <div class="container">
-        <form class="login-form" id="auth-form">
-            <div class="header">
-                <img src="agence180.svg" alt="Logo" class="auth-logo">
-                <label class="title">Espace Membre</label>
-                <p class="description">Connectez-vous ou inscrivez vous.</p>
-            </div>
+    <form class="login-form" id="auth-form">
+        <div class="header">
+            <img src="agence180.svg" alt="Logo" class="auth-logo">
+            <label class="title">Espace Membre</label>
+            <p class="description">Connectez-vous ou inscrivez vous.</p>
+            
+            <div id="error-message" class="error-text"></div>
+        </div>
             
             <div class="input_container">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -34,11 +36,12 @@
                 </svg>
                 <input id="password_field" class="input_field" type="password" placeholder="Mot de passe" required>
             </div>
+            
+           <form id="auth-form">
+    <div id="error-message" class="error-container"></div>
 
-            <button class="sign-in_btn" type="submit">
-                <span>Se connecter</span>
-            </button>
-        </form>
+    <button type="submit" class="sign-in_btn">Connexion</button>
+</form>
 
         <div class="testimonial">
             <p>"L'interface est simple mais efficace"</p>

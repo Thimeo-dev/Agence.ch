@@ -388,46 +388,43 @@ nav a:hover {
     overflow: hidden;
     padding: 60px 0;
     background: #fff;
-    white-space: nowrap;
-    position: relative;
 }
 
-/* Le conteneur qui bouge */
 .slider-track {
     display: flex;
     gap: 25px;
-    width: max-content; /* S'adapte au nombre d'images */
-    animation: scroll-left 30s linear infinite;
+    width: max-content;
+    /* L'animation ne s'arrête JAMAIS */
+    animation: scroll-infinite 40s linear infinite;
 }
 
-/* Style des rectangles */
 .dest-rect {
-    width: 280px;
-    height: 380px;
+    width: 300px;
+    height: 450px;
     flex-shrink: 0;
-    border-radius: 25px; /* Coins bien arrondis */
+    border-radius: 25px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    /* Transition douce pour l'agrandissement */
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    position: relative;
+}
+
+/* L'image grandit quand on met la souris dessus */
+.dest-rect:hover {
+    transform: scale(1.1); /* Grandit de 10% */
+    z-index: 10; /* Passe au premier plan */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
 .dest-rect img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
 }
 
-/* Animation de défilement infini */
-@keyframes scroll-left {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%); /* On décale de la moitié (puisqu'on a doublé les images) */
-    }
-}
-
-/* Optionnel : pause au survol pour que l'utilisateur puisse regarder */
-.slider-container:hover .slider-track {
-    animation-play-state: paused;
+@keyframes scroll-infinite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }

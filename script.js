@@ -10,52 +10,53 @@ if (authForm) {
         console.log("Tentative de connexion avec :", email);
         // Authentification réelle gérée par auth-script.js
     });
-}$document.addEventListener("DOMContentLoaded", async () => {
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
     const track = document.getElementById('slider-track');
     if (!track) {
-        console.error("L'élément slider-track est introuvable dans le HTML !");
+        console.error("L'élément slider-track est introuvable !");
         return;
     }
 
-    const username = "Thimeo-dev"; // Remplace par ton nom d'utilisateur GitHub
+    const username = "Thimeo-dev"; 
     const repo = "Agence.ch";     
     const folder = "images";      
 
     try {
-        console.log("Tentative de connexion à GitHub...");
         const response = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/${folder}`);
         const files = await response.json();
 
         if (files.message === "Not Found") {
-            console.error("Dossier ou dépôt introuvable. Vérifie l'URL.");
+            console.error("Dossier images introuvable sur GitHub.");
             return;
         }
 
-        const images = files.filter(f => f.name.match(/\.(jpe?g|png|webp)$/i));
-        console.log(`${images.length} images trouvées.`);
+        // On ne garde que les images
+        const images = files.filter(f => f.name.match(/\.(jpe?g|png|webp|gif)$/i));
 
+        // On vide le rail avant d'injecter
         track.innerHTML = ""; 
 
         images.forEach(img => {
-            const name = img.name.split('.').shift().replace(/-/g, ' ');
+            const name = decodeURIComponent(img.name.split('.').shift().replace(/-/g, ' '));
             const rect = document.createElement('div');
             rect.className = 'dest-rect';
             rect.innerHTML = `
-                <img src="${img.download_url}" alt="${name}" style="width:100%; height:100%; object-fit:cover;">
-                <div class="dest-label" style="position:absolute; bottom:0; width:100%; padding:20px; background:linear-gradient(transparent, rgba(0,0,0,0.8)); color:white;">
-                    <span style="font-weight:600;">${name}</span>
+                <img src="${img.download_url}" alt="${name}">
+                <div class="dest-label">
+                    <span>${name}</span>
                 </div>
             `;
             track.appendChild(rect);
         });
 
-        // On force le doublement pour le scroll
+        // TRÈS IMPORTANT : On double le contenu pour que le défilement soit infini
         if (images.length > 0) {
             track.innerHTML += track.innerHTML;
-            console.log("Images doublées, le scroll devrait démarrer.");
         }
 
     } catch (e) {
-        console.error("Erreur fatale :", e);
+        console.error("Erreur lors du chargement des images :", e);
     }
 });

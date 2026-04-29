@@ -383,56 +383,75 @@ nav a:hover {
     font-style: italic;
 }
 
-/* Empêche le défilement horizontal sur toute la page, seulement dans le slider */
-body {
-    overflow-x: hidden;
-}
-
+/* --- Slider Destinations --- */
 .destinations-section {
-    padding: 60px 0;
+    padding: 80px 0;
+    background: #fff;
     text-align: center;
 }
 
 .slider-container {
     width: 100%;
-    overflow: hidden; /* Cache ce qui dépasse de l'écran */
+    overflow: visible; /* Changement crucial : permet à l'ombre et au zoom de dépasser verticalement */
     position: relative;
-    padding: 20px 0;
+    padding: 100px 0; /* Plus d'espace pour un zoom confortable */
+    /* On utilise un conteneur parent pour masquer l'horizontal sans couper le vertical */
+    clip-path: inset(-100px 0 -100px 0); 
 }
 
 .slider-track {
-    display: flex; /* Aligne les images en ligne */
-    gap: 25px; /* Espace entre les rectangles */
-    width: max-content; /* Permet au rail d'être plus large que l'écran */
+    display: flex !important;
+    gap: 35px; /* Un peu plus d'espace pour laisser respirer les ombres */
+    width: max-content;
     animation: scroll-infinite 40s linear infinite;
+    will-change: transform; /* Optimisation pour des mouvements fluides */
 }
 
-/* Style des rectangles */
+/* Style des rectangles (état normal) */
 .dest-rect {
     position: relative;
-    width: 300px;
-    height: 450px;
-    flex-shrink: 0; /* Empêche les images de rétrécir */
-    border-radius: 25px;
+    width: 320px;
+    height: 480px;
+    flex-shrink: 0;
+    border-radius: 30px; /* Bords légèrement plus doux */
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: transform 0.4s ease;
+    background: #fff;
+    
+    /* OMBRE LUXE : Multi-couches pour plus de profondeur et de douceur */
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.04), 
+        0 2px 6px rgba(0, 0, 0, 0.02);
+    
+    /* Transition plus lente et plus "physique" */
+    transition: all 0.6s cubic-bezier(0.2, 1, 0.22, 1);
+    cursor: pointer;
+}
+
+/* L'effet de zoom et d'ombre au survol */
+.dest-rect:hover {
+    transform: scale(1.1) translateY(-10px); /* S'agrandit ET monte un peu */
+    z-index: 100; /* Assure qu'il passe au-dessus de tout */
+    
+    /* OMBRE ÉLEVÉE : Très diffuse pour simuler la hauteur */
+    box-shadow: 
+        0 40px 80px rgba(0, 0, 0, 0.12), 
+        0 20px 40px rgba(0, 0, 0, 0.06);
 }
 
 .dest-rect img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garde les bonnes proportions */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s ease; /* Petit effet de mouvement interne à l'image */
 }
 
-/* L'animation magique */
+.dest-rect:hover img {
+    transform: scale(1.05); /* L'image bouge un peu à l'intérieur pour donner de la vie */
+}
+
+/* L'animation de défilement */
 @keyframes scroll-infinite {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Doit correspondre au contenu doublé par le JS */
-}
-
-/* Effet au survol */
-.dest-rect:hover {
-    transform: scale(1.05);
-    z-index: 5;
+    100% { transform: translateX(-50%); }
 }

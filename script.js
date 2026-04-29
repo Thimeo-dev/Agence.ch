@@ -10,43 +10,52 @@ if (authForm) {
         console.log("Tentative de connexion avec :", email);
         // Authentification réelle gérée par auth-script.js
     });
-}
-document.addEventListener("DOMContentLoaded", async () => {
+}$document.addEventListener("DOMContentLoaded", async () => {
     const track = document.getElementById('slider-track');
-    if (!track) return;
+    if (!track) {
+        console.error("L'élément slider-track est introuvable dans le HTML !");
+        return;
+    }
 
-    // --- CONFIGURATION ---
-    const username = "Thimeo-dev"; // Remplace par ton pseudo GitHub
-    const repo = "Agence.ch";     // Remplace par le nom de ton projet
-    const folder = "images";      // Le nom du dossier où sont tes images
+    const username = "Thimeo-dev"; // Remplace par ton nom d'utilisateur GitHub
+    const repo = "Agence.ch";     
+    const folder = "images";      
 
     try {
-        // 1. On appelle l'API GitHub pour lister les fichiers du dossier
+        console.log("Tentative de connexion à GitHub...");
         const response = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/${folder}`);
         const files = await response.json();
 
-        // 2. On filtre pour ne garder que les images (jpg, png, webp)
-        const images = files.filter(file => 
-            file.name.match(/\.(jpe?g|png|gif|webp)$/i)
-        );
+        if (files.message === "Not Found") {
+            console.error("Dossier ou dépôt introuvable. Vérifie l'URL.");
+            return;
+        }
 
-        // 3. On crée les éléments dans le slider
+        const images = files.filter(f => f.name.match(/\.(jpe?g|png|webp)$/i));
+        console.log(`${images.length} images trouvées.`);
+
+        track.innerHTML = ""; 
+
         images.forEach(img => {
+            const name = img.name.split('.').shift().replace(/-/g, ' ');
             const rect = document.createElement('div');
             rect.className = 'dest-rect';
-            
-            // On utilise download_url qui est l'adresse directe du fichier
             rect.innerHTML = `
-                <img src="${img.download_url}" alt="${img.name}">
+                <img src="${img.download_url}" alt="${name}" style="width:100%; height:100%; object-fit:cover;">
+                <div class="dest-label" style="position:absolute; bottom:0; width:100%; padding:20px; background:linear-gradient(transparent, rgba(0,0,0,0.8)); color:white;">
+                    <span style="font-weight:600;">${name}</span>
+                </div>
             `;
             track.appendChild(rect);
         });
 
-        // 4. On double le contenu pour le scroll infini
-        const originalContent = track.innerHTML;
-        track.innerHTML = originalContent + originalContent;
+        // On force le doublement pour le scroll
+        if (images.length > 0) {
+            track.innerHTML += track.innerHTML;
+            console.log("Images doublées, le scroll devrait démarrer.");
+        }
 
-    } catch (error) {
-        console.error("Erreur lors de la récupération des images GitHub:", error);
+    } catch (e) {
+        console.error("Erreur fatale :", e);
     }
 });

@@ -383,48 +383,56 @@ nav a:hover {
     font-style: italic;
 }
 
+/* Empêche le défilement horizontal sur toute la page, seulement dans le slider */
+body {
+    overflow-x: hidden;
+}
+
+.destinations-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
 .slider-container {
     width: 100%;
-    overflow: hidden;
-    padding: 60px 0;
-    background: #fff;
+    overflow: hidden; /* Cache ce qui dépasse de l'écran */
+    position: relative;
+    padding: 20px 0;
 }
 
 .slider-track {
-    display: flex;
-    gap: 25px;
-    width: max-content;
-    /* L'animation ne s'arrête JAMAIS */
+    display: flex; /* Aligne les images en ligne */
+    gap: 25px; /* Espace entre les rectangles */
+    width: max-content; /* Permet au rail d'être plus large que l'écran */
     animation: scroll-infinite 40s linear infinite;
 }
 
+/* Style des rectangles */
 .dest-rect {
+    position: relative;
     width: 300px;
     height: 450px;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Empêche les images de rétrécir */
     border-radius: 25px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    /* Transition douce pour l'agrandissement */
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    cursor: pointer;
-    position: relative;
-}
-
-/* L'image grandit quand on met la souris dessus */
-.dest-rect:hover {
-    transform: scale(1.1); /* Grandit de 10% */
-    z-index: 10; /* Passe au premier plan */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
 }
 
 .dest-rect img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Garde les bonnes proportions */
 }
 
+/* L'animation magique */
 @keyframes scroll-infinite {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    100% { transform: translateX(-50%); } /* Doit correspondre au contenu doublé par le JS */
+}
+
+/* Effet au survol */
+.dest-rect:hover {
+    transform: scale(1.05);
+    z-index: 5;
 }

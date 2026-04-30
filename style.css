@@ -455,10 +455,17 @@ nav a:hover {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
-/* --- BLOC RESPONSIVE GLOBAL : À REMPLACER --- */
+/* --- BLOC RESPONSIVE FINAL : À REMPLACER --- */
 @media (max-width: 768px) {
     
-    /* 1. HEADER UNIVERSEL (S'applique à TOUTES les pages) */
+    /* BLOQUE LE DÉBORDEMENT ET LE DÉZOOM */
+    html, body {
+        overflow-x: hidden; /* Empêche de glisser sur les côtés */
+        width: 100%;
+        position: relative;
+    }
+
+    /* 1. HEADER UNIVERSEL */
     header { 
         padding: 10px 15px !important; 
     }
@@ -468,25 +475,16 @@ nav a:hover {
         gap: 10px; 
     }
 
-    /* Cache les liens de texte partout, garde le dernier bouton (Connexion/Profil) */
     nav ul li:not(:last-child) {
         display: none !important; 
     }
 
-    .brand-name { 
-        font-size: 18px; 
+    /* 2. ADAPTATION DU SLIDER (Le coupable du débordement) */
+    .destinations-section {
+        overflow: hidden; /* Coupe tout ce qui dépasse du slider sur mobile */
+        width: 100%;
     }
 
-    /* 2. CONTENU GÉNÉRAL (Pages Légales, Admin, etc.) */
-    .legal-content, .admin-content {
-        padding: 40px 20px; /* Moins de vide sur les côtés sur mobile */
-    }
-
-    .legal-content h1 {
-        font-size: 24px; /* Titre moins énorme sur téléphone */
-    }
-
-    /* 3. SLIDER (Uniquement pour la page d'accueil) */
     .slider-container {
         padding: 60px 0; 
         clip-path: inset(-60px 0 -60px 0);
@@ -497,15 +495,14 @@ nav a:hover {
         height: 380px;
     }
 
-    /* 4. FOOTER UNIVERSEL */
+    /* 3. AUTRES AJUSTEMENTS */
+    .hero h1 { 
+        font-size: 32px; 
+    }
+
     .footer-container {
         flex-direction: column;
         gap: 20px;
         text-align: center;
-    }
-
-    .footer-left {
-        flex-direction: column;
-        gap: 15px;
     }
 }

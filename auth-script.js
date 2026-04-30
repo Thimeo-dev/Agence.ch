@@ -96,3 +96,29 @@ function handleError(error) {
             errorContainer.innerText = 'Une erreur est survenue. Réessayez.';
     }
 }
+
+async function chargerTemoignageDepuisGithub() {
+    // REMPLACE l'URL ci-dessous par ton lien "Raw" GitHub
+    const urlGithub = "https://raw.githubusercontent.com/Thimeo-dev/Agence.ch/main/temoignage.txt";
+
+    try {
+        // Le paramètre { cache: "no-store" } force la récupération de la version la plus récente
+        const reponse = await fetch(urlGithub, { cache: "no-store" });
+
+        if (!reponse.ok) throw new Error("Fichier introuvable");
+
+        const texte = await reponse.text();
+        
+        // Injection dans le HTML
+        const element = document.getElementById('testimonial-text');
+        if (element) {
+            element.innerText = `"${texte.trim()}"`;
+        }
+    } catch (erreur) {
+        console.error("Erreur GitHub :", erreur);
+        document.getElementById('testimonial-text').innerText = "Citation en cours de mise à jour...";
+    }
+}
+
+// Lancement au chargement
+window.addEventListener('DOMContentLoaded', chargerTemoignageDepuisGithub);

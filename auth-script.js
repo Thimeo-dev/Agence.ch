@@ -18,7 +18,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-const ADMIN_EMAIL = "ton-email@exemple.com"; // Remplace par ton email administratif
+const ADMIN_EMAIL = "thimeosousa02@gmail.com"; // Remplace par ton email administratif
 
 const renderHeader = (user, userPhoto) => {
     // Image par défaut (un avatar gris standard)

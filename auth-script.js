@@ -2,7 +2,32 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
 import { getAuth, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+import { sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
+const actionCodeSettings = {
+    // L'URL vers laquelle l'utilisateur est renvoyé après avoir cliqué sur l'email
+    url: 'https://thimeo-dev.github.io/Agence.ch/auth.html', 
+    handleCodeInApp: true,
+};
+
+// Gestion du formulaire de connexion
+const loginForm = document.getElementById('login-form');
+if (loginForm) {
+    loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        
+        try {
+            await sendSignInLinkToEmail(auth, email, actionCodeSettings);
+            // On stocke l'email localement pour ne pas le redemander au retour
+            window.localStorage.setItem('emailForSignIn', email);
+            alert("Lien de connexion envoyé ! Vérifiez votre boîte mail.");
+        } catch (error) {
+            console.error("Erreur d'envoi :", error);
+            alert("Impossible d'envoyer l'email.");
+        }
+    });
+}
 // 1. Config
 const firebaseConfig = {
   apiKey: "AIzaSyCCKXBzJWFYUhziS40X6dH5VkeiTUTHv6A",

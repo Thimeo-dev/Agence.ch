@@ -1,9 +1,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { 
     getAuth, 
-    signInWithEmailAndPassword, 
-    createUserWithEmailAndPassword, 
-    onAuthStateChanged 
+    sendSignInLinkToEmail, 
+    isSignInWithEmailLink, 
+    signInWithEmailLink 
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
 const firebaseConfig = {
@@ -20,118 +20,114 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 // Éléments du DOM
-const loginForm = document.getElementById('auth-form');
+const authForm = document.getElementById('auth-form');
 const errorContainer = document.getElementById('error-message');
 const submitBtn = document.getElementById('submit-btn');
-const authTitle = document.getElementById('auth-title');
-const authDesc = document.getElementById('auth-desc');
-const switchBtn = document.getElementById('switch-auth');
-const toggleText = document.getElementById('toggle-text');
+const emailField = document.getElementById('email_field');
 
-let isLoginMode = true; // Mode par défaut
-
-// --- BASCULER ENTRE CONNEXION ET INSCRIPTION ---
-if (switchBtn) {
-    switchBtn.addEventListener('click', () => {
-        isLoginMode = !isLoginMode;
+// --- 1. VÉRIFICATION DU RETOUR PAR EMAIL ---
+// Cette fonction s'exécute dès que la page charge pour voir si on vient du mail
+async function finalizeLogin() {
+    if (isSignInWithEmailLink(auth, window.location.href)) {
+        let email = window.localStorage.getItem('emailForSignIn');
         
-        // Mise à jour visuelle
-        authTitle.textContent = isLoginMode ? "Connexion" : "Créer un compte";
-        authDesc.textContent = isLoginMode ? "Connectez-vous pour accéder à votre espace." : "Inscrivez-vous pour accéder au plein potentiel du site.";
-        submitBtn.textContent = isLoginMode ? "Connexion" : "S'inscrire";
-        toggleText.textContent = isLoginMode ? "Pas encore de compte ?" : "Déjà membre ?";
-        switchBtn.textContent = isLoginMode ? "S'inscrire" : "Se connecter";
-        
-        if (errorContainer) {
-            errorContainer.style.display = 'none';
+        // Si l'utilisateur a changé d'appareil/navigateur entre-temps
+        if (!email) {
+            email = window.prompt("Veuillez confirmer votre adresse email pour finaliser la connexion :");
         }
-    });
+
+        try {
+            await signInWithEmailLink(auth, email, window.location.href);
+            window.localStorage.removeItem('emailForSignIn');
+            window.location.href = 'myaccount.html'; // Redirection vers le compte
+        } catch (error) {
+            console.error("Erreur de finalisation:", error);
+            handleError({ code: 'link-expired' });
+        }
+    }
 }
 
-// --- GÉRER LA SOUMISSION ---
-if (loginForm) {
-    loginForm.addEventListener('submit', (e) => {
+// --- 2. ENVOI DU LIEN MAGIQUE ---
+if (authForm) {
+    authForm.addEventListener('submit', async (e) => {
         e.preventDefault();
+        const email = emailField.value.trim();
 
-        const email = document.getElementById('email_field').value;
-        const password = document.getElementById('password_field').value;
+        if (!email) return;
 
         errorContainer.style.display = 'none';
-        submitBtn.innerHTML = '<span>Patientez...</span>';
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Envoi en cours...</span>';
 
-        if (isLoginMode) {
-            // CONNEXION
-            signInWithEmailAndPassword(auth, email, password)
-                .then(() => window.location.href = 'index.html')
-                .catch((error) => handleError(error));
-        } else {
-            // INSCRIPTION
-            createUserWithEmailAndPassword(auth, email, password)
-                .then(() => window.location.href = 'index.html')
-                .catch((error) => handleError(error));
+        const actionCodeSettings = {
+            // URL de retour (doit être la même page ou index)
+            url: window.location.href, 
+            handleCodeInApp: true,
+        };
+
+        try {
+            await sendSignInLinkToEmail(auth, email, actionCodeSettings);
+            
+            // Sauvegarde de l'email pour le retour
+            window.localStorage.setItem('emailForSignIn', email);
+            
+            submitBtn.textContent = "Lien envoyé !";
+            alert("Un lien de connexion a été envoyé à " + email + ". Vérifiez vos courriers indésirables.");
+        } catch (error) {
+            handleError(error);
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Réessayer";
         }
     });
 }
 
-// --- GESTION DES ERREURS ---
+// --- 3. GESTION DES ERREURS ---
 function handleError(error) {
-    submitBtn.textContent = isLoginMode ? "Connexion" : "S'inscrire";
     errorContainer.style.display = 'block';
+    console.error("Auth Error:", error.code);
     
     switch (error.code) {
-        case 'auth/email-already-in-use':
-            errorContainer.innerText = 'Cet email est déjà utilisé.';
-            break;
-        case 'auth/weak-password':
-            errorContainer.innerText = 'Mot de passe trop court (6 caractères min).';
-            break;
         case 'auth/invalid-email':
             errorContainer.innerText = 'Format d\'email invalide.';
             break;
-        case 'auth/wrong-password':
-        case 'auth/user-not-found':
-            errorContainer.innerText = 'Email ou mot de passe incorrect.';
+        case 'auth/too-many-requests':
+            errorContainer.innerText = 'Trop de tentatives. Réessayez plus tard.';
+            break;
+        case 'link-expired':
+            errorContainer.innerText = 'Le lien a expiré ou a déjà été utilisé.';
             break;
         default:
-            errorContainer.innerText = 'Une erreur est survenue. Réessayez.';
+            errorContainer.innerText = 'Une erreur est survenue lors de l\'envoi du mail.';
     }
 }
 
+// --- 4. CHARGEMENT TÉMOIGNAGE GITHUB ---
 async function chargerTemoignageDepuisGithub() {
     const urlGithub = "https://raw.githubusercontent.com/Thimeo-dev/Agence.ch/refs/heads/main/temoignage.txt";
-
     try {
         const reponse = await fetch(urlGithub, { cache: "no-store" });
-        if (!reponse.ok) throw new Error("Fichier introuvable sur GitHub");
+        if (!reponse.ok) throw new Error("Fichier introuvable");
 
         const contenu = await reponse.text();
-        // Sépare les lignes et retire les lignes vides
         const lignes = contenu.split('\n').map(l => l.trim()).filter(l => l.length > 0);
 
         if (lignes.length > 0) {
-            const indexAleatoire = Math.floor(Math.random() * lignes.length);
-            const ligneChoisie = lignes[indexAleatoire];
-
-            // Découpage : Texte | Nom | Image
+            const ligneChoisie = lignes[Math.floor(Math.random() * lignes.length)];
             const parts = ligneChoisie.split('|');
 
-            // On récupère les éléments HTML
-            const elTexte = document.getElementById('testimonial-text');
-            const elNom = document.getElementById('testimonial-user');
-            const elPic = document.getElementById('testimonial-pic');
-
             if (parts.length >= 3) {
-                if (elTexte) elTexte.innerText = `"${parts[0].trim()}"`;
-                if (elNom) elNom.innerText = parts[1].trim();
-                if (elPic) elPic.src = parts[2].trim();
+                document.getElementById('testimonial-text').innerText = `"${parts[0].trim()}"`;
+                document.getElementById('testimonial-user').innerText = parts[1].trim();
+                document.getElementById('testimonial-pic').src = parts[2].trim();
             }
         }
     } catch (erreur) {
-        console.error("Erreur de chargement :", erreur);
-        const elTexte = document.getElementById('testimonial-text');
-        if (elTexte) elTexte.innerText = "Impossible de charger le témoignage.";
+        console.error("Erreur témoignage:", erreur);
     }
 }
 
-// Lancement au chargement de la page
-window.addEventListener('DOMContentLoaded', chargerTemoignageDepuisGithub);
+// --- LANCEMENT ---
+window.addEventListener('DOMContentLoaded', () => {
+    chargerTemoignageDepuisGithub();
+    finalizeLogin();
+});

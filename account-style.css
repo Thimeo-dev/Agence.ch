@@ -50,7 +50,7 @@
     display: block;
     font-size: 14px;
     color: #5f6368;
-    margin-bottom: 4px;
+    margin-bottom: 8px; /* Légèrement augmenté pour respirer */
 }
 
 .info-value {
@@ -59,6 +59,58 @@
     color: #202124;
 }
 
+/* --- AJUSTEMENT DU COMPOSANT UIVERSE (Tender Moose) --- */
+.custum-file-upload {
+    height: 180px; /* Réduit pour mieux s'intégrer */
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+    border: 2px dashed #cacaca;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+    margin: 10px 0 20px 0; /* Espacement autour du bloc */
+    transition: all 0.3s ease;
+}
+
+.custum-file-upload:hover {
+    border-color: #1a73e8;
+    background-color: #f0f7ff;
+}
+
+.custum-file-upload .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+    height: 60px; /* Taille corrigée pour éviter l'effet géant */
+    fill: rgba(75, 85, 99, 1);
+}
+
+.custum-file-upload .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custum-file-upload .text span {
+    font-weight: 400;
+    color: rgba(75, 85, 99, 1);
+}
+
+.custum-file-upload input {
+    display: none; /* Cache l'input natif moche */
+}
+
+/* --- BOUTONS ET INPUTS --- */
 .separator {
     border: 0;
     border-top: 1px solid #f1f3f4;
@@ -69,23 +121,28 @@
     background: #fff;
     border: 1px solid #dadce0;
     color: #1a73e8;
-    padding: 8px 24px;
-    border-radius: 4px;
+    padding: 10px 24px;
+    border-radius: 6px;
     cursor: pointer;
     font-weight: 500;
-    transition: background 0.2s;
+    transition: all 0.2s;
 }
 
 .btn-edit:hover {
-    background: #f8f9fa;
+    background: #1a73e8;
+    color: white;
 }
 
-.edit-input {
-    font-size: inherit;
-    font-family: inherit;
-    font-weight: bold;
-    border: 2px solid #1a73e8;
-    border-radius: 4px;
-    padding: 4px;
+.edit-input-field {
+    font-size: 16px;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    padding: 10px;
     width: 100%;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.edit-input-field:focus {
+    border-color: #1a73e8;
 }

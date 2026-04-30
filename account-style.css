@@ -79,3 +79,13 @@
 .btn-edit:hover {
     background: #f8f9fa;
 }
+
+.edit-input {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    border: 2px solid #1a73e8;
+    border-radius: 4px;
+    padding: 4px;
+    width: 100%;
+}

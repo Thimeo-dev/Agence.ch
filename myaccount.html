@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Compte - Agence.ch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="account-style.css">
+</head>
+<body>
+    <!-- Les conteneurs où le JS va injecter le code -->
+    <div id="header-placeholder"></div>
+
+    <main class="account-container">
+        <div class="account-card">
+            <div class="account-header">
+                <img src="" alt="Profil" class="profile-large" id="acc-pic">
+                <div>
+                    <h1 id="acc-name">Chargement...</h1>
+                    <p id="acc-status" class="status-badge"></p>
+                </div>
+            </div>
+            <div class="info-group">
+                <label>Adresse e-mail</label>
+                <p class="info-value" id="acc-email">Chargement...</p>
+            </div>
+            <div class="info-group">
+                <label>ID Utilisateur</label>
+                <p class="info-value" id="acc-id">---</p>
+            </div>
+            <hr class="separator">
+            <button class="btn-edit" id="edit-profile-btn">Modifier le profil</button>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- On appelle ton script qui contient renderHeader et footerHTML -->
+    
+    <script src="main.js" type="module"></script>
+</body>
+</html>

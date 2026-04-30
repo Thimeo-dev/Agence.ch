@@ -33,7 +33,7 @@ const renderHeader = (user) => {
             <li class="profile-menu">
                 <img src="${userPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
                 <div class="profile-dropdown" id="profile-dropdown">
-                    <a href="auth.html">Mon compte</a>
+                    <a href="myaccount.html">Mon compte</a>
                     ${isAdmin ? '<a href="admin.html">Tableau de bord</a>' : ''}
                     <hr>
                     <button type="button" id="logout-btn" class="logout-option">Déconnexion</button>

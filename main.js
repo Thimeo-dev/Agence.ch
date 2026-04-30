@@ -18,25 +18,20 @@ const auth = getAuth(app);
 
 const ADMIN_EMAIL = "ton-email@exemple.com"; // Remplace par ton email administratif
 
-const renderHeader = (userData, userAuth) => {
-    // Image par défaut
+const renderHeader = (user) => {
+    // Image par défaut (un avatar gris standard)
     const defaultPic = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
     
-    // PRIORITÉ : 
-    // 1. La photo en Base64 dans Firestore (userData.photo)
-    // 2. La photo du compte Google/Firebase (userAuth.photoURL)
-    // 3. L'image par défaut
-    const userPhoto = (userData && userData.photo) ? userData.photo : 
-                     (userAuth && userAuth.photoURL) ? userAuth.photoURL : defaultPic;
+    // On utilise la photo de l'utilisateur s'il en a une, sinon celle par défaut
+    const userPhoto = (user && user.photoURL) ? user.photoURL : defaultPic;
     
-    const isAdmin = userAuth && userAuth.email === "thimeosousa02@gmail.com";
+    const isAdmin = user && user.email === "thimeosousa02@gmail.com";
 
-    const authLinks = userAuth
+    const authLinks = user
         ? `
             <li><a href="index.html">Accueil</a></li>
             <li class="profile-menu">
-                <!-- AJOUT DE LA CLASSE profile-img-update ICI -->
-                <img src="${userPhoto}" alt="Profil" class="profile-pic profile-img-update" id="profile-pic">
+                <img src="${userPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
                 <div class="profile-dropdown" id="profile-dropdown">
                     <a href="myaccount.html">Mon compte</a>
                     ${isAdmin ? '<a href="admin.html">Tableau de bord</a>' : ''}

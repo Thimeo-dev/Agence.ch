@@ -5,28 +5,24 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase
 
 // 1. Config
 const firebaseConfig = {
-  apiKey: "AIzaSyCCKXBzJWFYUhziS40X6dH5VkeiTUTHv6A",
-  authDomain: "agencech-72ed4.firebaseapp.com",
-  projectId: "agencech-72ed4",
-  storageBucket: "agencech-72ed4.firebasestorage.app",
-  messagingSenderId: "510952112515",
-  appId: "1:510952112515:web:f530a16f16ba27fa6b76b6",
-  measurementId: "G-W5YM04M7VM"
+    apiKey: "AIzaSyCCKXBzJWFYUhziS40X6dH5VkeiTUTHv6A",
+    authDomain: "agencech-72ed4.firebaseapp.com",
+    projectId: "agencech-72ed4",
+    storageBucket: "agencech-72ed4.firebasestorage.app",
+    messagingSenderId: "510952112515",
+    appId: "1:510952112515:web:f530a16f16ba27fa6b76b6",
+    measurementId: "G-W5YM04M7VM"
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-const ADMIN_EMAIL = "thimeosousa02@gmail.com"; // Remplace par ton email administratif
+const ADMIN_EMAIL = "thimeosousa02@gmail.com"; 
 
 const renderHeader = (user, userPhoto) => {
-    // Image par défaut (un avatar gris standard)
     const defaultPic = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
-    
-    // userPhoto vient maintenant de Firestore
     const displayPhoto = userPhoto || defaultPic;
-    
     const isAdmin = user && user.email === "thimeosousa02@gmail.com";
 
     const authLinks = user
@@ -88,16 +84,44 @@ const footerHTML = `
 </footer>
 `;
 
+async function chargerTemoignageDepuisGithub() {
+    const urlGithub = "https://raw.githubusercontent.com/Thimeo-dev/Agence.ch/refs/heads/main/temoignage.txt";
+
+    try {
+        const reponse = await fetch(urlGithub, { cache: "no-store" });
+        if (!reponse.ok) throw new Error("Fichier introuvable");
+
+        const contenu = await reponse.text();
+        const lignes = contenu.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+
+        if (lignes.length > 0) {
+            const indexAleatoire = Math.floor(Math.random() * lignes.length);
+            const ligneChoisie = lignes[indexAleatoire];
+            const parts = ligneChoisie.split('|');
+
+            if (parts.length >= 3 && document.getElementById('testimonial-text')) {
+                document.getElementById('testimonial-text').innerText = `"${parts[0].trim()}"`;
+                document.getElementById('testimonial-user').innerText = parts[1].trim();
+                document.getElementById('testimonial-pic').src = parts[2].trim();
+            }
+        }
+    } catch (erreur) {
+        console.error("Erreur de chargement :", erreur);
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const hPlace = document.getElementById('header-placeholder');
     const fPlace = document.getElementById('footer-placeholder');
 
     if (fPlace) fPlace.innerHTML = footerHTML;
 
+    // Lancement des témoignages centralisé ici
+    chargerTemoignageDepuisGithub();
+
     const render = async (user) => {
         if (!hPlace) return;
         
-        // Récupérer la photo depuis Firestore
         let userPhoto = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
         if (user) {
             try {
@@ -139,50 +163,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
-        const isAdmin = user && user.email === "thimeosousa02@gmail.com";
+        const isAdmin = user && user.email === ADMIN_EMAIL;
         const isOnAdminPage = window.location.pathname.endsWith('admin.html');
         if (isOnAdminPage && !isAdmin) {
             window.location.href = 'index.html';
         }
     };
 
-    render(null);
     onAuthStateChanged(auth, render);
 });
-
-async function chargerTemoignageDepuisGithub() {
-    const urlGithub = "https://raw.githubusercontent.com/Thimeo-dev/Agence.ch/refs/heads/main/temoignage.txt";
-
-    try {
-        const reponse = await fetch(urlGithub, { cache: "no-store" });
-        if (!reponse.ok) throw new Error("Fichier introuvable");
-
-        const contenu = await reponse.text();
-        const lignes = contenu.split('\n').map(l => l.trim()).filter(l => l.length > 0);
-
-        if (lignes.length > 0) {
-            const indexAleatoire = Math.floor(Math.random() * lignes.length);
-            const ligneChoisie = lignes[indexAleatoire];
-
-            // On découpe la ligne avec le séparateur "|"
-            const parts = ligneChoisie.split('|');
-
-            if (parts.length >= 3) {
-                const texte = parts[0].trim();
-                const nom = parts[1].trim();
-                const image = parts[2].trim();
-
-                // Mise à jour du texte
-                document.getElementById('testimonial-text').innerText = `"${texte}"`;
-                // Mise à jour du nom
-                document.getElementById('testimonial-user').innerText = nom;
-                // Mise à jour de la photo (attention au chemin du dossier images)
-                document.getElementById('testimonial-pic').src = image;
-            }
-        }
-    } catch (erreur) {
-        console.error("Erreur de chargement :", erreur);
-    }
-}
-
-window.addEventListener('DOMContentLoaded', chargerTemoignageDepuisGithub);

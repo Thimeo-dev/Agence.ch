@@ -105,25 +105,30 @@ async function chargerTemoignageDepuisGithub() {
         if (!reponse.ok) throw new Error("Fichier introuvable");
 
         const contenu = await reponse.text();
-        
-        // 1. On sépare le texte en un tableau de lignes (en ignorant les lignes vides)
         const lignes = contenu.split('\n').map(l => l.trim()).filter(l => l.length > 0);
 
         if (lignes.length > 0) {
-            // 2. On choisit un index au hasard entre 0 et la longueur du tableau
             const indexAleatoire = Math.floor(Math.random() * lignes.length);
-            const citationChoisie = lignes[indexAleatoire];
+            const ligneChoisie = lignes[indexAleatoire];
 
-            // 3. Injection dans le HTML
-            const element = document.getElementById('testimonial-text');
-            if (element) {
-                element.innerText = `"${citationChoisie}"`;
+            // On découpe la ligne avec le séparateur "|"
+            const parts = ligneChoisie.split('|');
+
+            if (parts.length >= 3) {
+                const texte = parts[0].trim();
+                const nom = parts[1].trim();
+                const image = parts[2].trim();
+
+                // Mise à jour du texte
+                document.getElementById('testimonial-text').innerText = `"${texte}"`;
+                // Mise à jour du nom
+                document.getElementById('testimonial-user').innerText = nom;
+                // Mise à jour de la photo (attention au chemin du dossier images)
+                document.getElementById('testimonial-pic').src = image;
             }
         }
     } catch (erreur) {
-        console.error("Erreur GitHub :", erreur);
-        const element = document.getElementById('testimonial-text');
-        if (element) element.innerText = "Citation en cours de mise à jour...";
+        console.error("Erreur de chargement :", erreur);
     }
 }
 

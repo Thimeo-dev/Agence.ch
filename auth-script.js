@@ -89,25 +89,6 @@ const footerHTML = `
 `;
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Gestion du formulaire de connexion (Email + Mot de passe)
-const loginForm = document.getElementById('login-form'); // Vérifie que l'ID est correct dans ton HTML
-if (loginForm) {
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Connexion réussie
-                window.location.href = 'index.html';
-            })
-            .catch((error) => {
-                console.error("Erreur de connexion:", error.message);
-                alert("Erreur : Email ou mot de passe incorrect.");
-            });
-    });
-}
     const hPlace = document.getElementById('header-placeholder');
     const fPlace = document.getElementById('footer-placeholder');
 

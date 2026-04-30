@@ -98,27 +98,33 @@ function handleError(error) {
 }
 
 async function chargerTemoignageDepuisGithub() {
-    // REMPLACE l'URL ci-dessous par ton lien "Raw" GitHub
-    const urlGithub = "https://raw.githubusercontent.com/Thimeo-dev/Agence.ch/main/temoignage.txt";
+    const urlGithub = "https://raw.githubusercontent.com/Thimeo-dev/Agence.ch/refs/heads/main/temoignage.txt";
 
     try {
-        // Le paramètre { cache: "no-store" } force la récupération de la version la plus récente
         const reponse = await fetch(urlGithub, { cache: "no-store" });
-
         if (!reponse.ok) throw new Error("Fichier introuvable");
 
-        const texte = await reponse.text();
+        const contenu = await reponse.text();
         
-        // Injection dans le HTML
-        const element = document.getElementById('testimonial-text');
-        if (element) {
-            element.innerText = `"${texte.trim()}"`;
+        // 1. On sépare le texte en un tableau de lignes (en ignorant les lignes vides)
+        const lignes = contenu.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+
+        if (lignes.length > 0) {
+            // 2. On choisit un index au hasard entre 0 et la longueur du tableau
+            const indexAleatoire = Math.floor(Math.random() * lignes.length);
+            const citationChoisie = lignes[indexAleatoire];
+
+            // 3. Injection dans le HTML
+            const element = document.getElementById('testimonial-text');
+            if (element) {
+                element.innerText = `"${citationChoisie}"`;
+            }
         }
     } catch (erreur) {
         console.error("Erreur GitHub :", erreur);
-        document.getElementById('testimonial-text').innerText = "Citation en cours de mise à jour...";
+        const element = document.getElementById('testimonial-text');
+        if (element) element.innerText = "Citation en cours de mise à jour...";
     }
 }
 
-// Lancement au chargement
 window.addEventListener('DOMContentLoaded', chargerTemoignageDepuisGithub);

@@ -6,6 +6,26 @@ import {
     onAuthStateChanged 
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
+import { auth } from "./firebase-config.js";
+import { sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+const actionCodeSettings = {
+  // L'URL où l'utilisateur revient après avoir cliqué sur le mail
+  url: 'https://ton-site.ch/auth.html', 
+  handleCodeInApp: true,
+};
+
+async function envoyerLienConnexion(email) {
+  try {
+    await sendSignInLinkToEmail(auth, email, actionCodeSettings);
+    // On doit stocker l'email localement pour le vérifier au retour
+    window.localStorage.setItem('emailForSignIn', email);
+    alert("Un lien de connexion a été envoyé à votre adresse email !");
+  } catch (error) {
+    console.error("Erreur d'envoi :", error);
+  }
+}
+
 const firebaseConfig = {
     apiKey: "AIzaSyCCKXBzJWFYUhziS40X6dH5VkeiTUTHv6A",
     authDomain: "agencech-72ed4.firebaseapp.com",

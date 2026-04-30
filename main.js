@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 
 // 1. Config
@@ -15,15 +16,16 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
 const ADMIN_EMAIL = "ton-email@exemple.com"; // Remplace par ton email administratif
 
-const renderHeader = (user) => {
+const renderHeader = (user, userPhoto) => {
     // Image par défaut (un avatar gris standard)
     const defaultPic = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
     
-    // On utilise la photo de l'utilisateur s'il en a une, sinon celle par défaut
-    const userPhoto = (user && user.photoURL) ? user.photoURL : defaultPic;
+    // userPhoto vient maintenant de Firestore
+    const displayPhoto = userPhoto || defaultPic;
     
     const isAdmin = user && user.email === "thimeosousa02@gmail.com";
 
@@ -31,7 +33,7 @@ const renderHeader = (user) => {
         ? `
             <li><a href="index.html">Accueil</a></li>
             <li class="profile-menu">
-                <img src="${userPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
+                <img src="${displayPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
                 <div class="profile-dropdown" id="profile-dropdown">
                     <a href="myaccount.html">Mon compte</a>
                     ${isAdmin ? '<a href="admin.html">Tableau de bord</a>' : ''}
@@ -92,9 +94,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (fPlace) fPlace.innerHTML = footerHTML;
 
-    const render = (user) => {
+    const render = async (user) => {
         if (!hPlace) return;
-        hPlace.innerHTML = renderHeader(user);
+        
+        // Récupérer la photo depuis Firestore
+        let userPhoto = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
+        if (user) {
+            try {
+                const userDoc = await getDoc(doc(db, "utilisateurs", user.uid));
+                if (userDoc.exists() && userDoc.data().photo) {
+                    let photo = userDoc.data().photo;
+                    
+                    // Si c'est du base64, ajouter le préfixe data:image
+                    if (photo.startsWith('data:image') || photo.includes(',')) {
+                        userPhoto = photo;
+                    } else if (photo.startsWith('/') || photo.includes('http')) {
+                        userPhoto = photo;
+                    } else if (photo.trim().length > 0) {
+                        // Sinon, c'est probablement du base64 sans préfixe
+                        userPhoto = `data:image/jpeg;base64,${photo}`;
+                    }
+                }
+            } catch (error) {
+                console.error("Erreur lors de la récupération de la photo:", error);
+            }
+        }
+        
+        hPlace.innerHTML = renderHeader(user, userPhoto);
 
         if (user) {
             const profilePic = document.getElementById('profile-pic');

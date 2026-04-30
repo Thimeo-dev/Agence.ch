@@ -150,4 +150,39 @@ document.addEventListener("DOMContentLoaded", () => {
     onAuthStateChanged(auth, render);
 });
 
+async function chargerTemoignageDepuisGithub() {
+    const urlGithub = "https://raw.githubusercontent.com/Thimeo-dev/Agence.ch/refs/heads/main/temoignage.txt";
 
+    try {
+        const reponse = await fetch(urlGithub, { cache: "no-store" });
+        if (!reponse.ok) throw new Error("Fichier introuvable");
+
+        const contenu = await reponse.text();
+        const lignes = contenu.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+
+        if (lignes.length > 0) {
+            const indexAleatoire = Math.floor(Math.random() * lignes.length);
+            const ligneChoisie = lignes[indexAleatoire];
+
+            // On découpe la ligne avec le séparateur "|"
+            const parts = ligneChoisie.split('|');
+
+            if (parts.length >= 3) {
+                const texte = parts[0].trim();
+                const nom = parts[1].trim();
+                const image = parts[2].trim();
+
+                // Mise à jour du texte
+                document.getElementById('testimonial-text').innerText = `"${texte}"`;
+                // Mise à jour du nom
+                document.getElementById('testimonial-user').innerText = nom;
+                // Mise à jour de la photo (attention au chemin du dossier images)
+                document.getElementById('testimonial-pic').src = image;
+            }
+        }
+    } catch (erreur) {
+        console.error("Erreur de chargement :", erreur);
+    }
+}
+
+window.addEventListener('DOMContentLoaded', chargerTemoignageDepuisGithub);

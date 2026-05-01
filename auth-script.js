@@ -153,39 +153,36 @@ document.addEventListener("DOMContentLoaded", () => {
 async function chargerTemoignageDepuisGithub() {
     const urlGithub = "https://raw.githubusercontent.com/Thimeo-dev/Agence.ch/refs/heads/main/temoignage.txt";
 
-
     try {
         const reponse = await fetch(urlGithub, { cache: "no-store" });
-        if (!reponse.ok) throw new Error("Fichier introuvable sur GitHub");
+        if (!reponse.ok) throw new Error("Fichier introuvable");
 
         const contenu = await reponse.text();
-        // Sépare les lignes et retire les lignes vides
         const lignes = contenu.split('\n').map(l => l.trim()).filter(l => l.length > 0);
 
         if (lignes.length > 0) {
             const indexAleatoire = Math.floor(Math.random() * lignes.length);
             const ligneChoisie = lignes[indexAleatoire];
 
-            // Découpage : Texte | Nom | Image
+            // On découpe la ligne avec le séparateur "|"
             const parts = ligneChoisie.split('|');
 
-            // On récupère les éléments HTML
-            const elTexte = document.getElementById('testimonial-text');
-            const elNom = document.getElementById('testimonial-user');
-            const elPic = document.getElementById('testimonial-pic');
-
             if (parts.length >= 3) {
-                if (elTexte) elTexte.innerText = `"${parts[0].trim()}"`;
-                if (elNom) elNom.innerText = parts[1].trim();
-                if (elPic) elPic.src = parts[2].trim();
+                const texte = parts[0].trim();
+                const nom = parts[1].trim();
+                const image = parts[2].trim();
+
+                // Mise à jour du texte
+                document.getElementById('testimonial-text').innerText = `"${texte}"`;
+                // Mise à jour du nom
+                document.getElementById('testimonial-user').innerText = nom;
+                // Mise à jour de la photo (attention au chemin du dossier images)
+                document.getElementById('testimonial-pic').src = image;
             }
         }
     } catch (erreur) {
         console.error("Erreur de chargement :", erreur);
-        const elTexte = document.getElementById('testimonial-text');
-        if (elTexte) elTexte.innerText = "Impossible de charger le témoignage.";
     }
 }
 
-// Lancement au chargement de la page
 window.addEventListener('DOMContentLoaded', chargerTemoignageDepuisGithub);

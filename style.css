@@ -506,3 +506,52 @@ nav a:hover {
         text-align: center;
     }
 }
+.monthly-suggestion {
+    max-width: 1200px; /* Aligné sur ton slider */
+    margin: 40px auto; /* Espace avec le slider et le bas */
+    padding: 0 20px;
+}
+
+.suggestion-banner {
+    width: 100%;
+    height: 400px; /* Ajuste la hauteur selon tes envies */
+    background-image: url('images/enrico-bet-MdJq0zFUwrw-unsplash.jpg'); /* Mets ton image ici */
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px; /* Coins très arrondis comme sur ton dessin */
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.suggestion-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.suggestion-overlay .badge {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.suggestion-info {
+    margin-top: 25px; /* Espace entre l'image et le texte */
+    text-align: left;
+}
+
+.suggestion-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.suggestion-info p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5;
+    max-width: 800px;
+}

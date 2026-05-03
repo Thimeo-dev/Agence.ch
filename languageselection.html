@@ -13,13 +13,62 @@
 
     <main>
         <section class="hero">
-            <h1>Modifier votre langue</h1>
-            <p>La monnaie de paiement changera en conséquence</p>
+            <h1>Modifier votre zone géographique et votre langue</h1>
 <body class="legal-page">
 
     <div id="header-placeholder"></div>
 
+<div class="regions-grid">
+            
+            <!-- Section Europe -->
+            <section class="region-column">
+                <h2>Europe</h2>
+                <div class="country-list">
+                    <div class="lang-item" onclick="changeLang('de')">
+                        <img src="https://flagcdn.com/w20/ch.png" alt="">
+                        <div class="lang-text"><span>Schweiz</span><p>Deutsch</p></div>
+                    </div>
+                    <div class="lang-item" onclick="changeLang('fr')">
+                        <img src="https://flagcdn.com/w20/ch.png" alt="">
+                        <div class="lang-text"><span>Suisse</span><p>Français</p></div>
+                    </div>
+                    <div class="lang-item" onclick="changeLang('fr')">
+                        <img src="https://flagcdn.com/w20/fr.png" alt="">
+                        <div class="lang-text"><span>France</span><p>Français</p></div>
+                    </div>
+                    <div class="lang-item" onclick="changeLang('en')">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="">
+                        <div class="lang-text"><span>United Kingdom</span><p>English</p></div>
+                    </div>
+                </div>
+            </section>
 
+            <!-- Section Amériques -->
+            <section class="region-column">
+                <h2>Amériques</h2>
+                <div class="country-list">
+                    <div class="lang-item" onclick="changeLang('en')">
+                        <img src="https://flagcdn.com/w20/us.png" alt="">
+                        <div class="lang-text"><span>United States</span><p>English</p></div>
+                    </div>
+                    <div class="lang-item" onclick="changeLang('en')">
+                        <img src="https://flagcdn.com/w20/ca.png" alt="">
+                        <div class="lang-text"><span>Canada</span><p>English</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Asie/Pacifique -->
+            <section class="region-column">
+                <h2>Asie/Pacifique</h2>
+                <div class="country-list">
+                    <div class="lang-item" onclick="changeLang('en')">
+                        <img src="https://flagcdn.com/w20/au.png" alt="">
+                        <div class="lang-text"><span>Australia</span><p>English</p></div>
+                    </div>
+                </div>
+            </section>
+        </div>
     <div id="footer-placeholder"></div>
 
     <script src="main.js" type="module"></script>

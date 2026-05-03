@@ -737,3 +737,8 @@ nav a:hover {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+/* Style rapide pour les checkboxes */
+#cookie-options input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: #111827; /* Couleur assortie à ton bouton noir */
+}

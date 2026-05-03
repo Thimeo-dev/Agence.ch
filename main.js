@@ -67,10 +67,13 @@ const footerHTML = `
     <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-left">
-            <div class="country-info">
-                <img src="https://flagcdn.com/w20/ch.png" alt="Suisse">
-                <span>Suisse</span>
-            </div>
+            <!-- On entoure l'info par un lien vers ta nouvelle page -->
+            <a href="languageselection.html" class="country-link">
+                <div class="country-info">
+                    <img src="https://flagcdn.com/w20/ch.png" alt="Suisse">
+                    <span>Suisse</span>
+                </div>
+            </a>
             <div class="footer-legal-links">
                 <a href="confidentialite.html">Confidentialité</a>
                 <a href="conditions.html">Conditions</a>
@@ -85,7 +88,7 @@ const footerHTML = `
             <a href="#" aria-label="X"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="X"></a>
             <a href="#" aria-label="TikTok"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"></a>
             <a href="#" aria-label="Facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
-            <a href="https://github.com/Thimeo-dev/Agence.ch" aria-label="Github"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Facebook"></a>
+            <a href="https://github.com/Thimeo-dev/Agence.ch" aria-label="Github"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github"></a>
         </div>
     </div>
 </footer>

@@ -555,3 +555,25 @@ nav a:hover {
     line-height: 1.5;
     max-width: 800px;
 }
+.country-link {
+    text-decoration: none; /* Enlève le souligné */
+    color: inherit; /* Garde la couleur du texte du footer */
+    display: inline-block;
+}
+
+.country-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.country-link:hover .country-info {
+    opacity: 0.7; /* Petit effet visuel au survol */
+    text-decoration: underline; /* Optionnel : souligne juste au survol */
+}
+
+.country-info img {
+    border-radius: 2px; /* Pour que le drapeau soit propre */
+}

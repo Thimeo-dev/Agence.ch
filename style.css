@@ -648,6 +648,8 @@ nav a:hover {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
+  height: auto; /* Laisse la carte grandir selon le contenu */
+  transition: all 0.3s ease; /* Animation douce lors de l'ouverture */
   
   /* --- AJOUTS POUR LE POSITIONNEMENT --- */
   position: fixed;

@@ -174,7 +174,7 @@ const cookieHTML = `
         <span class="title">🍪 Paramètres des cookies</span>
         <p class="description">
             Nous utilisons des cookies pour améliorer votre expérience. 
-            <a href="assistance.html">En savoir plus</a>.
+            <a href="confidentialite.html">En savoir plus</a>.
         </p>
         
         <!-- Section des préférences cachée au début -->

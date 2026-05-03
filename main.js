@@ -75,6 +75,7 @@ const footerHTML = `
                 <a href="confidentialite.html">Confidentialité</a>
                 <a href="conditions.html">Conditions</a>
                 <a href="renseignements.html">Renseignements</a>
+                <a href="assistance.html">Assistance</a>
                 <p>© 2026 Agence.ch</p>
             </div>
         </div>

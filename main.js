@@ -2,6 +2,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+import { analytics } from './firebase-config.js';
+import { setAnalyticsCollectionEnabled } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+
+// Dans ton écouteur d'événement pour le bouton Accepter
+if (analyticsAllowed) {
+    setAnalyticsCollectionEnabled(analytics, true);
+}
 
 // 1. Config
 const firebaseConfig = {

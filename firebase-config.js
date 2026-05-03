@@ -2,6 +2,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 import { getStorage } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js";
+// 1. Ajout de l'import pour Analytics
+import { getAnalytics, setAnalyticsCollectionEnabled } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCCKXBzJWFYUhziS40X6dH5VkeiTUTHv6A",
@@ -18,4 +20,12 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
 
-export { auth, db, storage };
+// 2. Initialisation d'Analytics
+const analytics = getAnalytics(app);
+
+// 3. Désactivation de la collecte par défaut (Privacy by Design)
+// Cela empêche Firebase d'envoyer des données avant que l'utilisateur n'accepte ta pop-up.
+setAnalyticsCollectionEnabled(analytics, false);
+
+// 4. Ajout de "analytics" dans l'export
+export { auth, db, storage, analytics };

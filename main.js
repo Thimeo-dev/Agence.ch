@@ -167,3 +167,86 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// On ajoute le HTML de la carte cookie
+const cookieHTML = `
+<<div id="cookie-notice" class="cookie-card">
+    <div id="cookie-main-view">
+        <span class="title">🍪 Paramètres des cookies</span>
+        <p class="description">
+            Nous utilisons des cookies pour améliorer votre expérience. 
+            <a href="assistance.html">En savoir plus</a>.
+        </p>
+        
+        <!-- Section des préférences cachée au début -->
+        <div id="cookie-options" style="display: none; margin-top: 15px; border-top: 1px solid #eee; pt-3">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                <span style="font-size: 0.8rem; color: #333;">Essentiels</span>
+                <input type="checkbox" checked disabled> <!-- Toujours activé -->
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                <span style="font-size: 0.8rem; color: #333;">Analytiques</span>
+                <input type="checkbox" id="cookies-analytics">
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="pref" id="btn-toggle-prefs">
+                Personnaliser
+            </button>
+            <button class="accept" id="accept-cookies">
+                Accepter
+            </button>
+        </div>
+    </div>
+</div>
+`;
+document.addEventListener("DOMContentLoaded", function() {
+    const cookieNotice = document.getElementById('cookie-notice');
+    const cookieOptions = document.getElementById('cookie-options');
+    const togglePrefsBtn = document.getElementById('btn-toggle-prefs');
+    const acceptBtn = document.getElementById('accept-cookies');
+
+    // Affichage initial
+    if (!localStorage.getItem('cookies-accepted')) {
+        cookieNotice.style.display = 'block';
+    }
+
+    // Basculer l'affichage des préférences
+    togglePrefsBtn.addEventListener('click', function() {
+        if (cookieOptions.style.display === 'none') {
+            cookieOptions.style.display = 'block';
+            togglePrefsBtn.textContent = 'Masquer';
+        } else {
+            cookieOptions.style.display = 'none';
+            togglePrefsBtn.textContent = 'Personnaliser';
+        }
+    });
+
+    // Sauvegarder les choix
+    acceptBtn.addEventListener('click', function() {
+        const analytics = document.getElementById('cookies-analytics').checked;
+        
+        localStorage.setItem('cookies-accepted', 'true');
+        localStorage.setItem('cookies-analytics-allowed', analytics);
+        
+        cookieNotice.style.display = 'none';
+    });
+});
+
+// On l'injecte dans le body
+document.body.insertAdjacentHTML('beforeend', cookieHTML);
+
+// --- LOGIQUE DE FONCTIONNEMENT ---
+const cookieNotice = document.getElementById('cookie-notice');
+const acceptBtn = document.getElementById('accept-cookies');
+
+// Si l'utilisateur n'a pas encore accepté, on affiche la carte
+if (!localStorage.getItem('cookies-accepted')) {
+    cookieNotice.style.display = 'block';
+}
+
+// Quand on clique sur accepter
+acceptBtn.addEventListener('click', function() {
+    localStorage.setItem('cookies-accepted', 'true');
+    cookieNotice.style.display = 'none';
+});

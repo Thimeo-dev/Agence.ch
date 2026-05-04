@@ -591,52 +591,66 @@ nav a:hover {
     color: #1d1d1f;
 }
 
+/* Conteneur principal qui contient les 3 colonnes */
 .regions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+    display: flex;
+    justify-content: space-around; /* Crée l'espace égal entre les colonnes */
+    align-items: flex-start;
+    max-width: 1200px; /* Largeur maximale de la zone de contenu */
+    margin: 50px auto; /* Centre la grille et ajoute de l'espace en haut */
+    padding: 0 20px;
 }
 
+/* Style de chaque colonne (Europe, Amériques, Asie) */
+.region-column {
+    flex: 1; /* Chaque colonne prend la même largeur */
+    max-width: 300px; /* Empêche les colonnes d'être trop larges */
+}
+
+/* Titre de la région (le trait rouge du haut sur ton dessin) */
 .region-column h2 {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 25px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
     color: #1d1d1f;
+    text-align: left;
 }
 
+/* Liste des pays (les petits traits rouges sur ton dessin) */
 .country-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px; /* Espace vertical entre chaque pays */
 }
 
+/* Style d'un bloc pays */
 .lang-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
     cursor: pointer;
     transition: opacity 0.2s;
 }
 
 .lang-item:hover {
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 .lang-item img {
     width: 20px;
-    margin-top: 4px;
+    height: auto;
     border-radius: 2px;
 }
 
 .lang-text span {
     display: block;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 0.95rem;
+    font-weight: 500;
     color: #1d1d1f;
 }
 
 .lang-text p {
-    font-size: 13px;
+    font-size: 0.85rem;
     color: #86868b;
     margin: 0;
 }

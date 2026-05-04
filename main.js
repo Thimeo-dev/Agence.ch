@@ -48,6 +48,8 @@ const translatePage = () => {
 
 const changeLang = (lang) => {
     setCurrentLang(lang);
+    // Sauvegarder aussi le code de région pour l'affichage au footer
+    localStorage.setItem("region", lang);
     translatePage();
     if (window.location.pathname.endsWith("languageselection.html")) {
         window.location.href = "index.html";
@@ -124,8 +126,8 @@ const footerHTML = `
             <!-- On entoure l'info par un lien vers ta nouvelle page -->
             <a href="languageselection.html" class="country-link">
                 <div class="country-info">
-                    <img src="https://flagcdn.com/w20/ch.png" alt="Suisse">
-                    <span>Suisse</span>
+                    <img src="https://flagcdn.com/w20/ch.png" alt="Suisse" id="country-flag">
+                    <span id="country-name">Suisse</span>
                 </div>
             </a>
             <div class="footer-legal-links">
@@ -148,12 +150,37 @@ const footerHTML = `
 </footer>
 `;
 
+const countryFlags = {
+    "fr": { name: "Suisse", flag: "ch" },
+    "de": { name: "Schweiz", flag: "ch" },
+    "en": { name: "United Kingdom", flag: "gb" },
+    "es": { name: "México", flag: "mx" },
+    "jp": { name: "日本", flag: "jp" },
+    "ma": { name: "台灣", flag: "tw" }
+};
+
+const updateCountryDisplay = () => {
+    const region = localStorage.getItem("region") || "fr";
+    const countryInfo = countryFlags[region] || countryFlags["fr"];
+    
+    const countryNameEl = document.getElementById("country-name");
+    const countryFlagEl = document.getElementById("country-flag");
+    
+    if (countryNameEl) countryNameEl.textContent = countryInfo.name;
+    if (countryFlagEl) countryFlagEl.src = `https://flagcdn.com/w20/${countryInfo.flag}.png`;
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     const hPlace = document.getElementById('header-placeholder');
     const fPlace = document.getElementById('footer-placeholder');
 
     if (fPlace) fPlace.innerHTML = footerHTML;
-    translatePage();
+    
+    // Traduire immédiatement après injection du footer
+    setTimeout(() => {
+        updateCountryDisplay();
+        translatePage();
+    }, 0);
 
     const render = async (user) => {
         if (!hPlace) return;
@@ -182,6 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         
         hPlace.innerHTML = renderHeader(user, userPhoto);
+        updateCountryDisplay();
         translatePage();
 
         if (user) {
@@ -257,15 +285,23 @@ const cookieHTML = `
 </div>
 `;
 document.addEventListener("DOMContentLoaded", function() {
+    // Vérifier si les cookies ont déjà été acceptés
+    if (localStorage.getItem('cookies-accepted') === 'true') {
+        // Ne pas injecter la notification si déjà acceptée
+        return;
+    }
+    
     const cookieNotice = document.getElementById('cookie-notice');
     const cookieOptions = document.getElementById('cookie-options');
     const togglePrefsBtn = document.getElementById('btn-toggle-prefs');
     const acceptBtn = document.getElementById('accept-cookies');
 
-    // Affichage initial
-    if (!localStorage.getItem('cookies-accepted')) {
-        cookieNotice.style.display = 'block';
+    if (!cookieNotice || !acceptBtn) {
+        return;
     }
+
+    // Affichage initial
+    cookieNotice.style.display = 'block';
 
     // Basculer l'affichage des préférences
     togglePrefsBtn.addEventListener('click', function() {
@@ -289,20 +325,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// On l'injecte dans le body
-document.body.insertAdjacentHTML('beforeend', cookieHTML);
-
-// --- LOGIQUE DE FONCTIONNEMENT ---
-const cookieNotice = document.getElementById('cookie-notice');
-const acceptBtn = document.getElementById('accept-cookies');
-
-// Si l'utilisateur n'a pas encore accepté, on affiche la carte
-if (!localStorage.getItem('cookies-accepted')) {
-    cookieNotice.style.display = 'block';
+// On l'injecte dans le body SEULEMENT si pas encore accepté
+if (localStorage.getItem('cookies-accepted') !== 'true') {
+    document.body.insertAdjacentHTML('beforeend', cookieHTML);
 }
-
-// Quand on clique sur accepter
-acceptBtn.addEventListener('click', function() {
-    localStorage.setItem('cookies-accepted', 'true');
-    cookieNotice.style.display = 'none';
-});

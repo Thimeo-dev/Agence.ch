@@ -5,6 +5,28 @@ import {
     createUserWithEmailAndPassword, 
     onAuthStateChanged 
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import { translations } from "./translations.js";
+
+const defaultLang = "fr";
+const supportedLangs = Object.keys(translations);
+
+const normalizeLangCode = (lang) => {
+    if (!lang || typeof lang !== "string") return defaultLang;
+    const code = lang.toLowerCase().slice(0, 2);
+    return supportedLangs.includes(code) ? code : defaultLang;
+};
+
+const getCurrentLang = () => {
+    const stored = localStorage.getItem("lang");
+    if (stored) return normalizeLangCode(stored);
+    return defaultLang;
+};
+
+const getTranslation = (key) => {
+    const lang = getCurrentLang();
+    const trans = translations[lang] || translations[defaultLang];
+    return trans[key] || translations[defaultLang][key] || key;
+};
 
 const firebaseConfig = {
     apiKey: "AIzaSyCCKXBzJWFYUhziS40X6dH5VkeiTUTHv6A",
@@ -35,12 +57,12 @@ if (switchBtn) {
     switchBtn.addEventListener('click', () => {
         isLoginMode = !isLoginMode;
         
-        // Mise à jour visuelle
-        authTitle.textContent = isLoginMode ? "Connexion" : "Créer un compte";
-        authDesc.textContent = isLoginMode ? "Connectez-vous pour accéder à votre espace." : "Inscrivez-vous pour accéder au plein potentiel du site.";
-        submitBtn.textContent = isLoginMode ? "Connexion" : "S'inscrire";
-        toggleText.textContent = isLoginMode ? "Pas encore de compte ?" : "Déjà membre ?";
-        switchBtn.textContent = isLoginMode ? "S'inscrire" : "Se connecter";
+        // Mise à jour visuelle avec traduction dynamique
+        authTitle.textContent = isLoginMode ? getTranslation('auth_title') : getTranslation('auth_signup_title');
+        authDesc.textContent = isLoginMode ? getTranslation('auth_desc') : getTranslation('auth_signup_desc');
+        submitBtn.textContent = isLoginMode ? getTranslation('auth_submit') : getTranslation('auth_signup_submit');
+        toggleText.textContent = isLoginMode ? getTranslation('auth_toggle_text') : getTranslation('auth_login_text');
+        switchBtn.textContent = isLoginMode ? getTranslation('auth_switch_link') : getTranslation('auth_login_link');
         
         if (errorContainer) {
             errorContainer.style.display = 'none';

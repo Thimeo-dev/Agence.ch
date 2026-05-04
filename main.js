@@ -2,6 +2,60 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+import { translations } from "./translations.js";
+
+const defaultLang = "fr";
+const supportedLangs = Object.keys(translations);
+
+const normalizeLangCode = (lang) => {
+    if (!lang || typeof lang !== "string") return defaultLang;
+    const code = lang.toLowerCase().slice(0, 2);
+    return supportedLangs.includes(code) ? code : defaultLang;
+};
+
+const getCurrentLang = () => {
+    const stored = localStorage.getItem("lang");
+    if (stored) return normalizeLangCode(stored);
+    const browser = navigator.language || navigator.userLanguage || defaultLang;
+    return normalizeLangCode(browser);
+};
+
+const setCurrentLang = (lang) => {
+    const normalized = normalizeLangCode(lang);
+    localStorage.setItem("lang", normalized);
+    document.documentElement.lang = normalized;
+    return normalized;
+};
+
+const translatePage = () => {
+    const lang = getCurrentLang();
+    document.documentElement.lang = lang;
+    const translationsForLang = translations[lang] || translations[defaultLang];
+    document.querySelectorAll("[data-key]").forEach((el) => {
+        const key = el.dataset.key;
+        const text = translationsForLang[key] || translations[defaultLang][key] || el.textContent;
+        if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+            if ("placeholder" in el) {
+                el.placeholder = text;
+            } else {
+                el.value = text;
+            }
+        } else {
+            el.innerHTML = text;
+        }
+    });
+};
+
+const changeLang = (lang) => {
+    setCurrentLang(lang);
+    translatePage();
+    if (window.location.pathname.endsWith("languageselection.html")) {
+        window.location.href = "index.html";
+    }
+};
+
+window.changeLang = changeLang;
+window.translatePage = translatePage;
 
 // 1. Config
 const firebaseConfig = {
@@ -32,20 +86,20 @@ const renderHeader = (user, userPhoto) => {
 
     const authLinks = user
         ? `
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html" data-key="nav_home">Accueil</a></li>
             <li class="profile-menu">
                 <img src="${displayPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
                 <div class="profile-dropdown" id="profile-dropdown">
-                    <a href="myaccount.html">Mon compte</a>
-                    ${isAdmin ? '<a href="admin.html">Tableau de bord</a>' : ''}
+                    <a href="myaccount.html" data-key="nav_myaccount">Mon compte</a>
+                    ${isAdmin ? '<a href="admin.html" data-key="nav_admin">Tableau de bord</a>' : ''}
                     <hr>
-                    <button type="button" id="logout-btn" class="logout-option">Déconnexion</button>
+                    <button type="button" id="logout-btn" class="logout-option" data-key="nav_logout">Déconnexion</button>
                 </div>
             </li>
         `
         : `
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="auth.html" class="login-btn" id="auth-btn">Connexion</a></li>
+            <li><a href="index.html" data-key="nav_home">Accueil</a></li>
+            <li><a href="auth.html" class="login-btn" id="auth-btn" data-key="nav_login">Connexion</a></li>
         `;
 
     return `
@@ -75,11 +129,11 @@ const footerHTML = `
                 </div>
             </a>
             <div class="footer-legal-links">
-                <a href="confidentialite.html">Confidentialité</a>
-                <a href="conditions.html">Conditions</a>
-                <a href="renseignements.html">Renseignements</a>
-                <a href="assistance.html">Assistance</a>
-                <p>© 2026 Agence.ch</p>
+                <a href="confidentialite.html" data-key="footer_privacy">Confidentialité</a>
+                <a href="conditions.html" data-key="footer_terms">Conditions</a>
+                <a href="renseignements.html" data-key="footer_info">Renseignements</a>
+                <a href="assistance.html" data-key="footer_help">Assistance</a>
+                <p data-key="footer_copyright">© 2026 Agence.ch</p>
             </div>
         </div>
 
@@ -99,6 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const fPlace = document.getElementById('footer-placeholder');
 
     if (fPlace) fPlace.innerHTML = footerHTML;
+    translatePage();
 
     const render = async (user) => {
         if (!hPlace) return;
@@ -127,6 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         
         hPlace.innerHTML = renderHeader(user, userPhoto);
+        translatePage();
 
         if (user) {
             const profilePic = document.getElementById('profile-pic');
@@ -169,10 +225,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // On ajoute le HTML de la carte cookie
 const cookieHTML = `
-<<div id="cookie-notice" class="cookie-card">
+<div id="cookie-notice" class="cookie-card">
     <div id="cookie-main-view">
-        <span class="title">🍪 Paramètres des cookies</span>
-        <p class="description">
+        <span class="title" data-key="cookie_title">🍪 Paramètres des cookies</span>
+        <p class="description" data-key="cookie_desc">
             Nous utilisons des cookies pour améliorer votre expérience. 
             <a href="confidentialite.html">En savoir plus</a>.
         </p>
@@ -190,10 +246,10 @@ const cookieHTML = `
         </div>
 
         <div class="actions">
-            <button class="pref" id="btn-toggle-prefs">
+            <button class="pref" id="btn-toggle-prefs" data-key="cookie_customize">
                 Personnaliser
             </button>
-            <button class="accept" id="accept-cookies">
+            <button class="accept" id="accept-cookies" data-key="cookie_accept">
                 Accepter
             </button>
         </div>

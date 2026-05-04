@@ -7,22 +7,19 @@
     <link rel="icon" type="image/svg+xml" href="agence180.svg">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="legal-page">
 
     <div id="header-placeholder"></div>
 
     <main>
         <section class="hero">
-            <h1>Modifier votre zone géographique et votre langue</h1>
-<body class="legal-page">
+            <h1 data-key="lang_select_title">Modifier votre zone géographique et votre langue</h1>
+        </section>
 
-    <div id="header-placeholder"></div>
-
-<div class="regions-grid">
-            
+        <div class="regions-grid">
             <!-- Section Europe -->
             <section class="region-column">
-                <h2>Europe</h2>
+                <h2 data-key="region_europe">Europe</h2>
                 <div class="country-list">
                     <div class="lang-item" onclick="changeLang('de')">
                         <img src="https://flagcdn.com/w20/ch.png" alt="">
@@ -45,7 +42,7 @@
 
             <!-- Section Amériques -->
             <section class="region-column">
-                <h2>Amériques</h2>
+                <h2 data-key="region_americas">Amériques</h2>
                 <div class="country-list">
                     <div class="lang-item" onclick="changeLang('en')">
                         <img src="https://flagcdn.com/w20/us.png" alt="">
@@ -72,7 +69,7 @@
 
             <!-- Section Asie/Pacifique -->
             <section class="region-column">
-                <h2>Asie/Pacifique</h2>
+                <h2 data-key="region_asia">Asie/Pacifique</h2>
                 <div class="country-list">
                     <div class="lang-item" onclick="changeLang('en')">
                         <img src="https://flagcdn.com/w20/au.png" alt="">
@@ -101,6 +98,8 @@
                 </div>
             </section>
         </div>
+    </main>
+
     <div id="footer-placeholder"></div>
 
     <script src="main.js" type="module"></script>

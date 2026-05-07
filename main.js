@@ -84,20 +84,20 @@ const renderHeader = (user, userPhoto) => {
 
     const authLinks = user
         ? `
-            <li><a href="index.html" data-key="nav_home">Accueil</a></li>
+            <li><a href="index.html" data-key="nav_home"></a></li>
             <li class="profile-menu">
                 <img src="${displayPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
                 <div class="profile-dropdown" id="profile-dropdown">
-                    <a href="myaccount.html" data-key="nav_myaccount">Mon compte</a>
-                    ${isAdmin ? '<a href="admin.html" data-key="nav_admin">Tableau de bord</a>' : ''}
+                    <a href="myaccount.html" data-key="nav_myaccount"></a>
+                    ${isAdmin ? '<a href="admin.html" data-key="nav_admin"></a>' : ''}
                     <hr>
                     <button type="button" id="logout-btn" class="logout-option" data-key="nav_logout">Déconnexion</button>
                 </div>
             </li>
         `
         : `
-            <li><a href="index.html" data-key="nav_home">Accueil</a></li>
-            <li><a href="auth.html" class="login-btn" id="auth-btn" data-key="nav_login">Connexion</a></li>
+            <li><a href="index.html" data-key="nav_home"></a></li>
+            <li><a href="auth.html" class="login-btn" id="auth-btn" data-key="nav_login"></a></li>
         `;
 
     return `

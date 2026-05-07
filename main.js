@@ -110,10 +110,10 @@ const renderHeader = (user, userPhoto) => {
             <!-- Barre de recherche centrée -->
             <div class="container-input">
                 <div class="search-wrapper">
+                <input type="text" class="input" placeholder="Rechercher...">
                     <svg fill="#000000" width="18px" height="18px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
                         <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.179 1226.997 0 790.588 0S0 354.179 0 790.588s354.179 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 96.452-96.452-512.631-512.753Z" fill-rule="evenodd"></path>
                     </svg>
-                    <input type="text" placeholder="Rechercher un pays..." class="input" id="country-search">
                     <!-- CONTENEUR DES SUGGESTIONS -->
                     <div id="suggestions-box" class="suggestions-box"></div>
                 </div>
@@ -160,12 +160,40 @@ const footerHTML = `
 `;
 
 const countryFlags = {
-    "fr": { name: "Suisse", flag: "ch" },
-    "de": { name: "Schweiz", flag: "ch" },
-    "en": { name: "United Kingdom", flag: "gb" },
-    "es": { name: "México", flag: "mx" },
-    "jp": { name: "日本", flag: "jp" },
-    "ma": { name: "台灣", flag: "tw" }
+    // --- EUROPE ---
+    "fr_CH": { name: "Suisse", flag: "ch" },
+    "de_CH": { name: "Schweiz", flag: "ch" },
+    "fr_FR": { name: "France", flag: "fr" },
+    "fr_BE": { name: "Belgique", flag: "be" },
+    "en_GB": { name: "United Kingdom", flag: "gb" },
+    "de_DE": { name: "Deutschland", flag: "de" },
+    "it_IT": { name: "Italia", flag: "it" },
+    "es_ES": { name: "España", flag: "es" },
+    "pt_PT": { name: "Portugal", flag: "pt" },
+    "nl_NL": { name: "Nederland", flag: "nl" },
+
+    // --- AMÉRIQUES ---
+    "en_US": { name: "United States", flag: "us" },
+    "fr_CA": { name: "Canada (FR)", flag: "ca" },
+    "en_CA": { name: "Canada (EN)", flag: "ca" },
+    "es_MX": { name: "México", flag: "mx" },
+    "pt_BR": { name: "Brasil", flag: "br" },
+    "es_AR": { name: "Argentina", flag: "ar" },
+
+    // --- ASIE & OCÉANIE ---
+    "ja_JP": { name: "日本", flag: "jp" },
+    "zh_CN": { name: "中国", flag: "cn" },
+    "ko_KR": { name: "대한민국", flag: "kr" },
+    "en_AU": { name: "Australia", flag: "au" },
+    "hi_IN": { name: "India", flag: "in" },
+
+    // --- AFRIQUE & MOYEN-ORIENT ---
+    "ar_MA": { name: "Maroc", flag: "ma" },
+    "ar_DZ": { name: "Algérie", flag: "dz" },
+    "ar_EG": { name: "Egypt", flag: "eg" },
+    "fr_SN": { name: "Sénégal", flag: "sn" },
+    "ar_AE": { name: "UAE", flag: "ae" },
+    "en_ZA": { name: "South Africa", flag: "za" }
 };
 
 const updateCountryDisplay = () => {

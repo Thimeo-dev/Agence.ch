@@ -889,3 +889,209 @@ header .logo-area, header nav, header .search-wrapper {
 header.scrolled .logo-area {
     transform: scale(0.9); /* Le logo rétrécit légèrement sans saccade */
 }
+/* --- 1. RESET & FONTS --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html, body {
+    overflow-x: hidden; 
+    width: 100%;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; 
+    color: #202124; 
+    background: #fff; 
+    line-height: 1.6;
+}
+
+/* --- 2. HEADER DYNAMIQUE (PILULE AU SCROLL) --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 2000;
+    gap: 15px;
+    will-change: transform, width, top, border-radius;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+header.scrolled {
+    top: 15px;
+    width: 90%;
+    left: 5%;
+    height: 60px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    padding: 0 25px;
+}
+
+.logo-area { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.logo-area img { 
+    height: 45px; 
+    width: auto;
+}
+
+.brand-name { 
+    font-weight: 600; 
+    font-size: 22px; 
+    letter-spacing: -0.5px;
+}
+
+/* --- 3. BARRE DE RECHERCHE (CENTRE) --- */
+.container-input {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.search-wrapper {
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    width: 320px; 
+    height: 44px;
+    padding: 10px 15px 10px 45px;
+    border-radius: 9999px;
+    border: solid 1.5px #333;
+    background-color: #f5f5f7;
+    font-size: 16px !important; /* Empêche le zoom iOS */
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+.input:focus { 
+    width: 420px; 
+    background: #fff;
+    border-color: #1a73e8;
+}
+
+/* L'icône par défaut */
+.search-wrapper svg {
+    position: absolute;
+    left: 15px;
+    width: 18px;
+    height: 18px;
+    fill: #333;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* --- 4. NAVIGATION & PROFIL --- */
+nav ul { 
+    list-style: none; 
+    display: flex; 
+    align-items: center; 
+    gap: 30px; 
+}
+
+.login-btn {
+    background-color: #1a73e8;
+    color: white !important;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.profile-pic {
+    width: 40px; height: 40px; border-radius: 50%;
+    object-fit: cover; cursor: pointer; border: 2px solid #e0e0e0;
+}
+
+/* --- 5. SLIDER DESTINATIONS --- */
+.destinations-section { padding: 80px 0; text-align: center; }
+
+.slider-container {
+    width: 100%; overflow: visible; position: relative; padding: 100px 0;
+    clip-path: inset(-100px 0 -100px 0);
+}
+
+.slider-track {
+    display: flex; gap: 35px; width: max-content;
+    animation: scroll-infinite 40s linear infinite;
+}
+
+.dest-rect {
+    width: 320px; height: 480px; flex-shrink: 0;
+    border-radius: 30px; overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+    transition: all 0.6s cubic-bezier(0.2, 1, 0.22, 1);
+}
+
+@keyframes scroll-infinite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* --- 6. MOBILE : TRANSFORMATION EN BOUTON LOUPE --- */
+@media (max-width: 768px) {
+    header { padding: 10px 15px !important; }
+    .brand-name { display: none; }
+
+    .container-input {
+        position: relative; 
+        left: auto;
+        transform: none;
+    }
+
+    /* L'input est un petit cercle au repos */
+    .input {
+        width: 44px;
+        padding: 0;
+        cursor: pointer;
+        background-color: #f5f5f7;
+        color: transparent; /* Masque le curseur et le texte au repos */
+    }
+
+    /* Icône centrée dans le cercle mobile */
+    .search-wrapper svg {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* EFFET AU CLIC : On agrandit et on fait disparaître l'icône */
+    .input:focus {
+        width: 160px;
+        padding: 0 15px;
+        color: #333;
+        background: #fff;
+        text-align: center;
+    }
+
+    /* Disparition de la loupe pour laisser la place au texte */
+    .input:focus + svg {
+        opacity: 0;
+        transform: translate(-50%, -100%); /* Elle s'envole vers le haut */
+    }
+
+    nav ul li:not(:last-child) { display: none; }
+}
+
+/* --- 7. FOOTER --- */
+.site-footer { border-top: 1px solid #e0e0e0; padding: 30px 0; font-size: 13px; color: #5f6368; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 5%; flex-wrap: wrap; }

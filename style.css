@@ -12,18 +12,29 @@ body {
     line-height: 1.6; 
 }
 
-/* --- Header & Nav --- */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 5%;
-    border-bottom: 1px solid #e0e0e0;
-    position: sticky;
+    position: fixed;
     top: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px); /* Effet moderne vitré */
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
     z-index: 1000;
+
+    /* LA MAGIE EST ICI */
+    will-change: transform, width, top, border-radius; /* Prépare le processeur graphique */
+    transition: 
+        top 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        left 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-radius 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s ease,
+        background-color 0.4s ease;
 }
 
 .logo-area { 
@@ -33,7 +44,7 @@ header {
 }
 
 .logo-area img { 
-    height: 45px; /* Ajusté pour être plus élégant */
+    height: 100px; /* Ajusté pour être plus élégant */
     width: auto;
 }
 
@@ -67,7 +78,7 @@ nav a:hover {
     background-color: #1a73e8;
     color: white !important;
     padding: 10px 24px;
-    border-radius: 6px;
+    border-radius: 9999px;
     font-weight: 600;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -857,4 +868,24 @@ nav a:hover {
 .suggestions-box::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 10px;
+}
+
+header.scrolled {
+    top: 15px;
+    width: 90%;
+    left: 5%;
+    height: 60px;
+    border-radius: 50px; /* Plus arrondi pour l'effet pilule */
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px); /* Ajoute un flou derrière (très Apple/Google) */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    padding: 0 25px;
+}
+header .logo-area, header nav, header .search-wrapper {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+header.scrolled .logo-area {
+    transform: scale(0.9); /* Le logo rétrécit légèrement sans saccade */
 }

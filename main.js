@@ -254,6 +254,13 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = 'index.html';
         }
     };
+    window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+    if (header) {
+        // Ajoute la classe 'scrolled' après 20px de descente
+        header.classList.toggle("scrolled", window.scrollY > 20);
+    }
+});
 
     render(null);
     onAuthStateChanged(auth, render);

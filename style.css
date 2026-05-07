@@ -1203,7 +1203,7 @@ nav ul {
 .chat-field-group {
   position: relative;
   width: 100%;
-  margin-top: 0px; 
+  margin-top: -100px; 
 }
 
 .chat-field-input {

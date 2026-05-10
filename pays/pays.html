@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chargement...</title>
+    <title>Détails du pays — Agence.ch</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/svg+xml" href="../agence180.svg">
 </head>
-<body>
-    <div id="content">
-        <h1 id="country-title">Chargement du pays...</h1>
-        <p id="debug-info"></p>
-    </div>
+<body class="legal-page">
 
-    <script>
-        // On récupère les paramètres dans l'adresse (URL)
-        const params = new URLSearchParams(window.location.search);
-        const countryId = params.get('id');
-        const lang = params.get('lang');
+    <div id="header-placeholder"></div>
 
-        // On affiche les infos pour vérifier que ça marche
-        if (countryId) {
-            document.getElementById('country-title').textContent = "Bienvenue en " + countryId.toUpperCase();
-            document.getElementById('debug-info').textContent = "Langue choisie : " + lang;
-            document.title = "Voyage : " + countryId;
-        }
-    </script>
-</body>
+    <main id="country-page-content" class="legal-content">
+        
+        <section class="hero-country">
+            <h1 id="country-title">Chargement...</h1>
+            <div id="country-image" class="featured-image"></div>
+        </section>
+        
+        <section class="details-country">
+            <p id="country-desc" style="line-height: 1.6; font-size: 1.1rem; margin-top: 20px;"></p>
+            
+            <p class="lang-indicator" style="margin-top: 30px; opacity: 0.7;">
+                Langue : <span id="current-lang" style="font-weight: bold; text-transform: uppercase;"></span>
+            </p>
+        </section>
+        
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../main.js" type="module"></script>
+    <script src="../destinationjs.js" type="module"></script>
+    </body>
 </html>

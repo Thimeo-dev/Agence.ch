@@ -1,3 +1,28 @@
+import { translations } from './translations.js'; 
+import { countriesData } from './pays/data.js'; // On entre dans le dossier pays pour trouver data.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const countryId = params.get('id');
+    const lang = params.get('lang') || 'fr';
+
+    const titleEl = document.getElementById('country-title');
+    const descEl = document.getElementById('country-desc');
+    const langEl = document.getElementById('current-lang');
+
+    if (countryId && countriesData[countryId]) {
+        const info = countriesData[countryId][lang] || countriesData[countryId]['fr'];
+        
+        if (titleEl) titleEl.textContent = "Bienvenue en " + info.name;
+        if (descEl) descEl.textContent = info.desc;
+        if (langEl) langEl.textContent = lang;
+        
+        document.title = info.name + " — Agence.ch";
+    } else {
+        if (titleEl) titleEl.textContent = "Destination introuvable";
+        console.error("Le pays " + countryId + " n'existe pas dans data.js");
+    }
+});
 const countriesEurope = [
     { name: "Albanie", img:"https://images.unsplash.com/photo-1630339858071-4e64cc76fb6c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Allemagne", img: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },

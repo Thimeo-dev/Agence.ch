@@ -82,38 +82,45 @@ const renderHeader = (user, userPhoto) => {
     const displayPhoto = userPhoto || defaultPic;
     const isAdmin = user && user.email === "thimeosousa02@gmail.com";
 
-    const authLinks = user
-        ? `
-            <li><a href="index.html" data-key="nav_home"></a></li>
-            <li class="profile-menu">
-                <img src="${displayPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
-                <div class="profile-dropdown" id="profile-dropdown">
-                    <a href="myaccount.html" data-key="nav_myaccount"></a>
-                    ${isAdmin ? '<a href="admin.html" data-key="nav_admin"></a>' : ''}
-                    <hr>
-                    <button type="button" id="logout-btn" class="logout-option" data-key="nav_logout">Déconnexion</button>
-                </div>
-            </li>
-        `
-        : `
-            <li><a href="index.html" data-key="nav_home"></a></li>
-            <li><a href="auth.html" class="login-btn" id="auth-btn" data-key="nav_login"></a></li>
-        `;
+// 1. On définit le préfixe de chemin au début de la fonction
+const isSubFolder = window.location.pathname.includes('/pays/');
+const pathPrefix = isSubFolder ? '../' : './';
 
-    return `
-        <header>
-            <div class="logo-area">
-                <img src="agence180.svg" alt="Logo Agence">
-                <span class="brand-name">Agence.ch</span>
+// 2. On prépare les liens (n'oublie pas d'ajouter le préfixe aux href aussi !)
+const authLinks = user
+    ? `
+        <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
+        <li class="profile-menu">
+            <img src="${displayPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
+            <div class="profile-dropdown" id="profile-dropdown">
+                <a href="${pathPrefix}myaccount.html" data-key="nav_myaccount"></a>
+                ${isAdmin ? `<a href="${pathPrefix}admin.html" data-key="nav_admin"></a>` : ''}
+                <hr>
+                <button type="button" id="logout-btn" class="logout-option" data-key="nav_logout"></button>
             </div>
-            <nav>
-                <ul id="nav-links">
-                    ${authLinks}
-                </ul>
-            </nav>
-        </header>
+        </li>
+    `
+    : `
+        <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
+        <li><a href="${pathPrefix}auth.html" class="login-btn" id="auth-btn" data-key="nav_login"></a></li>
     `;
+
+// 3. On retourne le HTML avec le chemin du logo dynamique
+return `
+    <header>
+        <div class="logo-area">
+            <img src="${pathPrefix}agence180.svg" alt="Logo Agence">
+            <span class="brand-name">Agence.ch</span>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                ${authLinks}
+            </ul>
+        </nav>
+    </header>
+`;
 };
+
 
 const footerHTML = `
     <footer class="site-footer">

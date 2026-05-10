@@ -83,7 +83,8 @@ export const translations = {
         cookie_title: "🍪 Paramètres des cookies",
         cookie_desc: "Nous utilisons des cookies pour améliorer votre expérience. ",
         cookie_customize: "Personnaliser",
-        cookie_accept: "Accepter"
+        cookie_accept: "Accepter",
+        footer_reglage: "Réglage"
     },
     en: {
                 info_title: "Additional Information",
@@ -168,7 +169,8 @@ export const translations = {
         cookie_title: "🍪 Cookie Settings",
         cookie_desc: "We use cookies to improve your experience.",
         cookie_customize: "Customize",
-        cookie_accept: "Accept"
+        cookie_accept: "Accept",
+        footer_reglage: "Settings"
     },
     it: {
         info_title: "Informazioni complementari",
@@ -253,7 +255,8 @@ export const translations = {
         cookie_title: "🍪 Impostazioni dei cookie",
         cookie_desc: "Utilizziamo i cookie per migliorare la vostra esperienza.",
         cookie_customize: "Personalizza",
-        cookie_accept: "Accetta"
+        cookie_accept: "Accetta",
+        footer_reglage: "Impostazioni"
     },
     pt: {
             info_title: "Informações Complementares",
@@ -337,7 +340,8 @@ export const translations = {
         cookie_title: "🍪 Definições de cookies",
         cookie_desc: "Utilizamos cookies para melhorar a sua experiência.",
         cookie_customize: "Personalizar",
-        cookie_accept: "Aceitar"
+        cookie_accept: "Aceitar",
+        footer_reglage: "Configurações"
     },
     de: {
                 info_title: "Zusätzliche Informationen",
@@ -422,7 +426,8 @@ export const translations = {
         cookie_title: "🍪 Cookie-Einstellungen",
         cookie_desc: "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern.",
         cookie_customize: "Personalisieren",
-        cookie_accept: "Akzeptieren"
+        cookie_accept: "Akzeptieren",
+        footer_reglage: "Einstellungen"
     },
     es: {
     info_title: "Información Complementaria",
@@ -505,7 +510,8 @@ export const translations = {
         cookie_title: "🍪 Configuración de cookies",
         cookie_desc: "Usamos cookies para mejorar tu experiencia.",
         cookie_customize: "Personalizar",
-        cookie_accept: "Aceptar"
+        cookie_accept: "Aceptar",
+        footer_reglage: "Configuración"
     },
     ja: {
         info_title: "補足情報",
@@ -588,7 +594,8 @@ export const translations = {
         cookie_title: "🍪 クッキー設定",
         cookie_desc: "エクスペリエンスを向上させるためにクッキーを使用しています。",
         cookie_customize: "カスタマイズ",
-        cookie_accept: "同意する"
+        cookie_accept: "同意する",
+        footer_reglage: "設定"
     },
     nl: {
             info_title: "Aanvullende Informatie",
@@ -661,7 +668,8 @@ export const translations = {
         cookie_title: "🍪 Cookie-instellingen",
         cookie_desc: "We gebruiken cookies om uw ervaring te verbeteren.",
         cookie_customize: "Aanpassen",
-        cookie_accept: "Accepteren"
+        cookie_accept: "Accepteren",
+        footer_reglage: "Instellingen"
     },
     zh: {
             info_title: "补充信息",
@@ -746,7 +754,8 @@ export const translations = {
         cookie_title: "🍪 Cookie 设置",
         cookie_desc: "我们使用 cookie 来提升您的体验。",
         cookie_customize: "自定义",
-        cookie_accept: "接受"
+        cookie_accept: "接受",
+        footer_reglage: "设置"
     },
     ko: {
             info_title: "추가 정보",
@@ -831,7 +840,8 @@ export const translations = {
         cookie_title: "🍪 쿠키 설정",
         cookie_desc: "더 나은 서비스 제공을 위해 쿠키를 사용합니다.",
         cookie_customize: "설정 변경",
-        cookie_accept: "수락"
+        cookie_accept: "수락",
+        footer_reglage: "설정"
     },
     hi: {
             info_title: "अतिरिक्त जानकारी",
@@ -916,6 +926,7 @@ export const translations = {
         cookie_title: "🍪 कुकी सेटिंग्स",
         cookie_desc: "हम आपके अनुभव को बेहतर बनाने के लिए कुकीज़ का उपयोग करते हैं।",
         cookie_customize: "कस्टमाइज़ करें",
-        cookie_accept: "स्वीकार करें"
+        cookie_accept: "स्वीकार करें",
+        footer_reglage: "सेटिंग्स"
     },
 };

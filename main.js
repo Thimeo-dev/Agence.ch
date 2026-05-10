@@ -127,10 +127,11 @@ const footerHTML = `
                 </div>
             </a>
             <div class="footer-legal-links">
-                <a href="confidentialite.html" data-key="footer_privacy">Confidentialité</a>
-                <a href="conditions.html" data-key="footer_terms">Conditions</a>
-                <a href="renseignements.html" data-key="footer_info">Renseignements</a>
-                <a href="assistance.html" data-key="footer_help">Assistance</a>
+                <a href="confidentialite.html" data-key="footer_privacy"></a>
+                <a href="conditions.html" data-key="footer_terms"></a>
+                <a href="renseignements.html" data-key="footer_info"></a>
+                <a href="assistance.html" data-key="footer_help"></a>
+                <a href="reglage.html" data-key="footer_reglage">reg</a>
                 <p data-key="footer_copyright">© 2026 Agence.ch</p>
             </div>
         </div>
@@ -360,3 +361,28 @@ document.addEventListener("DOMContentLoaded", function() {
 if (localStorage.getItem('cookies-accepted') !== 'true') {
     document.body.insertAdjacentHTML('beforeend', cookieHTML);
 }
+
+// --- À METTRE À LA FIN DE TON MAIN.JS ---
+
+/**
+ * Fonction pour cacher le loader proprement
+ */
+const hideLoader = () => {
+    const loader = document.getElementById("loader");
+    if (loader) {
+        loader.classList.add("loader-hidden");
+        // On le retire du DOM après l'animation pour libérer de la mémoire
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 500);
+    }
+};
+
+// Sécurité : Si après 5 secondes rien ne se passe, on force l'affichage du site
+setTimeout(hideLoader, 5000);
+
+// Événement de chargement final
+window.addEventListener("load", () => {
+    // On attend un tout petit peu pour que l'animation de ton header pilule se fasse
+    setTimeout(hideLoader, 600);
+});

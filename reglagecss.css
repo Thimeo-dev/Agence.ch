@@ -1,0 +1,30 @@
+/* Style pour le sélecteur personnalisé */
+.custom-select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.custom-select:focus {
+    border-color: #1a73e8;
+}
+
+/* Couleurs pour le mode sombre (Data-attribute) */
+[data-theme="dark"] body {
+    background-color: #121212;
+    color: #e8eaed;
+}
+
+[data-theme="dark"] .settings-card {
+    background-color: #1e1e1e;
+    border-color: #3c4043;
+}
+
+[data-theme="dark"] .row-label { color: #fff; }
+[data-theme="dark"] .row-desc { color: #9aa0a6; }
+[data-theme="dark"] .settings-header h1 { color: #fff; }

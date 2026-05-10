@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>réglage — Agence.ch</title>
+    <link rel="stylesheet" href="reglagecss.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="agence180.svg">
+</head>
+<body class="legal-page">
+
+    <div id="header-placeholder"></div>
+
+   <main class="settings-container">
+    <header class="settings-header">
+        <h1 data-key="footer_reglage">Réglages</h1>
+    </header>
+
+    <div class="settings-grid">
+        
+        <section class="settings-section">
+            <h2 data-key="st_appearance">Apparence</h2>
+            <div class="settings-card">
+                <div class="settings-row">
+                    <div class="row-text">
+                        <span class="row-label">Thème du site</span>
+                        <p class="row-desc">Choisissez entre le mode clair, sombre ou automatique.</p>
+                    </div>
+                    <div class="theme-selector">
+                        <select id="theme-select" class="custom-select">
+                            <option value="light">Clair</option>
+                            <option value="dark">Sombre</option>
+                            <option value="auto">Auto (Système)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="settings-section">
+            <h2 data-key="st_privacy">Confidentialité & Cookies</h2>
+            <div class="settings-card">
+                <div class="settings-row">
+                    <div class="row-text">
+                        <span class="row-label">Cookies Analytiques</span>
+                        <p class="row-desc">Autoriser la collecte de données anonymes pour améliorer le site.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="cookie-analytics-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                
+                <div class="settings-row link-row" id="reset-cookies" style="cursor: pointer;">
+                    <div class="row-text">
+                        <span class="row-label" style="color: #d93025;">Réinitialiser les cookies</span>
+                        <p class="row-desc">Supprime tous les cookies et affiche à nouveau la bannière.</p>
+                    </div>
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="#d93025"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+                </div>
+            </div>
+        </section>
+
+        <section class="settings-section">
+            <h2 data-key="st_data">Stockage Local</h2>
+            <div class="settings-card">
+                <div class="settings-row">
+                    <div class="row-text">
+                        <span class="row-label">Cache du navigateur</span>
+                        <p class="row-desc">Effacer les données stockées localement (images, préférences).</p>
+                    </div>
+                    <button class="btn-outline" onclick="clearLocalStorage()">Effacer</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>

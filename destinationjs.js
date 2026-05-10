@@ -209,8 +209,8 @@ if (americaWrapper) {
 const countriesAfrica = [
     { name: "Afrique du Sud", img: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Algérie", img: "https://images.unsplash.com/photo-1575664274476-e02d99195164?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    { name: "Cameroun", img: "https://images.unsplashCameroun.com/photo-1523841589119-b444fe055952?q=80&w=400" },
-    { name: "Côte d'Ivoire", img: "https://https://images.unsplash.com/photo-1508971607899-a238a095d417?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dunsplash.com/photo-1541014840333-315159040333?q=80&w=400" },
+    { name: "Cameroun", img: "https://images.unsplash.com/photo-1659947234309-804b7fa01cf2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Côte d'Ivoire", img: "https://images.unsplash.com/photo-1508971607899-a238a095d417?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Égypte", img: "https://images.unsplash.com/photo-1600520611035-84157ad4084d?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Éthiopie", img: "https://images.unsplash.com/photo-1572888195250-3037a59d3578?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Kenya", img: "https://images.unsplash.com/photo-1519659528534-7fd733a832a0?q=80&w=1326&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },

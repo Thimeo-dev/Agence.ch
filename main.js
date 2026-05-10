@@ -121,28 +121,29 @@ return `
 `;
 };
 
+// --- LOGIQUE DU FOOTER ET DRAPEAUX ---
+const isSubFolderFooter = window.location.pathname.includes('/pays/');
+const pathPrefixFooter = isSubFolderFooter ? '../' : './';
 
 const footerHTML = `
     <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-left">
-            <!-- On entoure l'info par un lien vers ta nouvelle page -->
-            <a href="languageselection.html" class="country-link">
+            <a href="${pathPrefixFooter}languageselection.html" class="country-link">
                 <div class="country-info">
                     <img src="https://flagcdn.com/w20/ch.png" alt="Suisse" id="country-flag">
                     <span id="country-name">Suisse</span>
                 </div>
             </a>
             <div class="footer-legal-links">
-                <a href="confidentialite.html" data-key="footer_privacy"></a>
-                <a href="conditions.html" data-key="footer_terms"></a>
-                <a href="renseignements.html" data-key="footer_info"></a>
-                <a href="assistance.html" data-key="footer_help"></a>
-                <a href="reglage.html" data-key="footer_reglage">reg</a>
+                <a href="${pathPrefixFooter}confidentialite.html" data-key="footer_privacy"></a>
+                <a href="${pathPrefixFooter}conditions.html" data-key="footer_terms"></a>
+                <a href="${pathPrefixFooter}renseignements.html" data-key="footer_info"></a>
+                <a href="${pathPrefixFooter}assistance.html" data-key="footer_help"></a>
+                <a href="${pathPrefixFooter}reglage.html" data-key="footer_reglage"></a>
                 <p data-key="footer_copyright">© 2026 Agence.ch</p>
             </div>
         </div>
-
         <div class="footer-socials">
             <a href="#" aria-label="Instagram"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
             <a href="#" aria-label="X"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="X"></a>

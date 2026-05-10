@@ -51,31 +51,3 @@ const countriesEurope = [
     { name: "Ukraine", img: "https://images.unsplash.com/photo-1545310751-fcdeb3a4981d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Vatican", img: "https://images.unsplash.com/photo-1610655769765-be8a0dd9627a?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
 ];
-
-const container = document.querySelector('.countries-scroll-container');
-const wrapper = document.getElementById('europe-wrapper');
-
-if (wrapper) {
-    countriesEurope.forEach(country => {
-        const urlName = country.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
-        
-        const card = document.createElement('a');
-        card.href = `pays/${urlName}.html`;
-        card.className = 'country-card';
-
-        card.innerHTML = `
-            <div class="country-image" style="background-image: url('${country.img}');"></div>
-            <span class="country-name">${country.name}</span>
-        `;
-
-        wrapper.appendChild(card);
-    });
-}
-
-// SCRIPTS DE SCROLL (Molette)
-if (container) {
-    container.addEventListener('wheel', (evt) => {
-        evt.preventDefault();
-        container.scrollLeft += evt.deltaY;
-    }, { passive: false });
-}

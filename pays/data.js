@@ -1,3 +1,4 @@
+
 // pays/data.js
 export const countriesData = {
     "equateur": {
@@ -12,6 +13,7 @@ export const countriesData = {
         zh: { name: "厄瓜多尔", desc: "探索加拉帕戈斯群岛的独特生物多样性和赤道线。" },
     },
     "suisse": {
+        image: "https://flagcdn.com/w160/ch.png",
         fr: { name: "Suisse", desc: "Explorez les Alpes majestueuses et les lacs cristallins au cœur de l'Europe." },
         en: { name: "Switzerland", desc: "Explore the majestic Alps and crystal-clear lakes in the heart of Europe." }
     },

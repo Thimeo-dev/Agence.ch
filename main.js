@@ -106,19 +106,6 @@ const renderHeader = (user, userPhoto) => {
                 <img src="agence180.svg" alt="Logo Agence">
                 <span class="brand-name">Agence.ch</span>
             </div>
-
-            <!-- Barre de recherche centrée -->
-            <div class="container-input">
-                <div class="search-wrapper">
-                <input type="text" class="input" data-key="cta_main" placeholder="Rechercher...">
-                    <svg fill="#000000" width="18px" height="18px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.179 1226.997 0 790.588 0S0 354.179 0 790.588s354.179 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 96.452-96.452-512.631-512.753Z" fill-rule="evenodd"></path>
-                    </svg>
-                    <!-- CONTENEUR DES SUGGESTIONS -->
-                    <div id="suggestions-box" class="suggestions-box"></div>
-                </div>
-            </div>
-
             <nav>
                 <ul id="nav-links">
                     ${authLinks}

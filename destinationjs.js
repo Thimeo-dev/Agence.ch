@@ -72,10 +72,80 @@ if (wrapper) {
     });
 }
 
-// SCRIPTS DE SCROLL (Molette)
-if (container) {
+// On récupère TOUS les conteneurs de scroll de la page
+const allScrollContainers = document.querySelectorAll('.countries-scroll-container');
+
+allScrollContainers.forEach((container) => {
     container.addEventListener('wheel', (evt) => {
-        evt.preventDefault();
-        container.scrollLeft += evt.deltaY;
+        // Si la molette bouge verticalement
+        if (evt.deltaY !== 0) {
+            evt.preventDefault(); // On empêche la page de descendre
+            container.scrollLeft += evt.deltaY; // On fait défiler horizontalement
+        }
     }, { passive: false });
+});
+
+const countriesAsia = [
+    { name: "Afghanistan", img: "https://images.unsplash.com/photo-1589146144014-72436f852aa5?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Arabie Saoudite", img: "https://images.unsplash.com/photo-1586724230021-4c2bf648aa4c?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Bahreïn", img: "https://images.unsplash.com/photo-1549944850-84e00be4203b?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Bangladesh", img: "https://images.unsplash.com/photo-1585938389612-a552a28d6914?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Bhoutan", img: "https://images.unsplash.com/photo-1578516125863-306d649d83a1?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Birmanie", img: "https://images.unsplash.com/photo-1543739446-402096037203?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Brunei", img: "https://images.unsplash.com/photo-1629806411350-2340ee97448a?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Cambodge", img: "https://images.unsplash.com/photo-1500049222539-6593a38001d5?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Chine", img: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Corée du Nord", img: "https://images.unsplash.com/photo-1570191913384-5b4306346747?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Corée du Sud", img: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Émirats Arabes Unis", img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Inde", img: "https://images.unsplash.com/photo-1524492707943-5da365b11a27?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Indonésie", img: "https://images.unsplash.com/photo-1518548419970-58e3b40e9bd1?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Irak", img: "https://images.unsplash.com/photo-1531589184190-27e1db1d4d8b?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Iran", img: "https://images.unsplash.com/photo-1527126887308-6cee83674330?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Israël", img: "https://images.unsplash.com/photo-1544971587-b842c27f8e14?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Japon", img: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Jordanie", img: "https://images.unsplash.com/photo-1547235033-926fe7f5d7cf?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Kirghizistan", img: "https://images.unsplash.com/photo-1569530593440-e48dc1841329?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Koweït", img: "https://images.unsplash.com/photo-1614713568397-b33b79363766?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Laos", img: "https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Liban", img: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Malaisie", img: "https://images.unsplash.com/photo-1523073158913-90d522708306?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Maldives", img: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Mongolie", img: "https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Népal", img: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Oman", img: "https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Ouzbékistan", img: "https://images.unsplash.com/photo-1528533321320-0eaef9e5744c?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Pakistan", img: "https://images.unsplash.com/photo-1527786356703-4b100091cd2c?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Palestine", img: "https://images.unsplash.com/photo-1561490431-7d1900139772?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Philippines", img: "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Qatar", img: "https://images.unsplash.com/photo-1510665724063-f77a99b5105b?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Singapour", img: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Sri Lanka", img: "https://images.unsplash.com/photo-1523438097201-512ae7d59c44?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Syrie", img: "https://images.unsplash.com/photo-1536489885071-87983c3e2859?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Tadjikistan", img: "https://images.unsplash.com/photo-1555502621-39655845bc7a?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Taïwan", img: "https://images.unsplash.com/photo-1470004914212-05527e49370b?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Thaïlande", img: "https://images.unsplash.com/photo-1528181304800-2f1258bb9f35?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Timor oriental", img: "https://images.unsplash.com/photo-1516108317508-6788f6a160e6?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Turkménistan", img: "https://images.unsplash.com/photo-1629806411350-2340ee97448a?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Viêt Nam", img: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1470&auto=format&fit=crop" },
+    { name: "Yémen", img: "https://images.unsplash.com/photo-1540810903332-9080dc687056?q=80&w=1470&auto=format&fit=crop" }
+];
+
+const asiaWrapper = document.getElementById('asia-wrapper');
+
+if (asiaWrapper) {
+    countriesAsia.forEach(country => {
+        const urlName = country.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
+        
+        const card = document.createElement('a');
+        card.href = `pays/${urlName}.html`;
+        card.className = 'country-card';
+
+        card.innerHTML = `
+            <div class="country-image" style="background-image: url('${country.img}');"></div>
+            <span class="country-name">${country.name}</span>
+        `;
+
+        asiaWrapper.appendChild(card);
+    });
 }

@@ -206,3 +206,53 @@ if (americaWrapper) {
         americaWrapper.appendChild(card);
     });
 }
+const countriesAfrica = [
+    { name: "Afrique du Sud", img: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Algérie", img: "https://images.unsplash.com/photo-1575664274476-e02d99195164?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Cameroun", img: "https://images.unsplashCameroun.com/photo-1523841589119-b444fe055952?q=80&w=400" },
+    { name: "Côte d'Ivoire", img: "https://https://images.unsplash.com/photo-1508971607899-a238a095d417?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dunsplash.com/photo-1541014840333-315159040333?q=80&w=400" },
+    { name: "Égypte", img: "https://images.unsplash.com/photo-1600520611035-84157ad4084d?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Éthiopie", img: "https://images.unsplash.com/photo-1572888195250-3037a59d3578?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Kenya", img: "https://images.unsplash.com/photo-1519659528534-7fd733a832a0?q=80&w=1326&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Madagascar", img: "https://images.unsplash.com/photo-1570742544137-3a469196c32b?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Maroc", img: "https://images.unsplash.com/photo-1519594445471-0e5f86b3fb09?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Maurice", img: "https://images.unsplash.com/photo-1513415277900-a62401e19be4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Namibie", img: "https://images.unsplash.com/photo-1506710507565-203b9f24669b?q=80&w=1491&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Nigéria", img: "https://images.unsplash.com/photo-1618828665011-0abd973f7bb8?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Sénégal", img: "https://images.unsplash.com/photo-1524518668639-e6cc8c13ca08?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Tanzanie", img: "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1468&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Tunisie", img: "https://images.unsplash.com/photo-1665083767499-ce88decba1a2?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+];
+
+const countriesOceania = [
+    { name: "Australie", img: "https://images.unsplash.com/photo-1524820197278-540916411e20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8QXVzdHJhbGllfGVufDB8MHwwfHx8MA%3D%3D" },
+    { name: "Fidji", img: "https://images.unsplash.com/photo-1516091877740-fde016699f2c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Nouvelle-Zélande", img: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Papouasie-Nouvelle-Guinée", img: "https://images.unsplash.com/photo-1738932498296-b4ac7a99fabe?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Polynésie Française", img: "https://images.unsplash.com/photo-1652842183703-47c2f7bb8c3c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+];
+
+// Fonction pour injecter les pays (pour éviter de répéter le code 5 fois)
+function renderSection(list, elementId) {
+    const wrapper = document.getElementById(elementId);
+    if (!wrapper) return;
+
+    list.forEach(country => {
+        const urlName = country.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
+        const card = document.createElement('a');
+        card.href = `pays/${urlName}.html`;
+        card.className = 'country-card';
+        card.innerHTML = `
+            <div class="country-image" style="background-image: url('${country.img}');"></div>
+            <span class="country-name">${country.name}</span>
+        `;
+        wrapper.appendChild(card);
+    });
+}
+
+// Lancement des injections
+renderSection(countriesEurope, 'europe-wrapper');
+renderSection(countriesAsia, 'asia-wrapper');
+renderSection(countriesAmerica, 'america-wrapper');
+renderSection(countriesAfrica, 'africa-wrapper');
+renderSection(countriesOceania, 'oceania-wrapper');

@@ -51,7 +51,22 @@ const changeLang = (lang) => {
     // Sauvegarder aussi le code de région pour l'affichage au footer
     localStorage.setItem("region", lang);
     translatePage();
+
     if (window.location.pathname.endsWith("languageselection.html")) {
+        const referrer = document.referrer;
+        const isSameOrigin = referrer && new URL(referrer).origin === window.location.origin;
+
+        if (isSameOrigin && !referrer.endsWith("languageselection.html")) {
+            try {
+                const returnUrl = new URL(referrer);
+                returnUrl.searchParams.set('lang', normalizeLangCode(lang));
+                window.location.href = returnUrl.toString();
+                return;
+            } catch (err) {
+                console.error('Erreur de redirection après changement de langue :', err);
+            }
+        }
+
         window.location.href = "index.html";
     }
 };

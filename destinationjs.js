@@ -4,18 +4,40 @@ import { countriesData } from './pays/data.js'; // On entre dans le dossier pays
 document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
     const countryId = params.get('id');
-    const lang = params.get('lang') || 'fr';
+    const storedLang = localStorage.getItem('lang');
+    const normalizeLang = (value) => {
+        if (!value || typeof value !== 'string') return null;
+        return value.toLowerCase().split(/[_-]/)[0];
+    };
+    const langParam = normalizeLang(params.get('lang'));
+    const langStored = normalizeLang(storedLang);
+    const lang = langParam || langStored || 'fr';
 
     const titleEl = document.getElementById('country-title');
     const descEl = document.getElementById('country-desc');
     const langEl = document.getElementById('current-lang');
+    const langNameEl = document.getElementById('lang-display');
+
+    const languageNames = {
+        fr: 'Français',
+        en: 'English',
+        de: 'Deutsch',
+        it: 'Italiano',
+        es: 'Español',
+        pt: 'Português',
+        ja: '日本語',
+        zh: '中文',
+        ko: '한국어',
+        nl: 'Nederlands'
+    };
 
     if (countryId && countriesData[countryId]) {
         const info = countriesData[countryId][lang] || countriesData[countryId]['fr'];
         
         if (titleEl) titleEl.textContent = "Bienvenue en " + info.name;
         if (descEl) descEl.textContent = info.desc;
-        if (langEl) langEl.textContent = lang;
+        if (langEl) langEl.textContent = lang.toUpperCase();
+        if (langNameEl) langNameEl.textContent = languageNames[lang] || lang.toUpperCase();
         
         document.title = info.name + " — Agence.ch";
     } else {
@@ -23,6 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Le pays " + countryId + " n'existe pas dans data.js");
     }
 });
+
+const getStoredLang = () => {
+    const storedLang = localStorage.getItem('lang');
+    if (storedLang && typeof storedLang === 'string') {
+        return storedLang.toLowerCase().split(/[_-]/)[0];
+    }
+    const htmlLang = document.documentElement.lang;
+    return htmlLang ? htmlLang.toLowerCase().split(/[_-]/)[0] : 'fr';
+};
+
 const countriesEurope = [
     { name: "Albanie", img:"https://images.unsplash.com/photo-1630339858071-4e64cc76fb6c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Allemagne", img: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
@@ -211,7 +243,7 @@ function renderSection(list, elementId) {
             .replace(/[\u0300-\u036f]/g, "")
             .replace(/\s+/g, '-');
 
-        const currentLang = document.documentElement.lang || 'fr';
+        const currentLang = getStoredLang();
 
         const card = document.createElement('a');
         

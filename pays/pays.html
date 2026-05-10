@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chargement...</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="content">
+        <h1 id="country-title">Chargement du pays...</h1>
+        <p id="debug-info"></p>
+    </div>
+
+    <script>
+        // On récupère les paramètres dans l'adresse (URL)
+        const params = new URLSearchParams(window.location.search);
+        const countryId = params.get('id');
+        const lang = params.get('lang');
+
+        // On affiche les infos pour vérifier que ça marche
+        if (countryId) {
+            document.getElementById('country-title').textContent = "Bienvenue en " + countryId.toUpperCase();
+            document.getElementById('debug-info').textContent = "Langue choisie : " + lang;
+            document.title = "Voyage : " + countryId;
+        }
+    </script>
+</body>
+</html>

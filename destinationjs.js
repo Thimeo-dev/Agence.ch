@@ -51,27 +51,6 @@ const countriesEurope = [
     { name: "Ukraine", img: "https://images.unsplash.com/photo-1545310751-fcdeb3a4981d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Vatican", img: "https://images.unsplash.com/photo-1610655769765-be8a0dd9627a?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
 ];
-
-const container = document.querySelector('.countries-scroll-container');
-const wrapper = document.getElementById('europe-wrapper');
-
-if (wrapper) {
-    countriesEurope.forEach(country => {
-        const urlName = country.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
-        
-        const card = document.createElement('a');
-        card.href = `pays/${urlName}.html`;
-        card.className = 'country-card';
-
-        card.innerHTML = `
-            <div class="country-image" style="background-image: url('${country.img}');"></div>
-            <span class="country-name">${country.name}</span>
-        `;
-
-        wrapper.appendChild(card);
-    });
-}
-
 // On récupère TOUS les conteneurs de scroll de la page
 const allScrollContainers = document.querySelectorAll('.countries-scroll-container');
 
@@ -130,26 +109,6 @@ const countriesAsia = [
     { name: "Viêt Nam", img: "https://images.unsplash.com/photo-1609412058473-c199497c3c5d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Yémen", img: "https://images.unsplash.com/photo-1611907671216-7ec6ef949163?q=80&w=1434&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
 ];
-
-const asiaWrapper = document.getElementById('asia-wrapper');
-
-if (asiaWrapper) {
-    countriesAsia.forEach(country => {
-        const urlName = country.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
-        
-        const card = document.createElement('a');
-        card.href = `pays/${urlName}.html`;
-        card.className = 'country-card';
-
-        card.innerHTML = `
-            <div class="country-image" style="background-image: url('${country.img}');"></div>
-            <span class="country-name">${country.name}</span>
-        `;
-
-        asiaWrapper.appendChild(card);
-    });
-}
-
 const countriesAmerica = [
     { name: "Antigua-et-Barbuda", img: "https://images.unsplash.com/photo-1579144955436-706cc4f0e70a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Argentine", img: "https://images.unsplash.com/photo-1599094792743-7df3e8870800?q=80&w=1458&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
@@ -188,24 +147,8 @@ const countriesAmerica = [
     { name: "Venezuela", img: "https://images.unsplash.com/photo-1714594923299-e915b7d71701?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
 ];
 
-const americaWrapper = document.getElementById('america-wrapper');
 
-if (americaWrapper) {
-    countriesAmerica.forEach(country => {
-        const urlName = country.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
-        
-        const card = document.createElement('a');
-        card.href = `pays/${urlName}.html`;
-        card.className = 'country-card';
 
-        card.innerHTML = `
-            <div class="country-image" style="background-image: url('${country.img}');"></div>
-            <span class="country-name">${country.name}</span>
-        `;
-
-        americaWrapper.appendChild(card);
-    });
-}
 const countriesAfrica = [
     { name: "Afrique du Sud", img: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { name: "Algérie", img: "https://images.unsplash.com/photo-1575664274476-e02d99195164?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
@@ -238,14 +181,24 @@ function renderSection(list, elementId) {
     if (!wrapper) return;
 
     list.forEach(country => {
-        const urlName = country.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
+        const urlId = country.name.toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, '-');
+
+        const currentLang = document.documentElement.lang || 'fr';
+
         const card = document.createElement('a');
-        card.href = `pays/${urlName}.html`;
+        
+        // On change la destination ici vers pays.html
+        card.href = `pays/pays.html?id=${urlId}&lang=${currentLang}`;
+        
         card.className = 'country-card';
         card.innerHTML = `
             <div class="country-image" style="background-image: url('${country.img}');"></div>
             <span class="country-name">${country.name}</span>
         `;
+        
         wrapper.appendChild(card);
     });
 }

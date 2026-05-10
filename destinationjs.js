@@ -149,3 +149,60 @@ if (asiaWrapper) {
         asiaWrapper.appendChild(card);
     });
 }
+
+const countriesAmerica = [
+    { name: "Antigua-et-Barbuda", img: "https://images.unsplash.com/photo-1579144955436-706cc4f0e70a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Argentine", img: "https://images.unsplash.com/photo-1599094792743-7df3e8870800?q=80&w=1458&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Bahamas", img: "https://images.unsplash.com/photo-1589786161184-6d43d20526e2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Barbade", img: "https://images.unsplash.com/photo-1626023523650-f9fe5e85cacc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Belize", img: "https://images.unsplash.com/photo-1585543805890-6051f7829f98?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Bolivie", img: "https://images.unsplash.com/photo-1582986610555-7f5b1ecabab2?q=80&w=1338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Brésil", img: "https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Canada", img: "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Chili", img: "https://images.unsplash.com/photo-1689850543263-01a52ccc6943?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Colombie", img: "https://images.unsplash.com/photo-1583531352515-8884af319dc1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q29sb21iaWV8ZW58MHwwfDB8fHww" },
+    { name: "Costa Rica", img: "https://images.unsplash.com/photo-1586640866012-8273df34e593?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Cuba", img: "https://images.unsplash.com/photo-1503464093195-36b34a0869bd?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Dominique", img: "https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=400" },
+    { name: "Équateur", img: "https://images.unsplash.com/photo-1606591808963-8fc3c63fa6a2?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "États-Unis", img: "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?q=80&w=400" },
+    { name: "Grenade", img: "https://images.unsplash.com/photo-1730207892716-94467ca991b5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Guatemala", img: "https://images.unsplash.com/photo-1606503809729-40646b716a36?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Guyana", img: "https://images.unsplash.com/photo-1595794038905-0b713525dead?q=80&w=1467&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Haïti", img: "https://images.unsplash.com/photo-1580741186862-c5d0bf2aff33?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Honduras", img: "https://images.unsplash.com/photo-1599807427405-945924b4bf21?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Jamaïque", img: "https://images.unsplash.com/photo-1605994543054-6ffbabbd8139?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Mexique", img: "https://images.unsplash.com/photo-1521216774850-01bc1c5fe0da?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Nicaragua", img: "https://images.unsplash.com/photo-1599147092320-9ce79b36caa4?q=80&w=1559&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Panama", img: "https://images.unsplash.com/photo-1709653771859-e1e9516da54a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBhbmFtYSUyMGNpdHklMjBwYW5hbWF8ZW58MHwwfDB8fHww" },
+    { name: "Paraguay", img: "https://images.unsplash.com/photo-1708007736300-89c16fa57b40?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Pérou", img: "https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "République Dominicaine", img: "https://images.unsplash.com/photo-1592174887344-02ff9373ca55?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Saint-Christophe-et-Niévès", img: "https://images.unsplash.com/photo-1633107782766-bd7c8507ce41?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Saint-Vincent-et-les-Grenadines", img: "https://images.unsplash.com/photo-1579167149678-76415f24b197?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Sainte-Lucie", img: "https://images.unsplash.com/photo-1738079003703-c452210314f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Salvador", img: "https://images.unsplash.com/photo-1624864870794-1b1fc741e448?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Suriname", img: "https://images.unsplash.com/photo-1660758899283-3900e1d04f81?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Trinité-et-Tobago", img: "https://images.unsplash.com/photo-1607642875704-821b6eb0ba44?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Uruguay", img: "https://images.unsplash.com/photo-1589550552885-7ca9f2088974?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { name: "Venezuela", img: "https://images.unsplash.com/photo-1714594923299-e915b7d71701?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
+];
+
+const americaWrapper = document.getElementById('america-wrapper');
+
+if (americaWrapper) {
+    countriesAmerica.forEach(country => {
+        const urlName = country.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
+        
+        const card = document.createElement('a');
+        card.href = `pays/${urlName}.html`;
+        card.className = 'country-card';
+
+        card.innerHTML = `
+            <div class="country-image" style="background-image: url('${country.img}');"></div>
+            <span class="country-name">${country.name}</span>
+        `;
+
+        americaWrapper.appendChild(card);
+    });
+}

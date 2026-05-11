@@ -3,6 +3,7 @@
 export const countriesData = {
     "equateur": {
         image: "https://flagcdn.com/w160/ec.png",
+        decor: "images/decor-equateur.png",
         fr: { name: "Équateur", desc: "Découvrez la biodiversité unique des Galápagos et la ligne de l'Équateur." },
         en: { name: "Ecuador", desc: "Discover the unique biodiversity of the Galápagos and the equator line." },
         es: { name: "Ecuador", desc: "Descubre la biodiversidad única de los Galápagos y la línea del Ecuador." },

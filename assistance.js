@@ -20,6 +20,8 @@ const listenToMessages = (user) => {
 
     unsubscribe = onSnapshot(q, (snapshot) => {
         chatWindow.innerHTML = "";
+        const hasMessages = snapshot.size > 0;
+        
         snapshot.forEach((doc) => {
             const msg = doc.data();
             const messageDiv = document.createElement('div');
@@ -31,6 +33,9 @@ const listenToMessages = (user) => {
             messageDiv.innerHTML = `<p class="msg-text">${msg.text}</p>`;
             chatWindow.appendChild(messageDiv);
         });
+        
+        // Afficher/masquer le message de statut
+        updateStatusDisplay(true, hasMessages);
         
         // Scroll automatique vers le bas à chaque nouveau message
         chatWindow.scrollTop = chatWindow.scrollHeight;
@@ -48,7 +53,8 @@ chatForm.addEventListener('submit', async (e) => {
     const messageText = messageInput.value.trim();
 
     if (!user) {
-        // Optionnel : redirection vers login
+        // L'utilisateur n'est pas connecté, on bloque l'envoi
+        updateStatusDisplay(false, false);
         return;
     }
 
@@ -75,11 +81,33 @@ auth.onAuthStateChanged((user) => {
         listenToMessages(user);
         messageInput.disabled = false;
         messageInput.style.opacity = "1";
-        // Optionnel : Change le texte du placeholder via ta clé de traduction
     } else {
         if (unsubscribe) unsubscribe(); // On arrête d'écouter les messages
-        chatWindow.innerHTML = `<p class="chat-info" data-key="chat_login_required">Veuillez vous connecter pour voir votre historique.</p>`;
+        chatWindow.innerHTML = "";
         messageInput.disabled = true;
         messageInput.style.opacity = "0.5";
+        updateStatusDisplay(false, false); // Afficher le message de connexion
     }
 });
+
+function updateStatusDisplay(isLoggedIn, hasMessages) {
+    const statusEl = document.getElementById('status-message');
+    
+    if (!isLoggedIn) {
+        // Cas 1 : Pas connecté
+        statusEl.innerHTML = 'Veuillez vous <a href="auth.html">connecter</a> pour envoyer un message.';
+        statusEl.style.display = 'flex';
+    } else if (isLoggedIn && !hasMessages) {
+        // Cas 2 : Connecté mais historique vide
+        statusEl.textContent = 'Il y a toujours rien...';
+        statusEl.style.display = 'flex';
+    } else {
+        // Cas 3 : Connecté avec des messages (on cache le texte translucide)
+        statusEl.textContent = '';
+        statusEl.style.display = 'none';
+    }
+}
+
+// Exemple d'utilisation (à tester dans ta console)
+// updateStatusDisplay(false, false); // Affiche "Veuillez vous connecter"
+// updateStatusDisplay(true, false);  // Affiche "Historique vide"

@@ -6,10 +6,27 @@
     text-align: center;
 }
 
+.search-page-container h1 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: #202124;
+    letter-spacing: -1px;
+}
+
 .search-bar-wrapper {
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
+}
+
+.section-title {
+    margin: 40px 0 20px;
+    padding: 0 50px;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 700;
+    color: #202124;
 }
 
 .form-control {

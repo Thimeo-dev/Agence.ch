@@ -1218,3 +1218,52 @@ nav ul {
 }
 
 /* Reste du code (label, bar, highlight, etc.) identique à ce que tu as déjà */
+
+
+
+
+
+.form-control {
+  position: relative;
+  margin: 40px auto; /* Centré horizontalement */
+  width: 100%;       /* Prend toute la largeur disponible */
+  max-width: 600px;  /* Mais s'arrête à 600px pour rester élégant */
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #333 solid; /* Ligne noire pour être visible */
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #333; /* Texte écrit en noir */
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: #007aff; /* Bleu moderne au focus */
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: #999; /* Couleur grise par défaut */
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: #007aff;
+  transform: translateY(-30px);
+}

@@ -79,6 +79,9 @@ auth.onAuthStateChanged((user) => {
     } else {
         if (unsubscribe) unsubscribe(); // On arrête d'écouter les messages
         chatWindow.innerHTML = `<p class="chat-info" data-key="chat_login_required">Veuillez vous connecter pour voir votre historique.</p>`;
+        if (typeof window.translatePage === 'function') {
+            window.translatePage();
+        }
         messageInput.disabled = true;
         messageInput.style.opacity = "0.5";
     }

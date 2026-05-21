@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const isAdmin = user && user.email === "thimeosousa02@gmail.com";
-        const isOnAdminPage = window.location.pathname.endsWith('admin.html');
+        const isOnAdminPage = window.location.pathname.endsWith('index.html');
         if (isOnAdminPage && !isAdmin) {
             window.location.href = 'admin.html';
         }

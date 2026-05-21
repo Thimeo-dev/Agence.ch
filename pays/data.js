@@ -139,7 +139,7 @@ export const countriesData = {
             fr: { name: "Biélorussie", desc: "Explorez les paysages variés et la culture riche de la Biélorussie." },
             en: { name: "Belarus", desc: "Explore the diverse landscapes and rich culture of Belarus." }
         },
-    "bosnie-herzégovine": {
+    "bosnie-herzegovine": {
         image: "https://flagcdn.com/w160/ba.png",
         fr: { name: "Bosnie-Herzégovine", desc: "Découvrez la beauté naturelle et la culture riche de la Bosnie-Herzégovine." },
          en: { name: "Bosnia and Herzegovina", desc: "Discover the natural beauty and rich culture of Bosnia and Herzegovina." }
@@ -189,62 +189,62 @@ export const countriesData = {
         fr: { name: "Géorgie", desc: "Explorez les paysages variés et la culture riche de la Géorgie." },
         en: { name: "Georgia", desc: "Explore the diverse landscapes and rich culture of Georgia." }
     },
-    "Grece": {
+    "grece": {
         image: "https://flagcdn.com/w160/gr.png",
         fr: { name: "Grèce", desc: "Découvrez les plages magnifiques et la culture riche de la Grèce." },
         en: { name: "Greece", desc: "Discover the beautiful beaches and rich culture of Greece." }
     },
-    "Hongrie": {
+    "hongrie": {
         image: "https://flagcdn.com/w160/hu.png",
         fr: { name: "Hongrie", desc: "Explorez les paysages variés et la culture riche de la Hongrie." },
         en: { name: "Hungary", desc: "Explore the diverse landscapes and rich culture of Hungary." }
     },
-    "Irlande": {
+    "irlande": {
         image: "https://flagcdn.com/w160/ie.png",
         fr: { name: "Irlande", desc: "Découvrez les paysages variés et la culture riche de l'Irlande." },
         en: { name: "Ireland", desc: "Discover the diverse landscapes and rich culture of Ireland." }
     },
-    "Islande": {
+    "islande": {
         image: "https://flagcdn.com/w160/is.png",
         fr: { name: "Islande", desc: "Explorez les paysages variés et la culture riche de l'Islande." },
         en: { name: "Iceland", desc: "Explore the diverse landscapes and rich culture of Iceland." }
     },
-    "Italie": {
+    "italie": {
         image: "https://flagcdn.com/w160/it.png",
         fr: { name: "Italie", desc: "Découvrez la culture riche et les paysages variés de l'Italie." },
         en: { name: "Italy", desc: "Discover the rich culture and diverse landscapes of Italy." }
     },
-    "Kazakhstan": {
+    "kazakhstan": {
         image: "https://flagcdn.com/w160/kz.png",
         fr: { name: "Kazakhstan", desc: "Explorez les paysages variés et la culture riche du Kazakhstan." },
         en: { name: "Kazakhstan", desc: "Explore the diverse landscapes and rich culture of Kazakhstan." }
     },
-    "Kosovo": {
+    "kosovo": {
         image: "https://flagcdn.com/w160/xk.png",
         fr: { name: "Kosovo", desc: "Découvrez les paysages variés et la culture riche du Kosovo." },
         en: { name: "Kosovo", desc: "Discover the diverse landscapes and rich culture of Kosovo." }
     },
-    "Lettonie": {
+    "lettonie": {
         image: "https://flagcdn.com/w160/lv.png",
         fr: { name: "Lettonie", desc: "Explorez les paysages variés et la culture riche de la Lettonie." },
         en: { name: "Latvia", desc: "Explore the diverse landscapes and rich culture of Latvia." }
     },
-    "Liechtenstein": {
+    "liechtenstein": {
         image: "https://flagcdn.com/w160/li.png",
         fr: { name: "Liechtenstein", desc: "Découvrez les paysages variés et la culture riche du Liechtenstein." },
         en: { name: "Liechtenstein", desc: "Discover the diverse landscapes and rich culture of Liechtenstein." }
     },
-    "Lituanie": {
+    "lituanie": {
         image: "https://flagcdn.com/w160/lt.png",
         fr: { name: "Lituanie", desc: "Explorez les paysages variés et la culture riche de la Lituanie." },
         en: { name: "Lithuania", desc: "Explore the diverse landscapes and rich culture of Lithuania." }
     },
-    "Luxembourg": {
+    "luxembourg": {
         image: "https://flagcdn.com/w160/lu.png",
         fr: { name: "Luxembourg", desc: "Découvrez les paysages variés et la culture riche du Luxembourg." },
         en: { name: "Luxembourg", desc: "Discover the diverse landscapes and rich culture of Luxembourg." }
     },
-    "Macédoine du Nord": {
+    "macédoine du Nord": {
         image: "https://flagcdn.com/w160/mk.png",
         fr: { name: "Macédoine du Nord", desc: "Explorez les paysages variés et la culture riche de la Macédoine du Nord." },
         en: { name: "North Macedonia", desc: "Explore the diverse landscapes and rich culture of North Macedonia." }
@@ -254,7 +254,7 @@ export const countriesData = {
         fr: { name: "Malte", desc: "Découvrez les plages magnifiques et la culture riche de Malte." },
         en: { name: "Malta", desc: "Discover the beautiful beaches and rich culture of Malta." }
     },
-    "Moldavie": {
+    "moldavie": {
         image: "https://flagcdn.com/w160/md.png",
         fr: { name: "Moldavie", desc: "Explorez les paysages variés et la culture riche de la Moldavie." },
         en: { name: "Moldova", desc: "Explore the diverse landscapes and rich culture of Moldova." }
@@ -264,42 +264,42 @@ export const countriesData = {
         fr: { name: "Monaco", desc: "Découvrez le glamour et la culture riche de Monaco." },
         en: { name: "Monaco", desc: "Discover the glamour and rich culture of Monaco." }
     },
-    "Monténégro": {
+    "montenegro": {
         image: "https://flagcdn.com/w160/me.png",
         fr: { name: "Monténégro", desc: "Explorez les paysages variés et la culture riche du Monténégro." },
         en: { name: "Montenegro", desc: "Explore the diverse landscapes and rich culture of Montenegro." }
     },
-    "Norvège": {
+    "norvege": {
         image: "https://flagcdn.com/w160/no.png",
         fr: { name: "Norvège", desc: "Découvrez les paysages variés et la culture riche de la Norvège." },
         en: { name: "Norway", desc: "Discover the diverse landscapes and rich culture of Norway." }
     },
-    "Pays-Bas": {
+    "pays-Bas": {
         image: "https://flagcdn.com/w160/nl.png",
         fr: { name: "Pays-Bas", desc: "Explorez les paysages variés et la culture riche des Pays-Bas." },
         en: { name: "Netherlands", desc: "Explore the diverse landscapes and rich culture of the Netherlands." }
     },
-    "Pologne": {
+    "pologne": {
         image: "https://flagcdn.com/w160/pl.png",
         fr: { name: "Pologne", desc: "Découvrez les paysages variés et la culture riche de la Pologne." },
         en: { name: "Poland", desc: "Discover the diverse landscapes and rich culture of Poland." }
     },
-    "Portugal": {
+    "portugal": {
         image: "https://flagcdn.com/w160/pt.png",
         fr: { name: "Portugal", desc: "Explorez les plages magnifiques et la culture riche du Portugal." },
         en: { name: "Portugal", desc: "Explore the beautiful beaches and rich culture of Portugal." }
     },
-    "Roumanie": {
+    "roumanie": {
         image: "https://flagcdn.com/w160/ro.png",
         fr: { name: "Roumanie", desc: "Découvrez les paysages variés et la culture riche de la Roumanie." },
         en: { name: "Romania", desc: "Discover the diverse landscapes and rich culture of Romania." }
     },
-    "Royaume-Uni": {
+    "royaume-Uni": {
         image: "https://flagcdn.com/w160/gb.png",
         fr: { name: "Royaume-Uni", desc: "Explorez les paysages variés et la culture riche du Royaume-Uni." },
         en: { name: "United Kingdom", desc: "Explore the diverse landscapes and rich culture of the United Kingdom." }
     },
-    "Russie": {
+    "russie": {
         image: "https://flagcdn.com/w160/ru.png",
         fr: { name: "Russie", desc: "Découvrez les paysages variés et la culture riche de la Russie." },
         en: { name: "Russia", desc: "Discover the diverse landscapes and rich culture of Russia." }
@@ -314,22 +314,17 @@ export const countriesData = {
         fr: { name: "Serbie", desc: "Explorez les paysages variés et la culture riche de la Serbie." },
         en: { name: "Serbia", desc: "Explore the diverse landscapes and rich culture of Serbia." }
     },
-    "slovénie": {
+    "slovenie": {
         image: "https://flagcdn.com/w160/si.png",
         fr: { name: "Slovaquie ", desc: "Découvrez les paysages variés et la culture riche de la Slovaquie." },
         en: { name: "Slovakia", desc: "Discover the diverse landscapes and rich culture of Slovakia." }
     },
-    "slovénie": {
-        image: "https://flagcdn.com/w160/si.png",
-        fr: { name: "Slovénie", desc: "Explorez les paysages variés et la culture riche de la Slovénie." },
-        en: { name: "Slovenia", desc: "Explore the diverse landscapes and rich culture of Slovenia." }
-    },
-    "Suède": {
+    "suede": {
         image: "https://flagcdn.com/w160/se.png",
         fr: { name: "Suède", desc: "Découvrez les paysages variés et la culture riche de la Suède." },
         en: { name: "Sweden", desc: "Discover the diverse landscapes and rich culture of Sweden." }
     },
-    "Suisse": {
+    "suisse": {
         image: "https://flagcdn.com/w160/ch.png",
         fr: { name: "Suisse", desc: "Explorez les paysages variés et la culture riche de la Suisse." },
         en: { name: "Switzerland", desc: "Explore the diverse landscapes and rich culture of Switzerland." }
@@ -339,12 +334,12 @@ export const countriesData = {
         fr: { name: "Tchéquie", desc: "Découvrez les paysages variés et la culture riche de la Tchéquie." },
         en: { name: "Czech Republic", desc: "Discover the diverse landscapes and rich culture of the Czech Republic." }
     },
-    "Turquie": {
+    "turquie": {
         image: "https://flagcdn.com/w160/tr.png",
         fr: { name: "Turquie", desc: "Découvrez les paysages variés et la culture riche de la Turquie." },
         en: { name: "Turkey", desc: "Discover the diverse landscapes and rich culture of Turkey." }
     },
-    "Ukraine": {
+    "ukraine": {
         image: "https://flagcdn.com/w160/ua.png",
         fr: { name: "Ukraine", desc: "Explorez les paysages variés et la culture riche de l'Ukraine." },
         en: { name: "Ukraine", desc: "Explore the diverse landscapes and rich culture of Ukraine." }

@@ -39,6 +39,14 @@
         <p class="lang-indicator" style="margin-top: 30px; opacity: 0.7;">
             Langue : <span id="current-lang" style="font-weight: bold; text-transform: uppercase;"></span>
         </p>
+                <div class="weather-container">
+            <h3 class="weather-title">Prévisions sur 7 jours</h3>
+            <div id="weather-forecast" class="weather-forecast">
+                <p class="weather-loading">Chargement de la météo...</p>
+            </div>
+        </div>
+
+        <div id="map"></div>
     </section>
     </main>
     </main>
@@ -50,6 +58,7 @@
 
     <div id="footer-placeholder"></div>
 
+    <script src="meteo.js" type="module"></script>
     <script src="carte.js" type="module"></script>
     <script src="pays.js" type="module"></script>
     <script src="../main.js" type="module"></script>

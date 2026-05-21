@@ -1263,3 +1263,73 @@ nav ul {
   color: #007aff;
   transform: translateY(-30px);
 }
+/* Conteneur météo global */
+.weather-container {
+    max-width: 900px;
+    margin: 40px auto 20px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.weather-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 15px;
+}
+
+/* Grille ou liste des 7 jours */
+.weather-forecast {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 15px;
+}
+
+/* Ligne d'un jour précis */
+.weather-day-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.weather-day-row:last-child {
+    border-bottom: none; /* Retire la ligne séparatrice pour le dernier jour */
+}
+
+.weather-date {
+    font-weight: 500;
+    width: 120px;
+    color: #1d1d1f;
+}
+
+.weather-icon {
+    font-size: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.weather-temps {
+    font-weight: 500;
+    color: #86868b;
+    text-align: right;
+    width: 100px;
+}
+
+.weather-max {
+    color: #1d1d1f;
+    margin-right: 8px;
+}
+
+.weather-loading {
+    color: #86868b;
+    text-align: center;
+    font-style: italic;
+}

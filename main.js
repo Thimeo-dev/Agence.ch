@@ -261,37 +261,6 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCountryDisplay();
         translatePage();
         
-        // ==========================================
-        //  MODIFICATION : LOGIQUE DU NOM ET DU STATUT
-        // ==========================================
-        let userStatus = "utilisateur";
-        const isAdmin = user && user.email === ADMIN_EMAIL;
-        
-        if (user) {
-            if (isAdmin) userStatus = "admin";
-
-            // Remplacer "Monsieur" par le vrai nom (ou l'email si pas défini)
-            const userDisplayEl = document.getElementById('user-connected-name');
-            if (userDisplayEl) {
-                userDisplayEl.textContent = user.displayName || user.email.split('@')[0];
-            }
-
-            // Afficher le statut (ADMIN ou UTILISATEUR) sur le badge
-            const statusBadgeEl = document.getElementById('user-status-badge');
-            if (statusBadgeEl) {
-                statusBadgeEl.textContent = userStatus.toUpperCase();
-                statusBadgeEl.className = `badge-${userStatus}`;
-            }
-        }
-
-        // Sécurité de routage pour la page admin
-        const isOnAdminPage = window.location.pathname.endsWith('admin.html');
-        if (isOnAdminPage && !isAdmin) {
-            window.location.href = 'index.html';
-            return; // Interrompt la fonction
-        }
-        // ==========================================
-
         if (user) {
             const profilePic = document.getElementById('profile-pic');
             const profileDropdown = document.getElementById('profile-dropdown');

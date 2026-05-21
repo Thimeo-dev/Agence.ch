@@ -18,35 +18,107 @@ export const countriesData = {
             monnaie: "Albanian Lek"
         }
     },
-    "allemagne": {
+"allemagne": {
         image: "https://flagcdn.com/w160/de.png",
-        fr: { name: "Allemagne", desc: "Explorez l'histoire, la culture et les paysages variés de l'Allemagne." },
-        en: { name: "Germany", desc: "Explore the history, culture, and diverse landscapes of Germany." }
+        fr: { 
+            name: "Allemagne", 
+            desc: "Explorez l'histoire, la culture et les paysages variés de l'Allemagne.",
+            capitale: "Berlin",
+            population: "84 400 000",
+            monnaie: "Euro"
+        },
+        en: { 
+            name: "Germany", 
+            desc: "Explore the history, culture, and diverse landscapes of Germany.",
+            capitale: "Berlin",
+            population: "84,400,000",
+            monnaie: "Euro"
+        }
     },
     "andorre": {
         image: "https://flagcdn.com/w160/ad.png",
-        fr: { name: "Andorre", desc: "Découvrez les montagnes majestueuses et les charmants villages d'Andorre." },
-        en: { name: "Andorra", desc: "Discover the majestic mountains and charming villages of Andorra." }
+        fr: { 
+            name: "Andorre", 
+            desc: "Découvrez les montagnes majestueuses et les charmants villages d'Andorre.",
+            capitale: "Andorre-la-Vieille",
+            population: "85 000",
+            monnaie: "Euro"
+        },
+        en: { 
+            name: "Andorra", 
+            desc: "Discover the majestic mountains and charming villages of Andorra.",
+            capitale: "Andorra la Vella",
+            population: "85,000",
+            monnaie: "Euro"
+        }
     },
     "arménie": {
         image: "https://flagcdn.com/w160/am.png",
-        fr: { name: "Arménie", desc: "Explorez l'histoire ancienne et les paysages époustouflants de l'Arménie." },
-        en: { name: "Armenia", desc: "Explore the ancient history and breathtaking landscapes of Armenia." }
+        fr: { 
+            name: "Arménie", 
+            desc: "Explorez l'histoire ancienne et les paysages époustouflants de l'Arménie.",
+            capitale: "Erevan",
+            population: "3 000 000",
+            monnaie: "Dram arménien"
+        },
+        en: { 
+            name: "Armenia", 
+            desc: "Explore the ancient history and breathtaking landscapes of Armenia.",
+            capitale: "Yerevan",
+            population: "3,000,000",
+            monnaie: "Armenian Dram"
+        }
     },
     "autriche": {
         image: "https://flagcdn.com/w160/at.png",
-        fr: { name: "Autriche", desc: "Découvrez la culture riche et les paysages alpins de l'Autriche." },
-        en: { name: "Austria", desc: "Discover the rich culture and alpine landscapes of Austria." }
+        fr: { 
+            name: "Autriche", 
+            desc: "Découvrez la culture riche et les paysages alpins de l'Autriche.",
+            capitale: "Vienne",
+            population: "9 100 000",
+            monnaie: "Euro"
+        },
+        en: { 
+            name: "Austria", 
+            desc: "Discover the rich culture and alpine landscapes of Austria.",
+            capitale: "Vienna",
+            population: "9,100,000",
+            monnaie: "Euro"
+        }
     },
     "azerbaïdjan": {
         image: "https://flagcdn.com/w160/az.png",
-        fr: { name: "Azerbaïdjan", desc: "Explorez la fusion unique de l'Orient et de l'Occident en Azerbaïdjan." },
-        en: { name: "Azerbaijan", desc: "Explore the unique fusion of East and West in Azerbaijan." }
+        fr: { 
+            name: "Azerbaïdjan", 
+            desc: "Explorez la fusion unique de l'Orient et de l'Occident en Azerbaïdjan.",
+            capitale: "Bakou",
+            population: "10 100 000",
+            monnaie: "Manat azerbaïdjanais"
+        },
+        en: { 
+            name: "Azerbaijan", 
+            desc: "Explore the unique fusion of East and West in Azerbaijan.",
+            capitale: "Baku",
+            population: "10,100,000",
+            monnaie: "Azerbaijani Manat"
+        }
     },
     "belgique": {
         image: "https://flagcdn.com/w160/be.png",
-        fr: { name: "Belgique", desc: "Découvrez la diversité culturelle et les délices culinaires de la Belgique." },
-        en: { name: "Belgium", desc: "Discover the cultural diversity and culinary delights of Belgium." }
+        fr: { 
+            name: "Belgique", 
+            desc: "Découvrez la diversité culturelle et les délices culinaires de la Belgique.",
+            capitale: "Bruxelles",
+            population: "11 800 000",
+            monnaie: "Euro"
+        },
+        en: { 
+            name: "Belgium", 
+            desc: "Discover the cultural diversity and culinary delights of Belgium.",
+            capitale: "Brussels",
+            population: "11,800,000",
+            monnaie: "Euro"
+        }
     },
     "bielorussie": {
             image: "https://flagcdn.com/w160/by.png",

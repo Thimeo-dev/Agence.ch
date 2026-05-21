@@ -307,7 +307,7 @@ export const countriesData = {
     },
     "france": {
         image: "https://flagcdn.com/w160/fr.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bachambin.jpg/1920px-Bachambin.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/France_climats_carte_2010.png/960px-France_climats_carte_2010.png",
         coords: [46.2276, 2.2137], // [Latitude, Longitude] de la France
         fr: {
             name: "France",
@@ -345,7 +345,7 @@ export const countriesData = {
     },
     "grece": {
         image: "https://flagcdn.com/w160/gr.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Greece_01.jpg/1920px-Greece_01.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/OSE_220_029_Kifera.jpg/1920px-OSE_220_029_Kifera.jpg",
         coords: [39.074208, 21.824312], // [Latitude, Longitude] de la Grèce
         fr: {
             name: "Grèce",
@@ -360,32 +360,102 @@ export const countriesData = {
             capitale: "Athens",
             population: "10,500,000",
             monnaie: "Euro"
-        }
+        },
     },
     "hongrie": {
         image: "https://flagcdn.com/w160/hu.png",
-        fr: { name: "Hongrie", desc: "Explorez les paysages variés et la culture riche de la Hongrie." },
-        en: { name: "Hungary", desc: "Explore the diverse landscapes and rich culture of Hungary." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Badacsony_Szigligetr%C5%91l.jpg/1920px-Badacsony_Szigligetr%C5%91l.jpg",
+        coords: [47.162494, 19.503304], // [Latitude, Longitude] de la Hongrie
+        fr: {
+            name: "Hongrie",
+            desc: "Explorez les paysages variés et la culture riche de la Hongrie.",
+            capitale: "Budapest",
+            population: "9 700 000",
+            monnaie: "Forint hongrois"
+        },
+        en: {
+            name: "Hungary",
+            desc: "Explore the diverse landscapes and rich culture of Hungary.",
+            capitale: "Budapest",
+            population: "9,700,000",
+            monnaie: "Hungarian Forint"
+        },
     },
     "irlande": {
         image: "https://flagcdn.com/w160/ie.png",
-        fr: { name: "Irlande", desc: "Découvrez les paysages variés et la culture riche de l'Irlande." },
-        en: { name: "Ireland", desc: "Discover the diverse landscapes and rich culture of Ireland." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/d/db/Inisheer_landscape.jpg",
+        coords: [53.499444, -8.217778], // [Latitude, Longitude] de l'Irlande
+        fr: {
+            name: "Irlande",
+            desc: "Découvrez les paysages variés et la culture riche de l'Irlande.",
+            capitale: "Dublin",
+            population: "4 900 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Ireland",
+            desc: "Discover the diverse landscapes and rich culture of Ireland.",
+            capitale: "Dublin",
+            population: "4,900,000",
+            monnaie: "Euro"
+        },
     },
     "islande": {
         image: "https://flagcdn.com/w160/is.png",
-        fr: { name: "Islande", desc: "Explorez les paysages variés et la culture riche de l'Islande." },
-        en: { name: "Iceland", desc: "Explore the diverse landscapes and rich culture of Iceland." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Iceland_Landscape_4584.JPG/1920px-Iceland_Landscape_4584.JPG",
+        coords: [64.9631, -19.0208], // [Latitude, Longitude] de l'Islande
+        fr: {
+            name: "Islande",
+            desc: "Explorez les paysages variés et la culture riche de l'Islande.",
+            capitale: "Reykjavik",
+            population: "360 000",
+            monnaie: "Couronne islandaise"
+        },
+        en: {
+            name: "Iceland",
+            desc: "Explore the diverse landscapes and rich culture of Iceland.",
+            capitale: "Reykjavik",
+            population: "360,000",
+            monnaie: "Icelandic Krona"
+        },
     },
     "italie": {
         image: "https://flagcdn.com/w160/it.png",
-        fr: { name: "Italie", desc: "Découvrez la culture riche et les paysages variés de l'Italie." },
-        en: { name: "Italy", desc: "Discover the rich culture and diverse landscapes of Italy." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Pantheon_%28Rome%29_-_Right_side_and_front.jpg/1280px-Pantheon_%28Rome%29_-_Right_side_and_front.jpg",
+        coords: [41.87194, 12.56738], // [Latitude, Longitude] de l'Italie
+        fr: {
+            name: "Italie",
+            desc: "Découvrez la culture riche et les paysages alpins de l'Italie.",
+            capitale: "Rome",
+            population: "60 000 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Italy",
+            desc: "Discover the rich culture and alpine landscapes of Italy.",
+            capitale: "Rome",
+            population: "60,000,000",
+            monnaie: "Euro"
+        },
     },
     "kazakhstan": {
         image: "https://flagcdn.com/w160/kz.png",
-        fr: { name: "Kazakhstan", desc: "Explorez les paysages variés et la culture riche du Kazakhstan." },
-        en: { name: "Kazakhstan", desc: "Explore the diverse landscapes and rich culture of Kazakhstan." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/SB_-_Kazakh_man_on_horse_with_golden_eagle_1911-1914.jpg/1920px-SB_-_Kazakh_man_on_horse_with_golden_eagle_1911-1914.jpg",
+        coords: [48.0196, 66.9237], // [Latitude, Longitude] du Kazakhstan
+        fr: {
+            name: "Kazakhstan",
+            desc: "Explorez les paysages variés et la culture riche du Kazakhstan.",
+            capitale: "Noursoultan",
+            population: "18 000 000",
+            monnaie: "Tenge kazakh"
+        },
+        en: {
+            name: "Kazakhstan",
+            desc: "Explore the diverse landscapes and rich culture of Kazakhstan.",
+            capitale: "Nur-Sultan",
+            population: "18,000,000",
+            monnaie: "Kazakhstani Tenge"
+        },
     },
     "kosovo": {
         image: "https://flagcdn.com/w160/xk.png",

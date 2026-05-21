@@ -289,9 +289,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const isAdmin = user && user.email === "thimeosousa02@gmail.com";
-        const isOnAdminPage = window.location.pathname.endsWith('index.html');
+        const isOnAdminPage = window.location.pathname.endsWith('admin.html');
         if (isOnAdminPage && !isAdmin) {
-            window.location.href = 'admin.html';
+            window.location.href = 'index.html';
         }
     };
     window.addEventListener("scroll", () => {

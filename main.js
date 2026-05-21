@@ -260,6 +260,37 @@ document.addEventListener("DOMContentLoaded", () => {
         hPlace.innerHTML = renderHeader(user, userPhoto);
         updateCountryDisplay();
         translatePage();
+        
+        // ==========================================
+        //  MODIFICATION : LOGIQUE DU NOM ET DU STATUT
+        // ==========================================
+        let userStatus = "utilisateur";
+        const isAdmin = user && user.email === ADMIN_EMAIL;
+        
+        if (user) {
+            if (isAdmin) userStatus = "admin";
+
+            // Remplacer "Monsieur" par le vrai nom (ou l'email si pas défini)
+            const userDisplayEl = document.getElementById('user-connected-name');
+            if (userDisplayEl) {
+                userDisplayEl.textContent = user.displayName || user.email.split('@')[0];
+            }
+
+            // Afficher le statut (ADMIN ou UTILISATEUR) sur le badge
+            const statusBadgeEl = document.getElementById('user-status-badge');
+            if (statusBadgeEl) {
+                statusBadgeEl.textContent = userStatus.toUpperCase();
+                statusBadgeEl.className = `badge-${userStatus}`;
+            }
+        }
+
+        // Sécurité de routage pour la page admin
+        const isOnAdminPage = window.location.pathname.endsWith('admin.html');
+        if (isOnAdminPage && !isAdmin) {
+            window.location.href = 'index.html';
+            return; // Interrompt la fonction
+        }
+        // ==========================================
 
         if (user) {
             const profilePic = document.getElementById('profile-pic');
@@ -288,24 +319,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
-// 1. On vérifie si l'utilisateur connecté est bien toi
-const isAdmin = user && user.email === "thimeosousa02@gmail.com";
-
-// 2. On vérifie si l'utilisateur tente d'accéder à la page d'administration
-const isOnAdminPage = window.location.pathname.endsWith('admin.html');
-
-// 3. Sécurité : Si quelqu'un est sur la page admin mais n'est pas l'administrateur
-if (isOnAdminPage && !isAdmin) {
-    console.warn("Accès refusé ! Redirection vers l'accueil.");
-    // On le renvoie immédiatement vers la page d'accueil (index.html)
-    window.location.href = 'index.html';
-} else if (isOnAdminPage && isAdmin) {
-    // Si c'est bien toi, on affiche ton nom comme prévu
-    const userDisplayEl = document.getElementById('user-connected-name');
-    if (userDisplayEl) {
-        userDisplayEl.textContent = "Thiméo";
-    }
-}
+        const isAdmin = user && user.email === "thimeosousa02@gmail.com";
+        const isOnAdminPage = window.location.pathname.endsWith('admin.html');
+        if (isOnAdminPage && !isAdmin) {
+            window.location.href = 'index.html';
+        }
     };
     window.addEventListener("scroll", () => {
     const header = document.querySelector("header");

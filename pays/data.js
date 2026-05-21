@@ -4,6 +4,7 @@ export const countriesData = {
     "albanie": {
         image: "https://flagcdn.com/w160/al.png",
         landscape: "https://upload.wikimedia.org/wikipedia/commons/3/36/Panorama_Albania_Tour_003.jpg",
+        coords: [41.156986,20.18122199999999],
         fr: { 
             name: "Albanie", 
             desc: "Découvrez la beauté naturelle et la culture riche de l'Albanie.",
@@ -41,6 +42,7 @@ export const countriesData = {
     "andorre": {
         image: "https://flagcdn.com/w160/ad.png",
         landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Casa_de_la_Vall_-_18.jpg/1920px-Casa_de_la_Vall_-_18.jpg",
+        coords: [42.542268247534,1.5968647459716578], // [Latitude, Longitude] d'Andorre
         fr: { 
             name: "Andorre", 
             desc: "Découvrez les montagnes majestueuses et les charmants villages d'Andorre.",
@@ -59,6 +61,7 @@ export const countriesData = {
     "armenie": {
         image: "https://flagcdn.com/w160/am.png",
         landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Khor_Virap_Monastery_and_Mount_Ararat%2C_Armenia.jpg/1920px-Khor_Virap_Monastery_and_Mount_Ararat%2C_Armenia.jpg",
+        coords: [40.069099, 45.038189], // [Latitude, Longitude] de l'Arménie
         fr: { 
             name: "Arménie", 
             desc: "Explorez l'histoire ancienne et les paysages époustouflants de l'Arménie.",
@@ -77,6 +80,7 @@ export const countriesData = {
     "autriche": {
         image: "https://flagcdn.com/w160/at.png",
         landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Spitalskirche_zum_hl._Geist.jpg/1920px-Spitalskirche_zum_hl._Geist.jpg",
+        coords: [47.516231, 14.550072], // [Latitude, Longitude] de l'Autriche
         fr: { 
             name: "Autriche", 
             desc: "Découvrez la culture riche et les paysages alpins de l'Autriche.",

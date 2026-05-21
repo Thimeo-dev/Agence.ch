@@ -288,11 +288,24 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
-        const isAdmin = user && user.email === "thimeosousa02@gmail.com";
-        const isOnAdminPage = window.location.pathname.endsWith('admin.html');
-        if (isOnAdminPage && !isAdmin) {
-            window.location.href = 'index.html';
-        }
+// 1. On vérifie si l'utilisateur connecté est bien toi
+const isAdmin = user && user.email === "thimeosousa02@gmail.com";
+
+// 2. On vérifie si l'utilisateur tente d'accéder à la page d'administration
+const isOnAdminPage = window.location.pathname.endsWith('admin.html');
+
+// 3. Sécurité : Si quelqu'un est sur la page admin mais n'est pas l'administrateur
+if (isOnAdminPage && !isAdmin) {
+    console.warn("Accès refusé ! Redirection vers l'accueil.");
+    // On le renvoie immédiatement vers la page d'accueil (index.html)
+    window.location.href = 'index.html';
+} else if (isOnAdminPage && isAdmin) {
+    // Si c'est bien toi, on affiche ton nom comme prévu
+    const userDisplayEl = document.getElementById('user-connected-name');
+    if (userDisplayEl) {
+        userDisplayEl.textContent = "Thiméo";
+    }
+}
     };
     window.addEventListener("scroll", () => {
     const header = document.querySelector("header");

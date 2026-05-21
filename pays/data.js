@@ -307,20 +307,20 @@ export const countriesData = {
     },
     "france": {
         image: "https://flagcdn.com/w160/fr.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/France_climats_carte_2010.png/960px-France_climats_carte_2010.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/7/75/Lavender_field.jpg",
         coords: [46.2276, 2.2137], // [Latitude, Longitude] de la France
         fr: {
             name: "France",
             desc: "Découvrez la culture riche et les paysages variés de la France.",
             capitale: "Paris",
-            population: "67 000 000",
+            population: "68 000 000",
             monnaie: "Euro"
         },
         en: {
             name: "France",
             desc: "Discover the rich culture and diverse landscapes of France.",
             capitale: "Paris",
-            population: "67,000,000",
+            population: "68,000,000",
             monnaie: "Euro"
         }
     },
@@ -421,7 +421,7 @@ export const countriesData = {
     },
     "italie": {
         image: "https://flagcdn.com/w160/it.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Pantheon_%28Rome%29_-_Right_side_and_front.jpg/1280px-Pantheon_%28Rome%29_-_Right_side_and_front.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Cathedral_and_Campanary_-_Pisa_2014_%282%29.JPG/1920px-Cathedral_and_Campanary_-_Pisa_2014_%282%29.JPG",
         coords: [41.87194, 12.56738], // [Latitude, Longitude] de l'Italie
         fr: {
             name: "Italie",
@@ -459,8 +459,22 @@ export const countriesData = {
     },
     "kosovo": {
         image: "https://flagcdn.com/w160/xk.png",
-        fr: { name: "Kosovo", desc: "Découvrez les paysages variés et la culture riche du Kosovo." },
-        en: { name: "Kosovo", desc: "Discover the diverse landscapes and rich culture of Kosovo." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/1/1e/Battle_of_Kosovo%2C_Adam_Stefanovi%C4%87%2C_1870.jpg",
+        coords: [42.6026359, 20.902977], // [Latitude, Longitude] du Kosovo
+        fr: {
+            name: "Kosovo",
+            desc: "Découvrez les paysages variés et la culture riche du Kosovo.",
+            capitale: "Pristina",
+            population: "1 800 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Kosovo",
+            desc: "Explore the diverse landscapes and rich culture of Kosovo.",
+            capitale: "Pristina",
+            population: "1,800,000",
+            monnaie: "Euro"
+        },
     },
     "lettonie": {
         image: "https://flagcdn.com/w160/lv.png",
@@ -645,40 +659,4 @@ export const countriesData = {
         en: { name: "South Korea", desc: "Discover the diverse landscapes and rich culture of South Korea." }
     },
 
-
-
-
-    "equateur": {
-        image: "https://flagcdn.com/w160/ec.png",
-        decor: "images/decor-equateur.png",
-        fr: { name: "Équateur", desc: "Découvrez la biodiversité unique des Galápagos et la ligne de l'Équateur." },
-        en: { name: "Ecuador", desc: "Discover the unique biodiversity of the Galápagos and the equator line." },
-        es: { name: "Ecuador", desc: "Descubre la biodiversidad única de los Galápagos y la línea del Ecuador." },
-        pt: { name: "Equador", desc: "Descubra a biodiversidade única das Galápagos e a linha do Equador." },
-        de: { name: "Ecuador", desc: "Entdecken Sie die einzigartige Biodiversität der Galápagos und die Äquatorlinie." },
-        it: { name: "Ecuador", desc: "Scopri la biodiversità unica delle Galápagos e la linea dell'equatore." },
-        ja: { name: "エクアドル", desc: "ガラパゴスの独特な生物多様性と赤道線を発見してください。" },
-        zh: { name: "厄瓜多尔", desc: "探索加拉帕戈斯群岛的独特生物多样性和赤道线。" },
-    },
-    "suisse": {
-        image: "https://flagcdn.com/w160/ch.png",
-        fr: { name: "Suisse", desc: "Explorez les Alpes majestueuses et les lacs cristallins au cœur de l'Europe." },
-        en: { name: "Switzerland", desc: "Explore the majestic Alps and crystal-clear lakes in the heart of Europe." }
-    },
-    "france": {
-        fr: { name: "France", desc: "Plongez dans l'art, la gastronomie et l'histoire de la Ville Lumière et de ses régions." },
-        en: { name: "France", desc: "Dive into the art, gastronomy, and history of the City of Light and its regions." }
-    },
-    "royaume-uni": {
-        fr: { name: "Royaume-Uni", desc: "Découvrez le charme britannique, de Londres aux collines d'Écosse." },
-        en: { name: "United Kingdom", desc: "Discover British charm, from London to the hills of Scotland." }
-    },
-    "japon": {
-        fr: { name: "Japon", desc: "Un mélange fascinant entre traditions ancestrales et technologies futuristes." },
-        en: { name: "Japan", desc: "A fascinating blend of ancestral traditions and futuristic technologies." }
-    },
-    "italie": {
-        fr: { name: "Italie", desc: "Profitez de la Dolce Vita entre monuments historiques et saveurs méditerranéennes." },
-        en: { name: "Italy", desc: "Enjoy the Dolce Vita between historical monuments and Mediterranean flavors." }
-    }
 };

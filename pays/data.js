@@ -3,8 +3,20 @@
 export const countriesData = {
     "albanie": {
         image: "https://flagcdn.com/w160/al.png",
-        fr: { name: "Albanie", desc: "Découvrez la beauté naturelle et la culture riche de l'Albanie." },
-        en: { name: "Albania", desc: "Discover the natural beauty and rich culture of Albania." }
+        fr: { 
+            name: "Albanie", 
+            desc: "Découvrez la beauté naturelle et la culture riche de l'Albanie.",
+            capitale: "Tirana",
+            population: "2 800 000",
+            monnaie: "Lek albanais"
+        },
+        en: { 
+            name: "Albania", 
+            desc: "Discover the natural beauty and rich culture of Albania.",
+            capitale: "Tirana",
+            population: "2,800,000",
+            monnaie: "Albanian Lek"
+        }
     },
     "allemagne": {
         image: "https://flagcdn.com/w160/de.png",

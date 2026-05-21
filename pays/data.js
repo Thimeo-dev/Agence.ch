@@ -98,6 +98,8 @@ export const countriesData = {
     },
     "azerbaidjan": {
         image: "https://flagcdn.com/w160/az.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Bazarduzu_detail.JPG/1920px-Bazarduzu_detail.JPG",
+        coords: [40.143105, 47.576927], // [Latitude, Longitude] de l'Azerbaïdjan
         fr: { 
             name: "Azerbaïdjan", 
             desc: "Explorez la fusion unique de l'Orient et de l'Occident en Azerbaïdjan.",
@@ -115,6 +117,8 @@ export const countriesData = {
     },
     "belgique": {
         image: "https://flagcdn.com/w160/be.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/0_Botassart_-_Tombeau_du_G%C3%A9ant_%281%29.jpg/1920px-0_Botassart_-_Tombeau_du_G%C3%A9ant_%281%29.jpg",
+        coords: [50.509129, 4.483261], // [Latitude, Longitude] de la Belgique
         fr: { 
             name: "Belgique", 
             desc: "Découvrez la diversité culturelle et les délices culinaires de la Belgique.",

@@ -26,12 +26,30 @@ header, .navbar {
     margin-bottom: 0 !important;
 }
 
-/* Style de la carte OpenStreetMap */
+/* 1. Style complet de la carte en bas */
 #map {
-    width: 100%;
-    height: 350px;               /* Ajuste la hauteur selon tes besoins */
-    border-radius: 16px;         /* Coins arrondis style Apple */
-    margin: 30px 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    z-index: 1;                  /* Évite que la carte passe au-dessus des menus */
+    width: 100vw;                 /* Plein écran en largeur */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;           /* Annule les marges parentes */
+    
+    height: 350px;                
+    margin-top: 40px;             /* Espace par rapport au texte du haut */
+    margin-bottom: 0 !important;  /* Force la carte à ne pas avoir de marge en bas */
+    
+    border-radius: 0;             
+    box-shadow: none;
+    z-index: 1;
+}
+
+/* 2. LA CORRECTION : On retire les espaces cachés du conteneur principal */
+main, .main-container, .hero-country {
+    padding-bottom: 0 !important; /* Supprime l'espace intérieur du bas */
+    margin-bottom: 0 !important;  /* Supprime la marge extérieure du bas */
+}
+
+/* 3. On s'assure que le footer n'a pas de marge forcée au-dessus de lui */
+footer, .footer {
+    margin-top: 0 !important;
 }

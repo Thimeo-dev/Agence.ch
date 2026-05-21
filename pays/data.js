@@ -3,7 +3,7 @@
 export const countriesData = {
     "albanie": {
         image: "https://flagcdn.com/w160/al.png",
-        landscape: "https://images.unsplash.com/photo-1623167428954-be47340e0812?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/3/36/Panorama_Albania_Tour_003.jpg",
         fr: { 
             name: "Albanie", 
             desc: "Découvrez la beauté naturelle et la culture riche de l'Albanie.",
@@ -21,7 +21,8 @@ export const countriesData = {
     },
 "allemagne": {
         image: "https://flagcdn.com/w160/de.png",
-        landscape: "https://images.unsplash.com/photo-1618259278412-2819cbdea4dc?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Frauenkirche_and_Neues_Rathaus_Munich_March_2013.JPG/1920px-Frauenkirche_and_Neues_Rathaus_Munich_March_2013.JPG",
+        coords: [51.1657, 10.4515], // [Latitude, Longitude] de l'Allemagne
         fr: { 
             name: "Allemagne", 
             desc: "Explorez l'histoire, la culture et les paysages variés de l'Allemagne.",
@@ -39,6 +40,7 @@ export const countriesData = {
     },
     "andorre": {
         image: "https://flagcdn.com/w160/ad.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Casa_de_la_Vall_-_18.jpg/1920px-Casa_de_la_Vall_-_18.jpg",
         fr: { 
             name: "Andorre", 
             desc: "Découvrez les montagnes majestueuses et les charmants villages d'Andorre.",
@@ -54,8 +56,9 @@ export const countriesData = {
             monnaie: "Euro"
         }
     },
-    "arménie": {
+    "armenie": {
         image: "https://flagcdn.com/w160/am.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Khor_Virap_Monastery_and_Mount_Ararat%2C_Armenia.jpg/1920px-Khor_Virap_Monastery_and_Mount_Ararat%2C_Armenia.jpg",
         fr: { 
             name: "Arménie", 
             desc: "Explorez l'histoire ancienne et les paysages époustouflants de l'Arménie.",
@@ -73,6 +76,7 @@ export const countriesData = {
     },
     "autriche": {
         image: "https://flagcdn.com/w160/at.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Spitalskirche_zum_hl._Geist.jpg/1920px-Spitalskirche_zum_hl._Geist.jpg",
         fr: { 
             name: "Autriche", 
             desc: "Découvrez la culture riche et les paysages alpins de l'Autriche.",
@@ -88,7 +92,7 @@ export const countriesData = {
             monnaie: "Euro"
         }
     },
-    "azerbaïdjan": {
+    "azerbaidjan": {
         image: "https://flagcdn.com/w160/az.png",
         fr: { 
             name: "Azerbaïdjan", 

@@ -20,6 +20,7 @@ export const countriesData = {
     },
 "allemagne": {
         image: "https://flagcdn.com/w160/de.png",
+        landscape: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1200",
         fr: { 
             name: "Allemagne", 
             desc: "Explorez l'histoire, la culture et les paysages variés de l'Allemagne.",

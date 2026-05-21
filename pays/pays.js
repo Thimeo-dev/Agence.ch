@@ -52,6 +52,11 @@ const afficherDonneesPays = () => {
             imageEl.src = dataPays.image;
             imageEl.alt = `Bannière ${trad.name}`;
         }
+        const landscapeEl = document.getElementById('api-landscape-image');
+        if (landscapeEl && dataPays.landscape) {
+            landscapeEl.src = dataPays.landscape;
+            landscapeEl.alt = `Paysage ${trad.name}`;
+        }
 
         // Vignette du drapeau
         const flagEl = document.getElementById('api-country-flag');

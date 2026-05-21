@@ -1,0 +1,27 @@
+/* Force l'image à se coller tout en haut de son espace */
+.api-landscape-image {
+    width: 100vw;                 /* Prend toute la largeur de l'écran */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;           /* Centre l'image malgré le conteneur principal */
+    
+    margin-top: 0;                /* Supprime toute marge au-dessus de l'image */
+    height: 450px;                /* Hauteur fine comme demandé */
+    object-fit: cover;            /* Recadre proprement sans déformer */
+    object-position: center 30%;  /* Ajuste le cadrage vertical */
+    
+    border-radius: 0;
+    display: block;
+}
+
+/* Supprime les espaces du conteneur global en haut de page */
+main, .main-container, .hero-country {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Optionnel : Si ton header/barre de navigation a une marge en bas, on la retire */
+header, .navbar {
+    margin-bottom: 0 !important;
+}

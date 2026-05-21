@@ -3,6 +3,7 @@
 export const countriesData = {
     "albanie": {
         image: "https://flagcdn.com/w160/al.png",
+        landscape: "https://images.unsplash.com/photo-1623167428954-be47340e0812?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         fr: { 
             name: "Albanie", 
             desc: "Découvrez la beauté naturelle et la culture riche de l'Albanie.",
@@ -20,7 +21,7 @@ export const countriesData = {
     },
 "allemagne": {
         image: "https://flagcdn.com/w160/de.png",
-        landscape: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1200",
+        landscape: "https://images.unsplash.com/photo-1618259278412-2819cbdea4dc?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         fr: { 
             name: "Allemagne", 
             desc: "Explorez l'histoire, la culture et les paysages variés de l'Allemagne.",

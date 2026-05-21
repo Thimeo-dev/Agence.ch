@@ -135,64 +135,232 @@ export const countriesData = {
         }
     },
     "bielorussie": {
-            image: "https://flagcdn.com/w160/by.png",
-            fr: { name: "Biélorussie", desc: "Explorez les paysages variés et la culture riche de la Biélorussie." },
-            en: { name: "Belarus", desc: "Explore the diverse landscapes and rich culture of Belarus." }
+        image: "https://flagcdn.com/w160/by.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Gouvernementbelarus.JPG/1920px-Gouvernementbelarus.JPG",
+        coords: [53.709807, 27.95155], // [Latitude, Longitude] de la Biélorussie
+        fr: { 
+            name: "Biélorussie", 
+            desc: "Explorez les paysages variés et la culture riche de la Biélorussie.",
+            capitale: "Minsk",
+            population: "9 200 000",
+            monnaie: "Rouble biélorusse"
+        },
+        en: { 
+            name: "Belarus", 
+            desc: "Explore the diverse landscapes and rich culture of Belarus.",
+            capitale: "Minsk",
+            population: "9,200,000",
+            monnaie: "Belarusian Ruble"
+            }
         },
     "bosnie-herzegovine": {
         image: "https://flagcdn.com/w160/ba.png",
-        fr: { name: "Bosnie-Herzégovine", desc: "Découvrez la beauté naturelle et la culture riche de la Bosnie-Herzégovine." },
-         en: { name: "Bosnia and Herzegovina", desc: "Discover the natural beauty and rich culture of Bosnia and Herzegovina." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Sarajevo_City_Hall_01.jpg/1920px-Sarajevo_City_Hall_01.jpg",
+        coords: [43.915886, 17.679076], // [Latitude
+        fr: { 
+            name: "Bosnie-Herzégovine", 
+            desc: "Découvrez la beauté naturelle et la culture riche de la Bosnie-Herzégovine.",
+            capitale: "Sarajevo",
+            population: "3 900 000",
+            monnaie: "Convertible Mark"
+        },
+        en: { 
+            name: "Bosnia and Herzegovina", 
+            desc: "Discover the natural beauty and rich culture of Bosnia and Herzegovina.",
+            capitale: "Sarajevo",
+            population: "3,900,000",
+            monnaie: "Convertible Mark"
+        }
      },
      "bulgarie": {
         image: "https://flagcdn.com/w160/bg.png",
-        fr: { name: "Bulgarie", desc: "Explorez les paysages variés et la culture riche de la Bulgarie." },
-        en: { name: "Bulgaria", desc: "Explore the diverse landscapes and rich culture of Bulgaria." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bulgaria_Bulgaria-0785_-_Roman_Theatre_of_Philippopolis_%287432772486%29.jpg/1920px-Bulgaria_Bulgaria-0785_-_Roman_Theatre_of_Philippopolis_%287432772486%29.jpg",
+        coords: [42.733883, 25.48583], // [Latitude, Longitude] de la Bulgarie
+        fr: {
+            name: "Bulgarie",
+            desc: "Explorez les paysages variés et la culture riche de la Bulgarie.",
+            capitale: "Sofia",
+            population: "7 200 000",
+            monnaie: "Lev bulgare"
+        },
+        en: {
+            name: "Bulgaria",
+            desc: "Explore the diverse landscapes and rich culture of Bulgaria.",
+            capitale: "Sofia",
+            population: "7,200,000",
+            monnaie: "Bulgarian Lev"
+        }
     },
     "chypre": {
         image: "https://flagcdn.com/w160/cy.png",
-        fr: { name: "Chypre", desc: "Découvrez les plages magnifiques et la culture riche de Chypre." },
-        en: { name: "Cyprus", desc: "Discover the beautiful beaches and rich culture of Cyprus." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Amphitheatre_Bay_after_a_storm%2C_Akamas_Peninsula%2C_Cyprus.jpg/1920px-Amphitheatre_Bay_after_a_storm%2C_Akamas_Peninsula%2C_Cyprus.jpg",
+        coords: [35.126413, 33.429859], // [Latitude, Longitude] de Chypre
+        fr: {
+            name: "Chypre",
+            desc: "Découvrez les plages magnifiques et la culture riche de Chypre.",
+            capitale: "Nicosie",
+            population: "1 200 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Cyprus",
+            desc: "Discover the beautiful beaches and rich culture of Cyprus.",
+            capitale: "Nicosia",
+            population: "1,200,000",
+            monnaie: "Euro"
+        }
     },
     "croatie": {
         image: "https://flagcdn.com/w160/hr.png",
-        fr: { name: "Croatie", desc: "Explorez les côtes magnifiques et la culture riche de la Croatie." },
-        en: { name: "Croatia", desc: "Explore the beautiful coasts and rich culture of Croatia." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/4/49/Porozina.jpg",
+        coords: [45.1, 15.2], // [Latitude, Longitude] de Croatie
+        fr: {
+            name: "Croatie",
+            desc: "Explorez les côtes magnifiques et la culture riche de la Croatie.",
+            capitale: "Zagreb",
+            population: "4 100 000",
+            monnaie: "Kuna"
+        },
+        en: {
+            name: "Croatia",
+            desc: "Explore the beautiful coasts and rich culture of Croatia.",
+            capitale: "Zagreb",
+            population: "4,100,000",
+            monnaie: "Croatian Kuna"
+        }
     },
     "danemark": {
         image: "https://flagcdn.com/w160/dk.png",
-        fr: { name: "Danemark", desc: "Découvrez la culture riche et les paysages variés du Danemark." },
-        en: { name: "Denmark", desc: "Discover the rich culture and diverse landscapes of Denmark." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Christian_VII%27_Mansion_-_Amalienborg.jpg/1920px-Christian_VII%27_Mansion_-_Amalienborg.jpg",
+        coords: [56.26392, 9.501785], // [Latitude, Longitude] de la Danemark
+        fr: {
+            name: "Danemark",
+            desc: "Découvrez la culture riche et les paysages variés du Danemark.",
+            capitale: "Copenhague",
+            population: "5 800 000",
+            monnaie: "Couronne danoise"
+        },
+        en: {
+            name: "Denmark",
+            desc: "Discover the rich culture and diverse landscapes of Denmark.",
+            capitale: "Copenhagen",
+            population: "5,800,000",
+            monnaie: "Danish Krone"
+        }
     },
     "espagne": {
         image: "https://flagcdn.com/w160/es.png",
-        fr: { name: "Espagne", desc: "Explorez les plages magnifiques et la culture riche de l'Espagne." },
-        en: { name: "Spain", desc: "Explore the beautiful beaches and rich culture of Spain." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Acueducto_de_Segovia_01.jpg/1920px-Acueducto_de_Segovia_01.jpg",
+        coords: [40.463667, -3.74922], // [Latitude, Longitude] de l'Espagne
+        fr: {
+            name: "Espagne",
+            desc: "Explorez les plages magnifiques et la culture riche de l'Espagne.",
+            capitale: "Madrid",
+            population: "47 000 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Spain",
+            desc: "Explore the beautiful beaches and rich culture of Spain.",
+            capitale: "Madrid",
+            population: "47,000,000",
+            monnaie: "Euro"
+        }
     },
     "estonie": {
         image: "https://flagcdn.com/w160/ee.png",
-        fr: { name: "Estonie", desc: "Découvrez les paysages variés et la culture riche de l'Estonie." },
-        en: { name: "Estonia", desc: "Discover the diverse landscapes and rich culture of Estonia." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Vaade_Ropkale_Emaj%C3%B5e_vasemkaldalt.jpg/1920px-Vaade_Ropkale_Emaj%C3%B5e_vasemkaldalt.jpg",
+        coords: [58.595272, 25.013607], // [Latitude, Longitude] de l'Estonie
+        fr: {
+            name: "Estonie",
+            desc: "Découvrez les paysages variés et la culture riche de l'Estonie.",
+            capitale: "Tallinn",
+            population: "1 300 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Estonia",
+            desc: "Discover the diverse landscapes and rich culture of Estonia.",
+            capitale: "Tallinn",
+            population: "1,300,000",
+            monnaie: "Euro"
+        }
     },
     "finlande": {
         image: "https://flagcdn.com/w160/fi.png",
-        fr: { name: "Finlande", desc: "Explorez les paysages variés et la culture riche de la Finlande." },
-        en: { name: "Finland", desc: "Explore the diverse landscapes and rich culture of Finland." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Savivuori_view.jpg/1920px-Savivuori_view.jpg",
+        coords: [64.000000, 25.000000], // [Latitude, Longitude] de la Finlande
+        fr: {
+            name: "Finlande",
+            desc: "Explorez les paysages variés et la culture riche de la Finlande.",
+            capitale: "Helsinki",
+            population: "5 500 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Finland",
+            desc: "Explore the diverse landscapes and rich culture of Finland.",
+            capitale: "Helsinki",
+            population: "5,500,000",
+            monnaie: "Euro"
+        }
     },
     "france": {
         image: "https://flagcdn.com/w160/fr.png",
-        fr: { name: "France", desc: "Découvrez la culture riche et les paysages variés de la France." },
-        en: { name: "France", desc: "Discover the rich culture and diverse landscapes of France." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bachambin.jpg/1920px-Bachambin.jpg",
+        coords: [46.2276, 2.2137], // [Latitude, Longitude] de la France
+        fr: {
+            name: "France",
+            desc: "Découvrez la culture riche et les paysages variés de la France.",
+            capitale: "Paris",
+            population: "67 000 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "France",
+            desc: "Discover the rich culture and diverse landscapes of France.",
+            capitale: "Paris",
+            population: "67,000,000",
+            monnaie: "Euro"
+        }
     },
     "georgie": {
         image: "https://flagcdn.com/w160/ge.png",
-        fr: { name: "Géorgie", desc: "Explorez les paysages variés et la culture riche de la Géorgie." },
-        en: { name: "Georgia", desc: "Explore the diverse landscapes and rich culture of Georgia." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/The_alpine_landscapes_of_northwestern_Georgia%2C_southeastern_Europe.jpg/1920px-The_alpine_landscapes_of_northwestern_Georgia%2C_southeastern_Europe.jpg",
+        coords: [42.313333, 43.833333], // [Latitude, Longitude] de la Géorgie
+        fr: {
+            name: "Géorgie",
+            desc: "Explorez les paysages variés et la culture riche de la Géorgie.",
+            capitale: "Tbilissi",
+            population: "4 000 000",
+            monnaie: "Lari"
+        },
+        en: {
+            name: "Georgia",
+            desc: "Explore the diverse landscapes and rich culture of Georgia.",
+            capitale: "Tbilisi",
+            population: "4,000,000",
+            monnaie: "Lari"
+        }
     },
     "grece": {
         image: "https://flagcdn.com/w160/gr.png",
-        fr: { name: "Grèce", desc: "Découvrez les plages magnifiques et la culture riche de la Grèce." },
-        en: { name: "Greece", desc: "Discover the beautiful beaches and rich culture of Greece." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Greece_01.jpg/1920px-Greece_01.jpg",
+        coords: [39.074208, 21.824312], // [Latitude, Longitude] de la Grèce
+        fr: {
+            name: "Grèce",
+            desc: "Découvrez les plages magnifiques et la culture riche de la Grèce.",
+            capitale: "Athènes",
+            population: "10 500 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Greece",
+            desc: "Discover the beautiful beaches and rich culture of Greece.",
+            capitale: "Athens",
+            population: "10,500,000",
+            monnaie: "Euro"
+        }
     },
     "hongrie": {
         image: "https://flagcdn.com/w160/hu.png",

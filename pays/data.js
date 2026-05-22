@@ -310,6 +310,7 @@ export const countriesData = {
         landscape: "https://upload.wikimedia.org/wikipedia/commons/7/75/Lavender_field.jpg",
         coords: [46.2276, 2.2137], // [Latitude, Longitude] de la France
         anthem: "https://upload.wikimedia.org/wikipedia/commons/3/30/La_Marseillaise.ogg",
+
         fr: {
             name: "France",
             desc: "Découvrez la culture riche et les paysages variés de la France.",
@@ -479,8 +480,22 @@ export const countriesData = {
     },
     "lettonie": {
         image: "https://flagcdn.com/w160/lv.png",
-        fr: { name: "Lettonie", desc: "Explorez les paysages variés et la culture riche de la Lettonie." },
-        en: { name: "Latvia", desc: "Explore the diverse landscapes and rich culture of Latvia." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Tratado_de_Lisboa_13_12_2007_%28081%29.jpg",
+        coords: [56.94965, 24.10519], // [Latitude, Longitude] de la Lettonie
+        fr: {
+            name: "Lettonie",
+            desc: "Explorez les paysages variés et la culture riche de la Lettonie.",
+            capitale: "Riga",
+            population: "1 900 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Latvia",
+            desc: "Explore the diverse landscapes and rich culture of Latvia.",
+            capitale: "Riga",
+            population: "1,900,000",
+            monnaie: "Euro"
+        }
     },
     "liechtenstein": {
         image: "https://flagcdn.com/w160/li.png",

@@ -309,6 +309,7 @@ export const countriesData = {
         image: "https://flagcdn.com/w160/fr.png",
         landscape: "https://upload.wikimedia.org/wikipedia/commons/7/75/Lavender_field.jpg",
         coords: [46.2276, 2.2137], // [Latitude, Longitude] de la France
+        anthem: "https://upload.wikimedia.org/wikipedia/commons/3/30/La_Marseillaise.ogg",
         fr: {
             name: "France",
             desc: "Découvrez la culture riche et les paysages variés de la France.",

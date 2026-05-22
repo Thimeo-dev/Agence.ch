@@ -79,3 +79,19 @@ const afficherDonneesPays = () => {
 document.addEventListener("DOMContentLoaded", () => {
     afficherDonneesPays();
 });
+// Remplace le bloc de l'hymne dans ton pays.js par celui-ci :
+const anthemEl = document.getElementById('api-country-anthem');
+if (anthemEl) {
+    if (dataPays.anthem) {
+        // 1. On applique l'URL
+        anthemEl.src = dataPays.anthem;
+        
+        // 2. CORRECTION REBUSTE : On force le navigateur à reset et re-télécharger le fichier
+        anthemEl.load(); 
+        
+        // 3. On affiche le bloc
+        anthemEl.parentElement.style.display = "flex"; 
+    } else {
+        anthemEl.parentElement.style.display = "none";
+    }
+}

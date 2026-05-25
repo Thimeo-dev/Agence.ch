@@ -690,7 +690,7 @@ export const countriesData = {
     },
     "pologne": {
         image: "https://flagcdn.com/w160/pl.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Warsaw_Old_Town.jpg/1920px-Warsaw_Old_Town.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/S%C5%82owi%C5%84ski_Park_Narodowy_102.jpg/1920px-S%C5%82owi%C5%84ski_Park_Narodowy_102.jpg",
         coords: [51.919, 19.145],
         fr: {
             name: "Pologne",
@@ -709,7 +709,7 @@ export const countriesData = {
     },
     "portugal": {
         image: "https://flagcdn.com/w160/pt.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Lisbon_Alfama.jpg/1920px-Lisbon_Alfama.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Vista_da_Fortaleza_de_Juromanha.jpg/1920px-Vista_da_Fortaleza_de_Juromanha.jpg",
         coords: [39.399, -8.224],
         fr: {
             name: "Portugal",
@@ -728,7 +728,7 @@ export const countriesData = {
     },
     "roumanie": {
         image: "https://flagcdn.com/w160/ro.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Peles_Castle_Romania.jpg/1920px-Peles_Castle_Romania.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bran_Castle_TB1.jpg/1920px-Bran_Castle_TB1.jpg",
         coords: [45.943, 24.966],
         fr: {
             name: "Roumanie",
@@ -745,9 +745,9 @@ export const countriesData = {
             monnaie: "Romanian Leu"
         }
     },
-    "royaume-Uni": {
+    "royaume-uni": {
         image: "https://flagcdn.com/w160/gb.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Palace_of_Westminster_London.jpg/1920px-Palace_of_Westminster_London.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/2019_London%2C_Canary_Wharf_02.jpg/1920px-2019_London%2C_Canary_Wharf_02.jpg",
         coords: [55.378, -3.435],
         fr: {
             name: "Royaume-Uni",
@@ -766,7 +766,7 @@ export const countriesData = {
     },
     "russie": {
         image: "https://flagcdn.com/w160/ru.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Red_Square_Moscow.jpg/1920px-Red_Square_Moscow.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/f/f0/%D0%A1%D0%B0%D0%B1%D0%BB%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B5%D0%B1%D0%B5%D1%82.jpg",
         coords: [61.524, 105.318],
         fr: {
             name: "Russie",

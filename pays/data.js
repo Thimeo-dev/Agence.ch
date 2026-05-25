@@ -538,7 +538,7 @@ export const countriesData = {
     },
     "luxembourg": {
         image: "https://flagcdn.com/w160/lu.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Luxembourg_City_Chambre_des_d%C3%A9put%C3%A9s_Nov_2009.jpg/1280px-Luxembourg_City_Chambre_des_d%C3%A9put%C3%A9s_Nov_2009.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/2016_Nationalfeierdag_L%C3%ABtzebuerg_02.jpg/1920px-2016_Nationalfeierdag_L%C3%ABtzebuerg_02.jpg",
         coords: [49.815, 6.129],
         fr: {
             name: "Luxembourg",

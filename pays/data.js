@@ -823,7 +823,7 @@ export const countriesData = {
     },
     "slovaquie": {
         image: "https://flagcdn.com/w160/sk.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Slovakia_Bojnice_Castle_2004_hires.jpg/1920px-Slovakia_Bojnice_Castle_2004_hires.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Slovensky_raj_02.jpg/1920px-Slovensky_raj_02.jpg",
         coords: [48.669, 19.699],
         fr: {
             name: "Slovaquie",

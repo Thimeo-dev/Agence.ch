@@ -633,7 +633,7 @@ export const countriesData = {
     },
     "montenegro": {
         image: "https://flagcdn.com/w160/me.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Kotor_Montenegro.jpg/1920px-Kotor_Montenegro.jpg",
+        landscape: "https://cdn.pixabay.com/photo/2016/05/16/00/21/tunnel-1394759_960_720.jpg",
         coords: [42.708, 19.374],
         fr: {
             name: "Monténégro",
@@ -652,7 +652,7 @@ export const countriesData = {
     },
     "norvege": {
         image: "https://flagcdn.com/w160/no.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Geirangerfjord_Norway.jpg/1920px-Geirangerfjord_Norway.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Storting_Spring_2016.JPG/1920px-Storting_Spring_2016.JPG",
         coords: [60.472, 8.468],
         fr: {
             name: "Norvège",
@@ -671,7 +671,7 @@ export const countriesData = {
     },
     "pays-Bas": {
         image: "https://flagcdn.com/w160/nl.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Amsterdam_Canal_House.jpg/1920px-Amsterdam_Canal_House.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Amazonehaven.JPG/1920px-Amazonehaven.JPG",
         coords: [52.132, 5.291],
         fr: {
             name: "Pays-Bas",

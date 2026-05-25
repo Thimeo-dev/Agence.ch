@@ -519,7 +519,7 @@ export const countriesData = {
     },
     "lituanie": {
         image: "https://flagcdn.com/w160/lt.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Tratado_de_Lisboa_13_12_2007_%28081%29.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/La_selecci%C3%B3n_de_Lituania_celebra_su_tercer_puesto_en_el_Mundial_de_baloncesto_2010.jpg/1920px-La_selecci%C3%B3n_de_Lituania_celebra_su_tercer_puesto_en_el_Mundial_de_baloncesto_2010.jpg",
         coords: [55.169, 23.881],
         fr: {
             name: "Lituanie",

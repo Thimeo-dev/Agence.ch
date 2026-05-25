@@ -785,48 +785,174 @@ export const countriesData = {
     },
     "saint-marin": {
         image: "https://flagcdn.com/w160/sm.png",
-        fr: { name: "Saint-Marin", desc: "Découvrez les paysages variés et la culture riche de Saint-Marin." },
-        en: { name: "San Marino", desc: "Discover the diverse landscapes and rich culture of San Marino." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Panoramic_SanMarino_Adriatic_matl.jpg/1920px-Panoramic_SanMarino_Adriatic_matl.jpg",
+        coords: [43.933, 12.457],
+        fr: {
+            name: "Saint-Marin",
+            desc: "Découvrez les paysages variés et la culture riche de Saint-Marin.",
+            capitale: "Saint-Marin",
+            population: "34 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "San Marino",
+            desc: "Discover the diverse landscapes and rich culture of San Marino.",
+            capitale: "San Marino",
+            population: "34,000",
+            monnaie: "Euro"
+        }
     },
     "serbie": {
         image: "https://flagcdn.com/w160/rs.png",
-        fr: { name: "Serbie", desc: "Explorez les paysages variés et la culture riche de la Serbie." },
-        en: { name: "Serbia", desc: "Explore the diverse landscapes and rich culture of Serbia." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Sava-Danube-Confluence-2009-08-09.jpg",
+        coords: [44.016, 21.005],
+        fr: {
+            name: "Serbie",
+            desc: "Explorez les paysages variés et la culture riche de la Serbie.",
+            capitale: "Belgrade",
+            population: "6 800 000",
+            monnaie: "Dinar serbe"
+        },
+        en: {
+            name: "Serbia",
+            desc: "Explore the diverse landscapes and rich culture of Serbia.",
+            capitale: "Belgrade",
+            population: "6,800,000",
+            monnaie: "Serbian Dinar"
+        }
     },
     "slovenie": {
         image: "https://flagcdn.com/w160/si.png",
-        fr: { name: "Slovaquie ", desc: "Découvrez les paysages variés et la culture riche de la Slovaquie." },
-        en: { name: "Slovakia", desc: "Discover the diverse landscapes and rich culture of Slovakia." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Triglav.jpg",
+        coords: [46.151, 14.995],
+        fr: {
+            name: "Slovénie",
+            desc: "Découvrez les paysages variés et la culture riche de la Slovénie.",
+            capitale: "Ljubljana",
+            population: "2 100 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Slovenia",
+            desc: "Discover the diverse landscapes and rich culture of Slovenia.",
+            capitale: "Ljubljana",
+            population: "2,100,000",
+            monnaie: "Euro"
+        }
     },
     "suede": {
         image: "https://flagcdn.com/w160/se.png",
-        fr: { name: "Suède", desc: "Découvrez les paysages variés et la culture riche de la Suède." },
-        en: { name: "Sweden", desc: "Discover the diverse landscapes and rich culture of Sweden." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Sergels_torg_dec_2010.jpg/1920px-Sergels_torg_dec_2010.jpg",
+        coords: [60.128, 18.643],
+        fr: {
+            name: "Suède",
+            desc: "Découvrez les paysages variés et la culture riche de la Suède.",
+            capitale: "Stockholm",
+            population: "10 400 000",
+            monnaie: "Couronne suédoise"
+        },
+        en: {
+            name: "Sweden",
+            desc: "Discover the diverse landscapes and rich culture of Sweden.",
+            capitale: "Stockholm",
+            population: "10,400,000",
+            monnaie: "Swedish Krona"
+        }
     },
     "suisse": {
         image: "https://flagcdn.com/w160/ch.png",
-        fr: { name: "Suisse", desc: "Explorez les paysages variés et la culture riche de la Suisse." },
-        en: { name: "Switzerland", desc: "Explore the diverse landscapes and rich culture of Switzerland." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Panorama_of_Sion%2C_Switzerland_from_the_north-west%2C_with_Tourbillon_Castle_and_Val%C3%A8re_Basilica_%282022%29.jpg/1920px-Panorama_of_Sion%2C_Switzerland_from_the_north-west%2C_with_Tourbillon_Castle_and_Val%C3%A8re_Basilica_%282022%29.jpg",
+        coords: [46.818, 8.227],
+        fr: {
+            name: "Suisse",
+            desc: "Explorez les paysages variés et la culture riche de la Suisse.",
+            capitale: "Berne",
+            population: "8 700 000",
+            monnaie: "Franc suisse"
+        },
+        en: {
+            name: "Switzerland",
+            desc: "Explore the diverse landscapes and rich culture of Switzerland.",
+            capitale: "Bern",
+            population: "8,700,000",
+            monnaie: "Swiss Franc"
+        }
     },
     "thequie": {
         image: "https://flagcdn.com/w160/cz.png",
-        fr: { name: "Tchéquie", desc: "Découvrez les paysages variés et la culture riche de la Tchéquie." },
-        en: { name: "Czech Republic", desc: "Discover the diverse landscapes and rich culture of the Czech Republic." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Karlstejn_od_jv_2.jpg/1920px-Karlstejn_od_jv_2.jpg",
+        coords: [49.817, 15.473],
+        fr: {
+            name: "Tchéquie",
+            desc: "Découvrez les paysages variés et la culture riche de la Tchéquie.",
+            capitale: "Prague",
+            population: "10 500 000",
+            monnaie: "Couronne tchèque"
+        },
+        en: {
+            name: "Czech Republic",
+            desc: "Discover the diverse landscapes and rich culture of the Czech Republic.",
+            capitale: "Prague",
+            population: "10,500,000",
+            monnaie: "Czech Koruna"
+        }
     },
     "turquie": {
         image: "https://flagcdn.com/w160/tr.png",
-        fr: { name: "Turquie", desc: "Découvrez les paysages variés et la culture riche de la Turquie." },
-        en: { name: "Turkey", desc: "Discover the diverse landscapes and rich culture of Turkey." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Celsus-Bibliothek2.jpg/1920px-Celsus-Bibliothek2.jpg",
+        coords: [38.963, 35.243],
+        fr: {
+            name: "Turquie",
+            desc: "Découvrez les paysages variés et la culture riche de la Turquie.",
+            capitale: "Ankara",
+            population: "85 000 000",
+            monnaie: "Livre turque"
+        },
+        en: {
+            name: "Turkey",
+            desc: "Discover the diverse landscapes and rich culture of Turkey.",
+            capitale: "Ankara",
+            population: "85,000,000",
+            monnaie: "Turkish Lira"
+        }
     },
     "ukraine": {
         image: "https://flagcdn.com/w160/ua.png",
-        fr: { name: "Ukraine", desc: "Explorez les paysages variés et la culture riche de l'Ukraine." },
-        en: { name: "Ukraine", desc: "Explore the diverse landscapes and rich culture of Ukraine." }
+        landscape: "https://cdn.pixabay.com/photo/2022/03/21/12/11/flag-7083047_960_720.jpg",
+        coords: [48.379, 31.165],
+        fr: {
+            name: "Ukraine",
+            desc: "Explorez les paysages variés et la culture riche de l'Ukraine.",
+            capitale: "Kyiv",
+            population: "41 000 000",
+            monnaie: "Hryvnia"
+        },
+        en: {
+            name: "Ukraine",
+            desc: "Explore the diverse landscapes and rich culture of Ukraine.",
+            capitale: "Kyiv",
+            population: "41,000,000",
+            monnaie: "Ukrainian Hryvnia"
+        }
     },
     "vatican": {
         image: "https://flagcdn.com/w160/va.png",
-        fr: { name: "Vatican", desc: "Découvrez les trésors artistiques et culturels du Vatican." },
-        en: { name: "Vatican", desc: "Discover the artistic and cultural treasures of the Vatican." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/St_Peter%27s_Square%2C_Vatican_City_-_April_2007.jpg/1920px-St_Peter%27s_Square%2C_Vatican_City_-_April_2007.jpg",
+        coords: [41.902, 12.453],
+        fr: {
+            name: "Vatican",
+            desc: "Découvrez les trésors artistiques et culturels du Vatican.",
+            capitale: "Vatican",
+            population: "800",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Vatican",
+            desc: "Discover the artistic and cultural treasures of the Vatican.",
+            capitale: "Vatican City",
+            population: "800",
+            monnaie: "Euro"
+        }
     },
 
 

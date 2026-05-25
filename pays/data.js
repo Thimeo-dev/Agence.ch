@@ -501,8 +501,21 @@ export const countriesData = {
         image: "https://flagcdn.com/w160/li.png",
         landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Liechtenstein_asv2022-10_img22_Vaduz_Schloss.jpg/1920px-Liechtenstein_asv2022-10_img22_Vaduz_Schloss.jpg",
         coords: [47.166, 9.555], // [Latitude, Longitude] du Liechtenstein
-        fr: { name: "Liechtenstein", desc: "Découvrez les paysages variés et la culture riche du Liechtenstein." },
-        en: { name: "Liechtenstein", desc: "Discover the diverse landscapes and rich culture of Liechtenstein." }
+        fr: {
+            name: "Liechtenstein",
+            desc: "Découvrez les paysages variés et la culture riche du Liechtenstein.",
+            capitale: "Vaduz",
+            population: "39 000",
+            monnaie: "Franc suisse"
+        },
+        en: {
+            name: "Liechtenstein",
+            desc: "Discover the diverse landscapes and rich culture of Liechtenstein.",
+            capitale: "Vaduz",
+            population: "39,000",
+            monnaie: "Swiss Franc"
+        }
+
     },
     "lituanie": {
         image: "https://flagcdn.com/w160/lt.png",

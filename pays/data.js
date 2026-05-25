@@ -499,6 +499,8 @@ export const countriesData = {
     },
     "liechtenstein": {
         image: "https://flagcdn.com/w160/li.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Liechtenstein_asv2022-10_img22_Vaduz_Schloss.jpg/1920px-Liechtenstein_asv2022-10_img22_Vaduz_Schloss.jpg",
+        coords: [47.166, 9.555], // [Latitude, Longitude] du Liechtenstein
         fr: { name: "Liechtenstein", desc: "Découvrez les paysages variés et la culture riche du Liechtenstein." },
         en: { name: "Liechtenstein", desc: "Discover the diverse landscapes and rich culture of Liechtenstein." }
     },

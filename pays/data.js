@@ -519,73 +519,269 @@ export const countriesData = {
     },
     "lituanie": {
         image: "https://flagcdn.com/w160/lt.png",
-        fr: { name: "Lituanie", desc: "Explorez les paysages variés et la culture riche de la Lituanie." },
-        en: { name: "Lithuania", desc: "Explore the diverse landscapes and rich culture of Lithuania." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Tratado_de_Lisboa_13_12_2007_%28081%29.jpg",
+        coords: [55.169, 23.881],
+        fr: {
+            name: "Lituanie",
+            desc: "Explorez les paysages variés et la culture riche de la Lituanie.",
+            capitale: "Vilnius",
+            population: "2 800 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Lithuania",
+            desc: "Explore the diverse landscapes and rich culture of Lithuania.",
+            capitale: "Vilnius",
+            population: "2,800,000",
+            monnaie: "Euro"
+        }
     },
     "luxembourg": {
         image: "https://flagcdn.com/w160/lu.png",
-        fr: { name: "Luxembourg", desc: "Découvrez les paysages variés et la culture riche du Luxembourg." },
-        en: { name: "Luxembourg", desc: "Discover the diverse landscapes and rich culture of Luxembourg." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Luxembourg_city_view.jpg/1920px-Luxembourg_city_view.jpg",
+        coords: [49.815, 6.129],
+        fr: {
+            name: "Luxembourg",
+            desc: "Découvrez les paysages variés et la culture riche du Luxembourg.",
+            capitale: "Luxembourg",
+            population: "640 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Luxembourg",
+            desc: "Discover the diverse landscapes and rich culture of Luxembourg.",
+            capitale: "Luxembourg",
+            population: "640,000",
+            monnaie: "Euro"
+        }
     },
     "macédoine du Nord": {
         image: "https://flagcdn.com/w160/mk.png",
-        fr: { name: "Macédoine du Nord", desc: "Explorez les paysages variés et la culture riche de la Macédoine du Nord." },
-        en: { name: "North Macedonia", desc: "Explore the diverse landscapes and rich culture of North Macedonia." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Skopje_Stone_Bridge.jpg/1920px-Skopje_Stone_Bridge.jpg",
+        coords: [41.608, 21.745],
+        fr: {
+            name: "Macédoine du Nord",
+            desc: "Explorez les paysages variés et la culture riche de la Macédoine du Nord.",
+            capitale: "Skopje",
+            population: "2 100 000",
+            monnaie: "Denar macédonien"
+        },
+        en: {
+            name: "North Macedonia",
+            desc: "Explore the diverse landscapes and rich culture of North Macedonia.",
+            capitale: "Skopje",
+            population: "2,100,000",
+            monnaie: "Macedonian Denar"
+        }
     },
     "malte": {
         image: "https://flagcdn.com/w160/mt.png",
-        fr: { name: "Malte", desc: "Découvrez les plages magnifiques et la culture riche de Malte." },
-        en: { name: "Malta", desc: "Discover the beautiful beaches and rich culture of Malta." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Valletta_Skyline.jpg/1920px-Valletta_Skyline.jpg",
+        coords: [35.937, 14.375],
+        fr: {
+            name: "Malte",
+            desc: "Découvrez les plages magnifiques et la culture riche de Malte.",
+            capitale: "La Valette",
+            population: "530 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Malta",
+            desc: "Discover the beautiful beaches and rich culture of Malta.",
+            capitale: "Valletta",
+            population: "530,000",
+            monnaie: "Euro"
+        }
     },
     "moldavie": {
         image: "https://flagcdn.com/w160/md.png",
-        fr: { name: "Moldavie", desc: "Explorez les paysages variés et la culture riche de la Moldavie." },
-        en: { name: "Moldova", desc: "Explore the diverse landscapes and rich culture of Moldova." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Chisinau_City_Center.jpg/1920px-Chisinau_City_Center.jpg",
+        coords: [47.411, 28.369],
+        fr: {
+            name: "Moldavie",
+            desc: "Explorez les paysages variés et la culture riche de la Moldavie.",
+            capitale: "Chișinău",
+            population: "2 600 000",
+            monnaie: "Leu moldave"
+        },
+        en: {
+            name: "Moldova",
+            desc: "Explore the diverse landscapes and rich culture of Moldova.",
+            capitale: "Chișinău",
+            population: "2,600,000",
+            monnaie: "Moldovan Leu"
+        }
     },
     "monaco": {
         image: "https://flagcdn.com/w160/mc.png",
-        fr: { name: "Monaco", desc: "Découvrez le glamour et la culture riche de Monaco." },
-        en: { name: "Monaco", desc: "Discover the glamour and rich culture of Monaco." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Monaco_Port_Hercules.jpg/1920px-Monaco_Port_Hercules.jpg",
+        coords: [43.738, 7.424],
+        fr: {
+            name: "Monaco",
+            desc: "Découvrez le glamour et la culture riche de Monaco.",
+            capitale: "Monaco",
+            population: "39 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Monaco",
+            desc: "Discover the glamour and rich culture of Monaco.",
+            capitale: "Monaco",
+            population: "39,000",
+            monnaie: "Euro"
+        }
     },
     "montenegro": {
         image: "https://flagcdn.com/w160/me.png",
-        fr: { name: "Monténégro", desc: "Explorez les paysages variés et la culture riche du Monténégro." },
-        en: { name: "Montenegro", desc: "Explore the diverse landscapes and rich culture of Montenegro." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Kotor_Montenegro.jpg/1920px-Kotor_Montenegro.jpg",
+        coords: [42.708, 19.374],
+        fr: {
+            name: "Monténégro",
+            desc: "Explorez les paysages variés et la culture riche du Monténégro.",
+            capitale: "Podgorica",
+            population: "620 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Montenegro",
+            desc: "Explore the diverse landscapes and rich culture of Montenegro.",
+            capitale: "Podgorica",
+            population: "620,000",
+            monnaie: "Euro"
+        }
     },
     "norvege": {
         image: "https://flagcdn.com/w160/no.png",
-        fr: { name: "Norvège", desc: "Découvrez les paysages variés et la culture riche de la Norvège." },
-        en: { name: "Norway", desc: "Discover the diverse landscapes and rich culture of Norway." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Geirangerfjord_Norway.jpg/1920px-Geirangerfjord_Norway.jpg",
+        coords: [60.472, 8.468],
+        fr: {
+            name: "Norvège",
+            desc: "Découvrez les paysages variés et la culture riche de la Norvège.",
+            capitale: "Oslo",
+            population: "5 400 000",
+            monnaie: "Couronne norvégienne"
+        },
+        en: {
+            name: "Norway",
+            desc: "Discover the diverse landscapes and rich culture of Norway.",
+            capitale: "Oslo",
+            population: "5,400,000",
+            monnaie: "Norwegian Krone"
+        }
     },
     "pays-Bas": {
         image: "https://flagcdn.com/w160/nl.png",
-        fr: { name: "Pays-Bas", desc: "Explorez les paysages variés et la culture riche des Pays-Bas." },
-        en: { name: "Netherlands", desc: "Explore the diverse landscapes and rich culture of the Netherlands." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Amsterdam_Canal_House.jpg/1920px-Amsterdam_Canal_House.jpg",
+        coords: [52.132, 5.291],
+        fr: {
+            name: "Pays-Bas",
+            desc: "Explorez les paysages variés et la culture riche des Pays-Bas.",
+            capitale: "Amsterdam",
+            population: "17 500 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Netherlands",
+            desc: "Explore the diverse landscapes and rich culture of the Netherlands.",
+            capitale: "Amsterdam",
+            population: "17,500,000",
+            monnaie: "Euro"
+        }
     },
     "pologne": {
         image: "https://flagcdn.com/w160/pl.png",
-        fr: { name: "Pologne", desc: "Découvrez les paysages variés et la culture riche de la Pologne." },
-        en: { name: "Poland", desc: "Discover the diverse landscapes and rich culture of Poland." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Warsaw_Old_Town.jpg/1920px-Warsaw_Old_Town.jpg",
+        coords: [51.919, 19.145],
+        fr: {
+            name: "Pologne",
+            desc: "Découvrez les paysages variés et la culture riche de la Pologne.",
+            capitale: "Varsovie",
+            population: "38 000 000",
+            monnaie: "Złoty"
+        },
+        en: {
+            name: "Poland",
+            desc: "Discover the diverse landscapes and rich culture of Poland.",
+            capitale: "Warsaw",
+            population: "38,000,000",
+            monnaie: "Polish Złoty"
+        }
     },
     "portugal": {
         image: "https://flagcdn.com/w160/pt.png",
-        fr: { name: "Portugal", desc: "Explorez les plages magnifiques et la culture riche du Portugal." },
-        en: { name: "Portugal", desc: "Explore the beautiful beaches and rich culture of Portugal." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Lisbon_Alfama.jpg/1920px-Lisbon_Alfama.jpg",
+        coords: [39.399, -8.224],
+        fr: {
+            name: "Portugal",
+            desc: "Explorez les plages magnifiques et la culture riche du Portugal.",
+            capitale: "Lisbonne",
+            population: "10 300 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Portugal",
+            desc: "Explore the beautiful beaches and rich culture of Portugal.",
+            capitale: "Lisbon",
+            population: "10,300,000",
+            monnaie: "Euro"
+        }
     },
     "roumanie": {
         image: "https://flagcdn.com/w160/ro.png",
-        fr: { name: "Roumanie", desc: "Découvrez les paysages variés et la culture riche de la Roumanie." },
-        en: { name: "Romania", desc: "Discover the diverse landscapes and rich culture of Romania." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Peles_Castle_Romania.jpg/1920px-Peles_Castle_Romania.jpg",
+        coords: [45.943, 24.966],
+        fr: {
+            name: "Roumanie",
+            desc: "Découvrez les paysages variés et la culture riche de la Roumanie.",
+            capitale: "Bucarest",
+            population: "19 000 000",
+            monnaie: "Leu roumain"
+        },
+        en: {
+            name: "Romania",
+            desc: "Discover the diverse landscapes and rich culture of Romania.",
+            capitale: "Bucharest",
+            population: "19,000,000",
+            monnaie: "Romanian Leu"
+        }
     },
     "royaume-Uni": {
         image: "https://flagcdn.com/w160/gb.png",
-        fr: { name: "Royaume-Uni", desc: "Explorez les paysages variés et la culture riche du Royaume-Uni." },
-        en: { name: "United Kingdom", desc: "Explore the diverse landscapes and rich culture of the United Kingdom." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Palace_of_Westminster_London.jpg/1920px-Palace_of_Westminster_London.jpg",
+        coords: [55.378, -3.435],
+        fr: {
+            name: "Royaume-Uni",
+            desc: "Explorez les paysages variés et la culture riche du Royaume-Uni.",
+            capitale: "Londres",
+            population: "67 000 000",
+            monnaie: "Livre sterling"
+        },
+        en: {
+            name: "United Kingdom",
+            desc: "Explore the diverse landscapes and rich culture of the United Kingdom.",
+            capitale: "London",
+            population: "67,000,000",
+            monnaie: "British Pound"
+        }
     },
     "russie": {
         image: "https://flagcdn.com/w160/ru.png",
-        fr: { name: "Russie", desc: "Découvrez les paysages variés et la culture riche de la Russie." },
-        en: { name: "Russia", desc: "Discover the diverse landscapes and rich culture of Russia." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Red_Square_Moscow.jpg/1920px-Red_Square_Moscow.jpg",
+        coords: [61.524, 105.318],
+        fr: {
+            name: "Russie",
+            desc: "Découvrez les paysages variés et la culture riche de la Russie.",
+            capitale: "Moscou",
+            population: "144 000 000",
+            monnaie: "Rouble russe"
+        },
+        en: {
+            name: "Russia",
+            desc: "Discover the diverse landscapes and rich culture of Russia.",
+            capitale: "Moscow",
+            population: "144,000,000",
+            monnaie: "Russian Ruble"
+        }
     },
     "saint-marin": {
         image: "https://flagcdn.com/w160/sm.png",

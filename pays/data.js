@@ -555,7 +555,7 @@ export const countriesData = {
             monnaie: "Euro"
         }
     },
-    "macédoinedunord": {
+    "macedoine du nord": {
         image: "https://flagcdn.com/w160/mk.png",
         landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Prilep_from_Towers_of_Marko.jpg/1920px-Prilep_from_Towers_of_Marko.jpg",
         coords: [41.608, 21.745],

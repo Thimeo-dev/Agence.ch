@@ -1,5 +1,9 @@
-// 1. Importation des données depuis ton fichier data.js
+// 1. Importation des données et du module audio
 import { countriesData } from './data.js';
+import { chargerHymneNational } from './audio.js'; // On réimporte ta fonction audio !
+
+// Variable globale pour stocker l'instance de la carte Leaflet
+let cartePays = null;
 
 // 2. Fonction principale d'affichage
 const afficherDonneesPays = () => {
@@ -34,7 +38,7 @@ const afficherDonneesPays = () => {
         const descEl = document.getElementById('country-desc');
         if (descEl) descEl.textContent = trad.desc;
 
-        // Capitale (si elle existe dans ton objet, sinon met "Non renseignée")
+        // Capitale (si elle existe dans ton objet, sinon met "—")
         const capitalEl = document.getElementById('api-country-capital');
         if (capitalEl) capitalEl.textContent = trad.capitale || "—";
 
@@ -65,6 +69,44 @@ const afficherDonneesPays = () => {
             flagEl.alt = `Drapeau ${trad.name}`;
         }
 
+        // --- AUDIO (HYMNE) ---
+        // Appel de ton fichier séparé audio.js qui gère le MP3 en minuscules
+        chargerHymneNational(cleanCountryId);
+
+        // --- CARTE OPENSTREETMAP ---
+        const mapContainer = document.getElementById('map');
+        if (mapContainer && dataPays.coords) {
+            // Si une carte existe déjà, on la détruit pour éviter les bugs d'initialisation
+            if (cartePays !== null) {
+                cartePays.remove();
+            }
+
+            // Initialise la carte sur les coordonnées du pays avec l'option plein écran 100vw
+            cartePays = L.map('map', {
+                minZoom: 2,
+                maxZoom: 18,
+                worldCopyJump: true
+            }).setView(dataPays.coords, 5);
+
+            // Charge les tuiles de la carte (sans répétition infinie sur les côtés)
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                noWrap: true
+            }).addTo(cartePays);
+
+            // Ajoute le marqueur au centre du pays
+            L.marker(dataPays.coords).addTo(cartePays)
+                .bindPopup(`<b>${trad.name}</b><br>${trad.capitale || ""}`)
+                .openPopup();
+
+            // Force la carte à s'ajuster correctement tout en bas selon ton CSS
+            setTimeout(() => {
+                if (cartePays) {
+                    cartePays.invalidateSize();
+                }
+            }, 150);
+        }
+
     } else {
         // Si le paramètre URL est vide ou faux
         const titleEl = document.getElementById('country-title');
@@ -79,19 +121,3 @@ const afficherDonneesPays = () => {
 document.addEventListener("DOMContentLoaded", () => {
     afficherDonneesPays();
 });
-// Remplace le bloc de l'hymne dans ton pays.js par celui-ci :
-const anthemEl = document.getElementById('api-country-anthem');
-if (anthemEl) {
-    if (dataPays.anthem) {
-        // 1. On applique l'URL
-        anthemEl.src = dataPays.anthem;
-        
-        // 2. CORRECTION REBUSTE : On force le navigateur à reset et re-télécharger le fichier
-        anthemEl.load(); 
-        
-        // 3. On affiche le bloc
-        anthemEl.parentElement.style.display = "flex"; 
-    } else {
-        anthemEl.parentElement.style.display = "none";
-    }
-}

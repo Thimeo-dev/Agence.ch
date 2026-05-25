@@ -36,11 +36,11 @@
             <p><strong>Monnaie officielle :</strong> <span id="api-country-currency">—</span></p>
         </div>
         <div class="anthem-container">
-    <span class="anthem-title">🎵 Hymne national :</span>
-    <audio id="api-country-anthem" controls src="">
-        Votre navigateur ne prend pas en charge l'élément audio˙.
-    </audio>
-</div>
+            <span class="anthem-title">🎵 Hymne national :</span>
+            <audio id="api-country-anthem" controls src="">
+                Votre navigateur ne prend pas en charge l'élément audio.
+            </audio>
+        </div>
         <p class="lang-indicator" style="margin-top: 30px; opacity: 0.7;">
             Langue : <span id="current-lang" style="font-weight: bold; text-transform: uppercase;"></span>
         </p>
@@ -62,7 +62,8 @@
         <div id="map"></div>
 
     <div id="footer-placeholder"></div>
-
+    
+    <script src="audio.js" type="module"></script>
     <script src="meteo.js" type="module"></script>
     <script src="carte.js" type="module"></script>
     <script src="pays.js" type="module"></script>

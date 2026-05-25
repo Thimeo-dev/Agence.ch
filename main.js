@@ -125,7 +125,7 @@ const authLinks = user
 return `
     <header>
         <div class="logo-area">
-            <img src="${pathPrefix}agence180.svg" alt="Logo Agence">
+            <img src="${pathPrefix}AGence.svg" alt="Logo Agence">
             <span class="brand-name">Agence.ch</span>
         </div>
         <nav>

@@ -605,7 +605,8 @@ nav a:hover {
 /* Conteneur principal qui contient les 3 colonnes */
 .regions-grid {
     display: flex;
-    justify-content: space-around; /* Crée l'espace égal entre les colonnes */
+    justify-content: center;
+    gap: 80px;
     align-items: flex-start;
     max-width: 1200px; /* Largeur maximale de la zone de contenu */
     margin: 50px auto; /* Centre la grille et ajoute de l'espace en haut */

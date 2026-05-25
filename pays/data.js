@@ -557,7 +557,7 @@ export const countriesData = {
     },
     "macedoine-du-nord": {
         image: "https://flagcdn.com/w160/mk.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Prilep_from_Towers_of_Marko.jpg/1920px-Prilep_from_Towers_of_Marko.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Sv._Sofija_Ohridska.JPG/1920px-Sv._Sofija_Ohridska.JPG",
         coords: [41.608, 21.745],
         fr: {
             name: "Macédoine du Nord",
@@ -576,7 +576,7 @@ export const countriesData = {
     },
     "malte": {
         image: "https://flagcdn.com/w160/mt.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Valletta_Skyline.jpg/1920px-Valletta_Skyline.jpg",
+        landscape: "https://cdn.pixabay.com/photo/2019/04/26/16/49/popeye-village-4158038_960_720.jpg",
         coords: [35.937, 14.375],
         fr: {
             name: "Malte",

@@ -17,8 +17,6 @@ const normalizeLangCode = (lang) => {
 const getCurrentLang = () => {
     const stored = localStorage.getItem("lang");
     if (stored) return normalizeLangCode(stored);
-    
-    // Détecte la langue système du navigateur (ex: "fr-CH", "en-US")
     const browser = navigator.language || navigator.userLanguage || defaultLang;
     return normalizeLangCode(browser);
 };

@@ -557,7 +557,7 @@ export const countriesData = {
     },
     "macédoine du Nord": {
         image: "https://flagcdn.com/w160/mk.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Skopje_Stone_Bridge.jpg/1920px-Skopje_Stone_Bridge.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Prilep_from_Towers_of_Marko.jpg/1920px-Prilep_from_Towers_of_Marko.jpg",
         coords: [41.608, 21.745],
         fr: {
             name: "Macédoine du Nord",

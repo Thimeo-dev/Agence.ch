@@ -821,6 +821,25 @@ export const countriesData = {
             monnaie: "Serbian Dinar"
         }
     },
+    "slovaquie": {
+        image: "https://flagcdn.com/w160/sk.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bratislava_Castle_2014.jpg/1920px-Bratislava_Castle_2014.jpg",
+        coords: [48.669, 19.699],
+        fr: {
+            name: "Slovaquie",
+            desc: "Découvrez les paysages variés et la culture riche de la Slovaquie.",
+            capitale: "Bratislava",
+            population: "5 400 000",
+            monnaie: "Euro"
+        },
+        en: {
+            name: "Slovakia",
+            desc: "Discover the diverse landscapes and rich culture of Slovakia.",
+            capitale: "Bratislava",
+            population: "5,400,000",
+            monnaie: "Euro"
+        }
+    },
     "slovenie": {
         image: "https://flagcdn.com/w160/si.png",
         landscape: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Triglav.jpg",

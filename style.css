@@ -1358,24 +1358,25 @@ nav ul {
    ZONE EXCLUSIVE : SLIDER DES AVIS (CORRIGÉ SANS CONFLIT)
    ========================================================= */
 .avis-container {
-    overflow: hidden; /* CORRECTION : Coupe proprement le débordement horizontal */
+    overflow: hidden; /* Important : coupe proprement ce qui dépasse */
     width: 100%;
     padding: 20px 0;
     position: relative;
 }
 
-/* Utilisation stricte de l'ID pour écraser l'animation de 40s du slider destinations */
+/* Utilisation stricte de l'ID pour écraser l'animation globale */
 #avis-track {
     display: flex !important;
     width: max-content !important;
-    gap: 0px !important; 
-    animation: defilementAvisInfini 20s linear infinite !important; /* CORRECTION : Seule animation active */
+    gap: 0px !important; /* CORRECTION DU TROU GÉANT : aucun espace entre les deux groupes */
+    animation: defilementAvisInfini 40s linear infinite !important; /* J'ai mis 40s car tu as beaucoup d'avis, sinon ça ira trop vite ! */
 }
 
+/* Le groupe d'avis gère l'espacement à l'intérieur de lui-même */
 .avis-group {
     display: flex !important;
-    gap: 24px !important;
-    padding-right: 24px !important; /* Espace de raccordement parfait */
+    gap: 24px !important; /* Espace entre chaque carte */
+    padding-right: 24px !important; /* Espace de raccordement pour la boucle parfaite */
 }
 
 /* Design de chaque carte d'avis style Apple */
@@ -1388,9 +1389,10 @@ nav ul {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
     display: flex;
     flex-direction: column;
+    flex-shrink: 0; /* Empêche les cartes d'être écrasées */
 }
 
-/* En-tête de la carte (Photo + Nom) */
+/* En-tête de la carte (Photo + Conteneur Nom/Étoiles) */
 #avis-track .review-header {
     display: flex;
     align-items: center;
@@ -1407,12 +1409,44 @@ nav ul {
     background-color: #f5f5f7;
 }
 
+/* Conteneur pour le nom et les étoiles (Alignement) */
+#avis-track .review-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* Nom de l'auteur */
 #avis-track .review-author {
     font-size: 1rem;
     font-weight: 600;
     color: #1d1d1f;
     margin: 0;
+    line-height: 1.2;
+}
+
+/* Conteneur des étoiles dans la carte */
+#avis-track .rating-display {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 2px;
+    margin-top: 4px;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Style de base pour toutes les étoiles */
+#avis-track .rating-display .star {
+    font-size: 18px !important;
+    line-height: 1;
+    color: #e5e5e7 !important; /* Gris clair */
+    user-select: none;
+    display: inline-block !important;
+}
+
+/* Style pour les étoiles actives (remplies) */
+#avis-track .rating-display .star.filled {
+    color: #ffa723 !important; /* Ton doré */
 }
 
 /* Texte du témoignage */
@@ -1425,10 +1459,6 @@ nav ul {
 
 /* ANIMATION FLUIDE ET INFINIE À 50% */
 @keyframes defilementAvisInfini {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }

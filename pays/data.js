@@ -633,7 +633,7 @@ export const countriesData = {
     },
     "montenegro": {
         image: "https://flagcdn.com/w160/me.png",
-        landscape: "https://cdn.pixabay.com/photo/2016/05/16/00/21/tunnel-1394759_960_720.jpg",
+        landscape: "https://cdn.pixabay.com/photo/2024/07/17/10/25/ocean-8901157_960_720.jpg",
         coords: [42.708, 19.374],
         fr: {
             name: "Monténégro",
@@ -669,7 +669,7 @@ export const countriesData = {
             monnaie: "Norwegian Krone"
         }
     },
-    "pays-Bas": {
+    "pays-bas": {
         image: "https://flagcdn.com/w160/nl.png",
         landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Amazonehaven.JPG/1920px-Amazonehaven.JPG",
         coords: [52.132, 5.291],

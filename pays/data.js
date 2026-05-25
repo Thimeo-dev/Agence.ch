@@ -861,7 +861,7 @@ export const countriesData = {
     },
     "suede": {
         image: "https://flagcdn.com/w160/se.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Sergels_torg_dec_2010.jpg/1920px-Sergels_torg_dec_2010.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Sarek_Skierffe_Rapadelta.jpg",
         coords: [60.128, 18.643],
         fr: {
             name: "Suède",

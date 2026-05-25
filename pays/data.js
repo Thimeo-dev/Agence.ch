@@ -595,7 +595,7 @@ export const countriesData = {
     },
     "moldavie": {
         image: "https://flagcdn.com/w160/md.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Chisinau_City_Center.jpg/1920px-Chisinau_City_Center.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Cetatea_Sorocii.jpg/1920px-Cetatea_Sorocii.jpg",
         coords: [47.411, 28.369],
         fr: {
             name: "Moldavie",
@@ -614,7 +614,7 @@ export const countriesData = {
     },
     "monaco": {
         image: "https://flagcdn.com/w160/mc.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Monaco_Port_Hercules.jpg/1920px-Monaco_Port_Hercules.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Vista_de_M%C3%B3naco%2C_2016-06-23%2C_DD_13.jpg/1920px-Vista_de_M%C3%B3naco%2C_2016-06-23%2C_DD_13.jpg",
         coords: [43.738, 7.424],
         fr: {
             name: "Monaco",

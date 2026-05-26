@@ -1053,18 +1053,60 @@ export const countriesData = {
     },
     "bhoutan": {
         image: "https://flagcdn.com/w160/bt.png",
-        fr: { name: "Bhoutan", desc: "Découvrez les paysages variés et la culture riche du Bhoutan." },
-        en: { name: "Bhutan", desc: "Discover the diverse landscapes and rich culture of Bhutan." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Tashichho_Dzong_2012-11-19.jpg/1920px-Tashichho_Dzong_2012-11-19.jpg",
+        coords: [27.514, 90.433],
+        fr: {
+            name: "Bhoutan",
+            desc: "Explorez les paysages variés et la culture riche du Bhoutan.",
+            capitale: "Thimphou",
+            population: "750 000",
+            monnaie: "Ngultrum bhoutanais"
+        },
+        en: {
+            name: "Bhutan",
+            desc: "Explore the diverse landscapes and rich culture of Bhutan.",
+            capitale: "Thimphu",
+            population: "750,000",
+            monnaie: "Bhutanese Ngultrum"
+        }
     },
     "birmanie": {
         image: "https://flagcdn.com/w160/mm.png",
-        fr: { name: "Birmanie", desc: "Explorez les paysages variés et la culture riche de la Birmanie." },
-        en: { name: "Myanmar", desc: "Explore the diverse landscapes and rich culture of Myanmar." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Bagan%2C_Hpaya-thon-zu-Group.JPG/1920px-Bagan%2C_Hpaya-thon-zu-Group.JPG",
+        coords: [21.916, 95.956],
+        fr: { 
+            name: "Birmanie",
+            desc: "Découvrez les paysages variés et la culture riche de la Birmanie.",
+            capitale: "Naypyidaw",
+            population: "54 000 000",
+            monnaie: "Kyat birman"
+        },
+        en: {
+            name: "Myanmar",
+            desc: "Discover the diverse landscapes and rich culture of Myanmar.",
+            capitale: "Naypyidaw",
+            population: "54,000,000",
+            monnaie: "Burmese Kyat"
+        }   
     },
     "brunei": {
         image: "https://flagcdn.com/w160/bn.png",
-        fr: { name: "Brunei", desc: "Découvrez les paysages variés et la culture riche de Brunei." },
-        en: { name: "Brunei", desc: "Discover the diverse landscapes and rich culture of Brunei." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bandar_Seri_Begawan_Brunei.JPG/1920px-Bandar_Seri_Begawan_Brunei.JPG",
+        coords: [4.535, 114.727],
+        fr: { 
+            name: "Brunei",
+            desc: "Explorez les paysages variés et la culture riche de Brunei.",
+            capitale: "Bandar Seri Begawan",
+            population: "430 000",
+            monnaie: "Dollar de Brunei"
+        },
+        en: {
+            name: "Brunei",
+            desc: "Explore the diverse landscapes and rich culture of Brunei.",
+            capitale: "Bandar Seri Begawan",
+            population: "430,000",
+            monnaie: "Brunei Dollar"
+        }
     },
     "cambodge": {
         image: "https://flagcdn.com/w160/kh.png",

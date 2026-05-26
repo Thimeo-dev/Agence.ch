@@ -864,7 +864,7 @@ export const countriesData = {
         landscape: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Sarek_Skierffe_Rapadelta.jpg",
         coords: [60.128, 18.643],
         fr: {
-            name: "Suède",
+            name: "Suède", 
             desc: "Découvrez les paysages variés et la culture riche de la Suède.",
             capitale: "Stockholm",
             population: "10 400 000",

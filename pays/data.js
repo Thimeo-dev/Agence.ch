@@ -977,23 +977,79 @@ export const countriesData = {
 
     "afghanistan": {
         image: "https://flagcdn.com/w160/af.png",
-        fr: { name: "Afghanistan", desc: "Découvrez les paysages variés et la culture riche de l'Afghanistan." },
-        en: { name: "Afghanistan", desc: "Discover the diverse landscapes and rich culture of Afghanistan." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Valley_in_Kunar-2012.jpg/1920px-Valley_in_Kunar-2012.jpg",
+        coords: [33.939, 67.710],
+        fr: {
+            name: "Afghanistan",
+            desc: "Explorez les paysages variés et la culture riche de l'Afghanistan.",
+            capitale: "Kaboul",
+            population: "38 000 000",
+            monnaie: "Afghani"
+        },
+        en: {
+            name: "Afghanistan",
+            desc: "Explore the diverse landscapes and rich culture of Afghanistan.",
+            capitale: "Kabul",
+            population: "38,000,000",
+            monnaie: "Afghan Afghani"
+        }
     },
     "arabie-saoudite": {
         image: "https://flagcdn.com/w160/sa.png",
-        fr: { name: "Arabie Saoudite", desc: "Explorez les paysages variés et la culture riche de l'Arabie Saoudite." },
-        en: { name: "Saudi Arabia", desc: "Explore the diverse landscapes and rich culture of Saudi Arabia." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Flickr_-_omar_chatriwala_-_Dawn_breaks.jpg/1920px-Flickr_-_omar_chatriwala_-_Dawn_breaks.jpg",
+        coords: [23.885, 45.079],
+        fr: { 
+            name: "Arabie Saoudite",
+            desc: "Découvrez les paysages variés et la culture riche de l'Arabie Saoudite.",
+            capitale: "Riyad",
+            population: "34 000 000",
+            monnaie: "Riyal saoudien"
+        },
+        en: {
+            name: "Saudi Arabia",
+            desc: "Discover the diverse landscapes and rich culture of Saudi Arabia.",
+            capitale: "Riyadh",
+            population: "34,000,000",
+            monnaie: "Saudi Riyal"
+        }
     },
-    "bahreïn": {
+    "bahrein": {
         image: "https://flagcdn.com/w160/bh.png",
-        fr: { name: "Bahreïn", desc: "Découvrez les paysages variés et la culture riche de Bahreïn." },
-        en: { name: "Bahrain", desc: "Discover the diverse landscapes and rich culture of Bahrain." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Bahrain_Fort_March_2015.JPG/1920px-Bahrain_Fort_March_2015.JPG",
+        coords: [25.930, 50.637],
+        fr: { 
+            name: "Bahreïn",
+            desc: "Explorez les paysages variés et la culture riche de Bahreïn.",
+            capitale: "Manama",
+            population: "1 700 000",
+            monnaie: "Dinar bahreïni"
+        },
+        en: {
+            name: "Bahrain",
+            desc: "Explore the diverse landscapes and rich culture of Bahrain.",
+            capitale: "Manama",
+            population: "1,700,000",
+            monnaie: "Bahraini Dinar"
+        }
     },
     "bangladesh": {
         image: "https://flagcdn.com/w160/bd.png",
-        fr: { name: "Bangladesh", desc: "Explorez les paysages variés et la culture riche du Bangladesh." },
-        en: { name: "Bangladesh", desc: "Explore the diverse landscapes and rich culture of Bangladesh." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/2/28/Lalbagh_Fort2008c.jpg",
+        coords: [23.685, 90.356],
+        fr: { 
+            name: "Bangladesh",
+            desc: "Découvrez les paysages variés et la culture riche du Bangladesh.",
+            capitale: "Dacca",
+            population: "163 000 000",
+            monnaie: "Taka bangladais"
+        },
+        en: {
+            name: "Bangladesh",
+            desc: "Discover the diverse landscapes and rich culture of Bangladesh.",
+            capitale: "Dhaka",
+            population: "163,000,000",
+            monnaie: "Bangladeshi Taka"
+        }
     },
     "bhoutan": {
         image: "https://flagcdn.com/w160/bt.png",

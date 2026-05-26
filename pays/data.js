@@ -1091,7 +1091,7 @@ export const countriesData = {
     },
     "brunei": {
         image: "https://flagcdn.com/w160/bn.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bandar_Seri_Begawan_Brunei.JPG/1920px-Bandar_Seri_Begawan_Brunei.JPG",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Sultan_Omar_Ali_Saifuddin_Mosque_with_the_ceremonial_ship.jpg",
         coords: [4.535, 114.727],
         fr: { 
             name: "Brunei",

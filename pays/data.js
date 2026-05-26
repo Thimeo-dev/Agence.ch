@@ -1110,23 +1110,79 @@ export const countriesData = {
     },
     "cambodge": {
         image: "https://flagcdn.com/w160/kh.png",
-        fr: { name: "Cambodge", desc: "Explorez les paysages variés et la culture riche du Cambodge." },
-        en: { name: "Cambodia", desc: "Explore the diverse landscapes and rich culture of Cambodia." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Koh_Tonsay_1.jpg/1920px-Koh_Tonsay_1.jpg",
+        coords: [12.565, 104.991],
+        fr: { 
+            name: "Cambodge",
+            desc: "Découvrez les paysages variés et la culture riche du Cambodge.",
+            capitale: "Phnom Penh",
+            population: "16 000 000",
+            monnaie: "Riel cambodgien"
+        },
+        en: {
+            name: "Cambodia",
+            desc: "Discover the diverse landscapes and rich culture of Cambodia.",
+            capitale: "Phnom Penh",
+            population: "16,000,000",
+            monnaie: "Cambodian Riel"
+        }
     },
     "chine": {
         image: "https://flagcdn.com/w160/cn.png",
-        fr: { name: "Chine", desc: "Découvrez les paysages variés et la culture riche de la Chine." },
-        en: { name: "China", desc: "Discover the diverse landscapes and rich culture of China." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/The_Great_Wall_of_China_at_Jinshanling.jpg/1920px-The_Great_Wall_of_China_at_Jinshanling.jpg",
+        coords: [35.861, 104.195],
+        fr: { 
+            name: "Chine",
+            desc: "Découvrez les paysages variés et la culture riche de la Chine.",
+            capitale: "Pékin",
+            population: "1 400 000 000",
+            monnaie: "Yuan chinois"
+        },
+        en: {
+            name: "China",
+            desc: "Discover the diverse landscapes and rich culture of China.",
+            capitale: "Beijing",
+            population: "1,400,000,000",
+            monnaie: "Chinese Yuan"
+        }
     },
     "coree-du-nord": {
         image: "https://flagcdn.com/w160/kp.png",
-        fr: { name: "Corée du Nord", desc: "Explorez les paysages variés et la culture riche de la Corée du Nord même si vous y revenez pas." },
-        en: { name: "North Korea", desc: "Explore the diverse landscapes and rich culture of North Korea even if you return to it." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/0322_Pyongyang_Turm_der_Juche_Idee_Aussicht.jpg/1920px-0322_Pyongyang_Turm_der_Juche_Idee_Aussicht.jpg",
+        coords: [40.339, 127.510],
+        fr: { 
+            name: "Corée du Nord", 
+            desc: "Explorez les paysages variés et la culture riche de la Corée du Nord même si vous y revenez pas." ,
+            Capital: "Pyongyang",
+            population: "25 000 000",
+            monnaie: "Won nord-coréen"
+        },
+        en: {
+            name: "North Korea", 
+            desc: "Explore the diverse landscapes and rich culture of North Korea, even if you won't be going back there." ,
+            Capital: "Pyongyang",
+            population: "25,000,000",
+            monnaie: "North Korean Won"
+        }
     },
     "coree-du-sud": {
         image: "https://flagcdn.com/w160/kr.png",
-        fr: { name: "Corée du Sud", desc: "Découvrez les paysages variés et la culture riche de la Corée du Sud." },
-        en: { name: "South Korea", desc: "Discover the diverse landscapes and rich culture of South Korea." }
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/%ED%8C%8C%EB%85%B8%EB%9D%BC%EB%A7%88_%EC%A0%9C2%EC%97%B0%ED%99%94%EB%B4%89_20171226_172553_Pano.jpg/1920px-%ED%8C%8C%EB%85%B8%EB%9D%BC%EB%A7%88_%EC%A0%9C2%EC%97%B0%ED%99%94%EB%B4%89_20171226_172553_Pano.jpg",
+        coords: [35.907, 127.766],
+        fr: { 
+            name: "Corée du Sud",
+            desc: "Découvrez les paysages variés et la culture riche de la Corée du Sud.",
+            capitale: "Séoul",
+            population: "51 000 000",
+            monnaie: "Won sud-coréen"
+        },
+        en: {
+            name: "South Korea",
+            desc: "Discover the diverse landscapes and rich culture of South Korea.",
+            capitale: "Seoul",
+            population: "51,000,000",
+            monnaie: "South Korean Won"
+        }
     },
 
 };

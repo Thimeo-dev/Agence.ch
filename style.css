@@ -1499,7 +1499,7 @@ nav ul {
     background-color: #000000 !important;
     
     /* Contour initial discret (blanc très transparent) */
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border: 3px solid rgba(255, 255, 255, 0.15) !important;
     
     /* Transition fluide pour la bordure et l'ombre */
     transition: border-color 0.2s, box-shadow 0.2s !important;
@@ -1530,7 +1530,7 @@ nav ul {
 .play-button-overlay {
     position: absolute !important;
     background-color: rgba(0, 0, 0, 0.7) !important;
-    color: #ffffff !important;
+    color: #ffffff3b !important;
     font-size: 22px !important;
     padding: 10px 22px !important;
     border-radius: 14px !important;
@@ -1545,7 +1545,7 @@ nav ul {
 }
 
 .youtube-card:hover .play-button-overlay {
-    background-color: #ff0000 !important;
+    background-color: #ff00003b !important;
     transform: scale(1.1) !important;
 }
 

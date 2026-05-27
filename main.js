@@ -119,7 +119,6 @@ const authLinks = user
     `
     : `
         <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
-        <li><a href="${pathPrefix}video.html" data-key="nav_video"></a></li>
         <li><a href="${pathPrefix}auth.html" class="login-btn" id="auth-btn" data-key="nav_login"></a></li>
     `;
 

@@ -105,8 +105,8 @@ const pathPrefix = isSubFolder ? '../' : './';
 // 2. On prépare les liens (n'oublie pas d'ajouter le préfixe aux href aussi !)
 const authLinks = user
     ? `
-    <li><a href="${pathPrefix}video.html" data-key="nav_video"></a></li>
                 <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
+                <li><a href="${pathPrefix}video.html" data-key="nav_video"></a></li>
                 <li class="profile-menu">
                     <img src="${displayPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
                     <div class="profile-dropdown" id="profile-dropdown">

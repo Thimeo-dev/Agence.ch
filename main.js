@@ -163,7 +163,7 @@ const footerHTML = `
         <div class="footer-socials">
             <a href="#" aria-label="Instagram"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
             <a href="#" aria-label="X"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="X"></a>
-            <a href="#" aria-label="TikTok"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"></a>
+            <a href="#" aria-label="TikTok"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="TikTok"></a>
             <a href="mailto:agence.ch@proton.me?subject=Demande d'assistance - Agence.ch" class="footer-icon-link" aria-label="Mail"><img src="https://cdn-icons-png.flaticon.com/512/542/542689.png" alt="Mail"></a>
             <a href="https://github.com/Thimeo-dev/Agence.ch" aria-label="Github"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github"></a>
         </div>

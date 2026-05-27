@@ -1528,7 +1528,7 @@ nav ul {
 
 /* Titre de la vidéo */
 .youtube-title {
-    color: #f1f1f1 !important; /* Blanc cassé YouTube */
+    color: #111010 !important; /* Blanc cassé YouTube */
     font-size: 16px !important;
     font-weight: 500 !important;
     line-height: 22px !important;

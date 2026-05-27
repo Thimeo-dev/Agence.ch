@@ -1499,7 +1499,7 @@ nav ul {
     background-color: #000000 !important;
     
     /* Contour initial discret (blanc très transparent) */
-    border: 3px solid rgba(255, 255, 255, 0.15) !important;
+    border: 0px solid rgba(255, 255, 255, 0.15) !important;
     
     /* Transition fluide pour la bordure et l'ombre */
     transition: border-color 0.2s, box-shadow 0.2s !important;

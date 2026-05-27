@@ -1464,7 +1464,7 @@ nav ul {
 }
 
 /* ==========================================================================
-   SECTION VIDÉO STYLE YOUTUBE (CORRECTION DU ZOOM DES MINIATURES)
+   SECTION VIDÉO STYLE YOUTUBE INTERACTIF
    ========================================================================== */
 
 .youtube-container {
@@ -1489,7 +1489,6 @@ nav ul {
     cursor: pointer !important;
 }
 
-/* Le conteneur garde le format cinéma 16:9 de YouTube */
 .youtube-thumbnail-wrapper {
     position: relative !important;
     width: 100% !important;
@@ -1498,24 +1497,48 @@ nav ul {
     overflow: hidden !important;
     background-color: #000000 !important;
     transition: border-radius 0.15s ease !important;
-    
-    /* Centrage parfait de l'image à l'intérieur */
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
 }
 
-/* LA CORRECTION : L'image s'adapte maintenant à 100% du cadre sans être coupée */
 .youtube-pure-thumbnail {
     width: 100% !important;
     height: 100% !important;
-    object-fit: contain !important; /* Force l'image entière à s'afficher sans zoomer */
+    object-fit: contain !important;
     display: block !important;
 }
 
-/* Effet au survol de la carte */
+/* Style de l'iframe une fois injectée par le JS (sans bandes noires) */
+.youtube-thumbnail-wrapper iframe {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    border: none !important;
+}
+
+/* Bouton Play qui apparaît au survol */
+.play-button-overlay {
+    position: absolute !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    color: #ffffff !important;
+    font-size: 22px !important;
+    padding: 10px 22px !important;
+    border-radius: 14px !important;
+    transition: background-color 0.2s, transform 0.2s !important;
+    pointer-events: none !important; /* Laisse le clic traverser vers le parent */
+}
+
+/* Effets au survol de la carte */
 .youtube-card:hover .youtube-thumbnail-wrapper {
     border-radius: 4px !important;
+}
+
+.youtube-card:hover .play-button-overlay {
+    background-color: #ff0000 !important; /* Devient rouge YouTube au survol */
+    transform: scale(1.1) !important;
 }
 
 .youtube-info-block {
@@ -1524,7 +1547,7 @@ nav ul {
 }
 
 .youtube-title {
-    color: #1d1c1c !important;
+    color: #f1f1f1 !important;
     font-size: 16px !important;
     font-weight: 500 !important;
     line-height: 22px !important;
@@ -1537,18 +1560,18 @@ nav ul {
 }
 
 .youtube-channel {
-    color: #494545 !important;
+    color: #aaaaaa !important;
     font-size: 14px !important;
     margin: 0 !important;
     line-height: 18px !important;
 }
 
 .youtube-channel:hover {
-    color: #494545 !important;
+    color: #f1f1f1 !important;
 }
 
 .youtube-meta {
-    color: #999292 !important;
+    color: #aaaaaa !important;
     font-size: 14px !important;
     margin: 2px 0 0 0 !important;
     line-height: 18px !important;

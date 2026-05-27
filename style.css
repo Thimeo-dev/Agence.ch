@@ -1464,7 +1464,7 @@ nav ul {
 }
 
 /* ==========================================================================
-   SECTION VIDÉO STYLE YOUTUBE INTERACTIF
+   SECTION VIDÉO STYLE YOUTUBE INTERACTIF (ARRONDIS FIXES & BORDURES)
    ========================================================================== */
 
 .youtube-container {
@@ -1489,14 +1489,21 @@ nav ul {
     cursor: pointer !important;
 }
 
+/* Le cadre avec les contours intégrés et les angles fixes */
 .youtube-thumbnail-wrapper {
     position: relative !important;
     width: 100% !important;
     aspect-ratio: 16 / 9 !important;
-    border-radius: 12px !important;
+    border-radius: 12px !important; /* Reste toujours arrondi à 12px */
     overflow: hidden !important;
     background-color: #000000 !important;
-    transition: border-radius 0.15s ease !important;
+    
+    /* Contour initial discret (blanc très transparent) */
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    
+    /* Transition fluide pour la bordure et l'ombre */
+    transition: border-color 0.2s, box-shadow 0.2s !important;
+    
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -1509,7 +1516,7 @@ nav ul {
     display: block !important;
 }
 
-/* Style de l'iframe une fois injectée par le JS (sans bandes noires) */
+/* Style de l'iframe une fois injectée (garde les mêmes arrondis internes) */
 .youtube-thumbnail-wrapper iframe {
     position: absolute !important;
     width: 100% !important;
@@ -1519,7 +1526,7 @@ nav ul {
     border: none !important;
 }
 
-/* Bouton Play qui apparaît au survol */
+/* Bouton Play virtuel */
 .play-button-overlay {
     position: absolute !important;
     background-color: rgba(0, 0, 0, 0.7) !important;
@@ -1528,16 +1535,17 @@ nav ul {
     padding: 10px 22px !important;
     border-radius: 14px !important;
     transition: background-color 0.2s, transform 0.2s !important;
-    pointer-events: none !important; /* Laisse le clic traverser vers le parent */
+    pointer-events: none !important;
 }
 
-/* Effets au survol de la carte */
+/* 🎯 CORRECTION AU SURVOL : Les angles ne bougent plus, le contour devient plus visible */
 .youtube-card:hover .youtube-thumbnail-wrapper {
-    border-radius: 4px !important;
+    border-color: rgba(255, 255, 255, 0.4) !important; /* Le contour s'illumine */
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1) !important; /* Légère lueur */
 }
 
 .youtube-card:hover .play-button-overlay {
-    background-color: #ff000034 !important; /* Devient rouge YouTube au survol */
+    background-color: #ff0000 !important;
     transform: scale(1.1) !important;
 }
 
@@ -1547,7 +1555,7 @@ nav ul {
 }
 
 .youtube-title {
-    color: #1a1919 !important;
+    color: #161616 !important;
     font-size: 16px !important;
     font-weight: 500 !important;
     line-height: 22px !important;
@@ -1560,18 +1568,18 @@ nav ul {
 }
 
 .youtube-channel {
-    color: #464242 !important;
+    color: #524f4f !important;
     font-size: 14px !important;
     margin: 0 !important;
     line-height: 18px !important;
 }
 
 .youtube-channel:hover {
-    color: #464242 !important;
+    color: #524f4f !important;
 }
 
 .youtube-meta {
-    color: #4d4b4b !important;
+    color: #686464 !important;
     font-size: 14px !important;
     margin: 2px 0 0 0 !important;
     line-height: 18px !important;
@@ -1583,6 +1591,7 @@ nav ul {
     }
     .youtube-thumbnail-wrapper {
         border-radius: 0 !important;
+        border: none !important; /* Pas de bordure sur petit écran pour un style épuré mobile */
     }
     .youtube-info-block {
         padding-left: 12px !important;

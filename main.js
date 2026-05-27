@@ -105,23 +105,23 @@ const pathPrefix = isSubFolder ? '../' : './';
 // 2. On prépare les liens (n'oublie pas d'ajouter le préfixe aux href aussi !)
 const authLinks = user
     ? `
-<li><a href="${pathPrefix}video.html" data-key="nav_video"></a></li>
-            <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
-            <li class="profile-menu">
-                <img src="${displayPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
-                <div class="profile-dropdown" id="profile-dropdown">
-                    <a href="${pathPrefix}myaccount.html" data-key="nav_myaccount"></a>
-                    ${isAdmin ? `<a href="${pathPrefix}admin.html" data-key="nav_admin"></a>` : ''}
-                    <hr>
-                    <button type="button" id="logout-btn" class="logout-option" data-key="nav_logout"></button>
-                </div>
-            </li>
-        `
-        : `
-            <li><a href="${pathPrefix}video.html" data-key="nav_video"></a></li>
-            <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
-            <li><a href="${pathPrefix}auth.html" class="login-btn" id="auth-btn" data-key="nav_login"></a></li>
-        `;
+    <li><a href="${pathPrefix}video.html" data-key="nav_video"></a></li>
+                <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
+                <li class="profile-menu">
+                    <img src="${displayPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <a href="${pathPrefix}myaccount.html" data-key="nav_myaccount"></a>
+                        ${isAdmin ? `<a href="${pathPrefix}admin.html" data-key="nav_admin"></a>` : ''}
+                        <hr>
+                        <button type="button" id="logout-btn" class="logout-option" data-key="nav_logout"></button>
+                    </div>
+                </li>
+            `
+            : `
+                <li><a href="${pathPrefix}video.html" data-key="nav_video"></a></li>
+                <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
+                <li><a href="${pathPrefix}auth.html" class="login-btn" id="auth-btn" data-key="nav_login"></a></li>
+            `;
 
 // 3. On retourne le HTML avec le chemin du logo dynamique
 return `

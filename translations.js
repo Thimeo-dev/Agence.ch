@@ -44,6 +44,7 @@ export const translations = {
         privacy_sec5_li2: "<strong>Cookies de mesure d'audience :</strong> Via Google Analytics, ces cookies nous permettent de comprendre comment vous interagissez avec notre site (pages visitées, provenance) afin d'améliorer nos services de voyage.",
         privacy_sec5_footer: "Nous ne pratiquons aucun traçage à des fins publicitaires et ne revendons jamais vos données à des tiers.",
         nav_home: "Accueil",
+        nav_video: "Vidéo",
         nav_login: "Connexion",
         nav_myaccount: "Mon compte",
         nav_admin: "Tableau de bord",

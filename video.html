@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agence.ch — Agence de voyage Suisse</title>
+    <link rel="icon" type="image/svg+xml" href="AGence.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="hero">
+            <h1 data-key="hero_title"></h1>
+            <p data-key="hero_subtitle"></p>
+            <a href="./destinationcherche.html" class="cta-main" data-key="cta_main"></a>
+        </section>
+        
+        <section class="destinations-section">
+    <div class="section-header">
+    </div>
+
+    <div class="slider-container">
+        <div class="slider-track" id="slider-track">
+            </div>
+    </div>
+</section>
+
+<section class="monthly-suggestion">
+    <!-- L'image est ici, elle prend toute la place entourée -->
+    <div class="suggestion-banner">
+        <div class="suggestion-overlay">
+            <span class="badge" data-key="suggestion_badge"></span>
+        </div>
+    </div>
+    
+    <!-- Les textes sont en dessous, comme sur ton dessin -->
+    <div class="suggestion-info">
+        <h2 data-key="suggestion_title"></h2>
+        <p data-key="suggestion_text"></p>
+        <div class="hero-text-content">
+            <a href="./pays/pays.html?id=suede&lang=fr" class="btn-suggestion">
+                Découvrir la destination
+            </a>
+</div>
+    </div>
+</section>
+
+<div class="section-presentation-video">
+<iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/wOTgFwdP1LI?autoplay=1&mute=1&loop=1&playlist=wOTgFwdP1LI"
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+</iframe>
+<iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/Z8IocUTNYbE?autoplay=1&mute=1&loop=1&playlist=Z8IocUTNYbE"
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+</iframe>
+<iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/sAQCyGfl4TE?autoplay=1&mute=1&loop=1&playlist=sAQCyGfl4TE"
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+</iframe>
+</div>
+
+<section class="reviews-section">
+        <div class="avis-container">
+            <div id="avis-track"></div>
+        </div>
+</section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    
+    <script src="./avis/avis.js" defer></script>
+    <script src="script.js" type="module"></script>
+    <script src="main.js" type="module"></script>
+</body>
+</html>

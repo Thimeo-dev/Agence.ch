@@ -1462,3 +1462,22 @@ nav ul {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
+.video-media-bloc {
+    flex: 1.2;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.video-media-bloc iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Ajoute cette ligne pour cacher les interactions au chargement */
+    pointer-events: none; 
+}

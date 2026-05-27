@@ -1464,58 +1464,112 @@ nav ul {
 }
 
 /* ==========================================================================
-   SECTION PRÉSENTATION VIDÉO (SPLIT DESIGN)
+   SECTION VIDÉO STYLE YOUTUBE DARK THEME
    ========================================================================== */
 
-.section-presentation-video {
+/* Conteneur principal qui applique le fond noir de YouTube */
+.youtube-container {
+    background-color: #0f0f0f !important; /* Le vrai noir de l'arrière-plan YouTube */
+    padding: 40px 24px !important;
+    min-height: 100vh !important;
+    font-family: "Roboto", "Arial", sans-serif !important;
+}
+
+/* Grille responsive : aligne les vidéos sur 3 colonnes, et passe à 1 sur mobile */
+.youtube-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 40px 16px !important; /* 40px d'espace vertical, 16px horizontal */
+    max-width: 1280px !important;
+    margin: 0 auto !important;
+}
+
+/* La carte d'une vidéo */
+.youtube-card {
+    background: transparent !important;
     display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 40px !important;
-    max-width: 1200px !important;
-    margin: 60px auto !important;
-    padding: 0 20px !important;
+    flex-direction: column !important;
+    cursor: pointer !important;
 }
 
-.video-texte-bloc {
-    flex: 1 !important;
-}
-
-.video-texte-bloc h2 {
-    font-size: 28px !important;
-    margin-bottom: 15px !important;
-    color: #1a1a1a !important;
-}
-
-.video-texte-bloc p {
-    font-size: 16px !important;
-    color: #555 !important;
-    line-height: 1.6 !important;
-}
-
-.video-media-bloc {
-    flex: 1.8 !important;
+/* Le cadre de la miniature avec format 16:9 et bords arrondis */
+.youtube-thumbnail-wrapper {
     position: relative !important;
-    aspect-ratio: 16 / 9 !important;
-    border-radius: 16px !important;
-    overflow: hidden !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
-}
-
-.video-media-bloc iframe {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
     width: 100% !important;
-    height: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 12px !important; /* Arrondis officiels des miniatures YouTube */
+    overflow: hidden !important;
+    background-color: #000000 !important;
+    transition: border-radius 0.15s ease !important;
 }
 
-/* Version mobile - s'active sur les petits écrans */
-@media (max-width: 768px) {
-    .section-presentation-video {
-        flex-direction: column !important;
-        text-align: center !important;
-        gap: 20px !important;
-        margin: 40px auto !important;
+/* Zoom ultra-léger de l'iframe pour masquer les bandes noires cinéma */
+.youtube-thumbnail-wrapper iframe {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100% !important;
+    height: 135% !important;
+    transform: translate(-50%, -50%) !important;
+    object-fit: cover !important;
+    border: none !important;
+}
+
+/* Effet au survol de la carte (Optionnel, comme sur YouTube où les bords s'aplatissent parfois légèrement) */
+.youtube-card:hover .youtube-thumbnail-wrapper {
+    border-radius: 4px !important;
+}
+
+/* Bloc contenant les textes sous la vidéo */
+.youtube-info-block {
+    padding-top: 12px !important;
+    padding-right: 24px !important;
+}
+
+/* Titre de la vidéo */
+.youtube-title {
+    color: #f1f1f1 !important; /* Blanc cassé YouTube */
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 22px !important;
+    margin: 0 0 4px 0 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important; /* Coupe le titre sur un maximum de 2 lignes */
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* Nom de la chaîne */
+.youtube-channel {
+    color: #aaaaaa !important; /* Gris secondaire pour la lisibilité */
+    font-size: 14px !important;
+    margin: 0 !important;
+    line-height: 18px !important;
+}
+
+.youtube-channel:hover {
+    color: #f1f1f1 !important; /* S'illumine au survol */
+}
+
+/* Vues et date de publication */
+.youtube-meta {
+    color: #aaaaaa !important;
+    font-size: 14px !important;
+    margin: 2px 0 0 0 !important;
+    line-height: 18px !important;
+}
+
+/* Ajustements pour les petits écrans (mobiles) */
+@media (max-width: 480px) {
+    .youtube-container {
+        padding: 16px 0 !important; /* Supprime les bords sur mobile pour maximiser la vidéo */
+    }
+    .youtube-thumbnail-wrapper {
+        border-radius: 0 !important; /* Les vidéos prennent tout l'écran sur téléphone */
+    }
+    .youtube-info-block {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
     }
 }

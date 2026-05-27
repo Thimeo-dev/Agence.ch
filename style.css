@@ -1494,7 +1494,7 @@ nav ul {
 }
 
 .video-media-bloc {
-    flex: 1.2 !important;
+    flex: 1.8 !important;
     position: relative !important;
     aspect-ratio: 16 / 9 !important;
     border-radius: 16px !important;

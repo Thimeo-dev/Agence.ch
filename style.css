@@ -1542,19 +1542,19 @@ nav ul {
 
 /* Nom de la chaîne */
 .youtube-channel {
-    color: #aaaaaa !important; /* Gris secondaire pour la lisibilité */
+    color: #535151 !important; /* Gris secondaire pour la lisibilité */
     font-size: 14px !important;
     margin: 0 !important;
     line-height: 18px !important;
 }
 
 .youtube-channel:hover {
-    color: #f1f1f1 !important; /* S'illumine au survol */
+    color: #535151 !important; /* S'illumine au survol */
 }
 
 /* Vues et date de publication */
 .youtube-meta {
-    color: #aaaaaa !important;
+    color: #6e6a6a !important;
     font-size: 14px !important;
     margin: 2px 0 0 0 !important;
     line-height: 18px !important;

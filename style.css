@@ -1537,7 +1537,7 @@ nav ul {
 }
 
 .youtube-card:hover .play-button-overlay {
-    background-color: #ff0000 !important; /* Devient rouge YouTube au survol */
+    background-color: #ff000034 !important; /* Devient rouge YouTube au survol */
     transform: scale(1.1) !important;
 }
 
@@ -1547,7 +1547,7 @@ nav ul {
 }
 
 .youtube-title {
-    color: #f1f1f1 !important;
+    color: #1a1919 !important;
     font-size: 16px !important;
     font-weight: 500 !important;
     line-height: 22px !important;
@@ -1560,18 +1560,18 @@ nav ul {
 }
 
 .youtube-channel {
-    color: #aaaaaa !important;
+    color: #464242 !important;
     font-size: 14px !important;
     margin: 0 !important;
     line-height: 18px !important;
 }
 
 .youtube-channel:hover {
-    color: #f1f1f1 !important;
+    color: #464242 !important;
 }
 
 .youtube-meta {
-    color: #aaaaaa !important;
+    color: #4d4b4b !important;
     font-size: 14px !important;
     margin: 2px 0 0 0 !important;
     line-height: 18px !important;

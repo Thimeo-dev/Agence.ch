@@ -109,7 +109,7 @@ const authLinks = user
                     <img src="${displayPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
                     <div class="profile-dropdown" id="profile-dropdown">
                         <a href="${pathPrefix}myaccount.html" data-key="nav_myaccount"></a>
-                        ${isAdmin ? `<a href="${pathPrefix}admin.html" data-key="nav_admin"></a>` : ''}
+                        ${isAdmin ? `<a href="${pathPrefix}admin.html" data-key="nav_admin">Admin</a>` : ''}
                         <hr>
                         <button type="button" id="logout-btn" class="logout-option" data-key="nav_logout"></button>
                     </div>
@@ -231,8 +231,28 @@ document.addEventListener("DOMContentLoaded", () => {
         translatePage();
     }, 0);
 
-    const render = async (user) => {
+    const render = async (user, isInitialCheck = false) => {
         if (!hPlace) return;
+        
+        // 🎯 LOGIQUE DE SÉCURITÉ INTÉGRÉE :
+        const pathname = window.location.pathname;
+        const isOnAdminPage = pathname.endsWith('admin.html') || pathname.includes('/admin');
+
+        if (isOnAdminPage) {
+            // Si c'est la vérification "à blanc" du départ, on attend patiemment Firebase
+            if (isInitialCheck) return; 
+
+            const isAdmin = user && user.email === "thimeosousa02@gmail.com";
+            if (!isAdmin) {
+                console.log("Accès refusé : Redirection automatique.");
+                window.location.href = 'index.html';
+                return;
+            } else {
+                console.log("Bienvenue Thiméo !");
+                const adminContent = document.getElementById('admin-content');
+                if (adminContent) adminContent.style.display = 'block';
+            }
+        }
         
         // Récupérer la photo depuis Firestore
         let userPhoto = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
@@ -242,13 +262,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (userDoc.exists() && userDoc.data().photo) {
                     let photo = userDoc.data().photo;
                     
-                    // Si c'est du base64, ajouter le préfixe data:image
                     if (photo.startsWith('data:image') || photo.includes(',')) {
                         userPhoto = photo;
                     } else if (photo.startsWith('/') || photo.includes('http')) {
                         userPhoto = photo;
                     } else if (photo.trim().length > 0) {
-                        // Sinon, c'est probablement du base64 sans préfixe
                         userPhoto = `data:image/jpeg;base64,${photo}`;
                     }
                 }
@@ -292,38 +310,17 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", () => {
         const header = document.querySelector("header");
         if (header) {
-            // Ajoute la classe 'scrolled' après 20px de descente
             header.classList.toggle("scrolled", window.scrollY > 20);
         }
     });
 
-    render(null);
-
-    // 🎯 C'EST ICI QUE J'AI INTÉGRÉ LA SÉCURITÉ ADMIN
-    onAuthStateChanged(auth, async (user) => {
-        // 1. On lance d'abord ton rendu normal (Header, photo, etc.)
-        await render(user);
-
-        // 2. On vérifie la sécurité admin
-        const ADMIN_EMAIL = "thimeosousa02@gmail.com";
-        const isAdmin = user && user.email === ADMIN_EMAIL;
-        
-        const pathname = window.location.pathname;
-        const isOnAdminPage = pathname.endsWith('admin.html') || pathname.includes('/admin');
-
-        if (isOnAdminPage) {
-            if (!isAdmin) {
-                console.log("Accès refusé : Redirection automatique vers l'accueil.");
-                window.location.href = 'index.html';
-            } else {
-                console.log("Accès administrateur validé ! Bienvenue Thiméo.");
-                // Forcer l'affichage de ton contenu si tu utilises display: none
-                const adminContent = document.getElementById('admin-content');
-                if (adminContent) {
-                    adminContent.style.display = 'block'; 
-                }
-            }
-        }
+    // 🎯 REGLAGE DES APPELS : 
+    // Au départ, on lance render avec true pour ne pas déclencher une fausse redirection immédiate.
+    render(null, true);
+    
+    // Dès que Firebase répond (que tu sois connecté ou non), il exécute la sécurité
+    onAuthStateChanged(auth, (user) => {
+        render(user, false);
     });
 });
 
@@ -341,7 +338,8 @@ const cookieHTML = `
         <div id="cookie-options" style="display: none; margin-top: 15px; border-top: 1px solid #eee; pt-3">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
                 <span style="font-size: 0.8rem; color: #333;">Essentiels</span>
-                <input type="checkbox" checked disabled> </div>
+                <input type="checkbox" checked disabled>
+            </div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
                 <span style="font-size: 0.8rem; color: #333;">Analytiques</span>
                 <input type="checkbox" id="cookies-analytics">
@@ -360,9 +358,7 @@ const cookieHTML = `
 </div>
 `;
 document.addEventListener("DOMContentLoaded", function() {
-    // Vérifier si les cookies ont déjà été acceptés
     if (localStorage.getItem('cookies-accepted') === 'true') {
-        // Ne pas injecter la notification si déjà acceptée
         return;
     }
     
@@ -375,10 +371,8 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
     }
 
-    // Affichage initial
     cookieNotice.style.display = 'block';
 
-    // Basculer l'affichage des préférences
     togglePrefsBtn.addEventListener('click', function() {
         if (cookieOptions.style.display === 'none') {
             cookieOptions.style.display = 'block';
@@ -389,7 +383,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Sauvegarder les choix
     acceptBtn.addEventListener('click', function() {
         const analytics = document.getElementById('cookies-analytics').checked;
         
@@ -400,32 +393,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// On l'injecte dans le body SEULEMENT si pas encore accepté
 if (localStorage.getItem('cookies-accepted') !== 'true') {
     document.body.insertAdjacentHTML('beforeend', cookieHTML);
 }
 
-// --- À METTRE À LA FIN DE TON MAIN.JS ---
-
-/**
- * Fonction pour cacher le loader proprement
- */
 const hideLoader = () => {
     const loader = document.getElementById("loader");
     if (loader) {
         loader.classList.add("loader-hidden");
-        // On le retire du DOM après l'animation pour libérer de la mémoire
         setTimeout(() => {
             loader.style.display = "none";
         }, 500);
     }
 };
 
-// Sécurité : Si après 5 secondes rien ne se passe, on force l'affichage du site
 setTimeout(hideLoader, 5000);
 
-// Événement de chargement final
 window.addEventListener("load", () => {
-    // On attend un tout petit peu pour que l'animation de ton header pilule se fasse
     setTimeout(hideLoader, 600);
 });

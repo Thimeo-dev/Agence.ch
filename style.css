@@ -369,14 +369,9 @@ nav a:hover {
 
 /* Remplace ton bloc .admin-page actuel par celui-ci */
 .admin-page {
-    opacity: 0; /* Caché au départ */
-    transition: opacity 2s ease; /* Transition douce sur 2 secondes */
+    opacity: 1; /* Caché au départ */
+    transition: opacity 2s e; /* Transition douce sur 2 secondes */
     background-color: #fcfcfc;
-}
-
-/* Cette classe sera ajoutée par le JS pour rendre visible */
-.admin-page.visible {
-    opacity: 1;
 }
 
 .admin-content {

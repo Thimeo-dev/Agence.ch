@@ -367,10 +367,17 @@ nav a:hover {
 }
 /* --- Styles spécifiques à la page Admin --- */
 
+/* Remplace ton bloc .admin-page actuel par celui-ci */
 .admin-page {
-    opacity: 100; /* Caché au chargement pour la sécurité */
+    opacity: 1; /* On commence visible pour éviter le bug de page blanche */
     transition: opacity 0.3s ease;
     background-color: #fcfcfc;
+}
+
+/* On définit une classe spécifique pour masquer au besoin via JS */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .admin-content {

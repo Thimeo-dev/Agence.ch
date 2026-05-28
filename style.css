@@ -369,15 +369,14 @@ nav a:hover {
 
 /* Remplace ton bloc .admin-page actuel par celui-ci */
 .admin-page {
-    opacity: 1; /* On commence visible pour éviter le bug de page blanche */
-    transition: opacity 0.3s ease;
+    opacity: 0; /* Caché au départ */
+    transition: opacity 2s ease; /* Transition douce sur 2 secondes */
     background-color: #fcfcfc;
 }
 
-/* On définit une classe spécifique pour masquer au besoin via JS */
-.hidden {
-    opacity: 0;
-    pointer-events: none;
+/* Cette classe sera ajoutée par le JS pour rendre visible */
+.admin-page.visible {
+    opacity: 1;
 }
 
 .admin-content {

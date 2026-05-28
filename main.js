@@ -96,13 +96,11 @@ const renderHeader = (user, userPhoto) => {
     const displayPhoto = userPhoto || defaultPic;
     const isAdmin = user && user.email === "thimeosousa02@gmail.com";
     
-    
-
 // 1. On définit le préfixe de chemin au début de la fonction
 const isSubFolder = window.location.pathname.includes('/pays/');
 const pathPrefix = isSubFolder ? '../' : './';
 
-// 2. On prépare les liens (n'oublie pas d'ajouter le préfixe aux href aussi !)
+// 2. On prépare les liens
 const authLinks = user
     ? `
                 <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
@@ -290,16 +288,43 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     };
+    
     window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
-    if (header) {
-        // Ajoute la classe 'scrolled' après 20px de descente
-        header.classList.toggle("scrolled", window.scrollY > 20);
-    }
-});
+        const header = document.querySelector("header");
+        if (header) {
+            // Ajoute la classe 'scrolled' après 20px de descente
+            header.classList.toggle("scrolled", window.scrollY > 20);
+        }
+    });
 
     render(null);
-    onAuthStateChanged(auth, render);
+
+    // 🎯 C'EST ICI QUE J'AI INTÉGRÉ LA SÉCURITÉ ADMIN
+    onAuthStateChanged(auth, async (user) => {
+        // 1. On lance d'abord ton rendu normal (Header, photo, etc.)
+        await render(user);
+
+        // 2. On vérifie la sécurité admin
+        const ADMIN_EMAIL = "thimeosousa02@gmail.com";
+        const isAdmin = user && user.email === ADMIN_EMAIL;
+        
+        const pathname = window.location.pathname;
+        const isOnAdminPage = pathname.endsWith('admin.html') || pathname.includes('/admin');
+
+        if (isOnAdminPage) {
+            if (!isAdmin) {
+                console.log("Accès refusé : Redirection automatique vers l'accueil.");
+                window.location.href = 'index.html';
+            } else {
+                console.log("Accès administrateur validé ! Bienvenue Thiméo.");
+                // Forcer l'affichage de ton contenu si tu utilises display: none
+                const adminContent = document.getElementById('admin-content');
+                if (adminContent) {
+                    adminContent.style.display = 'block'; 
+                }
+            }
+        }
+    });
 });
 
 
@@ -313,12 +338,10 @@ const cookieHTML = `
             <a href="confidentialite.html">En savoir plus</a>.
         </p>
         
-        <!-- Section des préférences cachée au début -->
         <div id="cookie-options" style="display: none; margin-top: 15px; border-top: 1px solid #eee; pt-3">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
                 <span style="font-size: 0.8rem; color: #333;">Essentiels</span>
-                <input type="checkbox" checked disabled> <!-- Toujours activé -->
-            </div>
+                <input type="checkbox" checked disabled> </div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
                 <span style="font-size: 0.8rem; color: #333;">Analytiques</span>
                 <input type="checkbox" id="cookies-analytics">

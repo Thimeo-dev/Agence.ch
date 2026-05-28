@@ -91,43 +91,81 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
-// On attend que Firebase valide l'utilisateur connecté
+const ADMIN_EMAIL = "thimeosousa02@gmail.com";
+
+// 1. FONCTION QUI CRÉE LE HEADER (Uniquement pour le visuel du menu)
+const renderHeader = (user, userPhoto) => {
+    const defaultPic = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
+    const displayPhoto = userPhoto || defaultPic;
+    const isAdmin = user && user.email === ADMIN_EMAIL;
+
+    const isSubFolder = window.location.pathname.includes('/pays/');
+    const pathPrefix = isSubFolder ? '../' : './';
+
+    // On prépare les liens selon la connexion
+    const authLinks = user
+        ? `
+        <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
+        <li class="profile-menu">
+            <img src="${displayPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
+            <div class="profile-dropdown" id="profile-dropdown">
+                <a href="${pathPrefix}myaccount.html" data-key="nav_navaccount"></a>
+                ${isAdmin ? `<a href="${pathPrefix}admin.html" data-key="nav_admin">Admin</a>` : ''}
+                <hr>
+                <button type="button" id="logout-btn" class="logout-option" data-key="nav_logout">Déconnexion</button>
+            </div>
+        </li>
+        `
+        : `
+        <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
+        <li><a href="${pathPrefix}auth.html" class="login-btn" id="auth-btn" data-key="nav_login"></a></li>
+        `;
+
+    return `
+    <header>
+        <div class="logo-area">
+            <img src="${pathPrefix}Agence.svg" alt="Logo Agence">
+            <span class="brand-name">Agence.ch</span>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                ${authLinks}
+            </ul>
+        </nav>
+    </header>
+    `;
+};
+
+// 2. LE VRAI ÉCOUTEUR DE SÉCURITÉ (C'est lui qui gère le plein écran / blocage de la page)
 onAuthStateChanged(auth, (user) => {
-    
-    // 1. Vérification de l'adresse email administrateur
-    const isAdmin = user && user.email === "thimeosousa02@gmail.com";
-    
+    const isAdmin = user && user.email === ADMIN_EMAIL;
     const pathname = window.location.pathname;
     const isOnAdminPage = pathname.endsWith('admin.html') || pathname.includes('/admin');
 
-    // 2. Sécurité : Si on tente de forcer l'accès sans être admin
-    if (isOnAdminPage && !isAdmin) {
-        console.log("Accès refusé : Redirection...");
-        window.location.href = 'index.html';
-    } 
-    
-    // 3. AFFICHAGE DE LA PAGE : Si tu es bien connecté avec le bon compte
-    else if (isOnAdminPage && isAdmin) {
-        console.log("Accès administrateur validé ! Chargement du tableau de bord...");
-        
-        // CORRECTION DE LA PAGE BLANCHE : 
-        // Si ton interface HTML possède un conteneur principal (ex: id="admin-content"), 
-        // on force son affichage ici pour qu'il apparaisse dès que Firebase a fini.
-        const adminContent = document.getElementById('admin-content');
-        if (adminContent) {
-            adminContent.style.display = 'block'; // Rend le contenu visible
-        }
+    // Injection du header sur la page
+    const headerContainer = document.getElementById('header-container'); // Assure-toi d'avoir un conteneur dans ton HTML
+    if (headerContainer) {
+        headerContainer.innerHTML = renderHeader(user, user?.photoURL);
+    }
 
-        // C'est ici que tu dois appeler tes fonctions pour charger ton fichier ou tes données !
-        chargerDonneesTableauDeBord(); 
+    // VÉRIFICATION DE SÉCURITÉ DE LA PAGE
+    if (isOnAdminPage) {
+        if (!isAdmin) {
+            console.log("Accès interdit. Redirection vers index.html");
+            window.location.href = 'index.html';
+        } else {
+            console.log("Bienvenue Thiméo, accès au tableau de bord autorisé !");
+            
+            // On force l'affichage de ton tableau de bord
+            const adminContent = document.getElementById('admin-content');
+            if (adminContent) {
+                adminContent.style.display = 'block'; 
+            }
+            
+            // Lance tes fonctions de chargement de fichier ici si nécessaire
+        }
     }
 });
-
-// Exemple de fonction pour charger tes données (à adapter selon la logique de ton fichier)
-function chargerDonneesTableauDeBord() {
-    console.log("Les données de ton fichier s'affichent ici.");
-    // Mets ici le code JS qui lit ton fichier ou l'affiche dans ton HTML
-}
 
 
 

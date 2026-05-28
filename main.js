@@ -91,28 +91,43 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
-// 🎯 On écoute en continu le changement d'état de connexion de Firebase
+// On attend que Firebase valide l'utilisateur connecté
 onAuthStateChanged(auth, (user) => {
     
-    // 1. On définit si l'utilisateur connecté est bien l'admin
+    // 1. Vérification de l'adresse email administrateur
     const isAdmin = user && user.email === "thimeosousa02@gmail.com";
     
-    // 2. On regarde sur quelle page se trouve le visiteur
     const pathname = window.location.pathname;
     const isOnAdminPage = pathname.endsWith('admin.html') || pathname.includes('/admin');
 
-    // 3. APPLICATION DE LA SÉCURITÉ
-    // Si l'utilisateur tente d'accéder à l'administration mais n'est pas le bon admin
+    // 2. Sécurité : Si on tente de forcer l'accès sans être admin
     if (isOnAdminPage && !isAdmin) {
-        console.log("Accès refusé : Redirection automatique vers l'accueil.");
+        console.log("Accès refusé : Redirection...");
         window.location.href = 'index.html';
     } 
-    // Si c'est bien l'admin, on le laisse tranquille sur la page
+    
+    // 3. AFFICHAGE DE LA PAGE : Si tu es bien connecté avec le bon compte
     else if (isOnAdminPage && isAdmin) {
-        console.log("Accès administrateur validé ! Bienvenue Thiméo.");
-        // Tu peux appeler ici une fonction pour charger ton tableau de bord si nécessaire
+        console.log("Accès administrateur validé ! Chargement du tableau de bord...");
+        
+        // CORRECTION DE LA PAGE BLANCHE : 
+        // Si ton interface HTML possède un conteneur principal (ex: id="admin-content"), 
+        // on force son affichage ici pour qu'il apparaisse dès que Firebase a fini.
+        const adminContent = document.getElementById('admin-content');
+        if (adminContent) {
+            adminContent.style.display = 'block'; // Rend le contenu visible
+        }
+
+        // C'est ici que tu dois appeler tes fonctions pour charger ton fichier ou tes données !
+        chargerDonneesTableauDeBord(); 
     }
 });
+
+// Exemple de fonction pour charger tes données (à adapter selon la logique de ton fichier)
+function chargerDonneesTableauDeBord() {
+    console.log("Les données de ton fichier s'affichent ici.");
+    // Mets ici le code JS qui lit ton fichier ou l'affiche dans ton HTML
+}
 
 
 

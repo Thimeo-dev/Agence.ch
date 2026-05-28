@@ -96,11 +96,13 @@ const renderHeader = (user, userPhoto) => {
     const displayPhoto = userPhoto || defaultPic;
     const isAdmin = user && user.email === "thimeosousa02@gmail.com";
     
+    
+
 // 1. On définit le préfixe de chemin au début de la fonction
 const isSubFolder = window.location.pathname.includes('/pays/');
 const pathPrefix = isSubFolder ? '../' : './';
 
-// 2. On prépare les liens
+// 2. On prépare les liens (n'oublie pas d'ajouter le préfixe aux href aussi !)
 const authLinks = user
     ? `
                 <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
@@ -231,28 +233,8 @@ document.addEventListener("DOMContentLoaded", () => {
         translatePage();
     }, 0);
 
-    const render = async (user, isInitialCheck = false) => {
+    const render = async (user) => {
         if (!hPlace) return;
-        
-        // 🎯 LOGIQUE DE SÉCURITÉ INTÉGRÉE :
-        const pathname = window.location.pathname;
-        const isOnAdminPage = pathname.endsWith('admin.html') || pathname.includes('/admin');
-
-        if (isOnAdminPage) {
-            // Si c'est la vérification "à blanc" du départ, on attend patiemment Firebase
-            if (isInitialCheck) return; 
-
-            const isAdmin = user && user.email === "thimeosousa02@gmail.com";
-            if (!isAdmin) {
-                console.log("Accès refusé : Redirection automatique.");
-                window.location.href = 'index.html';
-                return;
-            } else {
-                console.log("Bienvenue Thiméo !");
-                const adminContent = document.getElementById('admin-content');
-                if (adminContent) adminContent.style.display = 'block';
-            }
-        }
         
         // Récupérer la photo depuis Firestore
         let userPhoto = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
@@ -262,11 +244,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (userDoc.exists() && userDoc.data().photo) {
                     let photo = userDoc.data().photo;
                     
+                    // Si c'est du base64, ajouter le préfixe data:image
                     if (photo.startsWith('data:image') || photo.includes(',')) {
                         userPhoto = photo;
                     } else if (photo.startsWith('/') || photo.includes('http')) {
                         userPhoto = photo;
                     } else if (photo.trim().length > 0) {
+                        // Sinon, c'est probablement du base64 sans préfixe
                         userPhoto = `data:image/jpeg;base64,${photo}`;
                     }
                 }
@@ -306,22 +290,42 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     };
-    
     window.addEventListener("scroll", () => {
-        const header = document.querySelector("header");
-        if (header) {
-            header.classList.toggle("scrolled", window.scrollY > 20);
-        }
-    });
+    const header = document.querySelector("header");
+    if (header) {
+        // Ajoute la classe 'scrolled' après 20px de descente
+        header.classList.toggle("scrolled", window.scrollY > 20);
+    }
+});
 
-    // 🎯 REGLAGE DES APPELS : 
-    // Au départ, on lance render avec true pour ne pas déclencher une fausse redirection immédiate.
-    render(null, true);
-    
-    // Dès que Firebase répond (que tu sois connecté ou non), il exécute la sécurité
-    onAuthStateChanged(auth, (user) => {
-        render(user, false);
-    });
+    render(null);
+    onAuthStateChanged(auth, render);
+
+    // 🎯 NOUVELLE SÉCURITÉ ADMIN AVEC DÉLAI DE 5 SECONDES
+    const pathname = window.location.pathname;
+    const isOnAdminPage = pathname.endsWith('admin.html') || pathname.includes('/admin');
+
+    if (isOnAdminPage) {
+        // 1. On s'assure que le contenu est visible pendant les 5 secondes d'attente
+        const adminContent = document.getElementById('admin-content');
+        if (adminContent) {
+            adminContent.style.display = 'block';
+        }
+
+        // 2. On lance un compte à rebours de 5 secondes (5000ms)
+        setTimeout(() => {
+            // On récupère l'utilisateur actuellement connecté après le délai
+            const currentUser = auth.currentUser;
+            const isAdmin = currentUser && currentUser.email === "thimeosousa02@gmail.com";
+            
+            if (!isAdmin) {
+                console.log("Délai de 5s écoulé. Accès refusé, redirection automatique...");
+                window.location.href = 'index.html';
+            } else {
+                console.log("Délai de 5s écoulé. Tu es bien l'admin, tu peux rester !");
+            }
+        }, 5000);
+    }
 });
 
 
@@ -338,8 +342,7 @@ const cookieHTML = `
         <div id="cookie-options" style="display: none; margin-top: 15px; border-top: 1px solid #eee; pt-3">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
                 <span style="font-size: 0.8rem; color: #333;">Essentiels</span>
-                <input type="checkbox" checked disabled>
-            </div>
+                <input type="checkbox" checked disabled> </div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
                 <span style="font-size: 0.8rem; color: #333;">Analytiques</span>
                 <input type="checkbox" id="cookies-analytics">
@@ -358,7 +361,9 @@ const cookieHTML = `
 </div>
 `;
 document.addEventListener("DOMContentLoaded", function() {
+    // Vérifier si les cookies ont déjà été acceptés
     if (localStorage.getItem('cookies-accepted') === 'true') {
+        // Ne pas injecter la notification si déjà acceptée
         return;
     }
     
@@ -371,8 +376,10 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
     }
 
+    // Affichage initial
     cookieNotice.style.display = 'block';
 
+    // Basculer l'affichage des préférences
     togglePrefsBtn.addEventListener('click', function() {
         if (cookieOptions.style.display === 'none') {
             cookieOptions.style.display = 'block';
@@ -383,6 +390,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Sauvegarder les choix
     acceptBtn.addEventListener('click', function() {
         const analytics = document.getElementById('cookies-analytics').checked;
         
@@ -393,22 +401,32 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// On l'injecte dans le body SEULEMENT si pas encore accepté
 if (localStorage.getItem('cookies-accepted') !== 'true') {
     document.body.insertAdjacentHTML('beforeend', cookieHTML);
 }
 
+// --- À METTRE À LA FIN DE TON MAIN.JS ---
+
+/**
+ * Fonction pour cacher le loader proprement
+ */
 const hideLoader = () => {
     const loader = document.getElementById("loader");
     if (loader) {
         loader.classList.add("loader-hidden");
+        // On le retire du DOM après l'animation pour libérer de la mémoire
         setTimeout(() => {
             loader.style.display = "none";
         }, 500);
     }
 };
 
+// Sécurité : Si après 5 secondes rien ne se passe, on force l'affichage du site
 setTimeout(hideLoader, 5000);
 
+// Événement de chargement final
 window.addEventListener("load", () => {
+    // On attend un tout petit peu pour que l'animation de ton header pilule se fasse
     setTimeout(hideLoader, 600);
 });

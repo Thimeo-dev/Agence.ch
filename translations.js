@@ -108,7 +108,6 @@ export const translations = {
         section_africa: "Destinations en Afrique",
         section_oceania: "Destinations en Océanie",
         search_title: "Où voulez-vous aller ?",
-        essential_cookie_title: "Essentiels",
     },
     en: {
                 info_title: "Additional Information",

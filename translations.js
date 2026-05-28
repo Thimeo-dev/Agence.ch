@@ -101,7 +101,9 @@ export const translations = {
         cookie_customize: "Personnaliser",
         cookie_accept: "Accepter",
         footer_reglage: "Réglage",
-        destination_bouton: "Découvrir la destination "
+        destination_bouton: "Découvrir la destination ",
+        section_europe: "Destinations en Europe",
+        section_asia: "Destinations en Asie",
     },
     en: {
                 info_title: "Additional Information",
@@ -204,7 +206,9 @@ export const translations = {
         cookie_customize: "Customize",
         cookie_accept: "Accept",
         footer_reglage: "Settings",
-        destination_bouton: "Discover the destination "
+        destination_bouton: "Discover the destination ",
+        section_europe: "Destinations in Europe",
+        section_asia: "Destinations in Asia",
     },
     it: {
         info_title: "Informazioni complementari",
@@ -307,7 +311,9 @@ export const translations = {
         cookie_customize: "Personalizza",
         cookie_accept: "Accetta",
         footer_reglage: "Impostazioni",
-        destination_bouton: "Scopri la destinazione "
+        destination_bouton: "Scopri la destinazione ",
+        section_europe: "Destinazioni in Europa",
+        section_asia: "Destinazioni in Asia",
     },
     pt: {
             info_title: "Informações Complementares",
@@ -394,7 +400,9 @@ export const translations = {
         cookie_customize: "Personalizar",
         cookie_accept: "Aceitar",
         footer_reglage: "Configurações",
-        destination_bouton: "Descubra o destino "
+        destination_bouton: "Descubra o destino ",
+        section_europe: "Destinos na Europa",
+        section_asia: "Destinos na Ásia",
     },
     de: {
                 info_title: "Zusätzliche Informationen",
@@ -482,7 +490,9 @@ export const translations = {
         cookie_customize: "Personalisieren",
         cookie_accept: "Akzeptieren",
         footer_reglage: "Einstellungen",
-        destination_bouton: "Entdecken Sie das Reiseziel "
+        destination_bouton: "Entdecken Sie das Reiseziel ",
+        section_europe: "Reiseziele in Europa",
+        section_asia: "Reiseziele in Asien",
     },
     es: {
     info_title: "Información Complementaria",
@@ -568,7 +578,9 @@ export const translations = {
         cookie_customize: "Personalizar",
         cookie_accept: "Aceptar",
         footer_reglage: "Configuración",
-        destination_bouton: "Descubre el destino "
+        destination_bouton: "Descubre el destino ",
+        section_europe: "Destinos en Europa",
+        section_asia: "Destinos en Asia",
     },
     ja: {
         info_title: "補足情報",
@@ -654,7 +666,9 @@ export const translations = {
         cookie_customize: "カスタマイズ",
         cookie_accept: "同意する",
         footer_reglage: "設定",
-        destination_bouton: "目的地を発見 "
+        destination_bouton: "目的地を発見 ",
+        section_europe: "ヨーロッパの目的地",
+        section_asia: "アジアの目的地",
     },
     nl: {
             info_title: "Aanvullende Informatie",
@@ -730,7 +744,9 @@ export const translations = {
         cookie_customize: "Aanpassen",
         cookie_accept: "Accepteren",
         footer_reglage: "Instellingen",
-        destination_bouton: "Ontdek de bestemming "
+        destination_bouton: "Ontdek de bestemming ",
+        section_europe: "Bestemmingen in Europa",
+        section_asia: "Bestemmingen in Azië",
     },
     zh: {
             info_title: "补充信息",
@@ -818,7 +834,9 @@ export const translations = {
         cookie_customize: "自定义",
         cookie_accept: "接受",
         footer_reglage: "设置",
-        destination_bouton: "探索目的地 "
+        destination_bouton: "探索目的地 ",
+        section_europe: "欧洲目的地",
+        section_asia: "亚洲目的地",
     },
     ko: {
             info_title: "추가 정보",
@@ -906,7 +924,9 @@ export const translations = {
         cookie_customize: "설정 변경",
         cookie_accept: "수락",
         footer_reglage: "설정",
-        destination_bouton: "목적지 탐색 "
+        destination_bouton: "목적지 탐색 ",
+        section_europe: "유럽의 목적지",
+        section_asia: "아시아의 목적지",
     },
     hi: {
             info_title: "अतिरिक्त जानकारी",
@@ -994,6 +1014,8 @@ export const translations = {
         cookie_customize: "कस्टमाइज़ करें",
         cookie_accept: "स्वीकार करें",
         footer_reglage: "सेटिंग्स",
-        destination_bouton: "गंतव्य खोजें "
+        destination_bouton: "गंतव्य खोजें ",
+        section_europe: "यूरोप के गंतव्य",
+        section_asia: "एशिया के गंतव्य",
     },
 };

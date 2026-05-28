@@ -91,72 +91,26 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
-const ADMIN_EMAIL = "thimeosousa02@gmail.com";
-
-// 1. Ta fonction pour générer la barre de navigation
-const renderHeader = (user, userPhoto) => {
-    const defaultPic = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
-    const displayPhoto = userPhoto || defaultPic;
-    const isAdmin = user && user.email === ADMIN_EMAIL;
-
-    const isSubFolder = window.location.pathname.includes('/pays/');
-    const pathPrefix = isSubFolder ? '../' : './';
-
-    const authLinks = user
-        ? `
-        <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
-        <li class="profile-menu">
-            <img src="${displayPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
-            <div class="profile-dropdown" id="profile-dropdown">
-                <a href="${pathPrefix}myaccount.html" data-key="nav_myaccount"></a>
-                ${isAdmin ? `<a href="${pathPrefix}admin.html" data-key="nav_admin">Admin</a>` : ''}
-                <hr>
-                <button type="button" id="logout-btn" class="logout-option" data-key="nav_logout"></button>
-            </div>
-        </li>
-        `
-        : `
-        <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
-        <li><a href="${pathPrefix}auth.html" class="login-btn" id="auth-btn" data-key="nav_login"></a></li>
-        `;
-
-    return `
-    <header>
-        <div class="logo-area">
-            <img src="${pathPrefix}Agence.svg" alt="Logo Agence">
-            <span class="brand-name">Agence.ch</span>
-        </div>
-        <nav>
-            <ul id="nav-links">
-                ${authLinks}
-            </ul>
-        </nav>
-    </header>
-    `;
-};
-
-// 2. 🎯 SÉCURITÉ DE REDIRECTION ET INJECTION DU HEADER
-// On écoute le chargement de l'utilisateur Firebase
+// 🎯 On écoute en continu le changement d'état de connexion de Firebase
 onAuthStateChanged(auth, (user) => {
     
-    // On vérifie si l'utilisateur connecté est bien toi
-    const isAdmin = user && user.email === ADMIN_EMAIL;
+    // 1. On définit si l'utilisateur connecté est bien l'admin
+    const isAdmin = user && user.email === "thimeosousa02@gmail.com";
+    
+    // 2. On regarde sur quelle page se trouve le visiteur
     const pathname = window.location.pathname;
     const isOnAdminPage = pathname.endsWith('admin.html') || pathname.includes('/admin');
 
-    // On injecte ton menu en haut de la page si tu as un élément HTML prévu pour
-    const headerElement = document.querySelector('body'); // ou document.getElementById('ton-id-header')
-    // Note: Si tu injectes directement dans body, attention à ne pas écraser ton tableau de bord. 
-    // Idéalement, place un <div id="header-container"></div> en haut de ton HTML.
-
-    // LA SÉCURITÉ RE-CALCULÉE AU BON MOMENT :
-    // Si la page actuelle est admin.html et que Firebase confirme que tu n'es PAS connecté avec le bon email
+    // 3. APPLICATION DE LA SÉCURITÉ
+    // Si l'utilisateur tente d'accéder à l'administration mais n'est pas le bon admin
     if (isOnAdminPage && !isAdmin) {
-        console.log("Accès non autorisé. Redirection vers index.html...");
+        console.log("Accès refusé : Redirection automatique vers l'accueil.");
         window.location.href = 'index.html';
-    } else if (isOnAdminPage && isAdmin) {
-        console.log("Accès accordé à Thiméo. Le tableau de bord reste visible !");
-        // Ici, ton tableau de bord ne bouge pas et tes fonctionnalités s'exécutent normalement.
+    } 
+    // Si c'est bien l'admin, on le laisse tranquille sur la page
+    else if (isOnAdminPage && isAdmin) {
+        console.log("Accès administrateur validé ! Bienvenue Thiméo.");
+        // Tu peux appeler ici une fonction pour charger ton tableau de bord si nécessaire
     }
 });
 

@@ -1579,7 +1579,10 @@ nav ul {
     }
     .youtube-thumbnail-wrapper {
         border-radius: 0 !important;
-        border: none !important; /* Pas de bordure sur petit écran pour un style épuré mobile */
+        border: none !important;
+    }
+    .youtube-card:hover .youtube-thumbnail-wrapper {
+        transform: none !important; /* Désactive le zoom sur mobile pour éviter les bugs d'affichage */
     }
     .youtube-info-block {
         padding-left: 12px !important;

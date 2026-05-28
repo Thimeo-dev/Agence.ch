@@ -91,12 +91,32 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
+// 🎯 BLOC DE SÉCURITÉ À RAJOUTER TOUT EN BAS DE TON FICHIER
+onAuthStateChanged(auth, (user) => {
+    
+    // 1. On définit si l'utilisateur connecté est bien l'admin
+    const isAdmin = user && user.email === "thimeosousa02@gmail.com";
+    
+    // 2. On regarde sur quelle page se trouve le visiteur
+    const pathname = window.location.pathname;
+    const isOnAdminPage = pathname.endsWith('admin.html') || pathname.includes('/admin');
+
+    // 3. APPLICATION DE LA SÉCURITÉ
+    // Si l'utilisateur tente d'accéder à l'administration mais n'est pas le bon admin
+    if (isOnAdminPage && !isAdmin) {
+        console.log("Accès refusé : Redirection automatique vers l'accueil.");
+        window.location.href = 'index.html';
+    } 
+    // Si c'est bien l'admin, on le laisse tranquille sur la page
+    else if (isOnAdminPage && isAdmin) {
+        console.log("Accès administrateur validé ! Bienvenue Thiméo.");
+    }
+});
+
 const renderHeader = (user, userPhoto) => {
     const defaultPic = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
     const displayPhoto = userPhoto || defaultPic;
     const isAdmin = user && user.email === "thimeosousa02@gmail.com";
-    
-    
 
 // 1. On définit le préfixe de chemin au début de la fonction
 const isSubFolder = window.location.pathname.includes('/pays/');
@@ -111,7 +131,7 @@ const authLinks = user
                     <img src="${displayPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
                     <div class="profile-dropdown" id="profile-dropdown">
                         <a href="${pathPrefix}myaccount.html" data-key="nav_myaccount"></a>
-                        ${isAdmin ? `<a href="${pathPrefix}admin.html" data-key="nav_admin">Admin</a>` : ''}
+                        ${isAdmin ? `<a href="${pathPrefix}admin.html" data-key="nav_admin"></a>` : ''}
                         <hr>
                         <button type="button" id="logout-btn" class="logout-option" data-key="nav_logout"></button>
                     </div>
@@ -300,32 +320,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     render(null);
     onAuthStateChanged(auth, render);
-
-    // 🎯 NOUVELLE SÉCURITÉ ADMIN AVEC DÉLAI DE 5 SECONDES
-    const pathname = window.location.pathname;
-    const isOnAdminPage = pathname.endsWith('admin.html') || pathname.includes('/admin');
-
-    if (isOnAdminPage) {
-        // 1. On s'assure que le contenu est visible pendant les 5 secondes d'attente
-        const adminContent = document.getElementById('admin-content');
-        if (adminContent) {
-            adminContent.style.display = 'block';
-        }
-
-        // 2. On lance un compte à rebours de 5 secondes (5000ms)
-        setTimeout(() => {
-            // On récupère l'utilisateur actuellement connecté après le délai
-            const currentUser = auth.currentUser;
-            const isAdmin = currentUser && currentUser.email === "thimeosousa02@gmail.com";
-            
-            if (!isAdmin) {
-                console.log("Délai de 5s écoulé. Accès refusé, redirection automatique...");
-                window.location.href = 'index.html';
-            } else {
-                console.log("Délai de 5s écoulé. Tu es bien l'admin, tu peux rester !");
-            }
-        }, 5000);
-    }
 });
 
 
@@ -339,10 +333,12 @@ const cookieHTML = `
             <a href="confidentialite.html">En savoir plus</a>.
         </p>
         
+        <!-- Section des préférences cachée au début -->
         <div id="cookie-options" style="display: none; margin-top: 15px; border-top: 1px solid #eee; pt-3">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
                 <span style="font-size: 0.8rem; color: #333;">Essentiels</span>
-                <input type="checkbox" checked disabled> </div>
+                <input type="checkbox" checked disabled> <!-- Toujours activé -->
+            </div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
                 <span style="font-size: 0.8rem; color: #333;">Analytiques</span>
                 <input type="checkbox" id="cookies-analytics">

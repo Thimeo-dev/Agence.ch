@@ -368,7 +368,7 @@ nav a:hover {
 /* --- Styles spécifiques à la page Admin --- */
 
 .admin-page {
-    opacity: 0; /* Caché au chargement pour la sécurité */
+    opacity: 100; /* Caché au chargement pour la sécurité */
     transition: opacity 0.3s ease;
     background-color: #fcfcfc;
 }

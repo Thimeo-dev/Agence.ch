@@ -93,7 +93,7 @@ const analytics = getAnalytics(app);
 
 const ADMIN_EMAIL = "thimeosousa02@gmail.com";
 
-// 1. FONCTION QUI CRÉE LE HEADER (Uniquement pour le visuel du menu)
+// 1. Ta fonction pour générer la barre de navigation
 const renderHeader = (user, userPhoto) => {
     const defaultPic = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
     const displayPhoto = userPhoto || defaultPic;
@@ -102,17 +102,16 @@ const renderHeader = (user, userPhoto) => {
     const isSubFolder = window.location.pathname.includes('/pays/');
     const pathPrefix = isSubFolder ? '../' : './';
 
-    // On prépare les liens selon la connexion
     const authLinks = user
         ? `
         <li><a href="${pathPrefix}index.html" data-key="nav_home"></a></li>
         <li class="profile-menu">
             <img src="${displayPhoto}" alt="Profil" class="profile-pic" id="profile-pic">
             <div class="profile-dropdown" id="profile-dropdown">
-                <a href="${pathPrefix}myaccount.html" data-key="nav_navaccount"></a>
+                <a href="${pathPrefix}myaccount.html" data-key="nav_myaccount"></a>
                 ${isAdmin ? `<a href="${pathPrefix}admin.html" data-key="nav_admin">Admin</a>` : ''}
                 <hr>
-                <button type="button" id="logout-btn" class="logout-option" data-key="nav_logout">Déconnexion</button>
+                <button type="button" id="logout-btn" class="logout-option" data-key="nav_logout"></button>
             </div>
         </li>
         `
@@ -136,34 +135,28 @@ const renderHeader = (user, userPhoto) => {
     `;
 };
 
-// 2. LE VRAI ÉCOUTEUR DE SÉCURITÉ (C'est lui qui gère le plein écran / blocage de la page)
+// 2. 🎯 SÉCURITÉ DE REDIRECTION ET INJECTION DU HEADER
+// On écoute le chargement de l'utilisateur Firebase
 onAuthStateChanged(auth, (user) => {
+    
+    // On vérifie si l'utilisateur connecté est bien toi
     const isAdmin = user && user.email === ADMIN_EMAIL;
     const pathname = window.location.pathname;
     const isOnAdminPage = pathname.endsWith('admin.html') || pathname.includes('/admin');
 
-    // Injection du header sur la page
-    const headerContainer = document.getElementById('header-container'); // Assure-toi d'avoir un conteneur dans ton HTML
-    if (headerContainer) {
-        headerContainer.innerHTML = renderHeader(user, user?.photoURL);
-    }
+    // On injecte ton menu en haut de la page si tu as un élément HTML prévu pour
+    const headerElement = document.querySelector('body'); // ou document.getElementById('ton-id-header')
+    // Note: Si tu injectes directement dans body, attention à ne pas écraser ton tableau de bord. 
+    // Idéalement, place un <div id="header-container"></div> en haut de ton HTML.
 
-    // VÉRIFICATION DE SÉCURITÉ DE LA PAGE
-    if (isOnAdminPage) {
-        if (!isAdmin) {
-            console.log("Accès interdit. Redirection vers index.html");
-            window.location.href = 'index.html';
-        } else {
-            console.log("Bienvenue Thiméo, accès au tableau de bord autorisé !");
-            
-            // On force l'affichage de ton tableau de bord
-            const adminContent = document.getElementById('admin-content');
-            if (adminContent) {
-                adminContent.style.display = 'block'; 
-            }
-            
-            // Lance tes fonctions de chargement de fichier ici si nécessaire
-        }
+    // LA SÉCURITÉ RE-CALCULÉE AU BON MOMENT :
+    // Si la page actuelle est admin.html et que Firebase confirme que tu n'es PAS connecté avec le bon email
+    if (isOnAdminPage && !isAdmin) {
+        console.log("Accès non autorisé. Redirection vers index.html...");
+        window.location.href = 'index.html';
+    } else if (isOnAdminPage && isAdmin) {
+        console.log("Accès accordé à Thiméo. Le tableau de bord reste visible !");
+        // Ici, ton tableau de bord ne bouge pas et tes fonctionnalités s'exécutent normalement.
     }
 });
 

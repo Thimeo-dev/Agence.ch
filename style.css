@@ -1498,7 +1498,7 @@ nav ul {
     background-color: #000000 !important;
     
     /* Contour fin de base */
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border: 0px solid rgba(255, 255, 255, 0.15) !important;
     
     /* 🛠️ TRANSITION FLUIDE : Gère le zoom, la bordure et l'ombre en même temps */
     transition: transform 0.25s ease-in-out, border-color 0.25s ease, box-shadow 0.25s ease !important;
@@ -1538,7 +1538,7 @@ nav ul {
 }
 
 .youtube-title {
-    color: #f1f1f1 !important;
+    color: #1f1d1d !important;
     font-size: 16px !important;
     font-weight: 500 !important;
     line-height: 22px !important;
@@ -1551,18 +1551,18 @@ nav ul {
 }
 
 .youtube-channel {
-    color: #aaaaaa !important;
+    color: #444242 !important;
     font-size: 14px !important;
     margin: 0 !important;
     line-height: 18px !important;
 }
 
 .youtube-channel:hover {
-    color: #f1f1f1 !important;
+    color: #444242 !important;
 }
 
 .youtube-meta {
-    color: #aaaaaa !important;
+    color: #6b6767 !important;
     font-size: 14px !important;
     margin: 2px 0 0 0 !important;
     line-height: 18px !important;

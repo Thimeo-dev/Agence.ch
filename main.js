@@ -91,7 +91,11 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
-// 🎯 BLOC DE SÉCURITÉ À RAJOUTER TOUT EN BAS DE TON FICHIER
+const renderHeader = (user, userPhoto) => {
+    const defaultPic = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
+    const displayPhoto = userPhoto || defaultPic;
+
+    // 🎯 BLOC DE SÉCURITÉ À RAJOUTER TOUT EN BAS DE TON FICHIER
 onAuthStateChanged(auth, (user) => {
     
     // 1. On définit si l'utilisateur connecté est bien l'admin
@@ -112,11 +116,6 @@ onAuthStateChanged(auth, (user) => {
         console.log("Accès administrateur validé ! Bienvenue Thiméo.");
     }
 });
-
-const renderHeader = (user, userPhoto) => {
-    const defaultPic = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
-    const displayPhoto = userPhoto || defaultPic;
-    const isAdmin = user && user.email === "thimeosousa02@gmail.com";
 
 // 1. On définit le préfixe de chemin au début de la fonction
 const isSubFolder = window.location.pathname.includes('/pays/');

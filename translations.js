@@ -108,7 +108,7 @@ export const translations = {
         section_africa: "Destinations en Afrique",
         section_oceania: "Destinations en Océanie",
         search_title: "Où voulez-vous aller ?",
-        video_title: "Découvrez nos video de présentation de nos destinations de rêves",
+        video_title: "Découvrez nos video de présentation de nos destinations",
         video_subtitle: "Laissez-vous inspirer par nos vidéos mettant en avant les destinations les plus prisées pour vos voyages de luxe.",
     },
     en: {
@@ -219,6 +219,8 @@ export const translations = {
         section_africa: "Destinations in Africa",
         section_oceania: "Destinations in Oceania",
         search_title: "Where do you want to go?",
+        video_title: "Discover our presentation videos of our destinations",
+        video_subtitle: "Let yourself be inspired by our videos showcasing the most sought-after destinations for your luxury travels.",
     },
     it: {
         info_title: "Informazioni complementari",
@@ -328,6 +330,8 @@ export const translations = {
         section_africa: "Destinazioni in Africa",
         section_oceania: "Destinazioni in Oceania",
         search_title: "Dove vuoi andare?",
+        video_title: "Scopri i nostri video di presentazione delle nostre destinazioni",
+        video_subtitle: "Lasciati ispirare dai nostri video che mettono in evidenza le destinazioni più ambite per i tuoi viaggi di lusso.",
     },
     pt: {
             info_title: "Informações Complementares",
@@ -421,6 +425,8 @@ export const translations = {
         section_africa: "Destinos na África",
         section_oceania: "Destinos na Oceania",
         search_title: "Onde você quer ir?",
+        video_title: "Descubra nossos vídeos de apresentação de nossos destinos",
+        video_subtitle: "Deixe-se inspirar por nossos vídeos que destacam os destinos mais cobiçados para suas viagens de luxo.",
     },
     de: {
                 info_title: "Zusätzliche Informationen",
@@ -515,6 +521,8 @@ export const translations = {
         section_africa: "Reiseziele in Afrika",
         section_oceania: "Reiseziele in Ozeanien",
         search_title: "Wohin möchten Sie reisen?",
+        video_title: "Entdecken Sie unsere Präsentationsvideos unserer Reiseziele",
+        video_subtitle: "Lassen Sie sich von unseren Videos inspirieren, die die begehrtesten Reiseziele für Ihre Luxusreisen hervorheben.",
     },
     es: {
     info_title: "Información Complementaria",
@@ -527,7 +535,7 @@ export const translations = {
         info_sec3_text: "Al ser un proyecto que utiliza las ofertas gratuitas de Google Cloud, se aplican límites diarios de lectura y escritura. En caso de mucho tráfico, la visualización de perfiles puede ralentizarse. Es una limitación voluntaria para demostrar que un sitio funcional puede existir sin costes de infraestructura.",
         info_sec4_title: "4. Transparencia del código",
         info_sec4_text: "El código fuente de este proyecto está estructurado de forma modular. La integración con GitHub para los testimonios ilustra un método de trabajo colaborativo: el contenido puede ser actualizado por un equipo de redacción directamente en el repositorio.",
-                terms_title: "Condiciones de Uso",
+        terms_title: "Condiciones de Uso",
         terms_last_update: "Última actualización: 28 de abril de 2026",
         terms_sec1_title: "1. Objeto del contrato",
         terms_sec1_text: "Las presentes condiciones regulan las relaciones entre <strong>Agence.ch</strong> y sus clientes. Al utilizar nuestros servicios de reserva de viajes de lujo, usted acepta sin reservas estas disposiciones.",
@@ -607,6 +615,8 @@ export const translations = {
         section_africa: "Destinos en África",
         section_oceania: "Destinos en Oceanía",
         search_title: "¿A dónde quieres ir?",
+        video_title: "Descubre nuestros videos de presentación de nuestros destinos",
+        video_subtitle: "Déjate inspirar por nuestros videos que destacan los destinos más codiciados para tus viajes de lujo.",
     },
     ja: {
         info_title: "補足情報",
@@ -699,6 +709,8 @@ export const translations = {
         section_africa: "アフリカの目的地",
         section_oceania: "オセアニアの目的地",
         search_title: "どこに行きたいですか？",
+        video_title: "私たちの目的地の紹介ビデオを発見",
+        video_subtitle: "私たちのビデオに触発されて、あなたのラグジュアリー旅行のための最も魅力的な目的地を強調します。",
     },
     nl: {
             info_title: "Aanvullende Informatie",
@@ -781,6 +793,8 @@ export const translations = {
         section_africa: "Bestemmingen in Afrika",
         section_oceania: "Bestemmingen in Oceanië",
         search_title: "Waar wilt u naartoe?",
+        video_title: "Ontdek onze presentatievideo's van onze bestemmingen",
+        video_subtitle: "Laat u inspireren door onze video's die de meest begeerde bestemmingen voor uw luxe reizen benadrukken.",
     },
     zh: {
             info_title: "补充信息",
@@ -875,6 +889,8 @@ export const translations = {
         section_africa: "非洲目的地",
         section_oceania: "大洋洲目的地",
         search_title: "您想去哪里？",
+        video_title: "探索我们为目的地制作的介绍视频",
+        video_subtitle: "通过我们的视频，了解那些最受追捧的目的地，为您的奢华旅行提供灵感。",
     },
     ko: {
             info_title: "추가 정보",
@@ -969,6 +985,8 @@ export const translations = {
         section_africa: "아프리카의 목적지",
         section_oceania: "오세아니아의 목적지",
         search_title: "어디로 여행 가고 싶으세요?",
+        video_title: "우리의 목적지 소개 비디오를 발견하세요",
+        video_subtitle: "우리의 영상으로 영감을 받아 럭셔리 여행을 위한 가장 매력적인 목적지를 강조합니다.",
     },
     hi: {
             info_title: "अतिरिक्त जानकारी",
@@ -1063,5 +1081,7 @@ export const translations = {
         section_africa: "अफ्रीका के गंतव्य",
         section_oceania: "ओशिनिया के गंतव्य",
         search_title: "आप कहाँ जाना चाहते हैं?",
+        video_title: "हमारे गंतव्यों के परिचय वीडियो की खोज करें",
+        video_subtitle: "हमारे वीडियो से प्रेरित होकर, आपकी लक्जरी यात्रा के लिए सबसे आकर्षक गंतव्यों को उजागर करें।",
     },
 };

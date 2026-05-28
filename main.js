@@ -91,7 +91,30 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
-const ADMIN_EMAIL = "thimeosousa02@gmail.com"; // Remplace par ton email administratif
+// 🎯 On écoute en continu le changement d'état de connexion de Firebase
+onAuthStateChanged(auth, (user) => {
+    
+    // 1. On définit si l'utilisateur connecté est bien l'admin
+    const isAdmin = user && user.email === "thimeosousa02@gmail.com";
+    
+    // 2. On regarde sur quelle page se trouve le visiteur
+    const pathname = window.location.pathname;
+    const isOnAdminPage = pathname.endsWith('admin.html') || pathname.includes('/admin');
+
+    // 3. APPLICATION DE LA SÉCURITÉ
+    // Si l'utilisateur tente d'accéder à l'administration mais n'est pas le bon admin
+    if (isOnAdminPage && !isAdmin) {
+        console.log("Accès refusé : Redirection automatique vers l'accueil.");
+        window.location.href = 'index.html';
+    } 
+    // Si c'est bien l'admin, on le laisse tranquille sur la page
+    else if (isOnAdminPage && isAdmin) {
+        console.log("Accès administrateur validé ! Bienvenue Thiméo.");
+        // Tu peux appeler ici une fonction pour charger ton tableau de bord si nécessaire
+    }
+});
+
+
 
 const renderHeader = (user, userPhoto) => {
     const defaultPic = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
@@ -288,12 +311,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                 });
             }
-        }
-
-        const isAdmin = user && user.email === "thimeosousa02@gmail.com";
-        const isOnAdminPage = window.location.pathname.endsWith('admin.html');
-        if (isOnAdminPage && !isAdmin) {
-            window.location.href = 'index.html';
         }
     };
     window.addEventListener("scroll", () => {

@@ -107,6 +107,7 @@ export const translations = {
         section_americas: "Destinations en Amérique",
         section_africa: "Destinations en Afrique",
         section_oceania: "Destinations en Océanie",
+        search_title: "Où voulez-vous aller ?",
     },
     en: {
                 info_title: "Additional Information",
@@ -215,6 +216,7 @@ export const translations = {
         section_americas: "Destinations in America",
         section_africa: "Destinations in Africa",
         section_oceania: "Destinations in Oceania",
+        search_title: "Where do you want to go?",
     },
     it: {
         info_title: "Informazioni complementari",
@@ -323,6 +325,7 @@ export const translations = {
         section_americas: "Destinazioni in America",
         section_africa: "Destinazioni in Africa",
         section_oceania: "Destinazioni in Oceania",
+        search_title: "Dove vuoi andare?",
     },
     pt: {
             info_title: "Informações Complementares",
@@ -415,6 +418,7 @@ export const translations = {
         section_americas: "Destinos na América",
         section_africa: "Destinos na África",
         section_oceania: "Destinos na Oceania",
+        search_title: "Onde você quer ir?",
     },
     de: {
                 info_title: "Zusätzliche Informationen",
@@ -508,6 +512,7 @@ export const translations = {
         section_americas: "Reiseziele in Amerika",
         section_africa: "Reiseziele in Afrika",
         section_oceania: "Reiseziele in Ozeanien",
+        search_title: "Wohin möchten Sie reisen?",
     },
     es: {
     info_title: "Información Complementaria",
@@ -599,6 +604,7 @@ export const translations = {
         section_americas: "Destinos en América",
         section_africa: "Destinos en África",
         section_oceania: "Destinos en Oceanía",
+        search_title: "¿A dónde quieres ir?",
     },
     ja: {
         info_title: "補足情報",
@@ -690,6 +696,7 @@ export const translations = {
         section_americas: "アメリカの目的地",
         section_africa: "アフリカの目的地",
         section_oceania: "オセアニアの目的地",
+        search_title: "どこに行きたいですか？",
     },
     nl: {
             info_title: "Aanvullende Informatie",
@@ -771,6 +778,7 @@ export const translations = {
         section_americas: "Bestemmingen in Amerika",
         section_africa: "Bestemmingen in Afrika",
         section_oceania: "Bestemmingen in Oceanië",
+        search_title: "Waar wilt u naartoe?",
     },
     zh: {
             info_title: "补充信息",
@@ -864,6 +872,7 @@ export const translations = {
         section_americas: "美洲目的地",
         section_africa: "非洲目的地",
         section_oceania: "大洋洲目的地",
+        search_title: "您想去哪里？",
     },
     ko: {
             info_title: "추가 정보",
@@ -957,6 +966,7 @@ export const translations = {
         section_americas: "아메리카의 목적지",
         section_africa: "아프리카의 목적지",
         section_oceania: "오세아니아의 목적지",
+        search_title: "어디로 여행 가고 싶으세요?",
     },
     hi: {
             info_title: "अतिरिक्त जानकारी",
@@ -1050,5 +1060,6 @@ export const translations = {
         section_americas: "अमेरिका के गंतव्य",
         section_africa: "अफ्रीका के गंतव्य",
         section_oceania: "ओशिनिया के गंतव्य",
+        search_title: "आप कहाँ जाना चाहते हैं?",
     },
 };

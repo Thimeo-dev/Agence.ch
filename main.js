@@ -91,8 +91,6 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
-const ADMIN_EMAIL = "thimeosousa02@gmail.com";
-
 const renderHeader = (user, userPhoto) => {
     const defaultPic = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
     const displayPhoto = userPhoto || defaultPic;

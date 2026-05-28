@@ -1526,18 +1526,6 @@ nav ul {
     border: none !important;
 }
 
-/* Bouton Play virtuel */
-.play-button-overlay {
-    position: absolute !important;
-    background-color: rgba(0, 0, 0, 0.7) !important;
-    color: #ffffff3b !important;
-    font-size: 22px !important;
-    padding: 10px 22px !important;
-    border-radius: 14px !important;
-    transition: background-color 0.2s, transform 0.2s !important;
-    pointer-events: none !important;
-}
-
 /* 🎯 CORRECTION AU SURVOL : Les angles ne bougent plus, le contour devient plus visible */
 .youtube-card:hover .youtube-thumbnail-wrapper {
     border-color: rgba(255, 255, 255, 0.4) !important; /* Le contour s'illumine */

@@ -91,31 +91,12 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
+const ADMIN_EMAIL = "thimeosousa02@gmail.com";
+
 const renderHeader = (user, userPhoto) => {
     const defaultPic = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
     const displayPhoto = userPhoto || defaultPic;
-
-    // 🎯 BLOC DE SÉCURITÉ À RAJOUTER TOUT EN BAS DE TON FICHIER
-onAuthStateChanged(auth, (user) => {
-    
-    // 1. On définit si l'utilisateur connecté est bien l'admin
-    const isAdmin = user && user.email === "thimeosousa02@gmail.com";
-    
-    // 2. On regarde sur quelle page se trouve le visiteur
-    const pathname = window.location.pathname;
-    const isOnAdminPage = pathname.endsWith('admin.html') || pathname.includes('/admin');
-
-    // 3. APPLICATION DE LA SÉCURITÉ
-    // Si l'utilisateur tente d'accéder à l'administration mais n'est pas le bon admin
-    if (isOnAdminPage && !isAdmin) {
-        console.log("Accès refusé : Redirection automatique vers l'accueil.");
-        window.location.href = 'index.html';
-    } 
-    // Si c'est bien l'admin, on le laisse tranquille sur la page
-    else if (isOnAdminPage && isAdmin) {
-        console.log("Accès administrateur validé ! Bienvenue Thiméo.");
-    }
-});
+    const isAdmin = user && user.email === ADMIN_EMAIL;
 
 // 1. On définit le préfixe de chemin au début de la fonction
 const isSubFolder = window.location.pathname.includes('/pays/');
@@ -157,6 +138,43 @@ return `
     </header>
 `;
 };
+
+// 2. L'ÉCOUTEUR COMPLET : Gère l'affichage du menu ET la sécurité de la page
+onAuthStateChanged(auth, (user) => {
+    
+    // 🎯 CORRECTION DE LA PAGE BLANCHE : On force l'affichage du Header sur toutes les pages
+    // On cherche d'abord s'il y a un élément prévu pour recevoir le menu (par exemple une balise <div id="header-container">)
+    let headerContainer = document.getElementById('header-container');
+    
+    // Si cet élément n'existe pas, on l'injecte tout en haut du body
+    if (!headerContainer) {
+        headerContainer = document.createElement('div');
+        headerContainer.id = 'header-container';
+        document.body.insertBefore(headerContainer, document.body.firstChild);
+    }
+    
+    // On dessine le menu
+    headerContainer.innerHTML = renderHeader(user, user?.photoURL);
+
+
+    // 3. APPLICATION DE LA SÉCURITÉ SIMPLE
+    const isAdmin = user && user.email === ADMIN_EMAIL;
+    const pathname = window.location.pathname;
+    const isOnAdminPage = pathname.endsWith('admin.html') || pathname.includes('/admin');
+
+    if (isOnAdminPage && !isAdmin) {
+        console.log("Accès refusé : Redirection automatique vers l'accueil.");
+        window.location.href = 'index.html';
+    } 
+    else if (isOnAdminPage && isAdmin) {
+        console.log("Accès administrateur validé ! Bienvenue Thiméo.");
+        
+        // 🎯 AFFICHAGE DE TON FICHIER / DONNÉES :
+        // Si tu as une fonction spécifique qui charge ton tableau de bord ou tes fichiers, 
+        // c'est EXACTEMENT ici qu'il faut l'appeler pour qu'elle s'exécute, par exemple :
+        // chargerMonFichierAdmin();
+    }
+});
 
 // --- LOGIQUE DU FOOTER ET DRAPEAUX ---
 const isSubFolderFooter = window.location.pathname.includes('/pays/');

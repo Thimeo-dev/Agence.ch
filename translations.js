@@ -108,9 +108,11 @@ export const translations = {
         section_africa: "Destinations en Afrique",
         section_oceania: "Destinations en Océanie",
         search_title: "Où voulez-vous aller ?",
+        video_title: "Découvrez nos video de présentation de nos destinations de rêves",
+        video_subtitle: "Laissez-vous inspirer par nos vidéos mettant en avant les destinations les plus prisées pour vos voyages de luxe.",
     },
     en: {
-                info_title: "Additional Information",
+        info_title: "Additional Information",
         info_last_update: "Last updated: April 30, 2026",
         info_sec1_title: "1. What is the purpose of this site",
         info_sec1_text: "This site was created for exclusively fictional and educational purposes. The services and offers presented do not correspond to any real commercial activity. No sensitive data should be shared.",

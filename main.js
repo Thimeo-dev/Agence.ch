@@ -322,11 +322,11 @@ const cookieHTML = `
         <!-- Section des préférences cachée au début -->
         <div id="cookie-options" style="display: none; margin-top: 15px; border-top: 1px solid #eee; pt-3">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
-                <span style="font-size: 0.8rem; color: #333; data-key="essential_cookie_title"></span>
+                <span style="font-size: 0.8rem; color: #333 data-key="essential_cookie_title"></span>
                 <input type="checkbox" checked disabled> <!-- Toujours activé -->
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
-                <span style="font-size: 0.8rem; color: #333;data-key="annalytics_cookie_title"></span>
+                <span style="font-size: 0.8rem; color: #333 data-key="annalytics_cookie_title"></span>
                 <input type="checkbox" id="cookies-analytics">
             </div>
         </div>

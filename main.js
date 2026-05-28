@@ -91,7 +91,7 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
-// 🎯 On écoute en continu le changement d'état de connexion de Firebase
+// 🎯 BLOC DE SÉCURITÉ À RAJOUTER TOUT EN BAS DE TON FICHIER
 onAuthStateChanged(auth, (user) => {
     
     // 1. On définit si l'utilisateur connecté est bien l'admin
@@ -110,11 +110,8 @@ onAuthStateChanged(auth, (user) => {
     // Si c'est bien l'admin, on le laisse tranquille sur la page
     else if (isOnAdminPage && isAdmin) {
         console.log("Accès administrateur validé ! Bienvenue Thiméo.");
-        // Tu peux appeler ici une fonction pour charger ton tableau de bord si nécessaire
     }
 });
-
-
 
 const renderHeader = (user, userPhoto) => {
     const defaultPic = "https://cdn-icons-png.flaticon.com/512/149/149071.png";

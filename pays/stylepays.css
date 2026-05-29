@@ -1,10 +1,46 @@
+/* --- NOUVEAUX STYLES POUR LA DISPOSITION (TEXTE À GAUCHE, MÉTÉO À DROITE) --- */
+.layout-split {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.layout-left {
+    flex: 1;
+    max-width: 60%;
+}
+
+.layout-right {
+    flex: 1;
+    max-width: 35%;
+    /* Léger fond pour détacher la zone météo (optionnel) */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* Sur les téléphones, on remet tout l'un sous l'autre */
+@media (max-width: 768px) {
+    .layout-split {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .layout-left, .layout-right {
+        max-width: 100%;
+    }
+}
+/* -------------------------------------------------------------------------- */
+
+
 /* Force l'image à se coller tout en haut de son espace */
 .api-landscape-image {
-    width: 100vw;                 /* Prend toute la largeur de l'écran */
+    width: 100vw;                /* Prend toute la largeur de l'écran */
     position: relative;
     left: 50%;
     right: 50%;
-    margin-left: -50vw;           /* Centre l'image malgré le conteneur principal */
+    margin-left: -50vw;          /* Centre l'image malgré le conteneur principal */
     
     margin-top: 0;                /* Supprime toute marge au-dessus de l'image */
     height: 450px;                /* Hauteur fine comme demandé */
@@ -28,11 +64,11 @@ header, .navbar {
 
 /* 1. Style complet de la carte en bas */
 #map {
-    width: 100vw;                 /* Plein écran en largeur */
+    width: 100vw;                /* Plein écran en largeur */
     position: relative;
     left: 50%;
     right: 50%;
-    margin-left: -50vw;           /* Annule les marges parentes */
+    margin-left: -50vw;          /* Annule les marges parentes */
     
     height: 350px;                
     margin-top: 40px;             /* Espace par rapport au texte du haut */
@@ -57,8 +93,8 @@ footer, .footer {
 /* Style du bloc hymne national */
 .anthem-container {
     max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
+    margin: 30px 0; /* CORRECTION: margin auto retiré pour aligner à gauche */
+    padding: 0; /* CORRECTION: padding retiré pour alignement à gauche */
     display: flex;
     align-items: center;
     gap: 15px;
@@ -77,118 +113,7 @@ footer, .footer {
     height: 40px;
     outline: none;
 }
-/* Styles généraux de la page */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: #333;
-}
 
-.main-container {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.page-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.page-subtitle {
-    color: #666;
-    margin-bottom: 40px;
-}
-
-/* 🎯 ALIGNEMENT : Météo à gauche, Infos à droite */
-.content-layout {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 50px; /* Espace entre les deux colonnes */
-}
-
-/* 🌤️ STYLE DE LA ZONE MÉTÉO (À GAUCHE) */
-.weather-section {
-    flex: 1; /* Prend la place restante à gauche */
-    max-width: 500px;
-}
-
-.weather-section h2 {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-}
-
-.weather-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 0.95rem;
-}
-
-.weather-row .temp {
-    color: #444;
-}
-
-/* 🇦🇱 STYLE DE LA ZONE INFOS PAYS (À DROITE) */
-.info-section {
-    flex: 1; /* Prend la place restante à droite */
-    max-width: 450px;
-    background: #fafafa; /* Léger fond gris pour bien séparer */
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.country-flag {
-    width: 80px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-}
-
-.country-details p {
-    margin: 12px 0;
-    font-size: 1rem;
-}
-
-.audio-container {
-    margin-top: 20px;
-    background: #eaeaea;
-    padding: 15px;
-    border-radius: 6px;
-}
-
-.audio-container p {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-audio {
-    width: 100%;
-}
-
-.lang-text {
-    margin-top: 15px;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* Responsive : Si l'écran est trop petit, tout se remet l'un sous l'autre */
-@media (max-width: 768px) {
-    .content-layout {
-        flex-direction: column;
-        gap: 30px;
-    }
-    .weather-section, .info-section {
-        max-width: 100%;
-    }
-}
 
 
 /* --- Reset & Fonts --- */
@@ -1401,7 +1326,7 @@ nav ul {
   font-size: 16px;
   padding: 10px 10px 10px 5px;
   display: block;
-  width: 100%;         /* Prend 100% des 600px du conteneur */
+  width: 100%;        /* Prend 100% des 600px du conteneur */
   border: none;
   border-bottom: 1px solid #515151;
   background: transparent;
@@ -1423,358 +1348,4 @@ nav ul {
 
 .form-control input {
   background-color: transparent;
-  border: 0;
-  border-bottom: 2px #333 solid; /* Ligne noire pour être visible */
-  display: block;
-  width: 100%;
-  padding: 15px 0;
-  font-size: 18px;
-  color: #333; /* Texte écrit en noir */
-}
-
-.form-control input:focus,
-.form-control input:valid {
-  outline: 0;
-  border-bottom-color: #007aff; /* Bleu moderne au focus */
-}
-
-.form-control label {
-  position: absolute;
-  top: 15px;
-  left: 0;
-  pointer-events: none;
-}
-
-.form-control label span {
-  display: inline-block;
-  font-size: 18px;
-  min-width: 5px;
-  color: #999; /* Couleur grise par défaut */
-  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.form-control input:focus + label span,
-.form-control input:valid + label span {
-  color: #007aff;
-  transform: translateY(-30px);
-}
-/* Conteneur météo global */
-.weather-container {
-    max-width: 900px;
-    margin: 40px auto 20px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.weather-title {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #1d1d1f;
-    margin-bottom: 15px;
-}
-
-/* Grille ou liste des 7 jours */
-.weather-forecast {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 16px;
-    padding: 15px;
-}
-
-/* Ligne d'un jour précis */
-.weather-day-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.weather-day-row:last-child {
-    border-bottom: none; /* Retire la ligne séparatrice pour le dernier jour */
-}
-
-.weather-date {
-    font-weight: 500;
-    width: 120px;
-    color: #1d1d1f;
-}
-
-.weather-icon {
-    font-size: 1.5rem;
-    text-align: center;
-    flex-grow: 1;
-}
-
-.weather-temps {
-    font-weight: 500;
-    color: #86868b;
-    text-align: right;
-    width: 100px;
-}
-
-.weather-max {
-    color: #1d1d1f;
-    margin-right: 8px;
-}
-
-.weather-loading {
-    color: #86868b;
-    text-align: center;
-    font-style: italic;
-}
-.btn-suggestion {
-    display: inline-block;
-    padding: 14px 32px;
-    background: #202124;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    margin-top: 25px;
-    transition: transform 0.2s, background 0.2s;
-}
-
-/* Petit effet au survol de la souris */
-.btn-suggestion:hover {
-    background: #000;
-  transform: translateY(-2px);
-}
-
-
-
-/* =========================================================
-   ZONE EXCLUSIVE : SLIDER DES AVIS (CORRIGÉ SANS CONFLIT)
-   ========================================================= */
-.avis-container {
-    overflow: hidden; /* Important : coupe proprement ce qui dépasse */
-    width: 100%;
-    padding: 20px 0;
-    position: relative;
-}
-
-/* Utilisation stricte de l'ID pour écraser l'animation globale */
-#avis-track {
-    display: flex !important;
-    width: max-content !important;
-    gap: 0px !important; /* CORRECTION DU TROU GÉANT : aucun espace entre les deux groupes */
-    animation: defilementAvisInfini 40s linear infinite !important; /* J'ai mis 40s car tu as beaucoup d'avis, sinon ça ira trop vite ! */
-}
-
-/* Le groupe d'avis gère l'espacement à l'intérieur de lui-même */
-.avis-group {
-    display: flex !important;
-    gap: 24px !important; /* Espace entre chaque carte */
-    padding-right: 24px !important; /* Espace de raccordement pour la boucle parfaite */
-}
-
-/* Design de chaque carte d'avis style Apple */
-#avis-track .review-card {
-    background: #ffffff;
-    border: 1px solid #e5e5e7;
-    border-radius: 16px;
-    padding: 24px;
-    width: 320px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0; /* Empêche les cartes d'être écrasées */
-}
-
-/* En-tête de la carte (Photo + Conteneur Nom/Étoiles) */
-#avis-track .review-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-}
-
-/* Avatar de l'utilisateur */
-#avis-track .review-avatar {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    object-fit: cover;
-    background-color: #f5f5f7;
-}
-
-/* Conteneur pour le nom et les étoiles (Alignement) */
-#avis-track .review-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Nom de l'auteur */
-#avis-track .review-author {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1d1d1f;
-    margin: 0;
-    line-height: 1.2;
-}
-
-/* Conteneur des étoiles dans la carte */
-#avis-track .rating-display {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 2px;
-    margin-top: 4px;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-/* Style de base pour toutes les étoiles */
-#avis-track .rating-display .star {
-    font-size: 18px !important;
-    line-height: 1;
-    color: #e5e5e7 !important; /* Gris clair */
-    user-select: none;
-    display: inline-block !important;
-}
-
-/* Style pour les étoiles actives (remplies) */
-#avis-track .rating-display .star.filled {
-    color: #ffa723 !important; /* Ton doré */
-}
-
-/* Texte du témoignage */
-#avis-track .review-text {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #515154;
-    margin: 0;
-}
-
-/* ANIMATION FLUIDE ET INFINIE À 50% */
-@keyframes defilementAvisInfini {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-/* ==========================================================================
-   SECTION VIDÉO STYLE YOUTUBE (EFFET ZOOM AU SURVOL & ARRONDIS FIXES)
-   ========================================================================== */
-
-.youtube-container {
-    background-color: #0f0f0f !important;
-    padding: 40px 24px !important;
-    min-height: 100vh !important;
-    font-family: "Roboto", "Arial", sans-serif !important;
-}
-
-.youtube-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
-    gap: 40px 16px !important;
-    max-width: 1280px !important;
-    margin: 0 auto !important;
-}
-
-.youtube-card {
-    background: transparent !important;
-    display: flex !important;
-    flex-direction: column !important;
-    cursor: pointer !important;
-}
-
-.youtube-thumbnail-wrapper {
-    position: relative !important;
-    width: 100% !important;
-    aspect-ratio: 16 / 9 !important;
-    border-radius: 12px !important;
-    overflow: hidden !important;
-    background-color: #000000 !important;
-    
-    /* Contour fin de base */
-    border: 0px solid rgba(255, 255, 255, 0.15) !important;
-    
-    /* 🛠️ TRANSITION FLUIDE : Gère le zoom, la bordure et l'ombre en même temps */
-    transition: transform 0.25s ease-in-out, border-color 0.25s ease, box-shadow 0.25s ease !important;
-    
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-.youtube-pure-thumbnail {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    display: block !important;
-}
-
-/* Style de l'iframe plein écran injectée au clic */
-.youtube-thumbnail-wrapper iframe {
-    position: absolute !important;
-    width: 100% !important;
-    height: 100% !important;
-    top: 0 !important;
-    left: 0 !important;
-    border: none !important;
-}
-
-/* 🎯 ACTION AU SURVOL : La miniature s'agrandit légèrement, s'illumine et ajoute une ombre */
-.youtube-card:hover .youtube-thumbnail-wrapper {
-    transform: scale(1.03) !important; /* Augmente la taille de 3% */
-    border-color: rgba(255, 255, 255, 0.4) !important; /* Le contour devient plus blanc */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important; /* Ajoute du relief avec une ombre portée */
-}
-
-.youtube-info-block {
-    padding-top: 12px !important;
-    padding-right: 24px !important;
-}
-
-.youtube-title {
-    color: #1f1d1d !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    line-height: 22px !important;
-    margin: 0 0 4px 0 !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 2 !important;
-    -webkit-box-orient: vertical !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-}
-
-.youtube-channel {
-    color: #444242 !important;
-    font-size: 14px !important;
-    margin: 0 !important;
-    line-height: 18px !important;
-}
-
-.youtube-channel:hover {
-    color: #444242 !important;
-}
-
-.youtube-meta {
-    color: #6b6767 !important;
-    font-size: 14px !important;
-    margin: 2px 0 0 0 !important;
-    line-height: 18px !important;
-}
-
-@media (max-width: 480px) {
-    .youtube-container {
-        padding: 16px 0 !important;
-    }
-    .youtube-thumbnail-wrapper {
-        border-radius: 0 !important;
-        border: none !important;
-    }
-    .youtube-card:hover .youtube-thumbnail-wrapper {
-        transform: none !important; /* Désactive le zoom sur mobile pour éviter les bugs d'affichage */
-    }
-    .youtube-info-block {
-        padding-left: 12px !important;
-        padding-right: 12px !important;
-    }
 }

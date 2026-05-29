@@ -77,3 +77,1593 @@ footer, .footer {
     height: 40px;
     outline: none;
 }
+
+
+
+/* --- Reset & Fonts --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; 
+    color: #202124; 
+    background: #fff; 
+    line-height: 1.6; 
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 1000;
+
+    will-change: transform, width, top, border-radius; /* Prépare le processeur graphique */
+    transition: 
+        top 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        left 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-radius 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s ease,
+        background-color 0.4s ease;
+}
+
+.logo-area { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+}
+
+.logo-area img { 
+    height: 100px; 
+    width: auto;
+}
+
+.brand-name { 
+    font-weight: 600; 
+    font-size: 22px; 
+    letter-spacing: -0.5px;
+}
+
+nav ul { 
+    list-style: none; 
+    display: flex; 
+    align-items: center; 
+    gap: 30px; 
+}
+
+nav a { 
+    text-decoration: none; 
+    color: #5f6368; 
+    font-weight: 500; 
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+nav a:hover { 
+    color: #1a73e8; 
+}
+
+/* --- Bouton Connexion --- */
+.login-btn {
+    background-color: #1a73e8;
+    color: white !important;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.login-btn:hover { 
+    background-color: #1557b0; 
+    box-shadow: 0 2px 6px rgba(26, 115, 232, 0.3);
+}
+
+/* --- Menu Profil (Style Google) --- */
+.profile-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1 / 1; /* Force le carré pour un rond parfait */
+    border-radius: 50%;
+    object-fit: cover; /* Recadre l'image sans l'écraser */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid #e0e0e0;
+    background-color: #f1f3f4; /* Fond gris si l'image tarde à charger */
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    border-color: #1a73e8;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background: white;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    padding: 12px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001;
+}
+
+.profile-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 12px 20px;
+    color: #202124;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.profile-dropdown a:hover {
+    background-color: #f8f9fa;
+    color: #1a73e8;
+}
+
+.profile-dropdown hr {
+    margin: 8px 0;
+    border: none;
+    border-top: 1px solid #dadce0;
+}
+
+.logout-option {
+    width: 100%;
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    text-align: left;
+    color: #202124;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font: inherit;
+}
+
+.logout-option:hover {
+    background-color: #f8f9fa;
+    color: #1a73e8;
+}
+
+/* --- Hero Section --- */
+.hero {
+    padding: 120px 5%;
+    text-align: center;
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.hero h1 { 
+    font-size: 56px; 
+    font-weight: 800;
+    color: #202124; 
+    margin-bottom: 24px; 
+    letter-spacing: -1px;
+}
+
+.cta-main {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #202124;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 25px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.cta-main:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+
+/* --- Services Grid --- */
+.services-grid {
+    display: flex;
+    gap: 24px;
+    padding: 80px 5%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    border: 1px solid #e0e0e0;
+    padding: 40px;
+    border-radius: 12px;
+    width: 320px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: #1a73e8;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    border-top: 1px solid #e0e0e0;
+    padding: 30px 0;
+    background-color: #ffffff;
+    font-size: 13px;
+    color: #5f6368;
+    margin-top: 100px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.country-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #202124;
+}
+
+.country-info img {
+    width: 20px;
+    height: auto;
+    border-radius: 2px;
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-legal-links a {
+    text-decoration: none;
+    color: #5f6368;
+}
+
+.footer-legal-links a:hover {
+    color: #1a73e8;
+    text-decoration: underline;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials img {
+    width: 18px;
+    height: 18px;
+    filter: grayscale(1); /* Effet gris discret */
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.footer-socials img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+    header { padding: 15px 20px; }
+    nav ul { display: none; } /* Cache le menu sur mobile (à remplacer par un menu burger plus tard) */
+    .hero h1 { font-size: 36px; }
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+    .footer-left {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* --- Pages Légales --- */
+.legal-page {
+    background-color: #ffffff;
+}
+
+.legal-content {
+    max-width: 800px; /* On réduit la largeur pour une meilleure lecture */
+    margin: 60px auto;
+    padding: 0 20px;
+    margin-top: 120px
+}
+
+.legal-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #202124;
+}
+
+.last-update {
+    font-size: 14px;
+    color: #70757a;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+.legal-content section {
+    margin-bottom: 35px;
+}
+
+.legal-content h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #202124;
+}
+
+.legal-content p {
+    font-size: 16px;
+    color: #3c4043;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* --- Ajustement du Header pour ces pages --- */
+.legal-page header {
+    box-shadow: none;
+    border-bottom: 1px solid #f1f3f4;
+}
+/* --- Styles spécifiques à la page Admin --- */
+
+/* Remplace ton bloc .admin-page actuel par celui-ci */
+.admin-page {
+    opacity: 1; /* Caché au départ */
+    transition: opacity 2s e; /* Transition douce sur 2 secondes */
+    background-color: #fcfcfc;
+}
+
+.admin-content {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.admin-placeholder {
+    border: 2px dashed #ccc;
+    padding: 50px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 30px;
+    background-color: #fff;
+}
+
+.admin-placeholder p {
+    color: #666;
+    font-style: italic;
+}
+
+/* --- Slider Destinations --- */
+.destinations-section {
+    padding: 80px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: visible; /* Changement crucial : permet à l'ombre et au zoom de dépasser verticalement */
+    position: relative;
+    padding: 100px 0; /* Plus d'espace pour un zoom confortable */
+    /* On utilise un conteneur parent pour masquer l'horizontal sans couper le vertical */
+    clip-path: inset(-100px 0 -100px 0); 
+}
+
+.slider-track {
+    display: flex !important;
+    gap: 35px; /* Un peu plus d'espace pour laisser respirer les ombres */
+    width: max-content;
+    animation: scroll-infinite 40s linear infinite;
+    will-change: transform; /* Optimisation pour des mouvements fluides */
+}
+
+/* Style des rectangles (état normal) */
+.dest-rect {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    flex-shrink: 0;
+    border-radius: 30px; /* Bords légèrement plus doux */
+    overflow: hidden;
+    background: #fff;
+    
+    /* OMBRE LUXE : Multi-couches pour plus de profondeur et de douceur */
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.04), 
+        0 2px 6px rgba(0, 0, 0, 0.02);
+    
+    /* Transition plus lente et plus "physique" */
+    transition: all 0.6s cubic-bezier(0.2, 1, 0.22, 1);
+    cursor: pointer;
+}
+
+/* L'effet de zoom et d'ombre au survol */
+.dest-rect:hover {
+    transform: scale(1.1) translateY(-10px); /* S'agrandit ET monte un peu */
+    z-index: 100; /* Assure qu'il passe au-dessus de tout */
+    
+    /* OMBRE ÉLEVÉE : Très diffuse pour simuler la hauteur */
+    box-shadow: 
+        0 40px 80px rgba(0, 0, 0, 0.12), 
+        0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.dest-rect img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s ease; /* Petit effet de mouvement interne à l'image */
+}
+
+.dest-rect:hover img {
+    transform: scale(1.05); /* L'image bouge un peu à l'intérieur pour donner de la vie */
+}
+
+/* L'animation de défilement */
+@keyframes scroll-infinite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+/* --- BLOC RESPONSIVE FINAL : À REMPLACER --- */
+@media (max-width: 768px) {
+    
+    /* BLOQUE LE DÉBORDEMENT ET LE DÉZOOM */
+    html, body {
+        overflow-x: hidden; /* Empêche de glisser sur les côtés */
+        width: 100%;
+        position: relative;
+    }
+
+    /* 1. HEADER UNIVERSEL */
+    header { 
+        padding: 10px 15px !important; 
+    }
+
+    nav ul { 
+        display: flex !important; 
+        gap: 10px; 
+    }
+
+    nav ul li:not(:last-child) {
+        display: none !important; 
+    }
+
+    /* 2. ADAPTATION DU SLIDER (Le coupable du débordement) */
+    .destinations-section {
+        overflow: hidden; /* Coupe tout ce qui dépasse du slider sur mobile */
+        width: 100%;
+    }
+
+    .slider-container {
+        padding: 60px 0; 
+        clip-path: inset(-60px 0 -60px 0);
+    }
+
+    .dest-rect {
+        width: 260px;
+        height: 380px;
+    }
+
+    /* 3. AUTRES AJUSTEMENTS */
+    .hero h1 { 
+        font-size: 32px; 
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+.monthly-suggestion {
+    max-width: 1200px; /* Aligné sur ton slider */
+    margin: 40px auto; /* Espace avec le slider et le bas */
+    padding: 0 20px;
+}
+
+.suggestion-banner {
+    width: 100%;
+    height: 400px; /* Ajuste la hauteur selon tes envies */
+    background-image: url('images/patrik-carlberg-teX7sZeTQd8-unsplash.jpg'); /* Mets ton image ici */
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px; /* Coins très arrondis comme sur ton dessin */
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.suggestion-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.suggestion-overlay .badge {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.suggestion-info {
+    margin-top: 25px; /* Espace entre l'image et le texte */
+    text-align: left;
+}
+
+.suggestion-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.suggestion-info p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5;
+    max-width: 800px;
+}
+.country-link {
+    text-decoration: none; /* Enlève le souligné */
+    color: inherit; /* Garde la couleur du texte du footer */
+    display: inline-block;
+}
+
+.country-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.country-link:hover .country-info {
+    opacity: 0.7; /* Petit effet visuel au survol */
+    text-decoration: underline; /* Optionnel : souligne juste au survol */
+}
+
+.country-info img {
+    border-radius: 2px; /* Pour que le drapeau soit propre */
+}
+.lang-selection-container {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 40px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.lang-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    color: #1d1d1f;
+}
+
+/* Conteneur principal qui contient les 3 colonnes */
+.regions-grid {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    align-items: flex-start;
+    max-width: 1200px; /* Largeur maximale de la zone de contenu */
+    margin: 50px auto; /* Centre la grille et ajoute de l'espace en haut */
+    padding: 0 20px;
+}
+
+/* Style de chaque colonne (Europe, Amériques, Asie) */
+.region-column {
+    flex: 1; /* Chaque colonne prend la même largeur */
+    max-width: 300px; /* Empêche les colonnes d'être trop larges */
+}
+
+/* Titre de la région (le trait rouge du haut sur ton dessin) */
+.region-column h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #1d1d1f;
+    text-align: left;
+}
+
+/* Liste des pays (les petits traits rouges sur ton dessin) */
+.country-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espace vertical entre chaque pays */
+}
+
+/* Style d'un bloc pays */
+.lang-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.lang-item:hover {
+    opacity: 0.7;
+}
+
+.lang-item img {
+    width: 20px;
+    height: auto;
+    border-radius: 2px;
+}
+
+.lang-text span {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1d1d1f;
+}
+
+.lang-text p {
+    font-size: 0.85rem;
+    color: #86868b;
+    margin: 0;
+}
+
+/* From Uiverse.io by Yaya12085 - Updated for Agence.ch */
+.cookie-card {
+  max-width: 320px;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
+  height: auto; /* Laisse la carte grandir selon le contenu */
+  transition: all 0.3s ease; /* Animation douce lors de l'ouverture */
+  
+  /* --- AJOUTS POUR LE POSITIONNEMENT --- */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000; /* Assure que la carte est au-dessus de tout */
+  display: none;  /* Caché par défaut, activé par JS */
+  border: 1px solid #f3f4f6; /* Optionnel: légère bordure pour mieux ressortir sur fond blanc */
+}
+
+.title {
+  font-weight: 600;
+  color: rgb(31 41 55);
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(75 85 99);
+}
+
+.description a {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246);
+}
+
+.description a:hover {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  -moz-column-gap: 1rem;
+  column-gap: 1rem;
+  flex-shrink: 0;
+}
+
+.pref {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgb(31 41 55 );
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  background-color: transparent;
+  cursor: pointer; /* Ajouté pour indiquer que c'est cliquable */
+}
+
+.pref:hover {
+  color: rgb(156 163 175);
+}
+
+.pref:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.accept {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-color: rgb(17 24 39);
+  font-weight: 500;
+  border-radius: 0.5rem;
+  color: #fff;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  border: none;
+  transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer; /* Ajouté pour indiquer que c'est cliquable */
+}
+
+.accept:hover {
+  background-color: rgb(55 65 81);
+}
+
+.accept:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+/* Style rapide pour les checkboxes */
+#cookie-options input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: #111827; /* Couleur assortie à ton bouton noir */
+}
+.container-input {
+  /* On utilise position absolute pour le détacher du flux du logo et du bouton login */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Empêche le conteneur de bloquer les clics aux alentours */
+}
+
+.search-wrapper {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  pointer-events: auto; /* Réactive le clic pour l'input lui-même */
+}
+
+.input {
+  /* Reprends la taille de 320px pour bien dépasser du bouton */
+  width: 320px; 
+  height: 44px;
+  padding: 10px 15px 10px 45px;
+  border-radius: 9999px;
+  border: solid 1.5px #333;
+  background-color: #f5f5f7;
+  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.container-input svg {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  fill: #333;
+}
+
+.input:focus {
+  width: 420px;
+}
+/* --- Style de la boîte de suggestions --- */
+.suggestions-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border: 1.5px solid #333;
+    border-radius: 15px;
+    margin-top: 8px;
+    max-height: 280px;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: none; /* Caché par défaut, le JS l'affichera */
+}
+
+/* Style de chaque ligne de pays */
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background-color: #f5f5f7;
+}
+
+.suggestion-item img {
+    width: 24px;
+    height: auto;
+    margin-right: 12px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.suggestion-item span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1d1d1f;
+}
+
+/* Scrollbar personnalisée pour un look plus moderne */
+.suggestions-box::-webkit-scrollbar {
+    width: 6px;
+}
+.suggestions-box::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+header.scrolled {
+    top: 15px;
+    width: 90%;
+    left: 5%;
+    height: 60px;
+    border-radius: 50px; /* Plus arrondi pour l'effet pilule */
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px); /* Ajoute un flou derrière (très Apple/Google) */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    padding: 0 25px;
+}
+header .logo-area, header nav, header .search-wrapper {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+header.scrolled .logo-area {
+    transform: scale(0.9); /* Le logo rétrécit légèrement sans saccade */
+}
+/* --- 1. RESET & FONTS --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html, body {
+    overflow-x: hidden; 
+    width: 100%;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; 
+    color: #202124; 
+    background: #fff; 
+    line-height: 1.6;
+}
+
+/* --- 2. HEADER DYNAMIQUE (PILULE AU SCROLL) --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 2000;
+    gap: 15px;
+    will-change: transform, width, top, border-radius;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+header.scrolled {
+    top: 15px;
+    width: 90%;
+    left: 5%;
+    height: 60px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    padding: 0 25px;
+}
+
+.logo-area { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+
+.brand-name { 
+    font-weight: 600; 
+    font-size: 22px; 
+    letter-spacing: -0.5px;
+}
+
+/* --- 3. BARRE DE RECHERCHE (CENTRE) --- */
+.container-input {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.search-wrapper {
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    width: 320px; 
+    height: 44px;
+    padding: 10px 15px 10px 45px;
+    border-radius: 9999px;
+    border: solid 1.5px #333;
+    background-color: #f5f5f7;
+    font-size: 16px !important; /* Empêche le zoom iOS */
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+.input:focus { 
+    width: 420px; 
+    background: #fff;
+    border-color: #1a73e8;
+}
+
+/* L'icône par défaut */
+.search-wrapper svg {
+    position: absolute;
+    left: 15px;
+    width: 18px;
+    height: 18px;
+    fill: #333;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* --- 4. NAVIGATION & PROFIL --- */
+nav ul { 
+    list-style: none; 
+    display: flex; 
+    align-items: center; 
+    gap: 30px; 
+}
+
+.login-btn {
+    background-color: #1a73e8;
+    color: white !important;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.profile-pic {
+    width: 40px; height: 40px; border-radius: 50%;
+    object-fit: cover; cursor: pointer; border: 2px solid #e0e0e0;
+}
+
+/* --- 5. SLIDER DESTINATIONS --- */
+.destinations-section { padding: 80px 0; text-align: center; }
+
+.slider-container {
+    width: 100%; overflow: visible; position: relative; padding: 100px 0;
+    clip-path: inset(-100px 0 -100px 0);
+}
+
+.slider-track {
+    display: flex; gap: 35px; width: max-content;
+    animation: scroll-infinite 40s linear infinite;
+}
+
+.dest-rect {
+    width: 320px; height: 480px; flex-shrink: 0;
+    border-radius: 30px; overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+    transition: all 0.6s cubic-bezier(0.2, 1, 0.22, 1);
+}
+
+@keyframes scroll-infinite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* --- 6. MOBILE : TRANSFORMATION EN BOUTON LOUPE --- */
+@media (max-width: 768px) {
+    header { padding: 10px 15px !important; }
+    .brand-name { display: none; }
+
+    .container-input {
+        position: relative; 
+        left: auto;
+        transform: none;
+    }
+
+    /* L'input est un petit cercle au repos */
+    .input {
+        width: 44px;
+        padding: 0;
+        cursor: pointer;
+        background-color: #f5f5f7;
+        color: transparent; /* Masque le curseur et le texte au repos */
+    }
+
+    /* Icône centrée dans le cercle mobile */
+    .search-wrapper svg {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* EFFET AU CLIC : On agrandit et on fait disparaître l'icône */
+    .input:focus {
+        width: 160px;
+        padding: 0 15px;
+        color: #333;
+        background: #fff;
+        text-align: center;
+    }
+
+    /* Disparition de la loupe pour laisser la place au texte */
+    .input:focus + svg {
+        opacity: 0;
+        transform: translate(-50%, -100%); /* Elle s'envole vers le haut */
+    }
+
+    nav ul li:not(:last-child) { display: none; }
+}
+
+/* --- 7. FOOTER --- */
+.site-footer { border-top: 1px solid #e0e0e0; padding: 30px 0; font-size: 13px; color: #5f6368; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 5%; flex-wrap: wrap; }
+/* Le conteneur du champ */
+.chat-field-group {
+  position: relative;
+  width: 100%;
+}
+
+/* L'input lui-même */
+.chat-field-input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+  color: #333;
+}
+
+.chat-field-input:focus {
+  outline: none;
+}
+
+/* Le texte (Label) qui monte */
+.chat-field-label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+}
+
+/* Animation du label vers le haut */
+.chat-field-input:focus ~ .chat-field-label, 
+.chat-field-input:valid ~ .chat-field-label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264AE;
+}
+
+/* La barre de soulignement */
+.chat-field-bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.chat-field-bar:before, .chat-field-bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264AE;
+  transition: 0.2s ease all;
+}
+
+.chat-field-bar:before {
+  left: 50%;
+}
+
+.chat-field-bar:after {
+  right: 50%;
+}
+
+/* Animation d'ouverture de la barre au focus */
+.chat-field-input:focus ~ .chat-field-bar:before, 
+.chat-field-input:focus ~ .chat-field-bar:after {
+  width: 50%;
+}
+
+/* L'effet de flash (Highlight) */
+.chat-field-highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.chat-field-input:focus ~ .chat-field-highlight {
+  animation: chatInputHighlighter 0.3s ease;
+}
+
+@keyframes chatInputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+/* Ce conteneur va limiter la largeur de ton input */
+.chat-container {
+  max-width: 600px;
+  margin: -20px auto 50px auto; /* On utilise une valeur négative pour remonter le bloc */
+  padding: 0 20px;
+}
+
+/* On ajuste aussi l'espace interne du groupe pour que le label ne touche pas le texte du haut */
+.chat-field-group {
+  position: relative;
+  width: 100%;
+  margin-top: -100px; 
+}
+
+.chat-field-input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;         /* Prend 100% des 600px du conteneur */
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+  color: #333;
+}
+
+/* Reste du code (label, bar, highlight, etc.) identique à ce que tu as déjà */
+
+
+
+
+
+.form-control {
+  position: relative;
+  margin: 40px auto; /* Centré horizontalement */
+  width: 100%;       /* Prend toute la largeur disponible */
+  max-width: 600px;  /* Mais s'arrête à 600px pour rester élégant */
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #333 solid; /* Ligne noire pour être visible */
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #333; /* Texte écrit en noir */
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: #007aff; /* Bleu moderne au focus */
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: #999; /* Couleur grise par défaut */
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: #007aff;
+  transform: translateY(-30px);
+}
+/* Conteneur météo global */
+.weather-container {
+    max-width: 900px;
+    margin: 40px auto 20px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.weather-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 15px;
+}
+
+/* Grille ou liste des 7 jours */
+.weather-forecast {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 15px;
+}
+
+/* Ligne d'un jour précis */
+.weather-day-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.weather-day-row:last-child {
+    border-bottom: none; /* Retire la ligne séparatrice pour le dernier jour */
+}
+
+.weather-date {
+    font-weight: 500;
+    width: 120px;
+    color: #1d1d1f;
+}
+
+.weather-icon {
+    font-size: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.weather-temps {
+    font-weight: 500;
+    color: #86868b;
+    text-align: right;
+    width: 100px;
+}
+
+.weather-max {
+    color: #1d1d1f;
+    margin-right: 8px;
+}
+
+.weather-loading {
+    color: #86868b;
+    text-align: center;
+    font-style: italic;
+}
+.btn-suggestion {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #202124;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 25px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+/* Petit effet au survol de la souris */
+.btn-suggestion:hover {
+    background: #000;
+  transform: translateY(-2px);
+}
+
+
+
+/* =========================================================
+   ZONE EXCLUSIVE : SLIDER DES AVIS (CORRIGÉ SANS CONFLIT)
+   ========================================================= */
+.avis-container {
+    overflow: hidden; /* Important : coupe proprement ce qui dépasse */
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+}
+
+/* Utilisation stricte de l'ID pour écraser l'animation globale */
+#avis-track {
+    display: flex !important;
+    width: max-content !important;
+    gap: 0px !important; /* CORRECTION DU TROU GÉANT : aucun espace entre les deux groupes */
+    animation: defilementAvisInfini 40s linear infinite !important; /* J'ai mis 40s car tu as beaucoup d'avis, sinon ça ira trop vite ! */
+}
+
+/* Le groupe d'avis gère l'espacement à l'intérieur de lui-même */
+.avis-group {
+    display: flex !important;
+    gap: 24px !important; /* Espace entre chaque carte */
+    padding-right: 24px !important; /* Espace de raccordement pour la boucle parfaite */
+}
+
+/* Design de chaque carte d'avis style Apple */
+#avis-track .review-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e7;
+    border-radius: 16px;
+    padding: 24px;
+    width: 320px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Empêche les cartes d'être écrasées */
+}
+
+/* En-tête de la carte (Photo + Conteneur Nom/Étoiles) */
+#avis-track .review-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+/* Avatar de l'utilisateur */
+#avis-track .review-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #f5f5f7;
+}
+
+/* Conteneur pour le nom et les étoiles (Alignement) */
+#avis-track .review-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Nom de l'auteur */
+#avis-track .review-author {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Conteneur des étoiles dans la carte */
+#avis-track .rating-display {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 2px;
+    margin-top: 4px;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Style de base pour toutes les étoiles */
+#avis-track .rating-display .star {
+    font-size: 18px !important;
+    line-height: 1;
+    color: #e5e5e7 !important; /* Gris clair */
+    user-select: none;
+    display: inline-block !important;
+}
+
+/* Style pour les étoiles actives (remplies) */
+#avis-track .rating-display .star.filled {
+    color: #ffa723 !important; /* Ton doré */
+}
+
+/* Texte du témoignage */
+#avis-track .review-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #515154;
+    margin: 0;
+}
+
+/* ANIMATION FLUIDE ET INFINIE À 50% */
+@keyframes defilementAvisInfini {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   SECTION VIDÉO STYLE YOUTUBE (EFFET ZOOM AU SURVOL & ARRONDIS FIXES)
+   ========================================================================== */
+
+.youtube-container {
+    background-color: #0f0f0f !important;
+    padding: 40px 24px !important;
+    min-height: 100vh !important;
+    font-family: "Roboto", "Arial", sans-serif !important;
+}
+
+.youtube-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 40px 16px !important;
+    max-width: 1280px !important;
+    margin: 0 auto !important;
+}
+
+.youtube-card {
+    background: transparent !important;
+    display: flex !important;
+    flex-direction: column !important;
+    cursor: pointer !important;
+}
+
+.youtube-thumbnail-wrapper {
+    position: relative !important;
+    width: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    background-color: #000000 !important;
+    
+    /* Contour fin de base */
+    border: 0px solid rgba(255, 255, 255, 0.15) !important;
+    
+    /* 🛠️ TRANSITION FLUIDE : Gère le zoom, la bordure et l'ombre en même temps */
+    transition: transform 0.25s ease-in-out, border-color 0.25s ease, box-shadow 0.25s ease !important;
+    
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.youtube-pure-thumbnail {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+/* Style de l'iframe plein écran injectée au clic */
+.youtube-thumbnail-wrapper iframe {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    border: none !important;
+}
+
+/* 🎯 ACTION AU SURVOL : La miniature s'agrandit légèrement, s'illumine et ajoute une ombre */
+.youtube-card:hover .youtube-thumbnail-wrapper {
+    transform: scale(1.03) !important; /* Augmente la taille de 3% */
+    border-color: rgba(255, 255, 255, 0.4) !important; /* Le contour devient plus blanc */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important; /* Ajoute du relief avec une ombre portée */
+}
+
+.youtube-info-block {
+    padding-top: 12px !important;
+    padding-right: 24px !important;
+}
+
+.youtube-title {
+    color: #1f1d1d !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 22px !important;
+    margin: 0 0 4px 0 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.youtube-channel {
+    color: #444242 !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    line-height: 18px !important;
+}
+
+.youtube-channel:hover {
+    color: #444242 !important;
+}
+
+.youtube-meta {
+    color: #6b6767 !important;
+    font-size: 14px !important;
+    margin: 2px 0 0 0 !important;
+    line-height: 18px !important;
+}
+
+@media (max-width: 480px) {
+    .youtube-container {
+        padding: 16px 0 !important;
+    }
+    .youtube-thumbnail-wrapper {
+        border-radius: 0 !important;
+        border: none !important;
+    }
+    .youtube-card:hover .youtube-thumbnail-wrapper {
+        transform: none !important; /* Désactive le zoom sur mobile pour éviter les bugs d'affichage */
+    }
+    .youtube-info-block {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+}

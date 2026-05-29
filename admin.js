@@ -1,5 +1,5 @@
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-import { getFirestore, doc, getDoc, collection, query, orderBy, onSnapshot, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { getFirestore, doc, getDoc, collection, onSnapshot, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 const auth = getAuth();
 const db = getFirestore();
@@ -8,8 +8,7 @@ const adminChatWindow = document.getElementById('admin-chat-window');
 const adminChatForm = document.getElementById('admin-chat-form');
 const adminMessageInput = document.getElementById('admin-message-input');
 
-// Variable globale pour stocker l'ID de l'utilisateur avec qui on discute actuellement
-// (Pratique pour savoir à qui on répond)
+// Variable globale pour stocker l'ID de l'utilisateur avec qui on discute
 let activeUserChatUid = null; 
 
 // 1. Fonction pour récupérer et afficher le nom de l'admin
@@ -23,7 +22,7 @@ const loadUserName = () => {
                 if (userDoc.exists() && userDoc.data().nom) {
                     accNameSpan.textContent = userDoc.data().nom;
                 } else {
-                    accNameSpan.textContent = "Administrateur";
+                    accNameSpan.textContent = "Thiméo";
                 }
             } catch (error) {
                 console.error("Erreur lors de la récupération du nom :", error);
@@ -33,34 +32,47 @@ const loadUserName = () => {
     });
 };
 
-// 2. ÉCOUTER TOUS LES MESSAGES D'ASSISTANCE
+// 2. ÉCOUTER TOUS LES MESSAGES D'ASSISTANCE (SANS BLOCAGE)
 const listenToAllMessages = () => {
-    // On trie par date pour avoir le fil de discussion dans l'ordre
-    const q = query(collection(db, "messages"), orderBy("createdAt", "asc"));
+    // On écoute la collection sans le "orderBy" Firebase pour éviter le bug de page blanche
+    const messagesRef = collection(db, "messages");
 
-    onSnapshot(q, (snapshot) => {
+    onSnapshot(messagesRef, (snapshot) => {
         if (!adminChatWindow) return;
-        adminChatWindow.innerHTML = ""; // On vide avant de réafficher
+        adminChatWindow.innerHTML = ""; // On vide la fenêtre de chat
 
         if (snapshot.empty) {
             adminChatWindow.innerHTML = `<p class="chat-info">Aucun message d'assistance reçu.</p>`;
             return;
         }
 
+        // On convertit le snapshot en tableau pour pouvoir les trier proprement en JS
+        const allMessages = [];
         snapshot.forEach((doc) => {
-            const msg = doc.data();
+            allMessages.push({ id: doc.id, ...doc.data() });
+        });
+
+        // Tri sécurisé par date en JavaScript (les messages sans date vont au début)
+        allMessages.sort((a, b) => {
+            const dateA = a.createdAt ? a.createdAt.toMillis() : 0;
+            const dateB = b.createdAt ? b.createdAt.toMillis() : 0;
+            return dateA - dateB;
+        });
+
+        // Affichage des messages triés
+        allMessages.forEach((msg) => {
             const messageDiv = document.createElement('div');
             
-            // On différencie visuellement tes réponses de leurs messages
-            // Si l'email correspond au tien, c'est une réponse admin, sinon c'est le client
             if (msg.email === "thimeosousa02@gmail.com") {
+                // Message envoyé par toi (l'admin)
                 messageDiv.classList.add('message', 'admin-reply');
                 messageDiv.innerHTML = `<p class="msg-text"><strong>Moi :</strong> ${msg.text}</p>`;
             } else {
+                // Message envoyé par un client
                 messageDiv.classList.add('message', 'client-msg');
                 messageDiv.innerHTML = `<p class="msg-text"><strong>${msg.email || 'Client'} :</strong> ${msg.text}</p>`;
                 
-                // On mémorise l'UID du dernier client qui a écrit pour pouvoir lui répondre automatiquement
+                // On mémorise automatiquement son UID pour savoir à qui répondre
                 activeUserChatUid = msg.uid;
             }
             
@@ -71,6 +83,9 @@ const listenToAllMessages = () => {
         adminChatWindow.scrollTop = adminChatWindow.scrollHeight;
     }, (error) => {
         console.error("Erreur lors de la lecture des messages :", error);
+        if (adminChatWindow) {
+            adminChatWindow.innerHTML = `<p class="chat-info" style="color: red;">Erreur Firebase : ${error.message}</p>`;
+        }
     });
 };
 
@@ -88,29 +103,29 @@ if (adminChatForm) {
         }
 
         if (!activeUserChatUid) {
-            alert("Aucun utilisateur cible détecté pour cette réponse.");
+            alert("Désolé, impossible de répondre car aucun UID client n'a été détecté dans l'historique.");
             return;
         }
 
         if (replyText !== "") {
             try {
-                // On ajoute le message dans la collection globale "messages"
-                // On utilise l'UID du client ciblé pour que le message apparaisse dans son interface
+                // Envoi de ta réponse liée à l'UID du client
                 await addDoc(collection(db, "messages"), {
                     text: replyText,
-                    uid: activeUserChatUid, // Lié à l'UID du client pour ses règles de lecture
-                    email: user.email, // Ton email admin pour t'identifier
+                    uid: activeUserChatUid, 
+                    email: user.email, 
                     createdAt: serverTimestamp()
                 });
 
-                adminMessageInput.value = ""; // On vide l'entrée de texte
+                adminMessageInput.value = ""; // Vide l'input après l'envoi
             } catch (error) {
                 console.error("Erreur d'envoi de la réponse admin :", error);
+                alert("Erreur lors de l'envoi : " + error.message);
             }
         }
     });
 }
 
-// Lancement des fonctionnalités au chargement du script
+// Lancement des fonctions
 loadUserName();
 listenToAllMessages();

@@ -1,21 +1,8 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 import { getFirestore, doc, getDoc, collection, onSnapshot, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-// 🎯 CONFIGURATION FIREBASE (Remplace ces lignes par TES propres clés de configuration)
-const firebaseConfig = {
-    apiKey: "TON_API_KEY",
-    authDomain: "TON_AUTH_DOMAIN",
-    projectId: "TON_PROJECT_ID",
-    storageBucket: "TON_STORAGE_BUCKET",
-    messagingSenderId: "TON_MESSAGING_SENDER_ID",
-    appId: "TON_APP_ID"
-};
-
-// Initialisation de l'application Firebase pour ce script
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
+const auth = getAuth();
+const db = getFirestore();
 
 const adminChatWindow = document.getElementById('admin-chat-window');
 const adminChatForm = document.getElementById('admin-chat-form');
@@ -45,49 +32,54 @@ const loadUserName = () => {
     });
 };
 
-// 2. ÉCOUTER TOUS LES MESSAGES D'ASSISTANCE
+// 2. ÉCOUTER TOUS LES MESSAGES D'ASSISTANCE (SANS BLOCAGE)
 const listenToAllMessages = () => {
+    // On écoute la collection sans le "orderBy" Firebase pour éviter le bug de page blanche
     const messagesRef = collection(db, "messages");
 
     onSnapshot(messagesRef, (snapshot) => {
         if (!adminChatWindow) return;
-        adminChatWindow.innerHTML = ""; 
+        adminChatWindow.innerHTML = ""; // On vide la fenêtre de chat
 
         if (snapshot.empty) {
             adminChatWindow.innerHTML = `<p class="chat-info">Aucun message d'assistance reçu.</p>`;
             return;
         }
 
+        // On convertit le snapshot en tableau pour pouvoir les trier proprement en JS
         const allMessages = [];
         snapshot.forEach((doc) => {
             allMessages.push({ id: doc.id, ...doc.data() });
         });
 
-        // Tri par date en JavaScript
+        // Tri sécurisé par date en JavaScript (les messages sans date vont au début)
         allMessages.sort((a, b) => {
             const dateA = a.createdAt ? a.createdAt.toMillis() : 0;
             const dateB = b.createdAt ? b.createdAt.toMillis() : 0;
             return dateA - dateB;
         });
 
-        // Affichage des messages
+        // Affichage des messages triés
         allMessages.forEach((msg) => {
             const messageDiv = document.createElement('div');
             
             if (msg.email === "thimeosousa02@gmail.com") {
+                // Message envoyé par toi (l'admin)
                 messageDiv.classList.add('message', 'admin-reply');
                 messageDiv.innerHTML = `<p class="msg-text"><strong>Moi :</strong> ${msg.text}</p>`;
             } else {
+                // Message envoyé par un client
                 messageDiv.classList.add('message', 'client-msg');
                 messageDiv.innerHTML = `<p class="msg-text"><strong>${msg.email || 'Client'} :</strong> ${msg.text}</p>`;
                 
-                // Mémorisation de l'UID client pour la réponse
+                // On mémorise automatiquement son UID pour savoir à qui répondre
                 activeUserChatUid = msg.uid;
             }
             
             adminChatWindow.appendChild(messageDiv);
         });
 
+        // Défilement automatique vers le bas
         adminChatWindow.scrollTop = adminChatWindow.scrollHeight;
     }, (error) => {
         console.error("Erreur lors de la lecture des messages :", error);
@@ -111,12 +103,13 @@ if (adminChatForm) {
         }
 
         if (!activeUserChatUid) {
-            alert("Désolé, impossible de répondre car aucun UID client n'a été détecté.");
+            alert("Désolé, impossible de répondre car aucun UID client n'a été détecté dans l'historique.");
             return;
         }
 
         if (replyText !== "") {
             try {
+                // Envoi de ta réponse liée à l'UID du client
                 await addDoc(collection(db, "messages"), {
                     text: replyText,
                     uid: activeUserChatUid, 
@@ -124,7 +117,7 @@ if (adminChatForm) {
                     createdAt: serverTimestamp()
                 });
 
-                adminMessageInput.value = ""; 
+                adminMessageInput.value = ""; // Vide l'input après l'envoi
             } catch (error) {
                 console.error("Erreur d'envoi de la réponse admin :", error);
                 alert("Erreur lors de l'envoi : " + error.message);

@@ -77,7 +77,118 @@ footer, .footer {
     height: 40px;
     outline: none;
 }
+/* Styles généraux de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
 
+.main-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.page-subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* 🎯 ALIGNEMENT : Météo à gauche, Infos à droite */
+.content-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px; /* Espace entre les deux colonnes */
+}
+
+/* 🌤️ STYLE DE LA ZONE MÉTÉO (À GAUCHE) */
+.weather-section {
+    flex: 1; /* Prend la place restante à gauche */
+    max-width: 500px;
+}
+
+.weather-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.weather-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+.weather-row .temp {
+    color: #444;
+}
+
+/* 🇦🇱 STYLE DE LA ZONE INFOS PAYS (À DROITE) */
+.info-section {
+    flex: 1; /* Prend la place restante à droite */
+    max-width: 450px;
+    background: #fafafa; /* Léger fond gris pour bien séparer */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.country-flag {
+    width: 80px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.country-details p {
+    margin: 12px 0;
+    font-size: 1rem;
+}
+
+.audio-container {
+    margin-top: 20px;
+    background: #eaeaea;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.audio-container p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+audio {
+    width: 100%;
+}
+
+.lang-text {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Responsive : Si l'écran est trop petit, tout se remet l'un sous l'autre */
+@media (max-width: 768px) {
+    .content-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .weather-section, .info-section {
+        max-width: 100%;
+    }
+}
 
 
 /* --- Reset & Fonts --- */

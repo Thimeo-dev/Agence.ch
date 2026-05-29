@@ -1,25 +1,33 @@
-<!DOCTYPE html>
+<!DOCTYPEDOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administration — Agence.ch</title>
+    <title>Administration – Agence.ch</title>
     
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="AGence.svg">
+    <link rel="icon" type="image/svg+xml" href="Agence.svg">
 </head>
 <body class="admin-page">
 
     <div id="header-placeholder"></div>
 
     <main id="admin-content" class="admin-content">
-    <h1>Bienvenue <span id="acc-name">Chargement...</span></h1>
-    <p>Vos outils de gestion et statistiques s'afficheront ici.</p>
-    
-    <div class="admin-placeholder">
-        <p>Aucune donnée à afficher pour le moment.</p>
-    </div>
-</main>
+        <h1>Bienvenue <span id="acc-name">Chargement...</span></h1>
+        <p>Vos outils de gestion et statistiques s'afficheront ici.</p>
+        
+        <div class="admin-chat-container">
+            <h2>Assistance Clients</h2>
+            <div id="admin-chat-window" class="chat-window">
+                <p class="chat-info">Sélectionnez ou attendez un message...</p>
+            </div>
+            
+            <form id="admin-chat-form" class="chat-form">
+                <input type="text" id="admin-message-input" placeholder="Écrire une réponse..." required>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </main>
 
     <div id="footer-placeholder"></div>
 

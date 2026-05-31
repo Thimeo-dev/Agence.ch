@@ -8,7 +8,7 @@ export const countriesData = {
         fr: { 
             name: " Bienvenue en Albanie", 
             desc: "Découvrez la beauté naturelle et la culture riche de l'Albanie.",
-            info: "Située dans les Balkans, l'Albanie est un pays aux paysages variés, allant des plages méditerranéennes aux montagnes majestueuses. La capitale, Tirana, est un mélange vibrant de culture et d'histoire. Avec une population d'environ 2,8 millions d'habitants, l'Albanie offre une expérience unique à ses visiteurs. La monnaie utilisée est le Lek albanais.",
+            info: "Située dans les Balkans, l'Albanie est un pays aux paysages variés, allant des plages méditerranéennes aux montagnes majestueuses. La capitale, Tirana, est un mélange vibrant de culture et d'histoire. Avec une population d'environ 2,8 millions d'habitants, l'Albanie offre une expérience unique à ses visiteurs.",
             capitale: "Tirana",
             population: "2 800 000",
             monnaie: "Lek albanais"
@@ -16,7 +16,7 @@ export const countriesData = {
         en: { 
             name: "Welcome to Albania", 
             desc: "Discover the natural beauty and rich culture of Albania.",
-            info: "Located in the Balkans, Albania is a country with diverse landscapes, ranging from Mediterranean beaches to majestic mountains. The capital, Tirana, is a vibrant blend of culture and history. With a population of around 2.8 million people, Albania offers a unique experience to its visitors. The currency used is the Albanian Lek.",
+            info: "Located in the Balkans, Albania is a country with diverse landscapes, ranging from Mediterranean beaches to majestic mountains. The capital, Tirana, is a vibrant blend of culture and history. With a population of around 2.8 million people, Albania offers a unique experience to its visitors.",
             capitale: "Tirana",
             population: "2,800,000",
             monnaie: "Albanian Lek"

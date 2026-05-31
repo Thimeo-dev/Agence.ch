@@ -1184,5 +1184,62 @@ export const countriesData = {
             monnaie: "South Korean Won"
         }
     },
+    "emirats-arabes-unis": {
+        image: "https://flagcdn.com/w160/ae.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sir_Bani_Yas_Island_Panorama.jpg/1920px-Sir_Bani_Yas_Island_Panorama.jpg",
+        coords: [23.424, 53.847],
+        fr: {
+            name: "Bienvenue en Emirats Arabes Unis",
+            desc: "Découvrez les paysages variés et la culture riche des Emirats Arabes Unis.",
+            capitale: "Abu Dhabi",
+            population: "9 000 000",
+            monnaie: "Dirham des Emirats Arabes Unis"
+        },
+        en: {
+            name: "Welcome to United Arab Emirates",
+            desc: "Discover the diverse landscapes and rich culture of the United Arab Emirates.",
+            capitale: "Abu Dhabi",
+            population: "9,000,000",
+            monnaie: "United Arab Emirates Dirham"
+        }
+    },
+    "inde": {
+        image: "https://flagcdn.com/w160/in.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/New_Delhi_government_block_03-2016_img5.jpg/1920px-New_Delhi_government_block_03-2016_img5.jpg",
+        coords: [20.593, 78.962],
+        fr: {
+            name: "Bienvenue en Inde",
+            desc: "Découvrez les paysages variés et la culture riche de l'Inde.",
+            capitale: "New Delhi",
+            population: "1 380 000 000",
+            monnaie: "Roupie indienne"
+        },
+        en: {
+            name: "Welcome to India",
+            desc: "Discover the diverse landscapes and rich culture of India.",
+            capitale: "New Delhi",
+            population: "1,380,000,000",
+            monnaie: "Indian Rupee"
+        }
+    },
+    "indonesie": {
+        image: "https://flagcdn.com/w160/id.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Panoramic_views_of_Borobudur.jpg",
+        coords: [-0.789, 113.921],
+        fr: {
+            name: "Bienvenue en Indonésie",
+            desc: "Découvrez les paysages variés et la culture riche de l'Indonésie.",
+            capitale: "Jakarta",
+            population: "273 000 000",
+            monnaie: "Roupie indonésienne"
+        },
+        en: {
+            name: "Welcome to Indonesia",
+            desc: "Discover the diverse landscapes and rich culture of Indonesia.",
+            capitale: "Jakarta",
+            population: "273,000,000",
+            monnaie: "Indonesian Rupiah"
+        }
+        },
 
 };

@@ -3,26 +3,32 @@
     color: #3c4043;
     line-height: 1.7;
     
-    max-width: 800px;      /* Limite la largeur sur grand écran pour une lecture confortable style Apple */
+    max-width: 800px;      /* Empêche le texte de s'étaler à l'infini sur grand écran */
     margin-top: 50px;
-    margin-bottom: 15px;   /* Garde une seule marge basse propre */
-    margin-left: auto;     /* Combine avec margin-right: auto pour centrer le bloc global... */
-    margin-right: auto;    /* ... tout en gardant le texte aligné à gauche à l'intérieur */
-    padding: 0 20px;       /* Sécurité invisible pour que le texte ne colle pas aux bords sur mobile */
+    margin-bottom: 15px;
+    margin-left: 0;        /* Force le bloc à se coller tout à gauche de la page */
+    margin-right: auto;    /* Laisse tout l'espace vide se faire du côté droit */
+    
+    padding-left: 5%;      /* Crée un décalage propre à gauche pour s'aligner sous ton logo */
+    padding-right: 20px;   /* Marge de sécurité pour le côté droit */
     box-sizing: border-box;
+    position: relative;
 }
 
 .legal-content h1 {
     font-size: 2.5rem;
     color: #1d1d1f;
     
-    max-width: 800px;      /* Parfaitement aligné sur la largeur de tes paragraphes */
+    max-width: 800px;
     margin-top: 50px;
     margin-bottom: 35px;
-    margin-left: auto;     /* Centre le bloc du titre sur la page */
+    margin-left: 0;        /* Aligne également le gros titre tout à gauche */
     margin-right: auto;
-    padding: 0 20px;       /* Sécurité mobile */
+    
+    padding-left: 5%;      /* Parfaitement aligné sur la même ligne que tes paragraphes */
+    padding-right: 20px;
     box-sizing: border-box;
+    position: relative;
 }
 /* Force l'image à se coller tout en haut de son espace */
 .api-landscape-image {

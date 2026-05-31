@@ -1,10 +1,15 @@
+.country-page-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 .legal-content h1 {
     font-size: 2.5rem;
     margin-top: 50px;
     margin-bottom: 200px;
     color: #1d1d1f;
-    position: relative;
-    right: 2000px;
 }
 /* Force l'image à se coller tout en haut de son espace */
 .api-landscape-image {

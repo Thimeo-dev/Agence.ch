@@ -7,7 +7,7 @@ export const countriesData = {
         coords: [41.156986,20.18122199999999],
         fr: { 
             name: " Bienvenue en Albanie", 
-            desc: "Découvrez la beauté naturelle et la culture riche de l'Albanie.",
+            descr: "Découvrez la beauté naturelle et la culture riche de l'Albanie.",
             info: "Située dans les Balkans, l'Albanie est un pays aux paysages variés, allant des plages méditerranéennes aux montagnes majestueuses. La capitale, Tirana, est un mélange vibrant de culture et d'histoire. Avec une population d'environ 2,8 millions d'habitants, l'Albanie offre une expérience unique à ses visiteurs. La monnaie utilisée est le Lek albanais.",
             capitale: "Tirana",
             population: "2 800 000",

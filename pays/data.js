@@ -1240,6 +1240,25 @@ export const countriesData = {
             population: "273,000,000",
             monnaie: "Indonesian Rupiah"
         }
+    },
+    "irak": {
+        image: "https://flagcdn.com/w160/iq.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Imam_Ali_Shrine_%281%29.jpg",
+        coords: [33.223, 43.679],
+        fr: {
+            name: "Bienvenue en Irak",
+            desc: "Découvrez les paysages variés et la culture riche de l'Irak.",
+            capitale: "Bagdad",
+            population: "40 000 000",
+            monnaie: "Dinar irakien"
         },
+        en: {
+            name: "Welcome to Iraq",
+            desc: "Discover the diverse landscapes and rich culture of Iraq.",
+            capitale: "Baghdad",
+            population: "40,000,000",
+            monnaie: "Iraqi Dinar"
+        }
+    },
 
 };

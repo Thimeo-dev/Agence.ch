@@ -13,7 +13,7 @@ export const countriesData = {
             monnaie: "Lek albanais"
         },
         en: { 
-            name: "Albania", 
+            name: "Welcome to Albania", 
             desc: "Discover the natural beauty and rich culture of Albania.",
             capitale: "Tirana",
             population: "2,800,000",

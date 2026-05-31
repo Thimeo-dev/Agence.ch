@@ -17,9 +17,8 @@
 
 /* Supprime les espaces du conteneur global en haut de page */
 main, .main-container, .hero-country {
-    max-width: 1200px; /* Largeur max de ta zone de contenu */
     padding-top: 0 !important;
-    margin-top: 0 !important;
+    margin-top: 10px !important; /* Laisse un petit espace pour que le texte ne colle pas à l'image */
 }
 
 /* Optionnel : Si ton header/barre de navigation a une marge en bas, on la retire */

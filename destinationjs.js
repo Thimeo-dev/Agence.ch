@@ -189,6 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (titleEl) titleEl.textContent = info.name;
         if (descEl) descEl.textContent = info.desc;
+        if (infoEl) infoEl.textContent = info.info;
         if (langEl) langEl.textContent = lang.toUpperCase();
         if (langNameEl) langNameEl.textContent = languageNames[lang] || lang.toUpperCase();
         

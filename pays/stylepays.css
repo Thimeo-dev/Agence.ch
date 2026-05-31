@@ -18,7 +18,7 @@
 /* Supprime les espaces du conteneur global en haut de page */
 main, .main-container, .hero-country {
     padding-top: 0 !important;
-    margin-top: 100px !important; /* Laisse un petit espace pour que le texte ne colle pas à l'image */
+    margin-top: 1000px !important; /* Laisse un petit espace pour que le texte ne colle pas à l'image */
 }
 
 /* Optionnel : Si ton header/barre de navigation a une marge en bas, on la retire */

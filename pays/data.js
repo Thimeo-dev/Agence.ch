@@ -29,6 +29,7 @@ export const countriesData = {
         fr: { 
             name: "Bienvenue en Allemagne", 
             desc: "Explorez l'histoire, la culture et les paysages variés de l'Allemagne.",
+            info: "L'Allemagne, située en Europe centrale, est un pays riche en histoire et en culture. De la vibrante ville de Berlin aux paysages pittoresques de la Forêt-Noire, l'Allemagne offre une diversité d'expériences. Avec une population d'environ 84 millions d'habitants, c'est le pays le plus peuplé de l'Union européenne.",
             capitale: "Berlin",
             population: "84 400 000",
             monnaie: "Euro"
@@ -36,6 +37,7 @@ export const countriesData = {
         en: { 
             name: "Welcome to Germany", 
             desc: "Explore the history, culture, and diverse landscapes of Germany.",
+            info: "Germany, located in Central Europe, is a country rich in history and culture. From the vibrant city of Berlin to the picturesque landscapes of the Black Forest, Germany offers a variety of experiences. With a population of around 84 million people, it is the most populous country in the European Union.",
             capitale: "Berlin",
             population: "84,400,000",
             monnaie: "Euro"
@@ -48,6 +50,7 @@ export const countriesData = {
         fr: { 
             name: "Bienvenue en Andorre", 
             desc: "Découvrez les montagnes majestueuses et les charmants villages d'Andorre.",
+            info: "Andorre, nichée dans les Pyrénées entre la France et l'Espagne, est un petit pays connu pour ses paysages montagneux et ses stations de ski. La capitale, Andorre-la-Vieille, est un centre culturel et commercial animé. Avec une population d'environ 85 000 habitants, Andorre offre une expérience unique à ses visiteurs.",
             capitale: "Andorre-la-Vieille",
             population: "85 000",
             monnaie: "Euro"
@@ -55,6 +58,7 @@ export const countriesData = {
         en: { 
             name: "Welcome to Andorra", 
             desc: "Discover the majestic mountains and charming villages of Andorra.",
+            info: "Andorra, nestled in the Pyrenees between France and Spain, is a small country known for its mountainous landscapes and ski resorts. The capital, Andorra la Vella, is a vibrant cultural and commercial center. With a population of around 85,000 people, Andorra offers a unique experience to its visitors.",
             capitale: "Andorra la Vella",
             population: "85,000",
             monnaie: "Euro"

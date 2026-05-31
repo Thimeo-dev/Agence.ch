@@ -16,6 +16,7 @@ export const countriesData = {
         en: { 
             name: "Welcome to Albania", 
             desc: "Discover the natural beauty and rich culture of Albania.",
+            info: "Located in the Balkans, Albania is a country with diverse landscapes, ranging from Mediterranean beaches to majestic mountains. The capital, Tirana, is a vibrant blend of culture and history. With a population of around 2.8 million people, Albania offers a unique experience to its visitors. The currency used is the Albanian Lek.",
             capitale: "Tirana",
             population: "2,800,000",
             monnaie: "Albanian Lek"

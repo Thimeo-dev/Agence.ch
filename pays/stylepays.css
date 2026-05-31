@@ -1,3 +1,8 @@
+.legal-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1d1d1f;
+}
 /* Force l'image à se coller tout en haut de son espace */
 .api-landscape-image {
     width: 100vw;                 /* Prend toute la largeur de l'écran */

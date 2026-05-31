@@ -1,20 +1,28 @@
 .details-country p {
-    font-size: 2.5rem;
-    margin-top: 50px;
-    margin-bottom: 0;
     font-size: 16px;
     color: #3c4043;
     line-height: 1.7;
-    margin-bottom: 15px;
-    position: relative;
-    right: 500px;
+    
+    max-width: 800px;      /* Limite la largeur sur grand écran pour une lecture confortable style Apple */
+    margin-top: 50px;
+    margin-bottom: 15px;   /* Garde une seule marge basse propre */
+    margin-left: auto;     /* Combine avec margin-right: auto pour centrer le bloc global... */
+    margin-right: auto;    /* ... tout en gardant le texte aligné à gauche à l'intérieur */
+    padding: 0 20px;       /* Sécurité invisible pour que le texte ne colle pas aux bords sur mobile */
+    box-sizing: border-box;
 }
 
 .legal-content h1 {
     font-size: 2.5rem;
+    color: #1d1d1f;
+    
+    max-width: 800px;      /* Parfaitement aligné sur la largeur de tes paragraphes */
     margin-top: 50px;
     margin-bottom: 35px;
-    color: #1d1d1f;
+    margin-left: auto;     /* Centre le bloc du titre sur la page */
+    margin-right: auto;
+    padding: 0 20px;       /* Sécurité mobile */
+    box-sizing: border-box;
 }
 /* Force l'image à se coller tout en haut de son espace */
 .api-landscape-image {

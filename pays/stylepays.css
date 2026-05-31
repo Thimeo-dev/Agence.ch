@@ -5,6 +5,7 @@
     padding: 0 4%;         /* Aligné sur le même retrait que le conteneur principal */
     box-sizing: border-box;
 }
+
 .details-country p {
     font-size: 2.5rem;
     margin-top: 50px;

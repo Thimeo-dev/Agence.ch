@@ -16,10 +16,6 @@ const afficherDonneesPays = () => {
 
         // 1. Remplissage des textes et images existants
         const titleEl = document.getElementById('country-title');
-        if (titleEl) {
-            const prefix = currentLang === "en" ? "Welcome to " : "Bienvenue en ";
-            titleEl.textContent = trad.name.startsWith(prefix) ? trad.name : `${prefix}${trad.name}`;
-        }
 
         const descEl = document.getElementById('country-desc');
         if (descEl) descEl.textContent = trad.desc;

@@ -74,7 +74,7 @@ const afficherDonneesPays = () => {
         const trad = dataPays[currentLang] || dataPays["fr"];
 
         // Remplissage texte standard
-        const titleEl = document.getElementById('country-title');
+
 
         const descEl = document.getElementById('country-desc');
         if (descEl) descEl.textContent = trad.desc;

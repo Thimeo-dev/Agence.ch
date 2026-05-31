@@ -5,9 +5,6 @@ export const countriesData = {
         image: "https://flagcdn.com/w160/al.png",
         landscape: "https://upload.wikimedia.org/wikipedia/commons/3/36/Panorama_Albania_Tour_003.jpg",
         coords: [41.156986,20.18122199999999],
-        image: [
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Panorama_Albania_Tour_003.jpg/1920px-Panorama_Albania_Tour_003.jpg",
-        ],
         fr: { 
             name: " Bienvenue en Albanie", 
             desc: "Découvrez la beauté naturelle et la culture riche de l'Albanie.",

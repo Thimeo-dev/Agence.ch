@@ -1,3 +1,10 @@
+.legal-content section {
+    max-width: 800px;      /* Garde la même largeur maximale pour l'harmonie visuelle */
+    margin-left: 0;        /* Force la section à se coller tout à gauche */
+    margin-right: auto;    /* Repousse tout l'espace vide vers la droite */
+    padding: 0 4%;         /* Aligné sur le même retrait que le conteneur principal */
+    box-sizing: border-box;
+}
 .details-country p {
     font-size: 2.5rem;
     margin-top: 50px;

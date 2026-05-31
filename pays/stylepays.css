@@ -52,7 +52,7 @@ header, .navbar {
     
     height: 350px;                
     margin-top: 40px;             /* Espace par rapport au texte du haut */
-    margin-bottom: 0 !important;  /* Force la carte à ne pas avoir de marge en bas */
+    margin-bottom: -207;  /* Force la carte à ne pas avoir de marge en bas */
     
     border-radius: 0;             
     box-shadow: none;

@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const titleEl = document.getElementById('country-title');
     const descEl = document.getElementById('country-desc');
-    const countryInfoElement = document.getElementById('country-info');
+    const infoEl = document.getElementById('country-info');
     const langEl = document.getElementById('current-lang');
     const langNameEl = document.getElementById('lang-display');
 

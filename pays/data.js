@@ -71,6 +71,7 @@ export const countriesData = {
         fr: { 
             name: "Bienvenue en Arménie", 
             desc: "Explorez l'histoire ancienne et les paysages époustouflants de l'Arménie.",
+            info: "L'Arménie, située dans la région du Caucase, est un pays riche en histoire et en culture. De ses monastères anciens à ses paysages montagneux à couper le souffle, l'Arménie offre une expérience unique à ses visiteurs. La capitale, Erevan, est un centre culturel dynamique avec une population d'environ 3 millions d'habitants.",
             capitale: "Erevan",
             population: "3 000 000",
             monnaie: "Dram arménien"
@@ -78,6 +79,7 @@ export const countriesData = {
         en: { 
             name: "welcome to Armenia", 
             desc: "Explore the ancient history and breathtaking landscapes of Armenia.",
+            info: "Armenia, located in the Caucasus region, is a country rich in history and culture. From its ancient monasteries to its breathtaking mountainous landscapes, Armenia offers a unique experience to its visitors. The capital, Yerevan, is a vibrant cultural center with a population of around 3 million people.",
             capitale: "Yerevan",
             population: "3,000,000",
             monnaie: "Armenian Dram"

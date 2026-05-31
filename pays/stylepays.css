@@ -3,6 +3,8 @@
     margin-top: 50px;
     margin-bottom: 200px;
     color: #1d1d1f;
+    position: relative;
+    right: 20px;
 }
 /* Force l'image à se coller tout en haut de son espace */
 .api-landscape-image {

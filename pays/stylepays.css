@@ -83,3 +83,58 @@ footer, .footer {
     height: 40px;
     outline: none;
 }
+
+
+/* Conteneur principal qui cache tout ce qui dépasse sur les côtés */
+.horizontal-scroll-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 30px 0;
+    padding: 10px 0;
+    position: relative;
+}
+
+/* Le rail qui contient les groupes d'images et applique l'animation */
+.horizontal-scroll-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-infinite 25s linear infinite;
+}
+
+/* Chaque groupe d'images aligné horizontalement */
+.horizontal-scroll-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;         /* Espace entre chaque image */
+    padding-right: 20px; /* Aligné avec le gap pour éviter les sauts */
+}
+
+/* Style Apple pour tes images de paysages */
+.horizontal-scroll-group img {
+    height: 200px;             /* Hauteur fixe et fine */
+    width: 300px;              /* Largeur fixe pour garder l'harmonie */
+    object-fit: cover;         /* Recadre proprement l'image */
+    border-radius: 12px;       /* Angles arrondis doux */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Ombre discrète */
+    transition: transform 0.3s ease;
+}
+
+/* Optionnel : Légère interaction au survol */
+.horizontal-scroll-group img:hover {
+    transform: scale(1.02);
+}
+
+/* Animation CSS qui fait défiler exactement la moitié du rail (un groupe entier) */
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Met l'animation en pause si l'utilisateur survole la galerie */
+.horizontal-scroll-container:hover .horizontal-scroll-track {
+    animation-play-state: paused;
+}

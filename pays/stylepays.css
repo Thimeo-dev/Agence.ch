@@ -17,6 +17,7 @@
 
 /* Supprime les espaces du conteneur global en haut de page */
 main, .main-container, .hero-country {
+    max-width: 1200px; /* Largeur max de ta zone de contenu */
     padding-top: 0 !important;
     margin-top: 0 !important;
 }

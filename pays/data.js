@@ -2765,7 +2765,7 @@ export const countriesData = {
     },
     "maroc": {
         image: "https://flagcdn.com/w160/ma.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Casablanca_skyline.jpg/1920px-Casablanca_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Maroc_Sahara_caravane.jpg/1920px-Maroc_Sahara_caravane.jpg",
         coords: [33.9716, -6.8498],
         fr: {
             name: "Bienvenue au Maroc",

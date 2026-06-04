@@ -1967,7 +1967,7 @@ export const countriesData = {
     },
     "bolivie": {
         image: "https://flagcdn.com/w160/bo.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Salar_de_Uyuni.jpg/1920px-Salar_de_Uyuni.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/c/ce/Salar_de_Uyuni%2C_Bolivia2.jpg",
         coords: [-16.4897, -68.1193],
         fr: {
             name: "Bienvenue en Bolivie",
@@ -1988,7 +1988,7 @@ export const countriesData = {
     },
     "bresil": {
         image: "https://flagcdn.com/w160/br.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Rio_de_Janeiro_%2818512071784%29.jpg/1920px-Rio_de_Janeiro_%2818512071784%29.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Brasilia_Congresso_Nacional_05_2007_221.jpg/1920px-Brasilia_Congresso_Nacional_05_2007_221.jpg",
         coords: [-15.7939, -47.8828],
         fr: {
             name: "Bienvenue au Brésil",
@@ -2009,7 +2009,7 @@ export const countriesData = {
     },
     "canada": {
         image: "https://flagcdn.com/w160/ca.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Toronto_skyline.jpg/1920px-Toronto_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Ottawa_-_ON_-_Oberster_Gerichtshof_von_Kanada.jpg/1920px-Ottawa_-_ON_-_Oberster_Gerichtshof_von_Kanada.jpg",
         coords: [45.4215, -75.6972],
         fr: {
             name: "Bienvenue au Canada",
@@ -2030,7 +2030,7 @@ export const countriesData = {
     },
     "chili": {
         image: "https://flagcdn.com/w160/cl.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Santiago_de_Chile_%282021%29.jpg/1920px-Santiago_de_Chile_%282021%29.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Palacio_de_LaMoneda02.png",
         coords: [-33.4489, -70.6693],
         fr: {
             name: "Bienvenue au Chili",
@@ -2051,7 +2051,7 @@ export const countriesData = {
     },
     "colombie": {
         image: "https://flagcdn.com/w160/co.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Bogota_2018.jpg/1920px-Bogota_2018.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/P%C3%A1ramo_de_Sumapaz.jpg/1920px-P%C3%A1ramo_de_Sumapaz.jpg",
         coords: [4.7110, -74.0721],
         fr: {
             name: "Bienvenue en Colombie",
@@ -2072,7 +2072,7 @@ export const countriesData = {
     },
     "costa-rica": {
         image: "https://flagcdn.com/w160/cr.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Arenal_Volcano%2C_Costa_Rica.jpg/1920px-Arenal_Volcano%2C_Costa_Rica.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Parque_Nacional_Manuel_Antonio_1.JPG",
         coords: [9.7489, -83.7534],
         fr: {
             name: "Bienvenue au Costa Rica",
@@ -2093,7 +2093,7 @@ export const countriesData = {
     },
     "cuba": {
         image: "https://flagcdn.com/w160/cu.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Plaza_de_la_Revolucion%2C_Havana_%282011%29.jpg/1920px-Plaza_de_la_Revolucion%2C_Havana_%282011%29.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Traditional_dwelling_house_in_Cuba.jpg/1920px-Traditional_dwelling_house_in_Cuba.jpg",
         coords: [23.1136, -82.3666],
         fr: {
             name: "Bienvenue à Cuba",
@@ -2114,7 +2114,7 @@ export const countriesData = {
     },
     "dominique": {
         image: "https://flagcdn.com/w160/dm.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Morne_Trinity_Valley.jpg/1920px-Morne_Trinity_Valley.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/RANFOREST_DOMINICA_6435.jpg/1920px-RANFOREST_DOMINICA_6435.jpg",
         coords: [15.4150, -61.3710],
         fr: {
             name: "Bienvenue en Dominique",
@@ -2135,7 +2135,7 @@ export const countriesData = {
     },
     "equateur": {
         image: "https://flagcdn.com/w160/ec.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Quito_skyline.jpg/1920px-Quito_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Vicu%C3%B1a_-_Chimborazo%2C_Ecuador.jpg/1920px-Vicu%C3%B1a_-_Chimborazo%2C_Ecuador.jpg",
         coords: [-0.1807, -78.4678],
         fr: {
             name: "Bienvenue en Équateur",
@@ -2156,7 +2156,7 @@ export const countriesData = {
     },
     "etats-unis": {
         image: "https://flagcdn.com/w160/us.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/United_States_Capitol_west_front.jpg/1920px-United_States_Capitol_west_front.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/a/af/WhiteHouseSouthFacade.JPG",
         coords: [38.9072, -77.0369],
         fr: {
             name: "Bienvenue aux États-Unis",
@@ -2177,7 +2177,7 @@ export const countriesData = {
     },
     "grenade": {
         image: "https://flagcdn.com/w160/gd.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Grand_Anse_Beach%2C_Grenada.jpg/1920px-Grand_Anse_Beach%2C_Grenada.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Grenada_mountains.jpg",
         coords: [12.1165, -61.6790],
         fr: {
             name: "Bienvenue à la Grenade",
@@ -2198,7 +2198,7 @@ export const countriesData = {
     },
     "guatemala": {
         image: "https://flagcdn.com/w160/gt.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Antigua_Guatemala.jpg/1920px-Antigua_Guatemala.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Park_in_Quetzaltenango.JPG",
         coords: [14.6349, -90.5069],
         fr: {
             name: "Bienvenue au Guatemala",
@@ -2219,7 +2219,7 @@ export const countriesData = {
     },
     "guyana": {
         image: "https://flagcdn.com/w160/gy.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Georgetown_Guyana.jpg/1920px-Georgetown_Guyana.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/St_George%27s_Georgetown_Exterior.JPG/1920px-St_George%27s_Georgetown_Exterior.JPG",
         coords: [6.8045, -58.1551],
         fr: {
             name: "Bienvenue au Guyana",
@@ -2240,7 +2240,7 @@ export const countriesData = {
     },
     "haiti": {
         image: "https://flagcdn.com/w160/ht.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Port-au-Prince.jpg/1920px-Port-au-Prince.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Artibonite_River_in_Haiti_%282010%29.jpg/1920px-Artibonite_River_in_Haiti_%282010%29.jpg",
         coords: [18.5944, -72.3074],
         fr: {
             name: "Bienvenue en Haïti",
@@ -2261,7 +2261,7 @@ export const countriesData = {
     },
     "honduras": {
         image: "https://flagcdn.com/w160/hn.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Tegucigalpa_skyline.jpg/1920px-Tegucigalpa_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Artibonite_River_in_Haiti_%282010%29.jpg/1920px-Artibonite_River_in_Haiti_%282010%29.jpg",
         coords: [14.0723, -87.1921],
         fr: {
             name: "Bienvenue au Honduras",

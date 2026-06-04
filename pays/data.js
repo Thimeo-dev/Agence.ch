@@ -2786,7 +2786,7 @@ export const countriesData = {
     },
     "namibie": {
         image: "https://flagcdn.com/w160/na.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Sossusvlei_sand_dunes.jpg/1920px-Sossusvlei_sand_dunes.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Namibie_Luderitz_04.jpg/1920px-Namibie_Luderitz_04.jpg",
         coords: [-22.5609, 17.0658],
         fr: {
             name: "Bienvenue en Namibie",
@@ -2807,7 +2807,7 @@ export const countriesData = {
     },
     "nigeria": {
         image: "https://flagcdn.com/w160/ng.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Lagos_skyline.jpg/1920px-Lagos_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/An_array_of_iconic_buildings_in_Lagos_Nigeria_starting_with_United_Bank_of_Africa.jpg/1920px-An_array_of_iconic_buildings_in_Lagos_Nigeria_starting_with_United_Bank_of_Africa.jpg",
         coords: [9.0765, 7.3986],
         fr: {
             name: "Bienvenue au Nigéria",
@@ -2828,7 +2828,7 @@ export const countriesData = {
     },
     "senegal": {
         image: "https://flagcdn.com/w160/sn.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Dakar_skyline.jpg/1920px-Dakar_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/3/37/Car_rapide.jpg",
         coords: [14.7167, -17.4677],
         fr: {
             name: "Bienvenue au Sénégal",
@@ -2849,7 +2849,7 @@ export const countriesData = {
     },
     "tanzanie": {
         image: "https://flagcdn.com/w160/tz.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kilimanjaro_from_Uhuru_peak.jpg/1920px-Kilimanjaro_from_Uhuru_peak.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Bank_of_Tanzania_golden_hour_edit.jpg/250px-Bank_of_Tanzania_golden_hour_edit.jpg",
         coords: [-6.3690, 34.8888],
         fr: {
             name: "Bienvenue en Tanzanie",
@@ -2870,7 +2870,7 @@ export const countriesData = {
     },
     "tunisie": {
         image: "https://flagcdn.com/w160/tn.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Medina_of_Tunis.jpg/1920px-Medina_of_Tunis.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Pont_Cinqui%C3%A8me_de_B%C3%A9ja_-_Mai_2014_%283%29.JPG/1920px-Pont_Cinqui%C3%A8me_de_B%C3%A9ja_-_Mai_2014_%283%29.JPG",
         coords: [36.8065, 10.1815],
         fr: {
             name: "Bienvenue en Tunisie",
@@ -2891,7 +2891,7 @@ export const countriesData = {
     },
     "australie": {
         image: "https://flagcdn.com/w160/au.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Sydney_Opera_House_%28cropped%29.jpg/1920px-Sydney_Opera_House_%28cropped%29.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/King_George_Falls.jpg/1920px-King_George_Falls.jpg",
         coords: [-35.2809, 149.1300],
         fr: {
             name: "Bienvenue en Australie",
@@ -2912,7 +2912,7 @@ export const countriesData = {
     },
     "fidji": {
         image: "https://flagcdn.com/w160/fj.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Fiji_beach.jpg/1920px-Fiji_beach.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/The_Beautiful_Fijian_Sky_over_the_Kuladrusi_Brethren_Chapel.JPG/1920px-The_Beautiful_Fijian_Sky_over_the_Kuladrusi_Brethren_Chapel.JPG",
         coords: [-17.7134, 178.0650],
         fr: {
             name: "Bienvenue aux Fidji",
@@ -2933,7 +2933,7 @@ export const countriesData = {
     },
     "nouvelle-zelande": {
         image: "https://flagcdn.com/w160/nz.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Wellington_skyline.jpg/1920px-Wellington_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Wellington_government_parliament_library.jpg",
         coords: [-41.2865, 174.7762],
         fr: {
             name: "Bienvenue en Nouvelle-Zélande",
@@ -2954,7 +2954,7 @@ export const countriesData = {
     },
     "papouasie-nouvelle-guinee": {
         image: "https://flagcdn.com/w160/pg.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Port_Moresby_skyline.jpg/1920px-Port_Moresby_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Papua_New_Guinea_%285986599443%29.jpg/250px-Papua_New_Guinea_%285986599443%29.jpg",
         coords: [-9.4438, 147.1803],
         fr: {
             name: "Bienvenue en Papouasie-Nouvelle-Guinée",

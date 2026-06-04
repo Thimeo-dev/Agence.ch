@@ -1258,6 +1258,7 @@ export const countriesData = {
         fr: {
             name: "Bienvenue en Irak",
             desc: "Découvrez les paysages variés et la culture riche de l'Irak.",
+            info: "L'Irak est un pays du Moyen-Orient aux sites historiques anciens, comme Babylone et Mossoul. Sa capitale est Bagdad, un centre culturel important malgré les défis récents.",
             capitale: "Bagdad",
             population: "40 000 000",
             monnaie: "Dinar irakien"
@@ -1265,10 +1266,1732 @@ export const countriesData = {
         en: {
             name: "Welcome to Iraq",
             desc: "Discover the diverse landscapes and rich culture of Iraq.",
+            info: "Iraq is a Middle Eastern country with ancient historical sites such as Babylon and Mosul. Its capital Baghdad remains an important cultural center despite recent challenges.",
             capitale: "Baghdad",
             population: "40,000,000",
             monnaie: "Iraqi Dinar"
         }
     },
-
+    "iran": {
+        image: "https://flagcdn.com/w160/ir.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Tehran_by_Night.jpg/1920px-Tehran_by_Night.jpg",
+        coords: [35.6892, 51.3890],
+        fr: {
+            name: "Bienvenue en Iran",
+            desc: "Découvrez la richesse culturelle et historique de l'Iran.",
+            info: "L'Iran est un pays du Moyen-Orient connu pour ses mosquées majestueuses, ses jardins anciens et sa cuisine épicée. Sa capitale est Téhéran.",
+            capitale: "Téhéran",
+            population: "85 000 000",
+            monnaie: "Rial iranien"
+        },
+        en: {
+            name: "Welcome to Iran",
+            desc: "Discover the rich cultural and historical heritage of Iran.",
+            info: "Iran is a Middle Eastern country known for majestic mosques, ancient gardens, and flavorful cuisine. Its capital is Tehran.",
+            capitale: "Tehran",
+            population: "85,000,000",
+            monnaie: "Iranian Rial"
+        }
+    },
+    "israel": {
+        image: "https://flagcdn.com/w160/il.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Jerusalem_Western_Wall.jpg/1920px-Jerusalem_Western_Wall.jpg",
+        coords: [31.7683, 35.2137],
+        fr: {
+            name: "Bienvenue en Israël",
+            desc: "Découvrez Israël, pays de sites religieux et d'histoire ancienne.",
+            info: "Israël mélange histoire millénaire et villes modernes. Tel-Aviv et Jérusalem sont des centres culturels, religieux et économiques importants.",
+            capitale: "Jérusalem",
+            population: "9 000 000",
+            monnaie: "Shekel israélien"
+        },
+        en: {
+            name: "Welcome to Israel",
+            desc: "Discover Israel, a land of religious sites and ancient history.",
+            info: "Israel blends millennia of history with modern cities. Tel Aviv and Jerusalem are significant cultural, religious, and economic centers.",
+            capitale: "Jerusalem",
+            population: "9,000,000",
+            monnaie: "Israeli Shekel"
+        }
+    },
+    "japon": {
+        image: "https://flagcdn.com/w160/jp.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Tokyo_Tower_and_surrounding_buildings.jpg/1920px-Tokyo_Tower_and_surrounding_buildings.jpg",
+        coords: [35.6895, 139.6917],
+        fr: {
+            name: "Bienvenue au Japon",
+            desc: "Découvrez le Japon, pays de traditions anciennes et de technologies modernes.",
+            info: "Le Japon est célèbre pour ses temples, ses villes animées et ses paysages variés. Tokyo est une mégapole qui unit culture et innovation.",
+            capitale: "Tokyo",
+            population: "125 000 000",
+            monnaie: "Yen japonais"
+        },
+        en: {
+            name: "Welcome to Japan",
+            desc: "Discover Japan, a land of ancient traditions and modern technology.",
+            info: "Japan is famous for its temples, vibrant cities, and diverse landscapes. Tokyo is a megacity that blends culture and innovation.",
+            capitale: "Tokyo",
+            population: "125,000,000",
+            monnaie: "Japanese Yen"
+        }
+    },
+    "jordanie": {
+        image: "https://flagcdn.com/w160/jo.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Petra_rocks_Jordan.jpg/1920px-Petra_rocks_Jordan.jpg",
+        coords: [31.9454, 35.9284],
+        fr: {
+            name: "Bienvenue en Jordanie",
+            desc: "Découvrez la Jordanie, berceau de sites historiques et de paysages désertiques.",
+            info: "La Jordanie est connue pour Petra, la mer Morte et ses paysages incroyables. Sa capitale, Amman, est un carrefour culturel du Moyen-Orient.",
+            capitale: "Amman",
+            population: "11 000 000",
+            monnaie: "Dinar jordanien"
+        },
+        en: {
+            name: "Welcome to Jordan",
+            desc: "Discover Jordan, home to historic sites and desert landscapes.",
+            info: "Jordan is known for Petra, the Dead Sea, and stunning scenery. Its capital Amman is a cultural crossroads in the Middle East.",
+            capitale: "Amman",
+            population: "11,000,000",
+            monnaie: "Jordanian Dinar"
+        }
+    },
+    "kirghizistan": {
+        image: "https://flagcdn.com/w160/kg.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Sary_Chelek_Nature_Reserve%2C_Kyrgyzstan.jpg/1920px-Sary_Chelek_Nature_Reserve%2C_Kyrgyzstan.jpg",
+        coords: [42.8746, 74.5698],
+        fr: {
+            name: "Bienvenue au Kirghizistan",
+            desc: "Découvrez le Kirghizistan, terre de montagnes et de yourtes.",
+            info: "Le Kirghizistan offre des paysages de montagne spectaculaires et une culture nomade. Bishkek, sa capitale, est un centre vibrant de la région.",
+            capitale: "Bichkek",
+            population: "6 700 000",
+            monnaie: "Som kirghiz"
+        },
+        en: {
+            name: "Welcome to Kyrgyzstan",
+            desc: "Discover Kyrgyzstan, land of mountains and nomadic culture.",
+            info: "Kyrgyzstan offers spectacular mountain scenery and a nomadic heritage. Bishkek, its capital, is a lively regional center.",
+            capitale: "Bishkek",
+            population: "6,700,000",
+            monnaie: "Kyrgyzstani Som"
+        }
+    },
+    "koweit": {
+        image: "https://flagcdn.com/w160/kw.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Kuwait_City_skyline.jpg/1920px-Kuwait_City_skyline.jpg",
+        coords: [29.3759, 47.9774],
+        fr: {
+            name: "Bienvenue au Koweït",
+            desc: "Découvrez le Koweït, un petit État pétrolier du Golfe.",
+            info: "Le Koweït est connu pour ses gratte-ciels modernes et son histoire de commerce maritime. Sa capitale, Koweït, est un centre économique important.",
+            capitale: "Koweït",
+            population: "4 300 000",
+            monnaie: "Dinar koweïtien"
+        },
+        en: {
+            name: "Welcome to Kuwait",
+            desc: "Discover Kuwait, a small oil-rich state on the Gulf.",
+            info: "Kuwait is known for its modern skyscrapers and maritime trading history. Its capital Kuwait City is an important economic hub.",
+            capitale: "Kuwait City",
+            population: "4,300,000",
+            monnaie: "Kuwaiti Dinar"
+        }
+    },
+    "laos": {
+        image: "https://flagcdn.com/w160/la.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Vientiane_Riverfront.jpg/1920px-Vientiane_Riverfront.jpg",
+        coords: [17.9757, 102.6331],
+        fr: {
+            name: "Bienvenue au Laos",
+            desc: "Découvrez le Laos, pays de temples et de paysages tranquilles.",
+            info: "Le Laos est apprécié pour ses villages paisibles, ses rivières et ses montagnes. Vientiane, sa capitale, reste un lieu charmant et détendu.",
+            capitale: "Vientiane",
+            population: "7 300 000",
+            monnaie: "Kip lao"
+        },
+        en: {
+            name: "Welcome to Laos",
+            desc: "Discover Laos, a country of temples and peaceful landscapes.",
+            info: "Laos is known for its quiet villages, rivers, and mountains. Its capital Vientiane remains a charming, relaxed destination.",
+            capitale: "Vientiane",
+            population: "7,300,000",
+            monnaie: "Lao Kip"
+        }
+    },
+    "liban": {
+        image: "https://flagcdn.com/w160/lb.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Beirut_skyline.jpg/1920px-Beirut_skyline.jpg",
+        coords: [33.8886, 35.4955],
+        fr: {
+            name: "Bienvenue au Liban",
+            desc: "Découvrez le Liban, riche en histoire et en gastronomie méditerranéenne.",
+            info: "Le Liban est célèbre pour sa cuisine, son patrimoine antique et ses montagnes. Beyrouth est le cœur vibrant du pays.",
+            capitale: "Beyrouth",
+            population: "6 800 000",
+            monnaie: "Livre libanaise"
+        },
+        en: {
+            name: "Welcome to Lebanon",
+            desc: "Discover Lebanon, rich in history and Mediterranean cuisine.",
+            info: "Lebanon is famed for its food, ancient heritage, and mountains. Beirut is the vibrant heart of the country.",
+            capitale: "Beirut",
+            population: "6,800,000",
+            monnaie: "Lebanese Pound"
+        }
+    },
+    "malaisie": {
+        image: "https://flagcdn.com/w160/my.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Kuala_Lumpur_skyline.jpg/1920px-Kuala_Lumpur_skyline.jpg",
+        coords: [3.1390, 101.6869],
+        fr: {
+            name: "Bienvenue en Malaisie",
+            desc: "Découvrez la Malaisie, mélange de modernité et de forêts tropicales.",
+            info: "La Malaisie offre des villes ultramodernes, des plages et une nature luxuriante. Kuala Lumpur est une capitale dynamique et diversifiée.",
+            capitale: "Kuala Lumpur",
+            population: "33 000 000",
+            monnaie: "Ringgit malaisien"
+        },
+        en: {
+            name: "Welcome to Malaysia",
+            desc: "Discover Malaysia, a mix of modern cities and tropical rainforest.",
+            info: "Malaysia offers ultramodern cities, beaches, and lush nature. Kuala Lumpur is a dynamic, diverse capital.",
+            capitale: "Kuala Lumpur",
+            population: "33,000,000",
+            monnaie: "Malaysian Ringgit"
+        }
+    },
+    "maldives": {
+        image: "https://flagcdn.com/w160/mv.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Maldives_beach.jpg/1920px-Maldives_beach.jpg",
+        coords: [4.1755, 73.5093],
+        fr: {
+            name: "Bienvenue aux Maldives",
+            desc: "Découvrez les Maldives, archipel idyllique aux eaux turquoise.",
+            info: "Les Maldives sont réputées pour leurs plages de sable blanc, leurs récifs coralliens et leurs villas sur pilotis. C'est une destination de rêve pour la plongée.",
+            capitale: "Malé",
+            population: "530 000",
+            monnaie: "Rufiyaa maldivienne"
+        },
+        en: {
+            name: "Welcome to the Maldives",
+            desc: "Discover the Maldives, an idyllic archipelago of turquoise waters.",
+            info: "The Maldives are known for white sand beaches, coral reefs, and overwater villas. It's a dream destination for diving.",
+            capitale: "Malé",
+            population: "530,000",
+            monnaie: "Maldivian Rufiyaa"
+        }
+    },
+    "mongolie": {
+        image: "https://flagcdn.com/w160/mn.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Orkhon_waterfall%2C_Mongolia.jpg/1920px-Orkhon_waterfall%2C_Mongolia.jpg",
+        coords: [47.8864, 106.9057],
+        fr: {
+            name: "Bienvenue en Mongolie",
+            desc: "Découvrez la Mongolie, pays de steppes immenses et de traditions nomades.",
+            info: "La Mongolie est connue pour ses vastes plaines, ses chevaux et ses yourtes. Oulan-Bator est la capitale moderne au cœur de ces traditions.",
+            capitale: "Oulan-Bator",
+            population: "3 300 000",
+            monnaie: "Tugrik mongol"
+        },
+        en: {
+            name: "Welcome to Mongolia",
+            desc: "Discover Mongolia, land of vast steppes and nomadic traditions.",
+            info: "Mongolia is known for its wide plains, horses, and yurts. Ulaanbaatar is the modern capital at the heart of these traditions.",
+            capitale: "Ulaanbaatar",
+            population: "3,300,000",
+            monnaie: "Mongolian Tugrik"
+        }
+    },
+    "nepal": {
+        image: "https://flagcdn.com/w160/np.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mount_Everest_from_Gokyo_Ri_November_2012.jpg/1920px-Mount_Everest_from_Gokyo_Ri_November_2012.jpg",
+        coords: [27.7172, 85.3240],
+        fr: {
+            name: "Bienvenue au Népal",
+            desc: "Découvrez le Népal, pays des montagnes et des trekkings célèbres.",
+            info: "Le Népal est dominé par l'Himalaya et attire les randonneurs du monde entier. Katmandou reste un centre historique et spirituel.",
+            capitale: "Katmandou",
+            population: "30 000 000",
+            monnaie: "Roupie népalaise"
+        },
+        en: {
+            name: "Welcome to Nepal",
+            desc: "Discover Nepal, land of mountains and famous trekking routes.",
+            info: "Nepal is dominated by the Himalayas and attracts hikers from around the world. Kathmandu remains a historic, spiritual center.",
+            capitale: "Kathmandu",
+            population: "30,000,000",
+            monnaie: "Nepalese Rupee"
+        }
+    },
+    "oman": {
+        image: "https://flagcdn.com/w160/om.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Muscat_souq.jpg/1920px-Muscat_souq.jpg",
+        coords: [23.5859, 58.4059],
+        fr: {
+            name: "Bienvenue à Oman",
+            desc: "Découvrez Oman, pays du désert, des montagnes et du littoral omanien.",
+            info: "Oman est connu pour ses forts traditionnels, ses souks et ses plages du golfe d'Oman. Mascate est une capitale élégante et accueillante.",
+            capitale: "Mascate",
+            population: "5 200 000",
+            monnaie: "Rial omanais"
+        },
+        en: {
+            name: "Welcome to Oman",
+            desc: "Discover Oman, a land of desert, mountains, and coastline.",
+            info: "Oman is known for traditional forts, souks, and beaches along the Gulf of Oman. Muscat is an elegant, welcoming capital.",
+            capitale: "Muscat",
+            population: "5,200,000",
+            monnaie: "Omani Rial"
+        }
+    },
+    "ouzbekistan": {
+        image: "https://flagcdn.com/w160/uz.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Registan_at_night.jpg/1920px-Registan_at_night.jpg",
+        coords: [41.2995, 69.2401],
+        fr: {
+            name: "Bienvenue en Ouzbékistan",
+            desc: "Découvrez l'Ouzbékistan, pays de la route de la soie et de villes historiques.",
+            info: "L'Ouzbékistan est célèbre pour ses monuments de Samarcande et Boukhara. Tachkent est une capitale moderne sur un fond historique.",
+            capitale: "Tachkent",
+            population: "34 000 000",
+            monnaie: "Som ouzbek"
+        },
+        en: {
+            name: "Welcome to Uzbekistan",
+            desc: "Discover Uzbekistan, land of the Silk Road and historic cities.",
+            info: "Uzbekistan is famous for Samarkand and Bukhara. Tashkent is a modern capital with deep historical roots.",
+            capitale: "Tashkent",
+            population: "34,000,000",
+            monnaie: "Uzbekistani Som"
+        }
+    },
+    "pakistan": {
+        image: "https://flagcdn.com/w160/pk.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Lahore_Fort.jpg/1920px-Lahore_Fort.jpg",
+        coords: [30.3753, 69.3451],
+        fr: {
+            name: "Bienvenue au Pakistan",
+            desc: "Découvrez le Pakistan, un pays vaste aux cultures et paysages variés.",
+            info: "Le Pakistan offre montagnes, déserts et villes historiques. Islamabad est une capitale planifiée entourée de collines verdoyantes.",
+            capitale: "Islamabad",
+            population: "240 000 000",
+            monnaie: "Roupie pakistanaise"
+        },
+        en: {
+            name: "Welcome to Pakistan",
+            desc: "Discover Pakistan, a vast country of diverse cultures and landscapes.",
+            info: "Pakistan offers mountains, deserts, and historic cities. Islamabad is a planned capital surrounded by green hills.",
+            capitale: "Islamabad",
+            population: "240,000,000",
+            monnaie: "Pakistani Rupee"
+        }
+    },
+    "palestine": {
+        image: "https://flagcdn.com/w160/ps.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Al-Aqsa_Mosque_04.jpg/1920px-Al-Aqsa_Mosque_04.jpg",
+        coords: [31.9010, 35.2034],
+        fr: {
+            name: "Bienvenue en Palestine",
+            desc: "Découvrez la Palestine, terre de patrimoine culturel et religieux.",
+            info: "La Palestine abrite des sites historiques importants et une culture millénaire. Ramallah et Jérusalem-Est sont au cœur de son identité.",
+            capitale: "Ramallah",
+            population: "5 000 000",
+            monnaie: "Shekel israélien"
+        },
+        en: {
+            name: "Welcome to Palestine",
+            desc: "Discover Palestine, land of cultural and religious heritage.",
+            info: "Palestine is home to important historical sites and an ancient culture. Ramallah and East Jerusalem are central to its identity.",
+            capitale: "Ramallah",
+            population: "5,000,000",
+            monnaie: "Israeli Shekel"
+        }
+    },
+    "philippines": {
+        image: "https://flagcdn.com/w160/ph.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Manila_skyline.jpg/1920px-Manila_skyline.jpg",
+        coords: [14.5995, 120.9842],
+        fr: {
+            name: "Bienvenue aux Philippines",
+            desc: "Découvrez les Philippines, archipel tropical aux plages exotiques.",
+            info: "Les Philippines comptent des îles somptueuses, des récifs coralliens et une culture chaleureuse. Manille est une capitale animée et colorée.",
+            capitale: "Manille",
+            population: "111 000 000",
+            monnaie: "Peso philippin"
+        },
+        en: {
+            name: "Welcome to the Philippines",
+            desc: "Discover the Philippines, a tropical archipelago with exotic beaches.",
+            info: "The Philippines has stunning islands, coral reefs, and warm culture. Manila is a lively, colorful capital.",
+            capitale: "Manila",
+            population: "111,000,000",
+            monnaie: "Philippine Peso"
+        }
+    },
+    "qatar": {
+        image: "https://flagcdn.com/w160/qa.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Doha_skyline.jpg/1920px-Doha_skyline.jpg",
+        coords: [25.4858, 51.5310],
+        fr: {
+            name: "Bienvenue au Qatar",
+            desc: "Découvrez le Qatar, petit État du Golfe au développement rapide.",
+            info: "Le Qatar est connu pour son architecture moderne, ses musées et son huile. Doha est une capitale futuriste et animée.",
+            capitale: "Doha",
+            population: "2 900 000",
+            monnaie: "Rial qatarien"
+        },
+        en: {
+            name: "Welcome to Qatar",
+            desc: "Discover Qatar, a small Gulf state with rapid development.",
+            info: "Qatar is known for modern architecture, museums, and oil wealth. Doha is a futuristic, lively capital.",
+            capitale: "Doha",
+            population: "2,900,000",
+            monnaie: "Qatari Riyal"
+        }
+    },
+    "singapour": {
+        image: "https://flagcdn.com/w160/sg.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Marina_Bay_Sands_view.jpg/1920px-Marina_Bay_Sands_view.jpg",
+        coords: [1.3521, 103.8198],
+        fr: {
+            name: "Bienvenue à Singapour",
+            desc: "Découvrez Singapour, cité-État ultra-moderne et propre.",
+            info: "Singapour est célèbre pour son architecture avant-gardiste, ses jardins urbains et sa cuisine de rue raffinée.",
+            capitale: "Singapour",
+            population: "5 900 000",
+            monnaie: "Dollar de Singapour"
+        },
+        en: {
+            name: "Welcome to Singapore",
+            desc: "Discover Singapore, a ultra-modern and spotless city-state.",
+            info: "Singapore is famous for avant-garde architecture, urban gardens, and refined street food.",
+            capitale: "Singapore",
+            population: "5,900,000",
+            monnaie: "Singapore Dollar"
+        }
+    },
+    "sri-lanka": {
+        image: "https://flagcdn.com/w160/lk.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Sigiriya_Rock_Lion%27s_Paw.jpg/1920px-Sigiriya_Rock_Lion%27s_Paw.jpg",
+        coords: [7.8731, 80.7718],
+        fr: {
+            name: "Bienvenue au Sri Lanka",
+            desc: "Découvrez le Sri Lanka, île tropicale aux temples anciens.",
+            info: "Le Sri Lanka propose des plages, des plantations de thé et des sites historiques. Colombo est une capitale animée et colorée.",
+            capitale: "Colombo",
+            population: "22 000 000",
+            monnaie: "Roupie sri-lankaise"
+        },
+        en: {
+            name: "Welcome to Sri Lanka",
+            desc: "Discover Sri Lanka, a tropical island with ancient temples.",
+            info: "Sri Lanka offers beaches, tea plantations, and historic sites. Colombo is a vibrant, colorful capital.",
+            capitale: "Colombo",
+            population: "22,000,000",
+            monnaie: "Sri Lankan Rupee"
+        }
+    },
+    "syrie": {
+        image: "https://flagcdn.com/w160/sy.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Old_Damascus_2012.jpg/1920px-Old_Damascus_2012.jpg",
+        coords: [33.5138, 36.2765],
+        fr: {
+            name: "Bienvenue en Syrie",
+            desc: "Découvrez la Syrie, pays aux villes anciennes et à l'histoire millénaire.",
+            info: "La Syrie abrite Damas, l'une des plus anciennes capitales du monde, ainsi que des ruines antiques et des traditions profondes.",
+            capitale: "Damas",
+            population: "21 000 000",
+            monnaie: "Livre syrienne"
+        },
+        en: {
+            name: "Welcome to Syria",
+            desc: "Discover Syria, a land of ancient cities and millennia of history.",
+            info: "Syria is home to Damascus, one of the world's oldest capitals, and ancient ruins with deep traditions.",
+            capitale: "Damascus",
+            population: "21,000,000",
+            monnaie: "Syrian Pound"
+        }
+    },
+    "tadjikistan": {
+        image: "https://flagcdn.com/w160/tj.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Pamir_Mountains.jpg/1920px-Pamir_Mountains.jpg",
+        coords: [38.8610, 71.2761],
+        fr: {
+            name: "Bienvenue au Tadjikistan",
+            desc: "Découvrez le Tadjikistan, pays de montagnes du Pamir.",
+            info: "Le Tadjikistan est célèbre pour ses montagnes escarpées, ses vallées et sa culture montagnarde. Douchanbé est une capitale dynamique.",
+            capitale: "Douchanbé",
+            population: "9 500 000",
+            monnaie: "Somoni tadjik"
+        },
+        en: {
+            name: "Welcome to Tajikistan",
+            desc: "Discover Tajikistan, home to Pamir mountain landscapes.",
+            info: "Tajikistan is known for steep mountains, scenic valleys, and mountain culture. Dushanbe is a lively capital.",
+            capitale: "Dushanbe",
+            population: "9,500,000",
+            monnaie: "Tajikistani Somoni"
+        }
+    },
+    "taiwan": {
+        image: "https://flagcdn.com/w160/tw.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Taipei_101_and_city_skyline.jpg/1920px-Taipei_101_and_city_skyline.jpg",
+        coords: [25.0330, 121.5654],
+        fr: {
+            name: "Bienvenue à Taïwan",
+            desc: "Découvrez Taïwan, île moderne à la culture dynamique.",
+            info: "Taïwan est une île moderne avec des marchés nocturnes, de la technologie et des montagnes. Taipei est une métropole vibrante.",
+            capitale: "Taipei",
+            population: "23 000 000",
+            monnaie: "Dollar taïwanais"
+        },
+        en: {
+            name: "Welcome to Taiwan",
+            desc: "Discover Taiwan, a modern island with dynamic culture.",
+            info: "Taiwan is an island known for night markets, technology, and mountains. Taipei is a vibrant metropolis.",
+            capitale: "Taipei",
+            population: "23,000,000",
+            monnaie: "New Taiwan Dollar"
+        }
+    },
+    "thailande": {
+        image: "https://flagcdn.com/w160/th.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bangkok_skyline_%28cropped%29.jpg/1920px-Bangkok_skyline_%28cropped%29.jpg",
+        coords: [13.7563, 100.5018],
+        fr: {
+            name: "Bienvenue en Thaïlande",
+            desc: "Découvrez la Thaïlande, pays de temples et de plages tropicales.",
+            info: "La Thaïlande est célèbre pour sa cuisine, ses marchés flottants et ses îles paradisiaques. Bangkok est une capitale énergique et colorée.",
+            capitale: "Bangkok",
+            population: "70 000 000",
+            monnaie: "Baht thaïlandais"
+        },
+        en: {
+            name: "Welcome to Thailand",
+            desc: "Discover Thailand, land of temples and tropical beaches.",
+            info: "Thailand is famous for its cuisine, floating markets, and paradise islands. Bangkok is an energetic, colorful capital.",
+            capitale: "Bangkok",
+            population: "70,000,000",
+            monnaie: "Thai Baht"
+        }
+    },
+    "timor-oriental": {
+        image: "https://flagcdn.com/w160/tl.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Dili_skyline.jpg/1920px-Dili_skyline.jpg",
+        coords: [-8.5569, 125.5603],
+        fr: {
+            name: "Bienvenue au Timor oriental",
+            desc: "Découvrez le Timor oriental, île d'Asie du Sud-Est peu connue.",
+            info: "Le Timor oriental est apprécié pour ses plages, ses collines et sa culture authentique. Dili est la capitale en bord de mer.",
+            capitale: "Dili",
+            population: "1 300 000",
+            monnaie: "Dollar américain"
+        },
+        en: {
+            name: "Welcome to East Timor",
+            desc: "Discover East Timor, a lesser-known Southeast Asian island.",
+            info: "East Timor is known for its beaches, hills, and authentic culture. Dili is the seaside capital.",
+            capitale: "Dili",
+            population: "1,300,000",
+            monnaie: "United States Dollar"
+        }
+    },
+    "turkmenistan": {
+        image: "https://flagcdn.com/w160/tm.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Ashgabat_panorama.jpg/1920px-Ashgabat_panorama.jpg",
+        coords: [37.9601, 58.3261],
+        fr: {
+            name: "Bienvenue au Turkménistan",
+            desc: "Découvrez le Turkménistan, pays de steppes et de cités anciennes.",
+            info: "Le Turkménistan est reconnu pour ses monuments impressionnants et ses paysages désertiques. Achgabat est une ville moderne aux constructions remarquables.",
+            capitale: "Achgabat",
+            population: "6 000 000",
+            monnaie: "Manat turkmène"
+        },
+        en: {
+            name: "Welcome to Turkmenistan",
+            desc: "Discover Turkmenistan, land of steppes and ancient cities.",
+            info: "Turkmenistan is known for its striking monuments and desert landscapes. Ashgabat is a modern city with remarkable architecture.",
+            capitale: "Ashgabat",
+            population: "6,000,000",
+            monnaie: "Turkmenistan Manat"
+        }
+    },
+    "viet-nam": {
+        image: "https://flagcdn.com/w160/vn.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Ha_Long_Bay%2C_Vietnam.jpg/1920px-Ha_Long_Bay%2C_Vietnam.jpg",
+        coords: [21.0278, 105.8342],
+        fr: {
+            name: "Bienvenue au Viêt Nam",
+            desc: "Découvrez le Viêt Nam, pays de rizières, de villes et de plages.",
+            info: "Le Viêt Nam offre une cuisine savoureuse, des paysages variés et une histoire riche. Hanoï est la capitale au charme traditionnel.",
+            capitale: "Hanoï",
+            population: "98 000 000",
+            monnaie: "Dong vietnamien"
+        },
+        en: {
+            name: "Welcome to Vietnam",
+            desc: "Discover Vietnam, land of rice fields, cities, and beaches.",
+            info: "Vietnam offers delicious cuisine, varied landscapes, and rich history. Hanoi is a capital with traditional charm.",
+            capitale: "Hanoi",
+            population: "98,000,000",
+            monnaie: "Vietnamese Dong"
+        }
+    },
+    "yemen": {
+        image: "https://flagcdn.com/w160/ye.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Sanaa_Old_City.jpg/1920px-Sanaa_Old_City.jpg",
+        coords: [15.3694, 44.1910],
+        fr: {
+            name: "Bienvenue au Yémen",
+            desc: "Découvrez le Yémen, pays de traditions anciennes et de montagnes.",
+            info: "Le Yémen possède des villes historiques fascinantes et des paysages désertiques uniques. Sanaa est l'une des plus anciennes capitales du monde.",
+            capitale: "Sanaa",
+            population: "30 000 000",
+            monnaie: "Rial yéménite"
+        },
+        en: {
+            name: "Welcome to Yemen",
+            desc: "Discover Yemen, country of ancient traditions and mountains.",
+            info: "Yemen has fascinating historic cities and unique desert landscapes. Sana'a is one of the world's oldest capitals.",
+            capitale: "Sana'a",
+            population: "30,000,000",
+            monnaie: "Yemeni Rial"
+        }
+    },
+    "antigua-et-barbuda": {
+        image: "https://flagcdn.com/w160/ag.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Antigua_Barbuda.jpg/1920px-Antigua_Barbuda.jpg",
+        coords: [17.0608, -61.7964],
+        fr: {
+            name: "Bienvenue à Antigua-et-Barbuda",
+            desc: "Découvrez Antigua-et-Barbuda, îles tropicales aux plages paradisiaques.",
+            info: "L'archipel est réputé pour ses plages de sable fin et ses eaux turquoises. Saint John's est une capitale chaleureuse et animée.",
+            capitale: "Saint John's",
+            population: "97 000",
+            monnaie: "Dollar des Caraïbes orientales"
+        },
+        en: {
+            name: "Welcome to Antigua and Barbuda",
+            desc: "Discover Antigua and Barbuda, tropical islands with paradise beaches.",
+            info: "The archipelago is famous for white sand beaches and turquoise waters. St. John's is a warm, lively capital.",
+            capitale: "St. John's",
+            population: "97,000",
+            monnaie: "East Caribbean Dollar"
+        }
+    },
+    "argentine": {
+        image: "https://flagcdn.com/w160/ar.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Buenos_Aires_Plaza_de_Mayo.jpg/1920px-Buenos_Aires_Plaza_de_Mayo.jpg",
+        coords: [-34.6037, -58.3816],
+        fr: {
+            name: "Bienvenue en Argentine",
+            desc: "Découvrez l'Argentine, pays de gauchos, de tangu et de montagnes.",
+            info: "L'Argentine offre des villes passionnantes, les chutes d'Iguazú et la Patagonie. Buenos Aires est une capitale cosmopolite et artistique.",
+            capitale: "Buenos Aires",
+            population: "45 000 000",
+            monnaie: "Peso argentin"
+        },
+        en: {
+            name: "Welcome to Argentina",
+            desc: "Discover Argentina, land of gauchos, tango, and mountains.",
+            info: "Argentina offers vibrant cities, Iguazu Falls, and Patagonia. Buenos Aires is a cosmopolitan, artistic capital.",
+            capitale: "Buenos Aires",
+            population: "45,000,000",
+            monnaie: "Argentine Peso"
+        }
+    },
+    "bahamas": {
+        image: "https://flagcdn.com/w160/bs.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Paradise_Island_Bahamas.jpg/1920px-Paradise_Island_Bahamas.jpg",
+        coords: [25.0343, -77.3963],
+        fr: {
+            name: "Bienvenue aux Bahamas",
+            desc: "Découvrez les Bahamas, archipel aux plages turquoises.",
+            info: "Les Bahamas sont idéales pour la plongée, la voile et la détente sur des plages isolées.",
+            capitale: "Nassau",
+            population: "400 000",
+            monnaie: "Dollar bahaméen"
+        },
+        en: {
+            name: "Welcome to the Bahamas",
+            desc: "Discover the Bahamas, an archipelago of turquoise beaches.",
+            info: "The Bahamas are perfect for diving, sailing, and relaxing on secluded beaches.",
+            capitale: "Nassau",
+            population: "400,000",
+            monnaie: "Bahamian Dollar"
+        }
+    },
+    "barbade": {
+        image: "https://flagcdn.com/w160/bb.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Barbados_Sunset.jpg/1920px-Barbados_Sunset.jpg",
+        coords: [13.1939, -59.5432],
+        fr: {
+            name: "Bienvenue à la Barbade",
+            desc: "Découvrez la Barbade, île des Caraïbes au charme tropical.",
+            info: "La Barbade propose des plages, une culture anglaise et une ambiance festive.",
+            capitale: "Bridgetown",
+            population: "287 000",
+            monnaie: "Dollar barbadien"
+        },
+        en: {
+            name: "Welcome to Barbados",
+            desc: "Discover Barbados, a Caribbean island with tropical charm.",
+            info: "Barbados offers beaches, English-influenced culture, and a festive atmosphere.",
+            capitale: "Bridgetown",
+            population: "287,000",
+            monnaie: "Barbadian Dollar"
+        }
+    },
+    "belize": {
+        image: "https://flagcdn.com/w160/bz.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Belize_Caye_Caulker.jpg/1920px-Belize_Caye_Caulker.jpg",
+        coords: [17.1899, -88.4976],
+        fr: {
+            name: "Bienvenue au Belize",
+            desc: "Découvrez le Belize, pays d'Amérique centrale aux récifs coralliens.",
+            info: "Le Belize est célèbre pour ses sites de plongée, ses forêts tropicales et sa culture maya.",
+            capitale: "Belmopan",
+            population: "420 000",
+            monnaie: "Dollar bélizéen"
+        },
+        en: {
+            name: "Welcome to Belize",
+            desc: "Discover Belize, a Central American country with coral reefs.",
+            info: "Belize is famous for its diving sites, rainforests, and Mayan culture.",
+            capitale: "Belmopan",
+            population: "420,000",
+            monnaie: "Belize Dollar"
+        }
+    },
+    "bolivie": {
+        image: "https://flagcdn.com/w160/bo.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Salar_de_Uyuni.jpg/1920px-Salar_de_Uyuni.jpg",
+        coords: [-16.4897, -68.1193],
+        fr: {
+            name: "Bienvenue en Bolivie",
+            desc: "Découvrez la Bolivie, pays d'altitude et de traditions andines.",
+            info: "La Bolivie offre le salar d'Uyuni, des montagnes et une culture indigène riche.",
+            capitale: "Sucre",
+            population: "12 000 000",
+            monnaie: "Boliviano"
+        },
+        en: {
+            name: "Welcome to Bolivia",
+            desc: "Discover Bolivia, a highland country with Andean traditions.",
+            info: "Bolivia offers the Uyuni salt flats, mountains, and rich indigenous culture.",
+            capitale: "Sucre",
+            population: "12,000,000",
+            monnaie: "Boliviano"
+        }
+    },
+    "bresil": {
+        image: "https://flagcdn.com/w160/br.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Rio_de_Janeiro_%2818512071784%29.jpg/1920px-Rio_de_Janeiro_%2818512071784%29.jpg",
+        coords: [-15.7939, -47.8828],
+        fr: {
+            name: "Bienvenue au Brésil",
+            desc: "Découvrez le Brésil, pays de samba, de forêt amazonienne et de plages.",
+            info: "Le Brésil est immense, avec des villes comme Rio et Brasilia, et une nature spectaculaire.",
+            capitale: "Brasilia",
+            population: "214 000 000",
+            monnaie: "Real brésilien"
+        },
+        en: {
+            name: "Welcome to Brazil",
+            desc: "Discover Brazil, land of samba, the Amazon, and beaches.",
+            info: "Brazil is vast, with cities like Rio and Brasilia and spectacular nature.",
+            capitale: "Brasília",
+            population: "214,000,000",
+            monnaie: "Brazilian Real"
+        }
+    },
+    "canada": {
+        image: "https://flagcdn.com/w160/ca.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Toronto_skyline.jpg/1920px-Toronto_skyline.jpg",
+        coords: [45.4215, -75.6972],
+        fr: {
+            name: "Bienvenue au Canada",
+            desc: "Découvrez le Canada, pays de vastes forêts, de lacs et de villes cosmopolites.",
+            info: "Le Canada propose des paysages immenses, des hivers blancs et des villes multiculturelles.",
+            capitale: "Ottawa",
+            population: "38 000 000",
+            monnaie: "Dollar canadien"
+        },
+        en: {
+            name: "Welcome to Canada",
+            desc: "Discover Canada, land of vast forests, lakes, and cosmopolitan cities.",
+            info: "Canada offers immense landscapes, snowy winters, and multicultural cities.",
+            capitale: "Ottawa",
+            population: "38,000,000",
+            monnaie: "Canadian Dollar"
+        }
+    },
+    "chili": {
+        image: "https://flagcdn.com/w160/cl.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Santiago_de_Chile_%282021%29.jpg/1920px-Santiago_de_Chile_%282021%29.jpg",
+        coords: [-33.4489, -70.6693],
+        fr: {
+            name: "Bienvenue au Chili",
+            desc: "Découvrez le Chili, pays long et étroit aux paysages extrêmes.",
+            info: "Le Chili va du désert d'Atacama aux glaciers de la Patagonie, avec Santiago comme capitale.",
+            capitale: "Santiago",
+            population: "19 000 000",
+            monnaie: "Peso chilien"
+        },
+        en: {
+            name: "Welcome to Chile",
+            desc: "Discover Chile, a long narrow country with extreme landscapes.",
+            info: "Chile stretches from the Atacama Desert to Patagonia's glaciers, with Santiago as its capital.",
+            capitale: "Santiago",
+            population: "19,000,000",
+            monnaie: "Chilean Peso"
+        }
+    },
+    "colombie": {
+        image: "https://flagcdn.com/w160/co.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Bogota_2018.jpg/1920px-Bogota_2018.jpg",
+        coords: [4.7110, -74.0721],
+        fr: {
+            name: "Bienvenue en Colombie",
+            desc: "Découvrez la Colombie, pays de café, de montagnes et de caraïbes.",
+            info: "La Colombie combine villes dynamiques, montagnes andines et côtes tropicales.",
+            capitale: "Bogota",
+            population: "51 000 000",
+            monnaie: "Peso colombien"
+        },
+        en: {
+            name: "Welcome to Colombia",
+            desc: "Discover Colombia, land of coffee, mountains, and Caribbean coasts.",
+            info: "Colombia blends vibrant cities, Andean mountains, and tropical shores.",
+            capitale: "Bogotá",
+            population: "51,000,000",
+            monnaie: "Colombian Peso"
+        }
+    },
+    "costa-rica": {
+        image: "https://flagcdn.com/w160/cr.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Arenal_Volcano%2C_Costa_Rica.jpg/1920px-Arenal_Volcano%2C_Costa_Rica.jpg",
+        coords: [9.7489, -83.7534],
+        fr: {
+            name: "Bienvenue au Costa Rica",
+            desc: "Découvrez le Costa Rica, paradis de la biodiversité et des plages.",
+            info: "Le Costa Rica est un leader écotouristique avec des parcs nationaux et des volcans.",
+            capitale: "San José",
+            population: "5 200 000",
+            monnaie: "Colón costaricain"
+        },
+        en: {
+            name: "Welcome to Costa Rica",
+            desc: "Discover Costa Rica, a biodiversity paradise with beaches.",
+            info: "Costa Rica is an ecotourism leader with national parks and volcanoes.",
+            capitale: "San José",
+            population: "5,200,000",
+            monnaie: "Costa Rican Colón"
+        }
+    },
+    "cuba": {
+        image: "https://flagcdn.com/w160/cu.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Plaza_de_la_Revolucion%2C_Havana_%282011%29.jpg/1920px-Plaza_de_la_Revolucion%2C_Havana_%282011%29.jpg",
+        coords: [23.1136, -82.3666],
+        fr: {
+            name: "Bienvenue à Cuba",
+            desc: "Découvrez Cuba, île des cigares, de la musique et du passé colonial.",
+            info: "Cuba est célèbre pour ses voitures vintage, sa salsa et ses plages des Caraïbes.",
+            capitale: "La Havane",
+            population: "11 000 000",
+            monnaie: "Peso cubain"
+        },
+        en: {
+            name: "Welcome to Cuba",
+            desc: "Discover Cuba, island of cigars, music, and colonial history.",
+            info: "Cuba is famous for vintage cars, salsa music, and Caribbean beaches.",
+            capitale: "Havana",
+            population: "11,000,000",
+            monnaie: "Cuban Peso"
+        }
+    },
+    "dominique": {
+        image: "https://flagcdn.com/w160/dm.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Morne_Trinity_Valley.jpg/1920px-Morne_Trinity_Valley.jpg",
+        coords: [15.4150, -61.3710],
+        fr: {
+            name: "Bienvenue en Dominique",
+            desc: "Découvrez la Dominique, île nature des Caraïbes.",
+            info: "La Dominique offre des forêts tropicales, des sources chaudes et une nature intacte.",
+            capitale: "Roseau",
+            population: "72 000",
+            monnaie: "Dollar des Caraïbes orientales"
+        },
+        en: {
+            name: "Welcome to Dominica",
+            desc: "Discover Dominica, the nature island of the Caribbean.",
+            info: "Dominica offers rainforests, hot springs, and unspoiled natural beauty.",
+            capitale: "Roseau",
+            population: "72,000",
+            monnaie: "East Caribbean Dollar"
+        }
+    },
+    "equateur": {
+        image: "https://flagcdn.com/w160/ec.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Quito_skyline.jpg/1920px-Quito_skyline.jpg",
+        coords: [-0.1807, -78.4678],
+        fr: {
+            name: "Bienvenue en Équateur",
+            desc: "Découvrez l'Équateur, petit pays andin traversé par l'équateur.",
+            info: "L'Équateur propose les Andes, l'Amazonie et les îles Galápagos.",
+            capitale: "Quito",
+            population: "17 000 000",
+            monnaie: "Dollar américain"
+        },
+        en: {
+            name: "Welcome to Ecuador",
+            desc: "Discover Ecuador, a small Andean country crossed by the equator.",
+            info: "Ecuador offers the Andes, the Amazon, and the Galápagos Islands.",
+            capitale: "Quito",
+            population: "17,000,000",
+            monnaie: "United States Dollar"
+        }
+    },
+    "etats-unis": {
+        image: "https://flagcdn.com/w160/us.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/United_States_Capitol_west_front.jpg/1920px-United_States_Capitol_west_front.jpg",
+        coords: [38.9072, -77.0369],
+        fr: {
+            name: "Bienvenue aux États-Unis",
+            desc: "Découvrez les États-Unis, vaste pays aux paysages et cultures multiples.",
+            info: "Les États-Unis offrent des villes emblématiques, des parcs nationaux et une grande diversité régionale.",
+            capitale: "Washington D.C.",
+            population: "333 000 000",
+            monnaie: "Dollar américain"
+        },
+        en: {
+            name: "Welcome to the United States",
+            desc: "Discover the United States, a vast country of diverse landscapes and cultures.",
+            info: "The U.S. offers iconic cities, national parks, and great regional variety.",
+            capitale: "Washington D.C.",
+            population: "333,000,000",
+            monnaie: "United States Dollar"
+        }
+    },
+    "grenade": {
+        image: "https://flagcdn.com/w160/gd.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Grand_Anse_Beach%2C_Grenada.jpg/1920px-Grand_Anse_Beach%2C_Grenada.jpg",
+        coords: [12.1165, -61.6790],
+        fr: {
+            name: "Bienvenue à la Grenade",
+            desc: "Découvrez la Grenade, île des épices et des plages tranquilles.",
+            info: "La Grenade est réputée pour ses épices, ses jardins tropicaux et ses eaux claires.",
+            capitale: "Saint-Georges",
+            population: "112 000",
+            monnaie: "Dollar des Caraïbes orientales"
+        },
+        en: {
+            name: "Welcome to Grenada",
+            desc: "Discover Grenada, island of spices and tranquil beaches.",
+            info: "Grenada is known for its spices, tropical gardens, and clear waters.",
+            capitale: "St. George's",
+            population: "112,000",
+            monnaie: "East Caribbean Dollar"
+        }
+    },
+    "guatemala": {
+        image: "https://flagcdn.com/w160/gt.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Antigua_Guatemala.jpg/1920px-Antigua_Guatemala.jpg",
+        coords: [14.6349, -90.5069],
+        fr: {
+            name: "Bienvenue au Guatemala",
+            desc: "Découvrez le Guatemala, pays maya aux volcans et aux lacs.",
+            info: "Le Guatemala offre une culture traditionnelle, des ruines antiques et des paysages de montagne.",
+            capitale: "Guatemala",
+            population: "18 000 000",
+            monnaie: "Quetzal guatémaltèque"
+        },
+        en: {
+            name: "Welcome to Guatemala",
+            desc: "Discover Guatemala, a Maya country of volcanoes and lakes.",
+            info: "Guatemala offers traditional culture, ancient ruins, and mountain scenery.",
+            capitale: "Guatemala City",
+            population: "18,000,000",
+            monnaie: "Guatemalan Quetzal"
+        }
+    },
+    "guyana": {
+        image: "https://flagcdn.com/w160/gy.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Georgetown_Guyana.jpg/1920px-Georgetown_Guyana.jpg",
+        coords: [6.8045, -58.1551],
+        fr: {
+            name: "Bienvenue au Guyana",
+            desc: "Découvrez le Guyana, pays d'Amazonie et de plaines verdoyantes.",
+            info: "Le Guyana est connu pour ses forêts tropicales, ses chutes d'eau et sa diversité culturelle.",
+            capitale: "Georgetown",
+            population: "790 000",
+            monnaie: "Dollar guyanien"
+        },
+        en: {
+            name: "Welcome to Guyana",
+            desc: "Discover Guyana, land of Amazon rainforest and green plains.",
+            info: "Guyana is known for tropical forests, waterfalls, and cultural diversity.",
+            capitale: "Georgetown",
+            population: "790,000",
+            monnaie: "Guyanese Dollar"
+        }
+    },
+    "haiti": {
+        image: "https://flagcdn.com/w160/ht.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Port-au-Prince.jpg/1920px-Port-au-Prince.jpg",
+        coords: [18.5944, -72.3074],
+        fr: {
+            name: "Bienvenue en Haïti",
+            desc: "Découvrez Haïti, pays des Caraïbes au patrimoine créole.",
+            info: "Haïti possède une culture artistique riche et une histoire profonde.",
+            capitale: "Port-au-Prince",
+            population: "11 000 000",
+            monnaie: "Gourde haïtienne"
+        },
+        en: {
+            name: "Welcome to Haiti",
+            desc: "Discover Haiti, a Caribbean country with Creole heritage.",
+            info: "Haiti has rich artistic culture and deep history.",
+            capitale: "Port-au-Prince",
+            population: "11,000,000",
+            monnaie: "Haitian Gourde"
+        }
+    },
+    "honduras": {
+        image: "https://flagcdn.com/w160/hn.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Tegucigalpa_skyline.jpg/1920px-Tegucigalpa_skyline.jpg",
+        coords: [14.0723, -87.1921],
+        fr: {
+            name: "Bienvenue au Honduras",
+            desc: "Découvrez le Honduras, pays d'Amérique centrale aux montagnes et côtes.",
+            info: "Le Honduras offre des sites mayas, des plages et une nature tropicale.",
+            capitale: "Tegucigalpa",
+            population: "10 000 000",
+            monnaie: "Lempira hondurien"
+        },
+        en: {
+            name: "Welcome to Honduras",
+            desc: "Discover Honduras, a Central American country with mountains and coasts.",
+            info: "Honduras offers Maya sites, beaches, and tropical nature.",
+            capitale: "Tegucigalpa",
+            population: "10,000,000",
+            monnaie: "Honduran Lempira"
+        }
+    },
+    "jamaique": {
+        image: "https://flagcdn.com/w160/jm.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Negril_Beach.jpg/1920px-Negril_Beach.jpg",
+        coords: [18.1096, -77.2975],
+        fr: {
+            name: "Bienvenue en Jamaïque",
+            desc: "Découvrez la Jamaïque, île des rythmes reggae et des plages.",
+            info: "La Jamaïque est célèbre pour sa musique, sa cuisine épicée et ses paysages tropicaux.",
+            capitale: "Kingston",
+            population: "2 900 000",
+            monnaie: "Dollar jamaïcain"
+        },
+        en: {
+            name: "Welcome to Jamaica",
+            desc: "Discover Jamaica, the island of reggae rhythms and beaches.",
+            info: "Jamaica is famous for music, spicy cuisine, and tropical scenery.",
+            capitale: "Kingston",
+            population: "2,900,000",
+            monnaie: "Jamaican Dollar"
+        }
+    },
+    "mexique": {
+        image: "https://flagcdn.com/w160/mx.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Mexico_City_skyline.jpg/1920px-Mexico_City_skyline.jpg",
+        coords: [19.4326, -99.1332],
+        fr: {
+            name: "Bienvenue au Mexique",
+            desc: "Découvrez le Mexique, pays riche en culture, gastronomie et histoire.",
+            info: "Le Mexique combine sites précolombiens, villes coloniales et plages chaudes.",
+            capitale: "Mexico",
+            population: "128 000 000",
+            monnaie: "Peso mexicain"
+        },
+        en: {
+            name: "Welcome to Mexico",
+            desc: "Discover Mexico, a country rich in culture, cuisine, and history.",
+            info: "Mexico blends pre-Columbian sites, colonial cities, and warm beaches.",
+            capitale: "Mexico City",
+            population: "128,000,000",
+            monnaie: "Mexican Peso"
+        }
+    },
+    "nicaragua": {
+        image: "https://flagcdn.com/w160/ni.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Granada_Nicaragua.jpg/1920px-Granada_Nicaragua.jpg",
+        coords: [12.8654, -85.2072],
+        fr: {
+            name: "Bienvenue au Nicaragua",
+            desc: "Découvrez le Nicaragua, pays d'Amérique centrale aux lacs et volcans.",
+            info: "Le Nicaragua offre de belles villes coloniales, des volcans et des lacs majestueux.",
+            capitale: "Managua",
+            population: "7 000 000",
+            monnaie: "Córdoba nicaraguayen"
+        },
+        en: {
+            name: "Welcome to Nicaragua",
+            desc: "Discover Nicaragua, a Central American country of lakes and volcanoes.",
+            info: "Nicaragua offers colonial towns, volcanoes, and majestic lakes.",
+            capitale: "Managua",
+            population: "7,000,000",
+            monnaie: "Nicaraguan Córdoba"
+        }
+    },
+    "panama": {
+        image: "https://flagcdn.com/w160/pa.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Panama_City_skyline.jpg/1920px-Panama_City_skyline.jpg",
+        coords: [8.9824, -79.5199],
+        fr: {
+            name: "Bienvenue au Panama",
+            desc: "Découvrez le Panama, pays du canal reliant Atlantique et Pacifique.",
+            info: "Le Panama est connu pour son canal historique, ses forêts et sa capitale moderne.",
+            capitale: "Panama",
+            population: "4 400 000",
+            monnaie: "Balboa panaméen"
+        },
+        en: {
+            name: "Welcome to Panama",
+            desc: "Discover Panama, the country of the canal linking the Atlantic and Pacific.",
+            info: "Panama is known for its historic canal, forests, and modern capital.",
+            capitale: "Panama City",
+            population: "4,400,000",
+            monnaie: "Panamanian Balboa"
+        }
+    },
+    "paraguay": {
+        image: "https://flagcdn.com/w160/py.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Asuncion%2C_Paraguay_02.jpg/1920px-Asuncion%2C_Paraguay_02.jpg",
+        coords: [-25.2637, -57.5759],
+        fr: {
+            name: "Bienvenue au Paraguay",
+            desc: "Découvrez le Paraguay, pays d'Amérique du Sud au cœur du continent.",
+            info: "Le Paraguay est apprécié pour ses terres fertiles, ses rivières et sa culture guarani.",
+            capitale: "Asuncion",
+            population: "7 200 000",
+            monnaie: "Guarani paraguayen"
+        },
+        en: {
+            name: "Welcome to Paraguay",
+            desc: "Discover Paraguay, a South American country in the heart of the continent.",
+            info: "Paraguay is known for fertile lands, rivers, and Guarani culture.",
+            capitale: "Asunción",
+            population: "7,200,000",
+            monnaie: "Paraguayan Guarani"
+        }
+    },
+    "perou": {
+        image: "https://flagcdn.com/w160/pe.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Machu_Picchu%2C_Peru.jpg/1920px-Machu_Picchu%2C_Peru.jpg",
+        coords: [-12.0464, -77.0428],
+        fr: {
+            name: "Bienvenue au Pérou",
+            desc: "Découvrez le Pérou, pays des Andes, de la cuisine et de Machu Picchu.",
+            info: "Le Pérou offre des montagnes, une cuisine renommée et des sites incas.",
+            capitale: "Lima",
+            population: "33 000 000",
+            monnaie: "Sol péruvien"
+        },
+        en: {
+            name: "Welcome to Peru",
+            desc: "Discover Peru, land of the Andes, cuisine, and Machu Picchu.",
+            info: "Peru offers mountains, renowned cuisine, and Inca sites.",
+            capitale: "Lima",
+            population: "33,000,000",
+            monnaie: "Peruvian Sol"
+        }
+    },
+    "republique-dominicaine": {
+        image: "https://flagcdn.com/w160/do.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Santo_Domingo_skyline.jpg/1920px-Santo_Domingo_skyline.jpg",
+        coords: [18.4861, -69.9312],
+        fr: {
+            name: "Bienvenue en République Dominicaine",
+            desc: "Découvrez la République Dominicaine, île des Caraïbes animée.",
+            info: "La République Dominicaine propose des plages, du tourisme et un riche patrimoine colonial.",
+            capitale: "Saint-Domingue",
+            population: "11 000 000",
+            monnaie: "Peso dominicain"
+        },
+        en: {
+            name: "Welcome to the Dominican Republic",
+            desc: "Discover the Dominican Republic, a lively Caribbean island.",
+            info: "The Dominican Republic offers beaches, tourism, and colonial heritage.",
+            capitale: "Santo Domingo",
+            population: "11,000,000",
+            monnaie: "Dominican Peso"
+        }
+    },
+    "saint-christophe-et-nieves": {
+        image: "https://flagcdn.com/w160/kn.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/St_Kitts_Beaches.jpg/1920px-St_Kitts_Beaches.jpg",
+        coords: [17.3578, -62.782998],
+        fr: {
+            name: "Bienvenue à Saint-Christophe-et-Niévès",
+            desc: "Découvrez Saint-Christophe-et-Niévès, petites îles caraïbes préservées.",
+            info: "Cet archipel est connu pour ses plages, ses paysages montagneux et son ambiance paisible.",
+            capitale: "Basseterre",
+            population: "53 000",
+            monnaie: "Dollar des Caraïbes orientales"
+        },
+        en: {
+            name: "Welcome to Saint Kitts and Nevis",
+            desc: "Discover Saint Kitts and Nevis, preserved Caribbean islands.",
+            info: "The archipelago is known for beaches, mountain scenery, and tranquility.",
+            capitale: "Basseterre",
+            population: "53,000",
+            monnaie: "East Caribbean Dollar"
+        }
+    },
+    "saint-vincent-et-les-grenadines": {
+        image: "https://flagcdn.com/w160/vc.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/St_Vincent_La_Sophie.jpg/1920px-St_Vincent_La_Sophie.jpg",
+        coords: [13.2528, -61.1971],
+        fr: {
+            name: "Bienvenue à Saint-Vincent-et-les-Grenadines",
+            desc: "Découvrez Saint-Vincent-et-les-Grenadines, archipel idyllique.",
+            info: "Ces îles offrent des plages isolées, des récifs coralliens et une atmosphère détendue.",
+            capitale: "Kingstown",
+            population: "110 000",
+            monnaie: "Dollar des Caraïbes orientales"
+        },
+        en: {
+            name: "Welcome to Saint Vincent and the Grenadines",
+            desc: "Discover Saint Vincent and the Grenadines, an idyllic archipelago.",
+            info: "These islands offer secluded beaches, coral reefs, and a relaxed atmosphere.",
+            capitale: "Kingstown",
+            population: "110,000",
+            monnaie: "East Caribbean Dollar"
+        }
+    },
+    "sainte-lucie": {
+        image: "https://flagcdn.com/w160/lc.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pitons_Saint_Lucia.jpg/1920px-Pitons_Saint_Lucia.jpg",
+        coords: [13.9094, -60.9789],
+        fr: {
+            name: "Bienvenue à Sainte-Lucie",
+            desc: "Découvrez Sainte-Lucie, île volcanique des Caraïbes.",
+            info: "Sainte-Lucie est réputée pour ses pitons, ses sources chaudes et sa nature luxuriante.",
+            capitale: "Castries",
+            population: "183 000",
+            monnaie: "Dollar des Caraïbes orientales"
+        },
+        en: {
+            name: "Welcome to Saint Lucia",
+            desc: "Discover Saint Lucia, a volcanic Caribbean island.",
+            info: "Saint Lucia is known for its Pitons, hot springs, and lush nature.",
+            capitale: "Castries",
+            population: "183,000",
+            monnaie: "East Caribbean Dollar"
+        }
+    },
+    "salvador": {
+        image: "https://flagcdn.com/w160/sv.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/San_Salvador.jpg/1920px-San_Salvador.jpg",
+        coords: [13.6929, -89.2182],
+        fr: {
+            name: "Bienvenue au Salvador",
+            desc: "Découvrez le Salvador, petit État d'Amérique centrale.",
+            info: "Le Salvador propose des volcans, des plages surf et une vie culturelle vibrante.",
+            capitale: "San Salvador",
+            population: "6 500 000",
+            monnaie: "Colón salvadorien"
+        },
+        en: {
+            name: "Welcome to El Salvador",
+            desc: "Discover El Salvador, a small Central American nation.",
+            info: "El Salvador offers volcanoes, surf beaches, and vibrant culture.",
+            capitale: "San Salvador",
+            population: "6,500,000",
+            monnaie: "Salvadoran Colón"
+        }
+    },
+    "suriname": {
+        image: "https://flagcdn.com/w160/sr.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Paramaribo_01.jpg/1920px-Paramaribo_01.jpg",
+        coords: [5.8520, -55.2038],
+        fr: {
+            name: "Bienvenue au Suriname",
+            desc: "Découvrez le Suriname, pays d'Amazonie et de diversité culturelle.",
+            info: "Le Suriname mélange cultures créoles, javanaises et amérindiennes.",
+            capitale: "Paramaribo",
+            population: "600 000",
+            monnaie: "Dollar surinamien"
+        },
+        en: {
+            name: "Welcome to Suriname",
+            desc: "Discover Suriname, a country of Amazon and cultural diversity.",
+            info: "Suriname blends Creole, Javanese, and indigenous cultures.",
+            capitale: "Paramaribo",
+            population: "600,000",
+            monnaie: "Surinamese Dollar"
+        }
+    },
+    "trinite-et-tobago": {
+        image: "https://flagcdn.com/w160/tt.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Port_of_Spain.jpg/1920px-Port_of_Spain.jpg",
+        coords: [10.6918, -61.2225],
+        fr: {
+            name: "Bienvenue à Trinité-et-Tobago",
+            desc: "Découvrez Trinité-et-Tobago, îles des Caraïbes au carnaval festif.",
+            info: "Les îles sont connues pour leur musique calypso, leurs plages et leur biodiversité.",
+            capitale: "Port of Spain",
+            population: "1 400 000",
+            monnaie: "Dollar des Caraïbes orientales"
+        },
+        en: {
+            name: "Welcome to Trinidad and Tobago",
+            desc: "Discover Trinidad and Tobago, Caribbean islands of festive carnival.",
+            info: "The islands are known for calypso music, beaches, and biodiversity.",
+            capitale: "Port of Spain",
+            population: "1,400,000",
+            monnaie: "East Caribbean Dollar"
+        }
+    },
+    "uruguay": {
+        image: "https://flagcdn.com/w160/uy.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Montevideo%2C_Uruguay.jpg/1920px-Montevideo%2C_Uruguay.jpg",
+        coords: [-34.9011, -56.1645],
+        fr: {
+            name: "Bienvenue en Uruguay",
+            desc: "Découvrez l'Uruguay, pays paisible d'Amérique du Sud.",
+            info: "L'Uruguay est réputé pour sa côte, ses villes calmes et sa qualité de vie.",
+            capitale: "Montevideo",
+            population: "3 500 000",
+            monnaie: "Peso uruguayen"
+        },
+        en: {
+            name: "Welcome to Uruguay",
+            desc: "Discover Uruguay, a peaceful South American country.",
+            info: "Uruguay is known for its coast, calm cities, and high quality of life.",
+            capitale: "Montevideo",
+            population: "3,500,000",
+            monnaie: "Uruguayan Peso"
+        }
+    },
+    "venezuela": {
+        image: "https://flagcdn.com/w160/ve.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Angel_Falls.jpg/1920px-Angel_Falls.jpg",
+        coords: [10.4806, -66.9036],
+        fr: {
+            name: "Bienvenue au Venezuela",
+            desc: "Découvrez le Venezuela, pays d'Amazonie, de lacs et de montagne.",
+            info: "Le Venezuela offre le célèbre Salto Ángel, des forêts tropicales et des Caraïbes.",
+            capitale: "Caracas",
+            population: "28 000 000",
+            monnaie: "Bolivar vénézuélien"
+        },
+        en: {
+            name: "Welcome to Venezuela",
+            desc: "Discover Venezuela, country of Amazon, lakes, and mountains.",
+            info: "Venezuela offers Angel Falls, tropical forests, and Caribbean coast.",
+            capitale: "Caracas",
+            population: "28,000,000",
+            monnaie: "Venezuelan Bolívar"
+        }
+    },
+    "afrique-du-sud": {
+        image: "https://flagcdn.com/w160/za.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Cape_Town_from_Lion%27s_Head.jpg/1920px-Cape_Town_from_Lion%27s_Head.jpg",
+        coords: [-25.7461, 28.1881],
+        fr: {
+            name: "Bienvenue en Afrique du Sud",
+            desc: "Découvrez l'Afrique du Sud, pays de safaris, de côtes et de cultures multiples.",
+            info: "L'Afrique du Sud offre des parcs nationaux, des villes modernes et une grande diversité culturelle.",
+            capitale: "Prétoria",
+            population: "60 000 000",
+            monnaie: "Rand sud-africain"
+        },
+        en: {
+            name: "Welcome to South Africa",
+            desc: "Discover South Africa, land of safaris, coasts, and diverse cultures.",
+            info: "South Africa offers national parks, modern cities, and great cultural diversity.",
+            capitale: "Pretoria",
+            population: "60,000,000",
+            monnaie: "South African Rand"
+        }
+    },
+    "algerie": {
+        image: "https://flagcdn.com/w160/dz.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Algeria_North_Africa.jpg/1920px-Algeria_North_Africa.jpg",
+        coords: [36.7538, 3.0588],
+        fr: {
+            name: "Bienvenue en Algérie",
+            desc: "Découvrez l'Algérie, grand pays d'Afrique du Nord et de désert.",
+            info: "L'Algérie offre le Sahara, l'histoire ancienne et des villes méditerranéennes.",
+            capitale: "Alger",
+            population: "45 000 000",
+            monnaie: "Dinar algérien"
+        },
+        en: {
+            name: "Welcome to Algeria",
+            desc: "Discover Algeria, a large North African country of desert.",
+            info: "Algeria offers the Sahara, ancient history, and Mediterranean cities.",
+            capitale: "Algiers",
+            population: "45,000,000",
+            monnaie: "Algerian Dinar"
+        }
+    },
+    "cameroun": {
+        image: "https://flagcdn.com/w160/cm.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Douala_Cameroon.jpg/1920px-Douala_Cameroon.jpg",
+        coords: [3.8480, 11.5021],
+        fr: {
+            name: "Bienvenue au Cameroun",
+            desc: "Découvrez le Cameroun, pays aux paysages variés et aux cultures nombreuses.",
+            info: "Le Cameroun offre montagnes, savanes, forêts tropicales et une grande diversité ethnique.",
+            capitale: "Yaoundé",
+            population: "27 000 000",
+            monnaie: "Franc CFA"
+        },
+        en: {
+            name: "Welcome to Cameroon",
+            desc: "Discover Cameroon, a country of diverse landscapes and cultures.",
+            info: "Cameroon offers mountains, savannas, rainforests, and ethnic variety.",
+            capitale: "Yaoundé",
+            population: "27,000,000",
+            monnaie: "CFA Franc"
+        }
+    },
+    "cote-divoire": {
+        image: "https://flagcdn.com/w160/ci.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Abidjan_skyline.jpg/1920px-Abidjan_skyline.jpg",
+        coords: [5.3453, -4.0244],
+        fr: {
+            name: "Bienvenue en Côte d'Ivoire",
+            desc: "Découvrez la Côte d'Ivoire, pays ouest-africain de culture et de cacao.",
+            info: "La Côte d'Ivoire est connue pour sa musique, son agriculture et ses villes dynamiques.",
+            capitale: "Yamoussoukro",
+            population: "28 000 000",
+            monnaie: "Franc CFA"
+        },
+        en: {
+            name: "Welcome to Ivory Coast",
+            desc: "Discover Ivory Coast, a West African country of culture and cocoa.",
+            info: "Ivory Coast is known for music, agriculture, and vibrant cities.",
+            capitale: "Yamoussoukro",
+            population: "28,000,000",
+            monnaie: "CFA Franc"
+        }
+    },
+    "egypte": {
+        image: "https://flagcdn.com/w160/eg.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Giza_Plateau%2C_Egypt.jpg/1920px-Giza_Plateau%2C_Egypt.jpg",
+        coords: [30.0444, 31.2357],
+        fr: {
+            name: "Bienvenue en Égypte",
+            desc: "Découvrez l'Égypte, berceau des pyramides et du Nil.",
+            info: "L'Égypte est célèbre pour les pyramides de Gizeh, Louxor et son histoire ancienne.",
+            capitale: "Le Caire",
+            population: "104 000 000",
+            monnaie: "Livre égyptienne"
+        },
+        en: {
+            name: "Welcome to Egypt",
+            desc: "Discover Egypt, home of pyramids and the Nile.",
+            info: "Egypt is famous for the Giza pyramids, Luxor, and ancient history.",
+            capitale: "Cairo",
+            population: "104,000,000",
+            monnaie: "Egyptian Pound"
+        }
+    },
+    "ethiopie": {
+        image: "https://flagcdn.com/w160/et.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Addis_Ababa_skyline.jpg/1920px-Addis_Ababa_skyline.jpg",
+        coords: [9.0300, 38.7400],
+        fr: {
+            name: "Bienvenue en Éthiopie",
+            desc: "Découvrez l'Éthiopie, pays historique d'Afrique de l'Est.",
+            info: "L'Éthiopie offre une histoire ancienne, des hauts plateaux et une culture unique.",
+            capitale: "Addis-Abeba",
+            population: "123 000 000",
+            monnaie: "Birr éthiopien"
+        },
+        en: {
+            name: "Welcome to Ethiopia",
+            desc: "Discover Ethiopia, a historic East African country.",
+            info: "Ethiopia offers ancient history, highlands, and unique culture.",
+            capitale: "Addis Ababa",
+            population: "123,000,000",
+            monnaie: "Ethiopian Birr"
+        }
+    },
+    "kenya": {
+        image: "https://flagcdn.com/w160/ke.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Nairobi_skyline.jpg/1920px-Nairobi_skyline.jpg",
+        coords: [1.2921, 36.8219],
+        fr: {
+            name: "Bienvenue au Kenya",
+            desc: "Découvrez le Kenya, pays des safaris et des hauts plateaux.",
+            info: "Le Kenya est célèbre pour ses réserves animales, ses safaris et ses montagnes.",
+            capitale: "Nairobi",
+            population: "55 000 000",
+            monnaie: "Shilling kényan"
+        },
+        en: {
+            name: "Welcome to Kenya",
+            desc: "Discover Kenya, land of safaris and highlands.",
+            info: "Kenya is famous for wildlife reserves, safaris, and mountains.",
+            capitale: "Nairobi",
+            population: "55,000,000",
+            monnaie: "Kenyan Shilling"
+        }
+    },
+    "madagascar": {
+        image: "https://flagcdn.com/w160/mg.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Andasibe_Mantadia_National_Park.jpg/1920px-Andasibe_Mantadia_National_Park.jpg",
+        coords: [-18.7669, 46.8691],
+        fr: {
+            name: "Bienvenue à Madagascar",
+            desc: "Découvrez Madagascar, grande île d'Afrique au monde animal unique.",
+            info: "Madagascar est connue pour ses lémuriens, ses forêts tropicales et ses plages.",
+            capitale: "Antananarivo",
+            population: "28 000 000",
+            monnaie: "Ariary malgache"
+        },
+        en: {
+            name: "Welcome to Madagascar",
+            desc: "Discover Madagascar, a large African island with unique wildlife.",
+            info: "Madagascar is known for lemurs, rainforests, and beaches.",
+            capitale: "Antananarivo",
+            population: "28,000,000",
+            monnaie: "Malagasy Ariary"
+        }
+    },
+    "maroc": {
+        image: "https://flagcdn.com/w160/ma.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Casablanca_skyline.jpg/1920px-Casablanca_skyline.jpg",
+        coords: [33.9716, -6.8498],
+        fr: {
+            name: "Bienvenue au Maroc",
+            desc: "Découvrez le Maroc, pays du désert, des montagnes et des médinas.",
+            info: "Le Maroc offre des villes historiques, le Sahara et une culture riche.",
+            capitale: "Rabat",
+            population: "37 000 000",
+            monnaie: "Dirham marocain"
+        },
+        en: {
+            name: "Welcome to Morocco",
+            desc: "Discover Morocco, land of desert, mountains, and medinas.",
+            info: "Morocco offers historic cities, the Sahara, and rich culture.",
+            capitale: "Rabat",
+            population: "37,000,000",
+            monnaie: "Moroccan Dirham"
+        }
+    },
+    "namibie": {
+        image: "https://flagcdn.com/w160/na.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Sossusvlei_sand_dunes.jpg/1920px-Sossusvlei_sand_dunes.jpg",
+        coords: [-22.5609, 17.0658],
+        fr: {
+            name: "Bienvenue en Namibie",
+            desc: "Découvrez la Namibie, pays des dunes et des safaris.",
+            info: "La Namibie est connue pour ses vastes déserts, ses parcs naturels et ses paysages spectaculaires.",
+            capitale: "Windhoek",
+            population: "2 600 000",
+            monnaie: "Dollar namibien"
+        },
+        en: {
+            name: "Welcome to Namibia",
+            desc: "Discover Namibia, a land of dunes and safaris.",
+            info: "Namibia is known for its deserts, national parks, and stunning landscapes.",
+            capitale: "Windhoek",
+            population: "2,600,000",
+            monnaie: "Namibian Dollar"
+        }
+    },
+    "nigeria": {
+        image: "https://flagcdn.com/w160/ng.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Lagos_skyline.jpg/1920px-Lagos_skyline.jpg",
+        coords: [9.0765, 7.3986],
+        fr: {
+            name: "Bienvenue au Nigéria",
+            desc: "Découvrez le Nigéria, pays le plus peuplé d'Afrique.",
+            info: "Le Nigéria est un centre culturel et économique majeur avec une scène musicale dynamique.",
+            capitale: "Abuja",
+            population: "216 000 000",
+            monnaie: "Naira nigérian"
+        },
+        en: {
+            name: "Welcome to Nigeria",
+            desc: "Discover Nigeria, Africa's most populous country.",
+            info: "Nigeria is a major cultural and economic hub with a vibrant music scene.",
+            capitale: "Abuja",
+            population: "216,000,000",
+            monnaie: "Nigerian Naira"
+        }
+    },
+    "senegal": {
+        image: "https://flagcdn.com/w160/sn.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Dakar_skyline.jpg/1920px-Dakar_skyline.jpg",
+        coords: [14.7167, -17.4677],
+        fr: {
+            name: "Bienvenue au Sénégal",
+            desc: "Découvrez le Sénégal, pays d'Afrique de l'Ouest et de musique.",
+            info: "Le Sénégal est réputé pour sa culture, sa musique et son accueil chaleureux.",
+            capitale: "Dakar",
+            population: "17 000 000",
+            monnaie: "Franc CFA"
+        },
+        en: {
+            name: "Welcome to Senegal",
+            desc: "Discover Senegal, a West African country of music and culture.",
+            info: "Senegal is known for its culture, music, and warm hospitality.",
+            capitale: "Dakar",
+            population: "17,000,000",
+            monnaie: "CFA Franc"
+        }
+    },
+    "tanzanie": {
+        image: "https://flagcdn.com/w160/tz.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kilimanjaro_from_Uhuru_peak.jpg/1920px-Kilimanjaro_from_Uhuru_peak.jpg",
+        coords: [-6.3690, 34.8888],
+        fr: {
+            name: "Bienvenue en Tanzanie",
+            desc: "Découvrez la Tanzanie, pays des safaris et du Kilimandjaro.",
+            info: "La Tanzanie propose des safaris légendaires, des plages et la plus haute montagne d'Afrique.",
+            capitale: "Dodoma",
+            population: "61 000 000",
+            monnaie: "Shilling tanzanien"
+        },
+        en: {
+            name: "Welcome to Tanzania",
+            desc: "Discover Tanzania, land of safaris and Kilimanjaro.",
+            info: "Tanzania offers legendary safaris, beaches, and Africa's highest mountain.",
+            capitale: "Dodoma",
+            population: "61,000,000",
+            monnaie: "Tanzanian Shilling"
+        }
+    },
+    "tunisie": {
+        image: "https://flagcdn.com/w160/tn.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Medina_of_Tunis.jpg/1920px-Medina_of_Tunis.jpg",
+        coords: [36.8065, 10.1815],
+        fr: {
+            name: "Bienvenue en Tunisie",
+            desc: "Découvrez la Tunisie, pays méditerranéen aux sites antiques.",
+            info: "La Tunisie est connue pour Carthage, ses plages et son riche patrimoine historique.",
+            capitale: "Tunis",
+            population: "12 000 000",
+            monnaie: "Dinar tunisien"
+        },
+        en: {
+            name: "Welcome to Tunisia",
+            desc: "Discover Tunisia, a Mediterranean country with ancient sites.",
+            info: "Tunisia is known for Carthage, beaches, and rich historical heritage.",
+            capitale: "Tunis",
+            population: "12,000,000",
+            monnaie: "Tunisian Dinar"
+        }
+    },
+    "australie": {
+        image: "https://flagcdn.com/w160/au.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Sydney_Opera_House_%28cropped%29.jpg/1920px-Sydney_Opera_House_%28cropped%29.jpg",
+        coords: [-35.2809, 149.1300],
+        fr: {
+            name: "Bienvenue en Australie",
+            desc: "Découvrez l'Australie, continent insulaire aux paysages variés.",
+            info: "L'Australie offre des villes modernes, l'Outback et des plages légendaires.",
+            capitale: "Canberra",
+            population: "26 000 000",
+            monnaie: "Dollar australien"
+        },
+        en: {
+            name: "Welcome to Australia",
+            desc: "Discover Australia, an island continent with diverse landscapes.",
+            info: "Australia offers modern cities, the Outback, and legendary beaches.",
+            capitale: "Canberra",
+            population: "26,000,000",
+            monnaie: "Australian Dollar"
+        }
+    },
+    "fidji": {
+        image: "https://flagcdn.com/w160/fj.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Fiji_beach.jpg/1920px-Fiji_beach.jpg",
+        coords: [-17.7134, 178.0650],
+        fr: {
+            name: "Bienvenue aux Fidji",
+            desc: "Découvrez les Fidji, archipel tropical du Pacifique.",
+            info: "Les Fidji offrent des lagons bleus, des récifs coralliens et une ambiance détendue.",
+            capitale: "Suva",
+            population: "930 000",
+            monnaie: "Dollar fidjien"
+        },
+        en: {
+            name: "Welcome to Fiji",
+            desc: "Discover Fiji, a tropical Pacific archipelago.",
+            info: "Fiji offers blue lagoons, coral reefs, and a relaxed vibe.",
+            capitale: "Suva",
+            population: "930,000",
+            monnaie: "Fijian Dollar"
+        }
+    },
+    "nouvelle-zelande": {
+        image: "https://flagcdn.com/w160/nz.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Wellington_skyline.jpg/1920px-Wellington_skyline.jpg",
+        coords: [-41.2865, 174.7762],
+        fr: {
+            name: "Bienvenue en Nouvelle-Zélande",
+            desc: "Découvrez la Nouvelle-Zélande, île de nature et d'aventure.",
+            info: "La Nouvelle-Zélande est célèbre pour ses paysages époustouflants et ses sports en plein air.",
+            capitale: "Wellington",
+            population: "5 200 000",
+            monnaie: "Dollar néo-zélandais"
+        },
+        en: {
+            name: "Welcome to New Zealand",
+            desc: "Discover New Zealand, an island of nature and adventure.",
+            info: "New Zealand is famous for stunning landscapes and outdoor sports.",
+            capitale: "Wellington",
+            population: "5,200,000",
+            monnaie: "New Zealand Dollar"
+        }
+    },
+    "papouasie-nouvelle-guinee": {
+        image: "https://flagcdn.com/w160/pg.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Port_Moresby_skyline.jpg/1920px-Port_Moresby_skyline.jpg",
+        coords: [-9.4438, 147.1803],
+        fr: {
+            name: "Bienvenue en Papouasie-Nouvelle-Guinée",
+            desc: "Découvrez la Papouasie-Nouvelle-Guinée, pays de biodiversité et de cultures.",
+            info: "La Papouasie-Nouvelle-Guinée est connue pour ses forêts tropicales, ses tribus et ses montagnes.",
+            capitale: "Port Moresby",
+            population: "9 000 000",
+            monnaie: "Kina papouan"
+        },
+        en: {
+            name: "Welcome to Papua New Guinea",
+            desc: "Discover Papua New Guinea, a country of biodiversity and cultures.",
+            info: "Papua New Guinea is known for rainforests, tribes, and mountains.",
+            capitale: "Port Moresby",
+            population: "9,000,000",
+            monnaie: "Papua New Guinean Kina"
+        }
+    },
+    "polynesie-francaise": {
+        image: "https://flagcdn.com/w160/pf.png",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bora_Bora_2018.jpg/1920px-Bora_Bora_2018.jpg",
+        coords: [-17.6509, -149.4260],
+        fr: {
+            name: "Bienvenue en Polynésie Française",
+            desc: "Découvrez la Polynésie Française, archipel de lagons et de culture polynésienne.",
+            info: "La Polynésie Française est réputée pour ses eaux turquoises, ses montagnes volcaniques et son accueil chaleureux.",
+            capitale: "Papeete",
+            population: "280 000",
+            monnaie: "Franc pacifique"
+        },
+        en: {
+            name: "Welcome to French Polynesia",
+            desc: "Discover French Polynesia, an archipelago of lagoons and Polynesian culture.",
+            info: "French Polynesia is famous for turquoise waters, volcanic mountains, and warm hospitality.",
+            capitale: "Papeete",
+            population: "280,000",
+            monnaie: "CFP Franc"
+        }
+    }
 };

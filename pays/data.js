@@ -2282,7 +2282,7 @@ export const countriesData = {
     },
     "jamaique": {
         image: "https://flagcdn.com/w160/jm.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Negril_Beach.jpg/1920px-Negril_Beach.jpg",
+        landscape: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJA0ukEf6YzOOa0Ma0BCKaWuxA74Wku5vyIvkyYfj_jxQy3Q4jQHo_2r_h1ZXTAAgUPkXB5q1bdlbzpapULxeKXAheex94v_E1J0akyT7Q1NEJbHy0gvM-Ttw4nmsxnLo4N8P8=w540-h312-n-k-no",
         coords: [18.1096, -77.2975],
         fr: {
             name: "Bienvenue en Jamaïque",

@@ -2975,7 +2975,7 @@ export const countriesData = {
     },
     "polynesie-francaise": {
         image: "https://flagcdn.com/w160/pf.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bora_Bora_2018.jpg/1920px-Bora_Bora_2018.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/d/dd/CESC_%C3%A0_Papeete.JPG",
         coords: [-17.6509, -149.4260],
         fr: {
             name: "Bienvenue en Polynésie Française",

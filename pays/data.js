@@ -1274,7 +1274,7 @@ export const countriesData = {
     },
     "iran": {
         image: "https://flagcdn.com/w160/ir.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Tehran_by_Night.jpg/1920px-Tehran_by_Night.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/2018-09-21_Iran%2C_Persepolis%2C_Tachara_%28from_the_southeast%29.jpg/1920px-2018-09-21_Iran%2C_Persepolis%2C_Tachara_%28from_the_southeast%29.jpg",
         coords: [35.6892, 51.3890],
         fr: {
             name: "Bienvenue en Iran",
@@ -1295,7 +1295,7 @@ export const countriesData = {
     },
     "israel": {
         image: "https://flagcdn.com/w160/il.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Jerusalem_Western_Wall.jpg/1920px-Jerusalem_Western_Wall.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Scimitar_Oryx_-_Hai-Bar_Yotvata_2013.jpg",
         coords: [31.7683, 35.2137],
         fr: {
             name: "Bienvenue en Israël",
@@ -1316,7 +1316,7 @@ export const countriesData = {
     },
     "japon": {
         image: "https://flagcdn.com/w160/jp.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Tokyo_Tower_and_surrounding_buildings.jpg/1920px-Tokyo_Tower_and_surrounding_buildings.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Mt.fuji_%26_bullet_train_-_panoramio.jpg",
         coords: [35.6895, 139.6917],
         fr: {
             name: "Bienvenue au Japon",
@@ -1337,7 +1337,7 @@ export const countriesData = {
     },
     "jordanie": {
         image: "https://flagcdn.com/w160/jo.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Petra_rocks_Jordan.jpg/1920px-Petra_rocks_Jordan.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Jerash_-_Oval_Forum_01.jpg/1280px-Jerash_-_Oval_Forum_01.jpg",
         coords: [31.9454, 35.9284],
         fr: {
             name: "Bienvenue en Jordanie",
@@ -1358,7 +1358,7 @@ export const countriesData = {
     },
     "kirghizistan": {
         image: "https://flagcdn.com/w160/kg.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Sary_Chelek_Nature_Reserve%2C_Kyrgyzstan.jpg/1920px-Sary_Chelek_Nature_Reserve%2C_Kyrgyzstan.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/25_razgledi_iz_Bi%C5%A1keka_%284%29.JPG/1920px-25_razgledi_iz_Bi%C5%A1keka_%284%29.JPG",
         coords: [42.8746, 74.5698],
         fr: {
             name: "Bienvenue au Kirghizistan",
@@ -1379,7 +1379,7 @@ export const countriesData = {
     },
     "koweit": {
         image: "https://flagcdn.com/w160/kw.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Kuwait_City_skyline.jpg/1920px-Kuwait_City_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Kuwait_City_Kuwait_Towers_View_to_the_al-Hamra_Tower.jpg/1920px-Kuwait_City_Kuwait_Towers_View_to_the_al-Hamra_Tower.jpg",
         coords: [29.3759, 47.9774],
         fr: {
             name: "Bienvenue au Koweït",
@@ -1400,7 +1400,7 @@ export const countriesData = {
     },
     "laos": {
         image: "https://flagcdn.com/w160/la.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Vientiane_Riverfront.jpg/1920px-Vientiane_Riverfront.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Vat_Xieng_Thong.JPG/1920px-Vat_Xieng_Thong.JPG",
         coords: [17.9757, 102.6331],
         fr: {
             name: "Bienvenue au Laos",
@@ -1421,7 +1421,7 @@ export const countriesData = {
     },
     "liban": {
         image: "https://flagcdn.com/w160/lb.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Beirut_skyline.jpg/1920px-Beirut_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Lebanon_cedar_forest.jpg/1920px-Lebanon_cedar_forest.jpg",
         coords: [33.8886, 35.4955],
         fr: {
             name: "Bienvenue au Liban",
@@ -1442,7 +1442,7 @@ export const countriesData = {
     },
     "malaisie": {
         image: "https://flagcdn.com/w160/my.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Kuala_Lumpur_skyline.jpg/1920px-Kuala_Lumpur_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Kuala_Lumpur_at_dawn_%2818794580599%29.jpg/1920px-Kuala_Lumpur_at_dawn_%2818794580599%29.jpg",
         coords: [3.1390, 101.6869],
         fr: {
             name: "Bienvenue en Malaisie",
@@ -1463,7 +1463,7 @@ export const countriesData = {
     },
     "maldives": {
         image: "https://flagcdn.com/w160/mv.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Maldives_beach.jpg/1920px-Maldives_beach.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Baa_Atoll_Maldives.JPG/1920px-Baa_Atoll_Maldives.JPG",
         coords: [4.1755, 73.5093],
         fr: {
             name: "Bienvenue aux Maldives",
@@ -1484,7 +1484,7 @@ export const countriesData = {
     },
     "mongolie": {
         image: "https://flagcdn.com/w160/mn.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Orkhon_waterfall%2C_Mongolia.jpg/1920px-Orkhon_waterfall%2C_Mongolia.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Resized_pan-flaming-cropped2.jpg/1920px-Resized_pan-flaming-cropped2.jpg",
         coords: [47.8864, 106.9057],
         fr: {
             name: "Bienvenue en Mongolie",
@@ -1505,7 +1505,7 @@ export const countriesData = {
     },
     "nepal": {
         image: "https://flagcdn.com/w160/np.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mount_Everest_from_Gokyo_Ri_November_2012.jpg/1920px-Mount_Everest_from_Gokyo_Ri_November_2012.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Dhaulagiri_Mountain.jpg/1920px-Dhaulagiri_Mountain.jpg",
         coords: [27.7172, 85.3240],
         fr: {
             name: "Bienvenue au Népal",

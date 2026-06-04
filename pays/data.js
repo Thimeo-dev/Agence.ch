@@ -2303,7 +2303,7 @@ export const countriesData = {
     },
     "mexique": {
         image: "https://flagcdn.com/w160/mx.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Mexico_City_skyline.jpg/1920px-Mexico_City_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Chichen_Itza_3.jpg/1920px-Chichen_Itza_3.jpg",
         coords: [19.4326, -99.1332],
         fr: {
             name: "Bienvenue au Mexique",
@@ -2324,7 +2324,7 @@ export const countriesData = {
     },
     "nicaragua": {
         image: "https://flagcdn.com/w160/ni.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Granada_Nicaragua.jpg/1920px-Granada_Nicaragua.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/06.Plaza_de_la_Independencia_de_Granada.JPG/1920px-06.Plaza_de_la_Independencia_de_Granada.JPG",
         coords: [12.8654, -85.2072],
         fr: {
             name: "Bienvenue au Nicaragua",
@@ -2345,7 +2345,7 @@ export const countriesData = {
     },
     "panama": {
         image: "https://flagcdn.com/w160/pa.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Panama_City_skyline.jpg/1920px-Panama_City_skyline.jpg",
+        landscape: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGjzRj8kwaY1nJCi8uSCLRcagou1BQkW_kmpPxDNjfkw3r-KNNSTyJcSvOv2QPBXPd9phs6CljnEYwmx542ir4Kb27QGJnfYTtc0h887R3NvG8_G7SsKV3RQZW-YTFRMcldJiTR6Q=w540-h312-n-k-no",
         coords: [8.9824, -79.5199],
         fr: {
             name: "Bienvenue au Panama",
@@ -2366,7 +2366,7 @@ export const countriesData = {
     },
     "paraguay": {
         image: "https://flagcdn.com/w160/py.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Asuncion%2C_Paraguay_02.jpg/1920px-Asuncion%2C_Paraguay_02.jpg",
+        landscape: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFTKmrSCtoIOIuKCbYbU5rhoNcWwUgG_BVsvTUx6A3vKY5rmgOmufI-Shmu2kcUtCm9Kd1R9KpzX--XU3PP2H_tffLLmNa2dktzVt33ZmyhFmmXgnum9rdvMthVmFixULdvJSM=w540-h312-n-k-no",
         coords: [-25.2637, -57.5759],
         fr: {
             name: "Bienvenue au Paraguay",
@@ -2387,7 +2387,7 @@ export const countriesData = {
     },
     "perou": {
         image: "https://flagcdn.com/w160/pe.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Machu_Picchu%2C_Peru.jpg/1920px-Machu_Picchu%2C_Peru.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Machu_Picchu%2C_Peru.jpg",
         coords: [-12.0464, -77.0428],
         fr: {
             name: "Bienvenue au Pérou",
@@ -2408,7 +2408,7 @@ export const countriesData = {
     },
     "republique-dominicaine": {
         image: "https://flagcdn.com/w160/do.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Santo_Domingo_skyline.jpg/1920px-Santo_Domingo_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/9/96/Spaniards_branding_captured_Indians.jpg",
         coords: [18.4861, -69.9312],
         fr: {
             name: "Bienvenue en République Dominicaine",
@@ -2429,7 +2429,7 @@ export const countriesData = {
     },
     "saint-christophe-et-nieves": {
         image: "https://flagcdn.com/w160/kn.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/St_Kitts_Beaches.jpg/1920px-St_Kitts_Beaches.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/0/06/Basseterre.jpeg",
         coords: [17.3578, -62.782998],
         fr: {
             name: "Bienvenue à Saint-Christophe-et-Niévès",
@@ -2450,7 +2450,7 @@ export const countriesData = {
     },
     "saint-vincent-et-les-grenadines": {
         image: "https://flagcdn.com/w160/vc.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/St_Vincent_La_Sophie.jpg/1920px-St_Vincent_La_Sophie.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Mustiquebeaches.jpg",
         coords: [13.2528, -61.1971],
         fr: {
             name: "Bienvenue à Saint-Vincent-et-les-Grenadines",
@@ -2471,7 +2471,7 @@ export const countriesData = {
     },
     "sainte-lucie": {
         image: "https://flagcdn.com/w160/lc.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pitons_Saint_Lucia.jpg/1920px-Pitons_Saint_Lucia.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Unnamed_Road%2C_Saint_Lucia_-_panoramio_%2812%29.jpg/1920px-Unnamed_Road%2C_Saint_Lucia_-_panoramio_%2812%29.jpg",
         coords: [13.9094, -60.9789],
         fr: {
             name: "Bienvenue à Sainte-Lucie",
@@ -2492,7 +2492,7 @@ export const countriesData = {
     },
     "salvador": {
         image: "https://flagcdn.com/w160/sv.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/San_Salvador.jpg/1920px-San_Salvador.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Panoramica_del_Centro_Hist%C3%B3rico_de_San_Salvador.jpg/1920px-Panoramica_del_Centro_Hist%C3%B3rico_de_San_Salvador.jpg",
         coords: [13.6929, -89.2182],
         fr: {
             name: "Bienvenue au Salvador",
@@ -2513,7 +2513,7 @@ export const countriesData = {
     },
     "suriname": {
         image: "https://flagcdn.com/w160/sr.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Paramaribo_01.jpg/1920px-Paramaribo_01.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Amazon_jungle_from_above.jpg",
         coords: [5.8520, -55.2038],
         fr: {
             name: "Bienvenue au Suriname",
@@ -2534,7 +2534,7 @@ export const countriesData = {
     },
     "trinite-et-tobago": {
         image: "https://flagcdn.com/w160/tt.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Port_of_Spain.jpg/1920px-Port_of_Spain.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/BrianLaraUkexpat.jpg/1920px-BrianLaraUkexpat.jpg",
         coords: [10.6918, -61.2225],
         fr: {
             name: "Bienvenue à Trinité-et-Tobago",
@@ -2555,7 +2555,7 @@ export const countriesData = {
     },
     "uruguay": {
         image: "https://flagcdn.com/w160/uy.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Montevideo%2C_Uruguay.jpg/1920px-Montevideo%2C_Uruguay.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Palacio_Legislativo.JPG/1920px-Palacio_Legislativo.JPG",
         coords: [-34.9011, -56.1645],
         fr: {
             name: "Bienvenue en Uruguay",
@@ -2576,7 +2576,7 @@ export const countriesData = {
     },
     "venezuela": {
         image: "https://flagcdn.com/w160/ve.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Angel_Falls.jpg/1920px-Angel_Falls.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Burros_salvajes%2C_Los_Llanos%2C_Gu%C3%A1rico.JPG/1920px-Burros_salvajes%2C_Los_Llanos%2C_Gu%C3%A1rico.JPG",
         coords: [10.4806, -66.9036],
         fr: {
             name: "Bienvenue au Venezuela",
@@ -2597,7 +2597,7 @@ export const countriesData = {
     },
     "afrique-du-sud": {
         image: "https://flagcdn.com/w160/za.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Cape_Town_from_Lion%27s_Head.jpg/1920px-Cape_Town_from_Lion%27s_Head.jpg",
+        landscape: "afrique-du-sud",
         coords: [-25.7461, 28.1881],
         fr: {
             name: "Bienvenue en Afrique du Sud",

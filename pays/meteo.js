@@ -27,7 +27,7 @@ const chargerMeteo7Jours = async (coords) => {
 
     try {
         const [lat, lon] = coords;
-        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto`;
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto`;
         
         const response = await fetch(url);
         const data = await response.json();
@@ -38,7 +38,7 @@ const chargerMeteo7Jours = async (coords) => {
             // Boucle pour générer l'affichage des 7 jours reçus
             data.daily.time.forEach((jour, index) => {
                 const dateFormatee = formatJour(jour);
-                const emoji = getWmoEmoji(data.daily.weather_code[index]);
+                const emoji = getWmoEmoji(data.daily.weathercode[index]);
                 const tempMax = Math.round(data.daily.temperature_2m_max[index]);
                 const tempMin = Math.round(data.daily.temperature_2m_min[index]);
 

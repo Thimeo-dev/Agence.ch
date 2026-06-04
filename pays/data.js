@@ -874,7 +874,7 @@ export const countriesData = {
         fr: {
             name: "Bienvenue en Suède", 
             desc: "Découvrez les paysages variés et la culture riche de la Suède.",
-            info: "La Suède est connue pour ses paysages magnifiques, sa culture riche et son engagement envers la durabilité. C'est un pays qui offre une qualité de vie élevée, des innovations technologiques et une forte tradition de design. La nature suédoise, avec ses forêts denses, ses lacs scintillants et ses aurores boréales, attire les amoureux de la nature du monde entier.",
+            info: "La Suède est connue pour ses paysages magnifiques, sa culture riche et son engagement envers la durabilité. C'est un pays qui offre des innovations technologiques et une forte tradition. La nature suédoise, avec ses forêts denses, ses lacs scintillants et ses aurores boréales, attire les amoureux de la nature du monde entier.",
             capitale: "Stockholm",
             population: "10 400 000",
             monnaie: "Couronne suédoise"
@@ -882,7 +882,7 @@ export const countriesData = {
         en: {
             name: "Welcome to Sweden",
             desc: "Discover the diverse landscapes and rich culture of Sweden.",
-            info: "Sweden is known for its stunning landscapes, rich culture, and commitment to sustainability. It's a country that offers a high quality of life, technological innovations, and a strong tradition of design. The Swedish nature, with its dense forests, shimmering lakes, and northern lights, attracts nature lovers from around the world.",
+            info: "Sweden is known for its stunning landscapes, rich culture, and commitment to sustainability. It's a country that offers technological innovations, and a strong tradition. The Swedish nature, with its dense forests, shimmering lakes, and northern lights, attracts nature lovers from around the world.",
             capitale: "Stockholm",
             population: "10,400,000",
             monnaie: "Swedish Krona"

@@ -23,46 +23,55 @@ const formatJour = (dateString) => {
 // Nouvelle fonction pour charger la météo depuis Open-Meteo
 const chargerMeteo7Jours = async (coords) => {
     const forecastEl = document.getElementById('weather-forecast');
-    if (!forecastEl || !coords) return;
+    if (!forecastEl) return;
+
+    if (!coords || !Array.isArray(coords) || coords.length < 2) {
+        forecastEl.innerHTML = `<p class="weather-loading">Coordonnées météo invalides.</p>`;
+        return;
+    }
 
     try {
         const [lat, lon] = coords;
         const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto`;
         
         const response = await fetch(url);
-        const data = await response.json();
-
-        if (data && data.daily) {
-            forecastEl.innerHTML = ""; // Supprime le message "Chargement..."
-
-            // Boucle pour générer l'affichage des 7 jours reçus
-            data.daily.time.forEach((jour, index) => {
-                const dateFormatee = formatJour(jour);
-                const emoji = getWmoEmoji(data.daily.weathercode[index]);
-                const tempMax = Math.round(data.daily.temperature_2m_max[index]);
-                const tempMin = Math.round(data.daily.temperature_2m_min[index]);
-
-                // Structure HTML d'une ligne
-                const row = document.createElement('div');
-                row.className = 'weather-day-row';
-                row.innerHTML = `
-                    <span class="weather-date">${dateFormatee}</span>
-                    <span class="weather-icon">${emoji}</span>
-                    <span class="weather-temps">
-                        <span class="weather-max">${tempMax}°</span>
-                        <span class="weather-min">${tempMin}°</span>
-                    </span>
-                `;
-                forecastEl.appendChild(row);
-            });
+        if (!response.ok) {
+            throw new Error(`Open-Meteo status ${response.status}`);
         }
+
+        const data = await response.json();
+        if (!data || !data.daily || !Array.isArray(data.daily.time)) {
+            throw new Error('Réponse météo invalide');
+        }
+
+        forecastEl.innerHTML = ""; // Supprime le message "Chargement..."
+
+        // Boucle pour générer l'affichage des jours reçus
+        data.daily.time.forEach((jour, index) => {
+            const dateFormatee = formatJour(jour);
+            const emoji = getWmoEmoji(data.daily.weathercode[index]);
+            const tempMax = Math.round(data.daily.temperature_2m_max[index]);
+            const tempMin = Math.round(data.daily.temperature_2m_min[index]);
+
+            const row = document.createElement('div');
+            row.className = 'weather-day-row';
+            row.innerHTML = `
+                <span class="weather-date">${dateFormatee}</span>
+                <span class="weather-icon">${emoji}</span>
+                <span class="weather-temps">
+                    <span class="weather-max">${tempMax}°</span>
+                    <span class="weather-min">${tempMin}°</span>
+                </span>
+            `;
+            forecastEl.appendChild(row);
+        });
     } catch (error) {
         console.error("Erreur météo :", error);
         forecastEl.innerHTML = `<p class="weather-loading">Impossible de charger la météo.</p>`;
     }
 };
 
-const afficherDonneesPays = () => {
+const afficherDonneesPays = async () => {
     const params = new URLSearchParams(window.location.search);
     const countryId = params.get('id'); 
 
@@ -100,36 +109,8 @@ const afficherDonneesPays = () => {
 
         // --- APPEL DE LA METEO ---
         if (dataPays.coords) {
-            chargerMeteo7Jours(dataPays.coords);
+            await chargerMeteo7Jours(dataPays.coords);
         }
-
-        // --- GESTION DE LA CARTE ---
-        const mapContainer = document.getElementById('map');
-        if (mapContainer && dataPays.coords) {
-            if (cartePays !== null) {
-                cartePays.remove();
-            }
-
-            cartePays = L.map('map', {
-                minZoom: 2,
-                maxZoom: 18,
-                worldCopyJump: true
-            }).setView(dataPays.coords, 5);
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© OpenStreetMap contributors',
-                noWrap: true
-            }).addTo(cartePays);
-
-            L.marker(dataPays.coords).addTo(cartePays)
-                .bindPopup(`<b>${trad.name}</b><br>${trad.capitale || ""}`)
-                .openPopup();
-
-            setTimeout(() => {
-                cartePays.invalidateSize();
-            }, 150);
-        }
-
     } else {
         const titleEl = document.getElementById('country-title');
         if (titleEl) titleEl.textContent = "Pays introuvable";

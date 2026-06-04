@@ -1,12 +1,13 @@
-// 1. Importation des données et du module audio
+// 1. Importation des données et des modules
 import { countriesData } from './data.js';
-import { chargerHymneNational } from './audio.js'; // On réimporte ta fonction audio !
+import { chargerHymneNational } from './audio.js';
+import { chargerMeteo7Jours } from './meteo.js';
 
 // Variable globale pour stocker l'instance de la carte Leaflet
 let cartePays = null;
 
 // 2. Fonction principale d'affichage
-const afficherDonneesPays = () => {
+const afficherDonneesPays = async () => {
     // Récupère l'id dans l'URL (ex: ?id=albanie)
     const params = new URLSearchParams(window.location.search);
     const countryId = params.get('id'); 
@@ -70,8 +71,12 @@ const afficherDonneesPays = () => {
         }
 
         // --- AUDIO (HYMNE) ---
-        // Appel de ton fichier séparé audio.js qui gère le MP3 en minuscules
         chargerHymneNational(cleanCountryId);
+
+        // --- MÉTÉO ---
+        if (dataPays.coords) {
+            await chargerMeteo7Jours(dataPays.coords);
+        }
 
         // --- CARTE OPENSTREETMAP ---
         const mapContainer = document.getElementById('map');

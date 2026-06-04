@@ -2618,7 +2618,7 @@ export const countriesData = {
     },
     "algerie": {
         image: "https://flagcdn.com/w160/dz.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Algeria_North_Africa.jpg/1920px-Algeria_North_Africa.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/%D8%BA%D8%B1%D9%88%D8%A8_%D8%A7%D9%84%D8%B4%D9%85%D8%B3_%D9%81%D9%88%D9%82_%D8%AC%D8%A8%D9%84_%D8%AA%D8%A7%D9%87%D8%A7%D8%AA.jpg/1920px-%D8%BA%D8%B1%D9%88%D8%A8_%D8%A7%D9%84%D8%B4%D9%85%D8%B3_%D9%81%D9%88%D9%82_%D8%AC%D8%A8%D9%84_%D8%AA%D8%A7%D9%87%D8%A7%D8%AA.jpg",
         coords: [36.7538, 3.0588],
         fr: {
             name: "Bienvenue en Algérie",
@@ -2639,7 +2639,7 @@ export const countriesData = {
     },
     "cameroun": {
         image: "https://flagcdn.com/w160/cm.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Douala_Cameroon.jpg/1920px-Douala_Cameroon.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/VIADUC_de_BANGOU-BANA_au_Cameroun.jpg/1920px-VIADUC_de_BANGOU-BANA_au_Cameroun.jpg",
         coords: [3.8480, 11.5021],
         fr: {
             name: "Bienvenue au Cameroun",
@@ -2660,7 +2660,7 @@ export const countriesData = {
     },
     "cote-divoire": {
         image: "https://flagcdn.com/w160/ci.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Abidjan_skyline.jpg/1920px-Abidjan_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Palais_Bourbon%2C_Paris_7e%2C_NW_View_140402_1.jpg/1920px-Palais_Bourbon%2C_Paris_7e%2C_NW_View_140402_1.jpg",
         coords: [5.3453, -4.0244],
         fr: {
             name: "Bienvenue en Côte d'Ivoire",
@@ -2681,7 +2681,7 @@ export const countriesData = {
     },
     "egypte": {
         image: "https://flagcdn.com/w160/eg.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Giza_Plateau%2C_Egypt.jpg/1920px-Giza_Plateau%2C_Egypt.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Louis-Fran%C3%A7ois_Baron_Lejeune_001.jpg/1920px-Louis-Fran%C3%A7ois_Baron_Lejeune_001.jpg",
         coords: [30.0444, 31.2357],
         fr: {
             name: "Bienvenue en Égypte",
@@ -2702,7 +2702,7 @@ export const countriesData = {
     },
     "ethiopie": {
         image: "https://flagcdn.com/w160/et.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Addis_Ababa_skyline.jpg/1920px-Addis_Ababa_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Bete_Giyorgis_Lalibela.jpg",
         coords: [9.0300, 38.7400],
         fr: {
             name: "Bienvenue en Éthiopie",
@@ -2723,7 +2723,7 @@ export const countriesData = {
     },
     "kenya": {
         image: "https://flagcdn.com/w160/ke.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Nairobi_skyline.jpg/1920px-Nairobi_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Pentecostal_church_in_Mombasa.JPG/250px-Pentecostal_church_in_Mombasa.JPG",
         coords: [1.2921, 36.8219],
         fr: {
             name: "Bienvenue au Kenya",
@@ -2744,7 +2744,7 @@ export const countriesData = {
     },
     "madagascar": {
         image: "https://flagcdn.com/w160/mg.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Andasibe_Mantadia_National_Park.jpg/1920px-Andasibe_Mantadia_National_Park.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Lake_Tritriva_01.jpg/1920px-Lake_Tritriva_01.jpg",
         coords: [-18.7669, 46.8691],
         fr: {
             name: "Bienvenue à Madagascar",

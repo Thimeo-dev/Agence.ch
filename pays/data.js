@@ -1526,7 +1526,7 @@ export const countriesData = {
     },
     "oman": {
         image: "https://flagcdn.com/w160/om.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Muscat_souq.jpg/1920px-Muscat_souq.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Campsite_panorama_%286746496995%29.jpg/1920px-Campsite_panorama_%286746496995%29.jpg",
         coords: [23.5859, 58.4059],
         fr: {
             name: "Bienvenue à Oman",
@@ -1547,7 +1547,7 @@ export const countriesData = {
     },
     "ouzbekistan": {
         image: "https://flagcdn.com/w160/uz.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Registan_at_night.jpg/1920px-Registan_at_night.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Bukhara_-_Panorama.jpg",
         coords: [41.2995, 69.2401],
         fr: {
             name: "Bienvenue en Ouzbékistan",
@@ -1568,7 +1568,7 @@ export const countriesData = {
     },
     "pakistan": {
         image: "https://flagcdn.com/w160/pk.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Lahore_Fort.jpg/1920px-Lahore_Fort.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Mountains_in_Swat_Valley1.jpg/1920px-Mountains_in_Swat_Valley1.jpg",
         coords: [30.3753, 69.3451],
         fr: {
             name: "Bienvenue au Pakistan",
@@ -1589,7 +1589,7 @@ export const countriesData = {
     },
     "palestine": {
         image: "https://flagcdn.com/w160/ps.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Al-Aqsa_Mosque_04.jpg/1920px-Al-Aqsa_Mosque_04.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/7/71/Temple_mount.JPG",
         coords: [31.9010, 35.2034],
         fr: {
             name: "Bienvenue en Palestine",
@@ -1610,7 +1610,7 @@ export const countriesData = {
     },
     "philippines": {
         image: "https://flagcdn.com/w160/ph.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Manila_skyline.jpg/1920px-Manila_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/0/00/Pana_Banaue_Rice_Terraces.jpg",
         coords: [14.5995, 120.9842],
         fr: {
             name: "Bienvenue aux Philippines",
@@ -1631,7 +1631,7 @@ export const countriesData = {
     },
     "qatar": {
         image: "https://flagcdn.com/w160/qa.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Doha_skyline.jpg/1920px-Doha_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Hamad_International_Airport_Doha_Qatar_1.jpg/1920px-Hamad_International_Airport_Doha_Qatar_1.jpg",
         coords: [25.4858, 51.5310],
         fr: {
             name: "Bienvenue au Qatar",
@@ -1652,7 +1652,7 @@ export const countriesData = {
     },
     "singapour": {
         image: "https://flagcdn.com/w160/sg.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Marina_Bay_Sands_view.jpg/1920px-Marina_Bay_Sands_view.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Singapore_Panorama_v2.jpg/1920px-Singapore_Panorama_v2.jpg",
         coords: [1.3521, 103.8198],
         fr: {
             name: "Bienvenue à Singapour",
@@ -1673,7 +1673,7 @@ export const countriesData = {
     },
     "sri-lanka": {
         image: "https://flagcdn.com/w160/lk.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Sigiriya_Rock_Lion%27s_Paw.jpg/1920px-Sigiriya_Rock_Lion%27s_Paw.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Nallur_Kandasamy_front_entrance.jpg/330px-Nallur_Kandasamy_front_entrance.jpg",
         coords: [7.8731, 80.7718],
         fr: {
             name: "Bienvenue au Sri Lanka",
@@ -1694,7 +1694,7 @@ export const countriesData = {
     },
     "syrie": {
         image: "https://flagcdn.com/w160/sy.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Old_Damascus_2012.jpg/1920px-Old_Damascus_2012.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Dome_of_the_Clocks%2C_Umayyad_Mosque.jpg/1920px-Dome_of_the_Clocks%2C_Umayyad_Mosque.jpg",
         coords: [33.5138, 36.2765],
         fr: {
             name: "Bienvenue en Syrie",
@@ -1715,7 +1715,7 @@ export const countriesData = {
     },
     "tadjikistan": {
         image: "https://flagcdn.com/w160/tj.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Pamir_Mountains.jpg/1920px-Pamir_Mountains.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/1229_chineseBridge1.jpg/1920px-1229_chineseBridge1.jpg",
         coords: [38.8610, 71.2761],
         fr: {
             name: "Bienvenue au Tadjikistan",
@@ -1736,7 +1736,7 @@ export const countriesData = {
     },
     "taiwan": {
         image: "https://flagcdn.com/w160/tw.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Taipei_101_and_city_skyline.jpg/1920px-Taipei_101_and_city_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Chiang_Kai-shek_memorial_amk.jpg/1920px-Chiang_Kai-shek_memorial_amk.jpg",
         coords: [25.0330, 121.5654],
         fr: {
             name: "Bienvenue à Taïwan",
@@ -1757,7 +1757,7 @@ export const countriesData = {
     },
     "thailande": {
         image: "https://flagcdn.com/w160/th.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bangkok_skyline_%28cropped%29.jpg/1920px-Bangkok_skyline_%28cropped%29.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/WatChaiwatthanaram_2292.JPG/1920px-WatChaiwatthanaram_2292.JPG",
         coords: [13.7563, 100.5018],
         fr: {
             name: "Bienvenue en Thaïlande",
@@ -1778,7 +1778,7 @@ export const countriesData = {
     },
     "timor-oriental": {
         image: "https://flagcdn.com/w160/tl.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Dili_skyline.jpg/1920px-Dili_skyline.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Aerial_photos_of_the_Dili%2C_East_Timor_coastline.jpg/1920px-Aerial_photos_of_the_Dili%2C_East_Timor_coastline.jpg",
         coords: [-8.5569, 125.5603],
         fr: {
             name: "Bienvenue au Timor oriental",
@@ -1799,7 +1799,7 @@ export const countriesData = {
     },
     "turkmenistan": {
         image: "https://flagcdn.com/w160/tm.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Ashgabat_panorama.jpg/1920px-Ashgabat_panorama.jpg",
+        landscape: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGRNhLa1d_55hxIIp1euYguQXrhCdtzUkg33xodrUZVmjVoePpc-CPRGrY8MQ1ggnHKSvhAV3n3e8TImSK4uP9YxkPvT2hK9PAvgOWUgbyNiK8P97op9TabbeEgMUcLZIhlqyPejPOyY5w=w540-h312-n-k-no",
         coords: [37.9601, 58.3261],
         fr: {
             name: "Bienvenue au Turkménistan",
@@ -1820,7 +1820,7 @@ export const countriesData = {
     },
     "viet-nam": {
         image: "https://flagcdn.com/w160/vn.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Ha_Long_Bay%2C_Vietnam.jpg/1920px-Ha_Long_Bay%2C_Vietnam.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Canal_in_Mekong_Delta_-_My_Tho_-_Vietnam_%2815912635245%29.jpg/1920px-Canal_in_Mekong_Delta_-_My_Tho_-_Vietnam_%2815912635245%29.jpg",
         coords: [21.0278, 105.8342],
         fr: {
             name: "Bienvenue au Viêt Nam",
@@ -1841,7 +1841,7 @@ export const countriesData = {
     },
     "yemen": {
         image: "https://flagcdn.com/w160/ye.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Sanaa_Old_City.jpg/1920px-Sanaa_Old_City.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Hajarah%2C_Haraz_Mountains%2C_Yemen_%284325367234%29.jpg/1920px-Hajarah%2C_Haraz_Mountains%2C_Yemen_%284325367234%29.jpg",
         coords: [15.3694, 44.1910],
         fr: {
             name: "Bienvenue au Yémen",
@@ -1862,7 +1862,7 @@ export const countriesData = {
     },
     "antigua-et-barbuda": {
         image: "https://flagcdn.com/w160/ag.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Antigua_Barbuda.jpg/1920px-Antigua_Barbuda.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/2/24/English_Harbour_and_Falmouth_Harbour_on_Antigua.jpg",
         coords: [17.0608, -61.7964],
         fr: {
             name: "Bienvenue à Antigua-et-Barbuda",
@@ -1883,7 +1883,7 @@ export const countriesData = {
     },
     "argentine": {
         image: "https://flagcdn.com/w160/ar.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Buenos_Aires_Plaza_de_Mayo.jpg/1920px-Buenos_Aires_Plaza_de_Mayo.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Aconcagua2016.jpg/1920px-Aconcagua2016.jpg",
         coords: [-34.6037, -58.3816],
         fr: {
             name: "Bienvenue en Argentine",
@@ -1904,7 +1904,7 @@ export const countriesData = {
     },
     "bahamas": {
         image: "https://flagcdn.com/w160/bs.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Paradise_Island_Bahamas.jpg/1920px-Paradise_Island_Bahamas.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Bahamas_Gazebo.jpg/1920px-Bahamas_Gazebo.jpg",
         coords: [25.0343, -77.3963],
         fr: {
             name: "Bienvenue aux Bahamas",
@@ -1925,7 +1925,7 @@ export const countriesData = {
     },
     "barbade": {
         image: "https://flagcdn.com/w160/bb.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Barbados_Sunset.jpg/1920px-Barbados_Sunset.jpg",
+        landscape: "https://upload.wikimedia.org/wikipedia/commons/2/25/Parliament_Building_%2846667270015%29.jpg",
         coords: [13.1939, -59.5432],
         fr: {
             name: "Bienvenue à la Barbade",
@@ -1946,7 +1946,7 @@ export const countriesData = {
     },
     "belize": {
         image: "https://flagcdn.com/w160/bz.png",
-        landscape: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Belize_Caye_Caulker.jpg/1920px-Belize_Caye_Caulker.jpg",
+        landscape: "https://uphttps://upload.wikimedia.org/wikipedia/commons/6/61/Great_Blue_Hole.jpgload.wikimedia.org/wikipedia/commons/thumb/b/b5/Belize_Caye_Caulker.jpg/1920px-Belize_Caye_Caulker.jpg",
         coords: [17.1899, -88.4976],
         fr: {
             name: "Bienvenue au Belize",

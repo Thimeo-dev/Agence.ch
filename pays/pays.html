@@ -25,35 +25,40 @@
     </section>
     
     <section class="details-country">
-        <p id="country-desc" style="line-height: 1.6; font-size: 1.1rem; margin-top: 20px;"></p>
-        <p id="country-info" style="line-height: 1.6; font-size: 1.1rem; margin-top: 20px;"></p>
+        <div class="country-details-grid">
+            <div class="country-info-column">
+                <p id="country-desc" style="line-height: 1.6; font-size: 1.1rem; margin-top: 20px;"></p>
+                <p id="country-info" style="line-height: 1.6; font-size: 1.1rem; margin-top: 20px;"></p>
 
-        <div id="country-gallery-container" class="horizontal-scroll-container">
-        <div id="country-gallery-track" class="horizontal-scroll-track">
+                <div id="country-gallery-container" class="horizontal-scroll-container">
+                    <div id="country-gallery-track" class="horizontal-scroll-track"></div>
+                </div>
+                
+                <div class="api-data-box" style="margin-top: 25px; padding: 15px; background: rgba(255,255,255,0.5); border-radius: 12px;">
+                    <div class="flag-wrapper" style="margin-bottom: 15px;">
+                        <img id="api-country-flag" src="" alt="Drapeau" style="width: 60px; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    </div>
+                    <p><strong>Capitale :</strong> <span id="api-country-capital">—</span></p>
+                    <p><strong>Population :</strong> <span id="api-country-population">—</span> habitants</p>
+                    <p><strong>Monnaie officielle :</strong> <span id="api-country-currency">—</span></p>
+                </div>
+                <div class="anthem-container">
+                    <span class="anthem-title">Hymne national :</span>
+                    <audio id="api-country-anthem" controls src="">
+                        Votre navigateur ne prend pas en charge l'élément audio.
+                    </audio>
+                </div>
+                <p class="lang-indicator" style="margin-top: 30px; opacity: 0.7;">
+                    Langue : <span id="current-lang" style="font-weight: bold; text-transform: uppercase;"></span>
+                </p>
             </div>
-            </div>
-        
-        <div class="api-data-box" style="margin-top: 25px; padding: 15px; background: rgba(255,255,255,0.5); border-radius: 12px;">
-            <div class="flag-wrapper" style="margin-bottom: 15px;">
-                <img id="api-country-flag" src="" alt="Drapeau" style="width: 60px; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-            </div>
-            <p><strong>Capitale :</strong> <span id="api-country-capital">—</span></p>
-            <p><strong>Population :</strong> <span id="api-country-population">—</span> habitants</p>
-            <p><strong>Monnaie officielle :</strong> <span id="api-country-currency">—</span></p>
-        </div>
-        <div class="anthem-container">
-            <span class="anthem-title">Hymne national :</span>
-            <audio id="api-country-anthem" controls src="">
-                Votre navigateur ne prend pas en charge l'élément audio.
-            </audio>
-        </div>
-        <p class="lang-indicator" style="margin-top: 30px; opacity: 0.7;">
-            Langue : <span id="current-lang" style="font-weight: bold; text-transform: uppercase;"></span>
-        </p>
+            <div class="weather-column">
                 <div class="weather-container">
-            <h3 class="weather-title">Prévisions sur 7 jours</h3>
-            <div id="weather-forecast" class="weather-forecast">
-                <p class="weather-loading">Chargement de la météo...</p>
+                    <h3 class="weather-title">Prévisions sur 7 jours</h3>
+                    <div id="weather-forecast" class="weather-forecast">
+                        <p class="weather-loading">Chargement de la météo...</p>
+                    </div>
+                </div>
             </div>
         </div>
 

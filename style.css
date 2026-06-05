@@ -1478,7 +1478,7 @@ nav ul {
 .youtube-grid {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
-    gap: 40px 16px !important;
+    gap: 60px 16px !important;
     max-width: 1280px !important;
     margin: 0 auto !important;
 }
@@ -1526,9 +1526,9 @@ nav ul {
     border: none !important;
 }
 
-/* 🎯 ACTION AU SURVOL : La miniature s'agrandit légèrement, s'illumine et ajoute une ombre */
+/* 🎯 ACTION AU SURVOL : La miniature s'illumine et ajoute une ombre discrète */
 .youtube-card:hover .youtube-thumbnail-wrapper {
-    transform: scale(1.03) !important; /* Augmente la taille de 3% */
+    transform: scale(1.01) !important; /* Augmente à peine la taille (1%) pour moins perturber le layout */
     border-color: rgba(255, 255, 255, 0.4) !important; /* Le contour devient plus blanc */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important; /* Ajoute du relief avec une ombre portée */
 }

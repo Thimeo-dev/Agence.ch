@@ -300,6 +300,62 @@ nav a:hover {
     opacity: 1;
 }
 
+/* --- Video section --- */
+.youtube-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 60px 5%;
+}
+
+.youtube-card {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.youtube-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.12);
+}
+
+.youtube-thumbnail-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #f2f2f2;
+}
+
+.youtube-pure-thumbnail {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.youtube-info-block {
+    padding: 20px;
+}
+
+.youtube-title {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    color: #202124;
+}
+
+.youtube-channel,
+.youtube-meta {
+    color: #5f6368;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
 /* --- Responsive Mobile --- */
 @media (max-width: 768px) {
     header { padding: 15px 20px; }

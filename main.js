@@ -87,9 +87,11 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app); 
+const auth = getAuth(app);
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
+window.auth = auth;
+window.db = db;
 
 // 🎯 BLOC DE SÉCURITÉ À RAJOUTER TOUT EN BAS DE TON FICHIER
 onAuthStateChanged(auth, (user) => {

@@ -1,3 +1,84 @@
+// destinationjs.js
+// Animated, translatable placeholder and basic search filtering
+
+const DEFAULT_TRANSLATIONS = {
+  fr: 'Chercher un pays',
+  en: 'Search a country',
+  de: 'Land suchen',
+  es: 'Buscar un país',
+  it: 'Cerca un paese'
+};
+
+function getTranslations() {
+  // Prefer a global `translations` object if provided by the project
+  if (window && window.translations && typeof window.translations === 'object') return window.translations;
+  return DEFAULT_TRANSLATIONS;
+}
+
+function getLangKey() {
+  const htmlLang = document.documentElement.lang;
+  if (htmlLang) return htmlLang.split('-')[0];
+  const nav = navigator.language || navigator.userLanguage || 'fr';
+  return nav.split('-')[0];
+}
+
+function setAnimatedPlaceholder(text, containerId = 'animated-placeholder') {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  container.innerHTML = '';
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    const span = document.createElement('span');
+    span.textContent = ch;
+    span.style.transitionDelay = `${i * 50}ms`;
+    container.appendChild(span);
+  }
+}
+
+function wirePlaceholderInput(inputId = 'search-input', placeholderId = 'animated-placeholder') {
+  const input = document.getElementById(inputId);
+  const placeholder = document.getElementById(placeholderId);
+  if (!input || !placeholder) return;
+
+  // Focus when clicking the animated label
+  placeholder.addEventListener('click', () => input.focus());
+
+  const updateVisibility = () => {
+    if (input.value.length > 0) placeholder.style.display = 'none';
+    else placeholder.style.display = '';
+  };
+
+  input.addEventListener('input', (e) => {
+    updateVisibility();
+    filterCountries(e.target.value);
+  });
+  input.addEventListener('focus', updateVisibility);
+  input.addEventListener('blur', updateVisibility);
+  updateVisibility();
+}
+
+function filterCountries(query) {
+  const q = (query || '').trim().toLowerCase();
+  const containers = Array.from(document.querySelectorAll('.countries-wrapper, .destinations-grid'));
+  containers.forEach(container => {
+    const children = Array.from(container.children);
+    children.forEach(child => {
+      const text = (child.textContent || '').toLowerCase();
+      if (!q) child.style.display = '';
+      else child.style.display = text.includes(q) ? '' : 'none';
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const translations = getTranslations();
+  const lang = getLangKey();
+  const text = (translations[lang] || translations[lang.slice(0,2)] || translations.fr || DEFAULT_TRANSLATIONS.fr);
+  setAnimatedPlaceholder(text || DEFAULT_TRANSLATIONS.fr);
+  wirePlaceholderInput();
+});
+
+export {};
 import { translations } from './translations.js'; 
 import { countriesData } from './pays/data.js'; // On entre dans le dossier pays pour trouver data.js
 

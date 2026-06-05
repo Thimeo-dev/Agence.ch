@@ -1477,10 +1477,11 @@ nav ul {
 
 .youtube-grid {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
-    gap: 40px 16px !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 40px 24px !important;
     max-width: 1280px !important;
     margin: 0 auto !important;
+    padding: 0 24px !important;
 }
 
 .youtube-card {
